@@ -18,6 +18,6 @@ sidebar_position: 13
 ### chrome devtools
 
 ```shell
-var _path = "//div//text()"
+var _path = '//div//text()'
 var result = $x(_path).map(function(i){return i.textContent} ); copy(result);
 ```

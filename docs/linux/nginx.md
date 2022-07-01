@@ -26,10 +26,18 @@ server {
     server_name blog.hjkl01.cn;
 
     # 静态文件
-    root /html/github;
-    location / {
-       index index.html index.htm;
-    }
+    <!-- root /html/github; -->
+    <!-- location / { -->
+    <!--    index index.html index.htm; -->
+    <!-- } -->
+
+    root /html/github/;
+
+	location / {
+		# try_files $uri $uri/ =404;
+		try_files $uri $uri /index.html;
+	}
+
     
     # django
     location /static/ {
