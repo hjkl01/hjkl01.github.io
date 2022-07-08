@@ -26,10 +26,11 @@ server {
     server_name blog.hjkl01.cn;
 
     # 静态文件
-    <!-- root /html/github; -->
-    <!-- location / { -->
-    <!--    index index.html index.htm; -->
-    <!-- } -->
+
+    # root /html/github;
+    # location / {
+    #    index index.html index.htm;
+    # }
 
     root /html/github/;
 
@@ -66,6 +67,12 @@ server {
     # 重定向
     return 301 https://$host$request_uri;
     # rewrite ^(.*)$ https://blog.hjkl01.cn; #将所有HTTP请求通过rewrite指令重定向到HTTPS。
+
+    # CORS
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
+    add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+
 }
 ```
 
