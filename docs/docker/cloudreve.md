@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# cloudreve minIO
+# cloudreve minIO alist
 
 ## cloudreve
 
@@ -253,4 +253,20 @@ http {
         }
     }
 }
+```
+
+## alist
+
+```yaml
+version: "3.8"
+services:
+  cloudreve:
+    container_name: alist
+    image: xhofe/alist:latest
+    restart: unless-stopped
+    ports:
+      - "5244:5244"
+    volumes:
+      - ./data/alist:/opt/alist/data
+      - /some_dir:/mnt
 ```
