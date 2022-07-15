@@ -71,7 +71,13 @@ const config = {
             position: 'left',
             label: 'Notes',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/linux', label: 'Linux', position: 'left'},
+          {to: '/docs/docker', label: 'Docker', position: 'left'},
+          {to: '/docs/python', label: 'Python', position: 'left'},
+
+          {to: '/docs/bash-tutorial/intro', label: 'Bash Tutorial', position: 'right'},
+          {to: '/blog', label: 'Blog', position: 'right'},
+          {to: '/docs/tutorial/intro', label: 'Tutorial', position: 'right'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
