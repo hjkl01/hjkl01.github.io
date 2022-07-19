@@ -55,6 +55,58 @@ const config = {
 		],
 	],
 
+	plugins: [
+
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'docker',
+				path: 'notes/docker',
+				routeBasePath: 'notes/docker',
+				sidebarPath: require.resolve('./sidebars.js'),
+			},
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'linux',
+				path: 'notes/linux',
+				routeBasePath: 'notes/linux',
+				sidebarPath: require.resolve('./sidebars.js'),
+			},
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'python',
+				path: 'notes/python',
+				routeBasePath: 'notes/python',
+				sidebarPath: require.resolve('./sidebars.js'),
+			},
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'mac',
+				path: 'notes/mac',
+				routeBasePath: 'notes/mac',
+				sidebarPath: require.resolve('./sidebars.js'),
+			},
+		],
+
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'bash-tutorial',
+				path: 'notes/bash-tutorial',
+				routeBasePath: 'bash-tutorial',
+				sidebarPath: require.resolve('./sidebars.js'),
+			},
+		],
+
+
+	],
+
 	themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -65,31 +117,34 @@ const config = {
     			src: 'img/logo.svg',
     		},
     		items: [
-    			// {
-    			//   type: 'doc',
-    			//   docId: 'intro',
-    			//   position: 'left',
-    			//   label: 'Notes',
-    			// },
     			{
-    				type: 'dropdown',
-    				label: 'Notes',
-    				position: 'left',
-    				items: [
-    					{to: '/docs/linux', label: 'Linux'},
-    					{to: '/docs/docker', label: 'Docker'},
-    					{to: '/docs/python', label: 'Python'},
-    					{to: '/docs/mac', label: 'Mac'},
-    				],
+    			  type: 'doc',
+    			  docId: 'intro',
+    			  position: 'right',
+    			  label: 'Tutorial',
     			},
+    			// {
+    			// 	type: 'dropdown',
+    			// 	label: 'Notes',
+    			// 	position: 'left',
+    			// 	items: [
+    			// 		{to: '/docs/linux', label: 'Linux'},
+    			// 		{to: '/docs/docker', label: 'Docker'},
+    			// 		{to: '/docs/python', label: 'Python'},
+    			// 		{to: '/docs/mac', label: 'Mac'},
+    			// 	],
+    			// },
+    			{to: '/notes/docker', label: 'Docker', position: 'left'},
+    			{to: '/notes/linux', label: 'Linux', position: 'left'},
+    			{to: '/notes/python', label: 'Python', position: 'left'},
 
     			// {to: '/docs/linux', label: 'Linux', position: 'left'},
     			// {to: '/docs/docker', label: 'Docker', position: 'left'},
     			// {to: '/docs/python', label: 'Python', position: 'left'},
 
-    			{to: '/docs/bash-tutorial/intro', label: 'Bash Tutorial', position: 'right'},
+    			{to: '/notes/bash-tutorial', label: 'Bash Tutorial', position: 'right'},
     			{to: '/blog', label: 'Blog', position: 'right'},
-    			{to: '/docs/tutorial/intro', label: 'Tutorial', position: 'right'},
+    			// {to: '/docs/intro', label: 'Tutorial', position: 'left'},
     			{
     				href: 'https://github.com/facebook/docusaurus',
     				label: 'GitHub',
