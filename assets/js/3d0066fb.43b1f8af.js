@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_classic_typescript=self.webpackChunkdocusaurus_classic_typescript||[]).push([[7912],{8057:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"bash-tutorial"}')}}]);
