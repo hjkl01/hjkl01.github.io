@@ -94,17 +94,6 @@ const config = {
 			},
 		],
 
-		[
-			'@docusaurus/plugin-content-docs',
-			{
-				id: 'bash-tutorial',
-				path: 'notes/bash-tutorial',
-				routeBasePath: 'bash-tutorial',
-				sidebarPath: require.resolve('./sidebars.js'),
-			},
-		],
-
-
 	],
 
 	themeConfig:
@@ -142,7 +131,6 @@ const config = {
     			// {to: '/docs/docker', label: 'Docker', position: 'left'},
     			// {to: '/docs/python', label: 'Python', position: 'left'},
 
-    			{to: '/notes/bash-tutorial', label: 'Bash Tutorial', position: 'right'},
     			{to: '/blog', label: 'Blog', position: 'right'},
     			// {to: '/docs/intro', label: 'Tutorial', position: 'left'},
     			{
