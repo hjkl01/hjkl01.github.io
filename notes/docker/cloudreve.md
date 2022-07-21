@@ -7,6 +7,9 @@ sidebar_position: 2
 ## cloudreve
 
 ```yaml
+# office 文档预览服务
+# https://view.xdocin.com/view?src={$src}
+
 # mkdir -vp cloudreve/{uploads,avatar} \
     && touch cloudreve/conf.ini \
     && touch cloudreve/cloudreve.db \
@@ -50,6 +53,15 @@ services:
       - ./data/aria2/config:/config
       - ./data/aria2/downloads:/downloads
     restart: unless-stopped
+    ports:
+     - 16800:6800
+     - 16888:6888
+     - 16888:6888/udp
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+
 ``` 
 
 ### nginx 
