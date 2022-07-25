@@ -4,6 +4,19 @@ sidebar_position: 6
 
 # proxy
 
+## clash yacd
+```yaml
+version: "3.8"
+
+services:
+  yacd:
+    container_name: yacd
+    image: haishanh/yacd
+    ports:
+      - 127.0.0.1:1234:80
+    restart: unless-stopped
+```
+
 ## trojan-go
 ```shell
 brew install trojan-go
