@@ -196,3 +196,17 @@ location /flv/ {
 }
 ```
 - 这个限制是针对每个请求的，表示客户端下载前20M时不限速，后续限制100kb/s。
+
+## goaccess
+
+```shell
+# /etc/goaccess/goaccess.conf
+
+log-format %h %^[%d:%t %^] "%r" %s %b "%R" "%u"
+date-format %d/%b/%Y
+time-format %H:%M:%S
+output /usr/share/nginx/html/index.html
+
+# crontab
+*/30 * * * * goaccess -a -d -f /var/log/nginx/access.log -p /etc/goaccess/goaccess.conf
+```
