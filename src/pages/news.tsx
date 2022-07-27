@@ -75,7 +75,7 @@ const columns = [
     key: 'title',
     render: (_, record) => (
       <Space size="middle">
-        <a href={record.url}>{record.title}</a>
+        <a href={record.url} target="_blank" >{record.title}</a>
       </Space>
     ),
     width: '40%',
