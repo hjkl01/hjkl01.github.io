@@ -15,17 +15,39 @@ ssh-keygen -t rsa -b 4096 -C ""
 git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
 git config --global https.https://github.com.proxy socks5://127.0.0.1:7890
 
-# or vi ~/.gitconfig
-[http "https://github.com"]
-    proxy = socks5://127.0.0.1:7890
-    postBuffer = 524288000
-[https "https://github.com"]
-    proxy = socks5://127.0.0.1:7890
-    postBuffer = 524288000
-
 # git submodule
 git submodule add https://github.com/liuyib/hexo-theme-stun/ themes/stun
 git submodule update --remote
+```
+
+#### ~/.gitconfig
+```shell 
+# ~/.gitconfig
+[http "https://github.com"]
+	postBuffer = 524288000
+	proxy = socks5://127.0.0.1:1080
+[https "https://github.com"]
+	postBuffer = 524288000
+	proxy = socks5://127.0.0.1:1080
+
+[pull]
+	rebase = false
+[user]
+	email = 
+	name = 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = master
+
+; [url "https://ghproxy.com/https://github.com/"]
+; 	insteadOf = https://github.com
+
+; [url "https://gitclone.com/github.com/"]
+; 	insteadOf = https://github.com
 ```
 
 ### ssh
