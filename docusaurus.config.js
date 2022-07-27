@@ -112,6 +112,15 @@ const config = {
 				sidebarPath: require.resolve('./sidebars.js'),
 			},
 		],
+		// [
+		// 	'@docusaurus/plugin-content-docs',
+		// 	{
+		// 		id: 'news',
+		// 		path: 'news',
+		// 		routeBasePath: 'news',
+		// 		sidebarPath: require.resolve('./sidebars.js'),
+		// 	},
+		// ],
 
 	],
 
@@ -146,6 +155,7 @@ const config = {
     			{to: '/notes/linux', label: 'Linux', position: 'left'},
     			{to: '/notes/python', label: 'Python', position: 'left'},
     			{to: '/notes/mac', label: 'Mac', position: 'left'},
+    			{to: 'news', label: 'News', position: 'left'},
 
     			{to: '/blog', label: 'Blog', position: 'right'},
     			{
