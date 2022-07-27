@@ -209,4 +209,6 @@ output /usr/share/nginx/html/index.html
 
 # crontab
 */30 * * * * goaccess -a -d -f /var/log/nginx/access.log -p /etc/goaccess/goaccess.conf
+
+# 可以设置LANG为zh_CN 界面会变为中文
 ```
