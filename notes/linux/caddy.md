@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# caddy config
+# caddy
 
 ```shell 
 # 反向代理
