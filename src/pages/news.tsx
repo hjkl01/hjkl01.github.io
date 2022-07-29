@@ -90,6 +90,7 @@ const columns = [
     title: '热度',
     dataIndex: 'hot_score',
     key: 'hot_score',
+    width: '5%',
   },
   {
     title: '图片',
@@ -101,6 +102,7 @@ const columns = [
         <img src={record.img_url} crossorigin="use-credentials" />
       </Space>
     ),
+    width: '5%',
   },
   {
     title: '来源',
