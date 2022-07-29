@@ -70,7 +70,7 @@ const ForeverList: React.FC = () => {
 
 const columns = [
   {
-    title: 'Title',
+    title: '标题',
     dataIndex: 'title',
     key: 'title',
     render: (_, record) => (
@@ -78,16 +78,21 @@ const columns = [
         <a href={record.url} target="_blank" >{record.title}</a>
       </Space>
     ),
-    width: '40%',
+    // width: '40%',
     ellipsis: 'true',
   },
   {
-    title: 'Hot_score',
+    title: '获取时间',
+    dataIndex: 'created_time',
+    width: '25%',
+  },
+  {
+    title: '热度',
     dataIndex: 'hot_score',
     key: 'hot_score',
   },
   {
-    title: 'Img',
+    title: '图片',
     dataIndex: 'img_url',
     key: 'img_url',
     render: (_, record) => (
@@ -98,7 +103,7 @@ const columns = [
     ),
   },
   {
-    title: 'Website',
+    title: '来源',
     dataIndex: 'website',
     key: 'website',
     width: '10%',
