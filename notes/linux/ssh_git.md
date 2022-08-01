@@ -81,6 +81,43 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 # 转发服务器到本机的1082端口
 ssh -D 1082 -f -C -q -N archServer
 ```
+### ssh TOTP 开启二次验证
+
+```shell 
+# ubuntu 
+sudo apt install -y libpam-google-authenticator
+
+# arch 
+yay -S --noconfirm google-authenticator-libpam-git
+
+# 生成验证码  
+# 哪个账号需要动态验证码，请切换到该账号下操作  
+# -t: 使用 TOTP 验证  
+# -f: 将配置保存到 ~/.google_authenticator 文件里面  
+# -d: 不允许重复使用以前使用的令牌  
+# -w 3: 使用令牌进行身份验证以进行时钟偏移  
+# -e 10: 生成 10 个紧急备用代码  
+# -r 3 -R 30: 限速 - 每 30 秒允许 3 次登录  
+google-authenticator -t -f -d -w 3 -e 10 -r 3 -R 30
+
+# chrome 插件 https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai
+# android app Google Authenticator https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US
+
+sudo vim /etc/pam.d/sshd  
+
+auth required pam_google_authenticator.so
+
+sudo nvim /etc/ssh/sshd_config 
+
+KbdInteractiveAuthentication yes
+ChallengeResponseAuthentication yes  
+PubkeyAuthentication yes  
+PasswordAuthentication yes  
+AuthenticationMethods publickey,password publickey,keyboard-interactive
+
+sudo systemctl restart ssh.service
+```
+
 
 ### 星图
 
