@@ -75,7 +75,7 @@ Host archServer
 # 转发跳板机端口
 ssh -tt -i ./id_rsa -L 0.0.0.0:local_port:host2:host2_port user@host1
 
-# 上传共钥到目标服务器
+# 上传公钥到目标服务器
 ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 
 # 转发服务器到本机的1082端口
@@ -113,7 +113,8 @@ KbdInteractiveAuthentication yes
 ChallengeResponseAuthentication yes  
 PubkeyAuthentication yes  
 PasswordAuthentication yes  
-AuthenticationMethods publickey,password publickey,keyboard-interactive
+AuthenticationMethods keyboard-interactive
+# AuthenticationMethods publickey,password publickey,keyboard-interactive
 
 sudo systemctl restart ssh.service
 ```
