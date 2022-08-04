@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://hjkl01.github.io/blog"/>
     <subtitle>My Notes Site Blog</subtitle>
-    <icon>https://hjkl01.github.io/img/favicon.ico</icon>
+    <icon>https://hjkl01.github.io/img/favicon.jpg</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
