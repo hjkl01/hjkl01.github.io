@@ -34,7 +34,7 @@ export default function CardMyWebsites() {
 				</Col>
 
 				<Col span={8}>
-                    <a href="https://jsonv.hjkl01.cn/" target="_blank" >
+                    <a href="https://jsonv.hjkl01.cn/editor/" target="_blank" >
                         <Card>
 				            <Meta title='JSON Valid' description='Json视图' />
                         </Card>
