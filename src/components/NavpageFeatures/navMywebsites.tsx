@@ -18,14 +18,6 @@ export default function CardMyWebsites() {
 				</Col>
 
 				<Col span={8}>
-                    <a href="https://curl.hjkl01.cn/" target="_blank" >
-                        <Card>
-				            <Meta title='curl to python' description='Convert curl commands to code' />
-                        </Card>
-                    </a>
-				</Col>
-
-				<Col span={8}>
                     <a href="https://hexo.hjkl01.cn/" target="_blank" >
                         <Card>
 				            <Meta title='blog by hexo' description='stop update' />
@@ -37,6 +29,14 @@ export default function CardMyWebsites() {
                     <a href="https://hugo.hjkl01.cn/" target="_blank" >
                         <Card>
 				            <Meta title='blog by hugo' description='stop update' />
+                        </Card>
+                    </a>
+				</Col>
+
+				<Col span={8}>
+                    <a href="https://curl.hjkl01.cn/" target="_blank" >
+                        <Card>
+				            <Meta title='curl to python' description='Convert curl commands to code' />
                         </Card>
                     </a>
 				</Col>
