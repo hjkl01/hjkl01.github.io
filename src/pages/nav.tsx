@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import App from '@site/src/components/NavpageFeatures' ;
 import {Redirect} from '@docusaurus/router' ;
 
 function HomepageHeader() {
@@ -26,20 +27,15 @@ function HomepageHeader() {
   );
 }
 
-// export default function Home(): JSX.Element {
-//   const {siteConfig} = useDocusaurusContext();
-//   return (
-//     <Layout
-//       title={`Hello from ${siteConfig.title}`}
-//       description="Description will go into a meta tag in <head />">
-//       <HomepageHeader />
-//       <main>
-//         <HomepageFeatures />
-//       </main>
-//     </Layout>
-//   );
-// }
-
-export default function Home() {
-        return <Redirect to="/nav/" />;
-    };
+export default function Home(): JSX.Element {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />">
+      <main>
+        <App />
+      </main>
+    </Layout>
+  );
+}

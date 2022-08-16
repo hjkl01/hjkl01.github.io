@@ -31,7 +31,7 @@ const config = {
 
 	presets: [
 		[
-			'classic',
+			'@docusaurus/preset-classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				docs: {
@@ -151,6 +151,7 @@ const config = {
     			// 		{to: '/docs/mac', label: 'Mac'},
     			// 	],
     			// },
+    			{to: 'nav', label: 'Nav', position: 'left'},
     			{to: '/notes/docker', label: 'Docker', position: 'left'},
     			{to: '/notes/linux', label: 'Linux', position: 'left'},
     			{to: '/notes/python', label: 'Python', position: 'left'},
