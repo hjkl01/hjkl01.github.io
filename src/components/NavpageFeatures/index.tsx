@@ -28,7 +28,7 @@ const App: React.FC = () => (
         <CardMyWebsites />
       </TabPane>
 
-      <TabPane tab="学习/摸鱼" key="4">
+      <TabPane tab="学习(摸鱼)" key="4">
         <CardFish />
       </TabPane>
 
