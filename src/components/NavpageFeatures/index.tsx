@@ -21,7 +21,7 @@ const App: React.FC = () => (
         <p>Content of Tab Pane 2</p>
         <p>Content of Tab Pane 2</p>
       </TabPane>
-      <TabPane tab="我的备份" key="3">
+      <TabPane tab="Cloudflare" key="3">
         <CardMyWebsites />
       </TabPane>
     </Tabs>
