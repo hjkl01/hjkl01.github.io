@@ -8,7 +8,7 @@ export default function CardFish() {
     {
       "url": "https://github.com/explore",
       "title": "github explore",
-      "description": "",
+      "description": "探索GitHub优秀项目",
     },
     {
       "url": "https://dig.chouti.com/",
