@@ -152,11 +152,11 @@ const config = {
     			// 	],
     			// },
     			{to: 'nav', label: 'Nav', position: 'left'},
+    			{to: 'news', label: 'News', position: 'left'},
     			{to: '/notes/docker', label: 'Docker', position: 'left'},
     			{to: '/notes/linux', label: 'Linux', position: 'left'},
     			{to: '/notes/python', label: 'Python', position: 'left'},
     			{to: '/notes/mac', label: 'Mac', position: 'left'},
-    			{to: 'news', label: 'News', position: 'left'},
 
     			{to: '/blog', label: 'Blog', position: 'right'},
     			{
