@@ -42,6 +42,14 @@ export default function CardMyWebsites() {
 				</Col>
 
 				<Col span={8}>
+                    <a href="https://nginx.hjkl01.cn/" target="_blank" >
+                        <Card>
+				            <Meta title='Nginx Online' description='配置高性能、安全、稳定的NGINX服务器的最简单方法。' />
+                        </Card>
+                    </a>
+				</Col>
+
+				<Col span={8}>
                     <a href="https://curl.hjkl01.cn/" target="_blank" >
                         <Card>
 				            <Meta title='curl to python' description='Convert curl commands to code' />
