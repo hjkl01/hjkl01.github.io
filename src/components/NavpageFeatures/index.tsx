@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import CardTools from "./navTools.tsx";
 import CardMyWebsites from "./navMywebsites.tsx";
 import CardOffice from "./navOffice.tsx";
+import CardFish from "./navFish.tsx";
 
 const { TabPane } = Tabs;
 
@@ -27,7 +28,11 @@ const App: React.FC = () => (
         <CardMyWebsites />
       </TabPane>
 
-      <TabPane tab="Office" key="4">
+      <TabPane tab="学习/摸鱼" key="4">
+        <CardFish />
+      </TabPane>
+
+      <TabPane tab="Office" key="5">
         <CardOffice />
       </TabPane>
     </Tabs>

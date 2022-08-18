@@ -7,17 +7,17 @@ export default function CardMyWebsites() {
   const websites = [
     {
       "url": "https://pages.hjkl01.cn/",
-      "title": "blog by docusaurus",
+      "title": "blog/notes by docusaurus",
       "description": "我的笔记",
     },
     {
       "url": "https://hexo.hjkl01.cn/",
-      "title": "blog by hexo",
+      "title": "hexo",
       "description": "stop update",
     },
     {
       "url": "https://hugo.hjkl01.cn/",
-      "title": "blog by hugo",
+      "title": "hugo",
       "description": "stop update",
     },
     {
