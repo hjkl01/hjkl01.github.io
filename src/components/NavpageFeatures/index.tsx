@@ -1,42 +1,71 @@
 import "antd/dist/antd.css";
 
-import { Radio, Space, Tabs } from "antd";
+import { Tabs } from "antd";
 import React, { useState } from "react";
+import { Card, Col, Row } from "antd";
 
-import CardTools from "./navTools.tsx";
-import CardMyWebsites from "./navMywebsites.tsx";
-import CardOffice from "./navOffice.tsx";
-import CardFish from "./navFish.tsx";
+import tools from "./tools.json";
+import github from "./github.json";
+import websites from "./websites.json";
+import fish from "./fish.json";
+import office from "./office.json";
 
-const { TabPane } = Tabs;
+function GenElement(props) {
+  const { Meta } = Card;
 
-const App: React.FC = () => (
-  <div className="card-container">
-    <br />
-    <Tabs type="line" tabPosition="left" size="large" centered="true">
-      <TabPane tab="常用工具" key="1">
-        <CardTools />
-      </TabPane>
+  const websites = props.websites;
+  // console.log(websites);
 
-      <TabPane tab="Github" key="2">
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
-        <p>Content of Tab Pane 2</p>
-      </TabPane>
+  const element = websites.map((prop) => (
+    <Col span={8} key={prop.url}>
+      <a href={prop.url} target="_blank">
+        <Card
+          hoverable
+          style={{ width: "80%" }}
+          cover={<img alt="" src={prop.img} />}
+        >
+          <Meta title={prop.title} description={prop.description} />
+        </Card>
+      </a>
+    </Col>
+  ));
 
-      <TabPane tab="Cloudflare" key="3">
-        <CardMyWebsites />
-      </TabPane>
+  return (
+    <div className="site-card-wrapper">
+      <Row gutter={16}>
+        {element}
+      </Row>
+    </div>
+  );
+}
 
-      <TabPane tab="学习(摸鱼)" key="4">
-        <CardFish />
-      </TabPane>
+export default function App() {
+  const { TabPane } = Tabs;
 
-      <TabPane tab="Office" key="5">
-        <CardOffice />
-      </TabPane>
-    </Tabs>
-  </div>
-);
+  return (
+    <div className="card-container">
+      <br />
+      <Tabs type="line" tabPosition="left" size="large" centered="true">
+        <TabPane tab="常用工具" key="tools">
+          <GenElement websites={tools} />
+        </TabPane>
 
-export default App;
+        <TabPane tab="Github" key="2">
+          <GenElement websites={github} />
+        </TabPane>
+
+        <TabPane tab="Cloudflare" key="3">
+          <GenElement websites={websites} />
+        </TabPane>
+
+        <TabPane tab="学习(摸鱼)" key="4">
+          <GenElement websites={fish} />
+        </TabPane>
+
+        <TabPane tab="Office" key="5">
+          <GenElement websites={office} />
+        </TabPane>
+      </Tabs>
+    </div>
+  );
+}
