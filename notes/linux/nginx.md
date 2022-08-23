@@ -39,6 +39,13 @@ server {
 		try_files $uri $uri /index.html;
 	}
 
+
+    # ip
+    location / {
+        default_type application/json;
+        return 200 "{\"ip\":\"$remote_addr\"}";
+    }
+
     
     # django
     location /static/ {
