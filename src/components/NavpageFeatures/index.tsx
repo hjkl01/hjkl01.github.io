@@ -2,7 +2,7 @@ import "antd/dist/antd.css";
 
 import { Tabs } from "antd";
 import React, { useState } from "react";
-import { Card, Col, Row } from "antd";
+import { Avatar, Card, Col, Row } from "antd";
 
 import tools from "./tools.json";
 import github from "./github.json";
@@ -21,10 +21,16 @@ function GenElement(props) {
       <a href={prop.url} target="_blank">
         <Card
           hoverable
-          style={{ width: "80%" }}
-          cover={<img alt="" src={prop.img} />}
+          bordered
+          // style={{ width: "80%" }}
+          style={{ marginTop: 16 }}
+          // extra={<Avatar src={prop.img} />}
         >
-          <Meta title={prop.title} description={prop.description} />
+          <Meta
+            avatar={<Avatar src={prop.img} />}
+            title={prop.title}
+            description={prop.description}
+          />
         </Card>
       </a>
     </Col>
@@ -35,6 +41,7 @@ function GenElement(props) {
       <Row gutter={16}>
         {element}
       </Row>
+      <br />
     </div>
   );
 }

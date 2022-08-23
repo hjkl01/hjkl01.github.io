@@ -2,51 +2,61 @@
   {
     "url": "https://www.google.com/",
     "title": "Google ",
+    "img": "https://www.google.com/favicon.ico",
     "description": "Google 搜索  手气不错"
   },
   {
     "url": "https://www.github.com/",
     "title": "Github",
+    "img": "https://github.githubassets.com/favicons/favicon.png",
     "description": "Where the world builds software · GitHub"
   },
   {
     "url": "https://fanyi.youdao.com/",
     "title": "在线翻译_有道",
+    "img": "https://shared.ydstatic.com/images/favicon.ico",
     "description": "免费、即时的多语种在线翻译"
   },
   {
     "url": "https://jsonv.hjkl01.cn/editor/",
     "title": "JSON Valid",
+    "img": "https://jsonv.hjkl01.cn/favicon.ico",
     "description": "Json视图"
   },
   {
     "url": "https://spidertools.cn/#/",
     "title": "工具箱",
+    "img": "https://spidertools.cn/img/feapder.5d54c199.png",
     "description": "爬虫工具库"
   },
   {
     "url": "https://curl.hjkl01.cn/",
     "title": "curl to python",
+    "img": "https://curl.hjkl01.cn/favicon.ico",
     "description": "Convert curl commands to code"
   },
   {
     "url": "https://map.hjkl01.cn/",
     "title": "地图数据",
+    "img": "https://map.hjkl01.cn/favicon.ico",
     "description": "fork"
   },
   {
     "url": "https://dber.hjkl01.cn/",
     "title": "Database design tool based on entity relation diagram",
+    "img": "https://dber.hjkl01.cn/favicon.ico",
     "description": "fork"
   },
   {
     "url": "https://drf.hjkl01.cn/",
     "title": "drf中文文档",
+    "img": "https://drf.hjkl01.cn/img/favicon.ico",
     "description": "fork"
   },
   {
     "url": "https://nginx.hjkl01.cn/",
     "title": "Nginx Online",
+    "img": "https://www.digitalocean.com/_next/static/media/favicon-32x32.b7ef9ede.png",
     "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
   }
 ]
