@@ -2,51 +2,61 @@
   {
     "url": "https://github.com/explore",
     "title": "github explore",
+    "img": "/img/github.png",
     "description": "探索GitHub优秀项目"
   },
   {
     "url": "https://dig.chouti.com/",
     "title": "抽屉新热榜",
+    "img": "/img/chouti.png",
     "description": "抽屉新热榜-聚合每日热门、搞笑、有趣资讯"
   },
   {
     "url": "https://www.v2ex.com/",
     "title": "V2EX = way to explore",
+    "img": "/img/v2ex.ico",
     "description": "V2EX 是一个关于分享和探索的地方"
   },
   {
     "url": "https://web.telegram.org/z/",
     "title": "telegram",
+    "img": "/img/telegram.ico",
     "description": "电报"
   },
   {
     "url": "https://twitter.com/explore",
     "title": "twitter explore",
+    "img": "/img/twitter.ico",
     "description": "twitter"
   },
   {
     "url": "https://www.right.com.cn/forum/",
     "title": "恩山论坛",
+    "img": "/img/right.ico",
     "description": "搞基"
   },
   {
     "url": "https://tophub.today/",
     "title": "热榜",
+    "img": "/img/tophub.png",
     "description": "News"
   },
   {
     "url": "https://jubt.fun/cn/index.html",
     "title": "聚BT",
+    "img": "/img/jubt.ico",
     "description": "聚合搜索"
   },
   {
     "url": "https://www.dygod.net/",
     "title": "电影天堂",
+    "img": "/img/movie.ico",
     "description": "非4K"
   },
   {
     "url": "https://www.dydytt.net/",
     "title": "电影天堂",
+    "img": "/img/movie.ico",
     "description": "非4K"
   }
 ]
