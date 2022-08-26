@@ -111,15 +111,6 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
-    // [
-    // 	'@docusaurus/plugin-content-docs',
-    // 	{
-    // 		id: 'news',
-    // 		path: 'news',
-    // 		routeBasePath: 'news',
-    // 		sidebarPath: require.resolve('./sidebars.js'),
-    // 	},
-    // ],
   ],
 
   themeConfig:
@@ -140,7 +131,6 @@ const config = {
           },
 
           { to: "nav", label: "Nav", position: "left" },
-          { to: "news", label: "News", position: "left" },
 
           {
             type: "dropdown",
