@@ -30,6 +30,12 @@
     "description": "爬虫工具库"
   },
   {
+    "url": "  https://gchq.github.io/CyberChef",
+    "title": "加解密",
+    "img": "/img/encryption.ico",
+    "description": "a web app for encryption, encoding, compression and data analysis"
+  },
+  {
     "url": "https://curl.hjkl01.cn/",
     "title": "curl to python",
     "img": "/img/curl.ico",
