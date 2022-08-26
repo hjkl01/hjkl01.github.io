@@ -64,5 +64,11 @@
     "title": "Nginx Online",
     "img": "/img/nginx.png",
     "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
+  },
+  {
+    "url": "https://yacd.hjkl01.cn/",
+    "title": "yacd",
+    "img": "/img/yacd.ico",
+    "description": "监测clash流量"
   }
 ]
