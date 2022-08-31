@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.jpg",
+  favicon: "img/favicon-16x16.png",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -120,7 +120,7 @@ const config = {
         title: "My Notes Site",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/apple-touch-icon.png",
         },
         items: [
           {
