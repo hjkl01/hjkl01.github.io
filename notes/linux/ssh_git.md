@@ -113,8 +113,8 @@ KbdInteractiveAuthentication yes
 ChallengeResponseAuthentication yes  
 PubkeyAuthentication yes  
 PasswordAuthentication yes  
-AuthenticationMethods keyboard-interactive
-# AuthenticationMethods publickey,password publickey,keyboard-interactive
+AuthenticationMethods publickey keyboard-interactive
+# AuthenticationMethods keyboard-interactive
 
 sudo systemctl restart ssh.service
 ```
