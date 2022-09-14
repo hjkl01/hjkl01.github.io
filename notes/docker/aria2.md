@@ -28,10 +28,12 @@ services:
     volumes:
       - ${PWD}/data/aria2-config:/config
       - ${PWD}/data/aria2/downloads:/downloads
-    ports:
-     - 6800:6800
-     - 6888:6888
-     - 6888:6888/udp
+    network_mode: host
+    #  network_mode: bridge
+    #  ports:
+    #    - 6800:6800
+    #    - 6888:6888
+    #    - 6888:6888/udp
     restart: unless-stopped
     logging:
       driver: json-file
@@ -42,8 +44,10 @@ services:
     container_name: ariang
     image: p3terx/ariang
     command: --port 6880 --ipv6
-    ports:
-      - 127.0.0.1:6880:6880
+    network_mode: host
+    #  network_mode: bridge
+    #  ports:
+    #    - 127.0.0.1:6880:6880
     restart: unless-stopped
     logging:
       driver: json-file
@@ -61,6 +65,19 @@ services:
     ports:
       - 127.0.0.1:8096:8096
     restart: unless-stopped
+```
+
+## caddy
+```shell 
+movies.hjkl01.cn {
+    reverse_proxy 127.0.0.1:8096
+    encode zstd gzip
+}
+
+aria.hjkl01.cn {
+    reverse_proxy 127.0.0.1:6800
+    encode zstd gzip
+}
 ```
 
 ## nginx
