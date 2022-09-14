@@ -4,13 +4,8 @@ sidebar_position: 0
 
 # python
 
+### basic
 ```python
-# mysql-clients
-yay -S --noconfirm mysql-clients gcc
-pip install mysqlclient
-
-
-# json
 json.dumps(item, ensure_ascii=False, indent=4)
 
 # 对字典排序
@@ -19,7 +14,7 @@ sorted(_dict.items(), key=lambda d: d[1], reverse=False)
 # unicode replace
 repr()
 
-# http server
+### http server
 py2 python -m SimpleHTTPServer 8000
 py3 python -m http.server 8000
 
@@ -27,7 +22,28 @@ py3 python -m http.server 8000
 print("{:02d}".format(1))
 print(f"{1:02d}")
 
-# datetime
+# 乘法表 
+print ('\n'.join([' '.join(['%s*%s=%-2s' % (y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
+```
+
+### decorator try
+```python
+import functools
+
+def decorator_try(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as err:
+            print(err)
+            return err
+
+    return wrapper
+```
+
+### datetime
+```python
 pip install python-dateutil
 
 # yestoday
@@ -80,13 +96,18 @@ print((now - result).days)
 
 >>> local.humanize(locale='ko-kr')
 '한시간 전'
+```
 
-# read big file
+
+### read big file
+```python
 with open("log.txt") as infile:
     for line in infile:
         do_something_with(line)
+```
         
-# csv
+### csv
+```python
 import csv
 
 # read
@@ -110,8 +131,10 @@ with open('mycsvfile.csv', 'w', encoding="utf-8-sig") as f:  # You will need 'wb
     w = csv.DictWriter(f, result[0].keys())
     w.writeheader()
     w.writerows(result)
+```
 
-# asyncio
+### asyncio
+```python
 import asyncio
 import time
 
@@ -152,14 +175,19 @@ def create_generator(_range):
 result = create_generator(5)
 for i in result:
     print(i)
+```
 
-
-# xmljson
+### xmljson
+```python
 import xmljson
 from lxml.etree import  fromstring,tostring
 
 json.loads(json.dumps(xmljson.badgerfish.data(fromstring(con.encode()))))
+```
 
-# 乘法表 
-print ('\n'.join([' '.join(['%s*%s=%-2s' % (y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
+### mysql
+```python
+# mysql-clients
+yay -S --noconfirm mysql-clients gcc
+pip install mysqlclient
 ```
