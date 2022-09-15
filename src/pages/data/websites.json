@@ -1,68 +1,74 @@
 [
-  {
-    "url": "https://notes.hjkl01.cn/",
-    "title": "blog/notes by docusaurus",
-    "img": "/img/logo.svg",
-    "description": "我的笔记"
-  },
-  {
-    "url": "https://hexo.hjkl01.cn/",
-    "title": "hexo",
-    "img": "/img/hexo.png",
-    "description": "stop update"
-  },
-  {
-    "url": "https://hugo.hjkl01.cn/",
-    "title": "hugo",
-    "img": "/img/hugo.png",
-    "description": "stop update"
-  },
-  {
-    "url": "https://jsonv.hjkl01.cn/editor/",
-    "title": "JSON Valid",
-    "img": "/img/jsonvalid.ico",
-    "description": "Json视图"
-  },
-  {
-    "url": "https://nginx.hjkl01.cn/",
-    "title": "Nginx Online",
-    "img": "/img/nginx.png",
-    "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
-  },
-  {
-    "url": "https://crontab.pages.dev/",
-    "title": "crontab ui",
-    "img": "/img/crontab.ico",
-    "description": "Cron expression generator by Cronhub"
-  },
-  {
-    "url": "https://curl.hjkl01.cn/",
-    "title": "curl to python",
-    "img": "/img/curl.ico",
-    "description": "Convert curl commands to code"
-  },
-  {
-    "url": "https://map.hjkl01.cn/",
-    "title": "地图数据",
-    "img": "/img/map.ico",
-    "description": "fork"
-  },
-  {
-    "url": "https://dber.hjkl01.cn/",
-    "title": "Database design tool based on entity relation diagram",
-    "img": "/img/dber.ico",
-    "description": "fork"
-  },
-  {
-    "url": "https://yacd.hjkl01.cn/",
-    "title": "Yet Another Clash Dashboard",
-    "img": "/img/yacd.ico",
-    "description": "fork"
-  },
-  {
-    "url": "https://drf.hjkl01.cn/",
-    "title": "drf中文文档",
-    "img": "/img/drf.ico",
-    "description": "fork"
-  }
+    {
+        "url": "https://notes.hjkl01.cn/",
+        "title": "blog/notes by docusaurus",
+        "img": "/img/logo.svg",
+        "description": "我的笔记"
+    },
+    {
+        "url": "https://hexo.hjkl01.cn/",
+        "title": "hexo",
+        "img": "/img/hexo.png",
+        "description": "stop update"
+    },
+    {
+        "url": "https://hugo.hjkl01.cn/",
+        "title": "hugo",
+        "img": "/img/hugo.png",
+        "description": "stop update"
+    },
+    {
+        "url": "https://ascn.hjkl01.cn/",
+        "title": "awesome list chinese",
+        "img": "",
+        "description": "超赞合集"
+    },
+    {
+        "url": "https://jsonv.hjkl01.cn/editor/",
+        "title": "JSON Valid",
+        "img": "/img/jsonvalid.ico",
+        "description": "Json视图"
+    },
+    {
+        "url": "https://nginx.hjkl01.cn/",
+        "title": "Nginx Online",
+        "img": "/img/nginx.png",
+        "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
+    },
+    {
+        "url": "https://crontab.pages.dev/",
+        "title": "crontab ui",
+        "img": "/img/crontab.ico",
+        "description": "Cron expression generator by Cronhub"
+    },
+    {
+        "url": "https://curl.hjkl01.cn/",
+        "title": "curl to python",
+        "img": "/img/curl.ico",
+        "description": "Convert curl commands to code"
+    },
+    {
+        "url": "https://map.hjkl01.cn/",
+        "title": "地图数据",
+        "img": "/img/map.ico",
+        "description": "fork"
+    },
+    {
+        "url": "https://dber.hjkl01.cn/",
+        "title": "Database design tool based on entity relation diagram",
+        "img": "/img/dber.ico",
+        "description": "fork"
+    },
+    {
+        "url": "https://yacd.hjkl01.cn/",
+        "title": "Yet Another Clash Dashboard",
+        "img": "/img/yacd.ico",
+        "description": "fork"
+    },
+    {
+        "url": "https://drf.hjkl01.cn/",
+        "title": "drf中文文档",
+        "img": "/img/drf.ico",
+        "description": "fork"
+    }
 ]

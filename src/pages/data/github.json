@@ -1,20 +1,20 @@
 [
-  {
-    "url": "https://github.com/hjkl01/hjkl01.github.io",
-    "title": "blog/notes by docusaurus",
-    "img": "/img/logo.svg",
-    "description": "我的笔记"
-  },
-  {
-    "url": "https://github.com/hjkl01/dotfiles",
-    "title": "装机",
-    "img": "/img/github.png",
-    "description": " 我的Mac/Linux 配置"
-  },
-  {
-    "url": "https://github.com/hjkl01/init.lua",
-    "title": "我的neovim配置",
-    "img": "/img/github.png",
-    "description": "forked from https://github.com/NvChad/NvChad"
-  }
+    {
+        "url": "https://github.com/hjkl01/hjkl01.github.io",
+        "title": "blog/notes by docusaurus",
+        "img": "/img/logo.svg",
+        "description": "我的笔记"
+    },
+    {
+        "url": "https://github.com/hjkl01/dotfiles",
+        "title": "装机",
+        "img": "/img/github.png",
+        "description": " 我的Mac/Linux 配置"
+    },
+    {
+        "url": "https://github.com/hjkl01/init.lua",
+        "title": "我的neovim配置",
+        "img": "/img/github.png",
+        "description": "forked from https://github.com/NvChad/NvChad"
+    }
 ]
