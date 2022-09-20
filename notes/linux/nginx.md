@@ -3,8 +3,10 @@ sidebar_position: 1
 ---
 
 # nginx
-## 推荐在线配置
-> https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
+
+> 可视化配置 [nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager)
+
+> 在线配置 [nginxconfig.io](https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN)
 
 ## https证书
 
@@ -34,10 +36,10 @@ server {
 
     root /html/github/;
 
-	location / {
-		# try_files $uri $uri/ =404;
-		try_files $uri $uri /index.html;
-	}
+	  location / {
+	  	# try_files $uri $uri/ =404;
+	  	try_files $uri $uri /index.html;
+	  }
 
 
     # ip
