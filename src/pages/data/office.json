@@ -6,21 +6,21 @@
         "description": "Aria2 管理平台"
     },
     {
-        "url": "https://nj.hjkl01.cn:18096/",
-        "title": "Jellyfin",
-        "img": "/img/jellyfin.ico",
-        "description": "在线观看"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:15212/home",
-        "title": "Cloudreve",
-        "img": "/img/cloudreve.ico",
-        "description": "云盘"
+        "url": "https://nj.hjkl01.cn:8096/",
+        "title": "Alist",
+        "img": "/img/alist.svg",
+        "description": "云盘 for movies"
     },
     {
         "url": "https://nj.hjkl01.cn:15244/",
         "title": "Alist",
         "img": "/img/alist.svg",
+        "description": "云盘 for spider"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:15212/home",
+        "title": "Cloudreve",
+        "img": "/img/cloudreve.ico",
         "description": "云盘"
     },
     {
