@@ -30,6 +30,12 @@
         "description": "云盘"
     },
     {
+        "url": "https://nj.hjkl01.cn:37018",
+        "title": "Mongo Express",
+        "img": "/img/mongoexpress.ico",
+        "description": "Mongo"
+    },
+    {
         "url": "https://nj.hjkl01.cn:13000/",
         "title": "Mstream",
         "img": "/img/mstream.ico",
