@@ -42,6 +42,18 @@
         "description": "News"
     },
     {
+        "url": "https://www.hdtvbt.com/4k",
+        "title": "HD TV",
+        "img": "/img/movie.ico",
+        "description": "4K"
+    },
+    {
+        "url": "https://www.yinfans.me/",
+        "title": "音范丝|影音集",
+        "img": "/img/movie.ico",
+        "description": "4K"
+    },
+    {
         "url": "https://jubt.fun/cn/index.html",
         "title": "聚BT",
         "img": "/img/jubt.ico",
