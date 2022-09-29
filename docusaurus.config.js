@@ -78,6 +78,15 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "github",
+        path: "notes/github",
+        routeBasePath: "github",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
         id: "docker",
         path: "notes/docker",
         routeBasePath: "notes/docker",
@@ -143,6 +152,7 @@ const config = {
               { to: "/notes/mac", label: "Mac" },
             ],
           },
+          { to: "github", label: "Awesome Github", position: "left" },
 
           { to: "/blog", label: "Blog", position: "right" },
           {
