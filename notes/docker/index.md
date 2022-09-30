@@ -42,4 +42,6 @@ networks:
   default:
     external:
       name: nginx-proxy
+
+# docker network create nginx-proxy
 ```
