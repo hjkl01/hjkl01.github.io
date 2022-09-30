@@ -37,4 +37,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./data/portainer:/data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
