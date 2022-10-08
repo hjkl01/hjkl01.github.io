@@ -14,7 +14,8 @@ import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
 import tools from "./data/tools.json";
-import github from "./data/github.json";
+// import github from "./data/github.json";
+import movies from "./data/movies.json";
 import websites from "./data/websites.json";
 import fish from "./data/fish.json";
 import office from "./data/office.json";
@@ -63,16 +64,20 @@ function App() {
           <GenElement websites={tools} />
         </TabPane>
 
-        <TabPane tab="Office" key="5">
+        <TabPane tab="Office" key="office">
           <GenElement websites={office} />
         </TabPane>
 
-        <TabPane tab="Cloudflare" key="3">
+        <TabPane tab="Cloudflare" key="cloudflare">
           <GenElement websites={websites} />
         </TabPane>
 
-        <TabPane tab="学习(摸鱼)" key="4">
+        <TabPane tab="Learn(Fish)" key="fish">
           <GenElement websites={fish} />
+        </TabPane>
+
+        <TabPane tab="Funny" key="movies">
+          <GenElement websites={movies} />
         </TabPane>
 
       </Tabs>

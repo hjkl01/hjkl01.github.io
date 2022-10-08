@@ -1,0 +1,56 @@
+[
+    {
+        "url": "https://www.hdtvbt.com/4k",
+        "title": "HD TV",
+        "img": "/img/movie.ico",
+        "description": "4K"
+    },
+    {
+        "url": "https://www.yinfans.me/",
+        "title": "音范丝|影音集",
+        "img": "/img/movie.ico",
+        "description": "4K"
+    },
+    {
+        "url": "https://jubt.fun/cn/index.html",
+        "title": "聚BT",
+        "img": "/img/jubt.ico",
+        "description": "聚合搜索"
+    },
+    {
+        "url": "https://www.dygod.net/",
+        "title": "电影天堂",
+        "img": "/img/movie.ico",
+        "description": "非4K"
+    },
+    {
+        "url": "https://www.dydytt.net/",
+        "title": "电影天堂",
+        "img": "/img/movie.ico",
+        "description": "非4K"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:16880/",
+        "title": "AriaNg",
+        "img": "/img/ariang.png",
+        "description": "Aria2 管理平台"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:18096/",
+        "title": "jellyfin",
+        "img": "/img/jellyfin.ico",
+        "description": "影视"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:15244/",
+        "title": "Alist",
+        "img": "/img/alist.svg",
+        "description": "云盘 for movies"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:13000/",
+        "title": "Mstream",
+        "img": "/img/mstream.ico",
+        "description": "在线听音乐"
+    }
+]
