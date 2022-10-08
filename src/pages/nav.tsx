@@ -63,8 +63,8 @@ function App() {
           <GenElement websites={tools} />
         </TabPane>
 
-        <TabPane tab="Github" key="2">
-          <GenElement websites={github} />
+        <TabPane tab="Office" key="5">
+          <GenElement websites={office} />
         </TabPane>
 
         <TabPane tab="Cloudflare" key="3">
@@ -75,9 +75,6 @@ function App() {
           <GenElement websites={fish} />
         </TabPane>
 
-        <TabPane tab="Office" key="5">
-          <GenElement websites={office} />
-        </TabPane>
       </Tabs>
     </div>
   );

@@ -1,23 +1,5 @@
 [
     {
-        "url": "https://nj.hjkl01.cn:16880/",
-        "title": "AriaNg",
-        "img": "/img/ariang.png",
-        "description": "Aria2 管理平台"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:18096/",
-        "title": "jellyfin",
-        "img": "/img/jellyfin.ico",
-        "description": "影视"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:15244/",
-        "title": "Alist",
-        "img": "/img/alist.svg",
-        "description": "云盘 for movies"
-    },
-    {
         "url": "https://nj.hjkl01.cn:25244/",
         "title": "Alist",
         "img": "/img/alist.svg",
@@ -34,12 +16,6 @@
         "title": "Mongo Express",
         "img": "/img/mongoexpress.ico",
         "description": "Mongo"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:13000/",
-        "title": "Mstream",
-        "img": "/img/mstream.ico",
-        "description": "在线听音乐"
     },
     {
         "url": "https://nj.hjkl01.cn:33000/",
