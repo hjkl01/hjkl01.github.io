@@ -5,22 +5,25 @@ sidebar_position: 2
 # arch
 
 
-## wiki
-> link: https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
+## install on vps
+  - wiki: https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
 
-### ⚠️ 设置root的密码
+  - ### ⚠️ 设置root的密码
 
-```shell
-# wget https://tinyurl.com/vps2arch 也会被重定向到以下 url
-wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
+  ```shell
+  # wget https://tinyurl.com/vps2arch 也会被重定向到以下 url
+  wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
 
-# 启动脚本
-sh ./vps2arch
+  # 启动脚本
+  sh ./vps2arch
 
-# 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如
-sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
-sync ; reboot -f
-```
+  # 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如
+  sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
+  sync ; reboot -f
+  ```
+
+### 安装
+  - [archlinux](https://github.com/archlinux/archinstall)
 
 ### 源设置
 ```shell 
@@ -62,7 +65,6 @@ zh_CN.UTF-8 UTF-8
 # 执行 locale-gen
 
 # 创建 /etc/locale.conf 并编辑 LANG 这一 变量，比如：
-
 # LANG=zh_CN.UTF-8
 ```
 
