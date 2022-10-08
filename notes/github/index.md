@@ -68,6 +68,8 @@ sidebar_position: 0
 - https://eagleget.en.softonic.com/
 - download img: 
   - https://www.microsoft.com/zh-cn/software-download/windows10ISO
+  - https://hellowindows.cn/
+  - https://msdn.sjjzm.com/win10.html
   - https://next.itellyou.cn/
 
 ### Desktop
