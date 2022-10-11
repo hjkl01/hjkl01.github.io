@@ -50,6 +50,20 @@ git submodule update --remote
 ; 	insteadOf = https://github.com
 ```
 
+#### git branch
+```shell
+git branch -a # 查看全部分支
+git checkout -b dev # 创建并检出一个新的分支
+git add somefile
+git commit -m "update feature"
+git push -u origin dev
+
+git checkout master 
+git merge dev
+git branch -d dev # 删除dev分支
+git branch -d origin/dev # 删除远程dev分支
+```
+
 ### ssh
 ```shell
 # $HOME/.ssh/config
@@ -81,7 +95,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 # 转发服务器到本机的1082端口
 ssh -D 1082 -f -C -q -N archServer
 ```
-### ssh TOTP 开启二次验证
+#### ssh TOTP 开启二次验证
 
 ```shell 
 # ubuntu 
@@ -120,12 +134,14 @@ sudo systemctl restart ssh.service
 ```
 
 
-### 星图
+### github
 
-#### 在markdown中的代码:
+#### 星图
+
+##### 在markdown中的代码:
 ```shell
 ![stars](https://starchart.cc/lesssound/pornhub.svg)
 ```
 
-#### example:
+##### example:
 ![stars](https://starchart.cc/lesssound/pornhub.svg)
