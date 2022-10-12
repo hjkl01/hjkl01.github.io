@@ -50,7 +50,7 @@ git submodule update --remote
 ; 	insteadOf = https://github.com
 ```
 
-#### git branch
+#### git commands
 ```shell
 git branch -a # 查看全部分支
 git checkout -b dev # 创建并检出一个新的分支
@@ -62,6 +62,10 @@ git checkout master
 git merge dev
 git branch -d dev # 删除dev分支
 git branch -d origin/dev # 删除远程dev分支
+
+# 回退版本
+git reset --hard HEAD^
+git reset --hard somecommit
 ```
 
 ### ssh
