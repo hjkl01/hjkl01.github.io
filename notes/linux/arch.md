@@ -25,6 +25,17 @@ sidebar_position: 2
 ### 安装
   - [archlinux](https://github.com/archlinux/archinstall)
 
+### wifi
+```shell
+iwctl
+device list
+
+station list
+station wlan0 scan
+station wlan0 show
+station wlan0 connect SSID
+```
+
 ### 源设置
 ```shell 
 # /etc/pacman.d/mirrorlist
