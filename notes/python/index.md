@@ -191,3 +191,41 @@ json.loads(json.dumps(xmljson.badgerfish.data(fromstring(con.encode()))))
 yay -S --noconfirm mysql-clients gcc
 pip install mysqlclient
 ```
+
+### 转码
+```python
+import os
+import chardet
+
+
+def trans(filename):
+    print("file=====", filename)
+    with open(f"txt/{filename}", "rb") as file:
+        con = file.read()
+    _char = chardet.detect(con)["encoding"]
+    print("char is ", _char)
+
+    if "utf-8" in _char or "UTF-8" in _char:
+        cmd = f"mv txt/{filename} result/{filename}"
+    else:
+        cmd = f"iconv -c -f {_char} -t UTF-8 txt/{filename} > result/{filename}"
+    print(cmd)
+    os.system(cmd)
+
+
+def main():
+    txts = os.listdir("txt")
+    for txt in txts:
+        if ".txt" not in txt:
+            print(txt)
+            continue
+        try:
+            trans(txt)
+        except Exception as err:
+            print(err)
+        continue
+
+
+if __name__ == "__main__":
+    main()
+```
