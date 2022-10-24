@@ -1,33 +1,39 @@
 [
     {
-        "url": "https://www.hdtvbt.com/4k",
-        "title": "HD TV",
-        "img": "/img/movie.ico",
-        "description": "4K"
-    },
-    {
-        "url": "https://www.yinfans.me/",
-        "title": "音范丝|影音集",
-        "img": "/img/movie.ico",
-        "description": "4K"
-    },
-    {
         "url": "https://jubt.fun/cn/index.html",
         "title": "聚BT",
         "img": "/img/jubt.ico",
         "description": "聚合搜索"
     },
     {
+        "url": "https://www.hdtvbt.com/4k",
+        "title": "HD TV",
+        "img": "/img/movie.ico",
+        "description": "磁力下载4K"
+    },
+    {
+        "url": "https://www.yinfans.me/",
+        "title": "音范丝|影音集",
+        "img": "/img/movie.ico",
+        "description": "磁力下载4K"
+    },
+    {
         "url": "https://www.dygod.net/",
         "title": "电影天堂",
         "img": "/img/movie.ico",
-        "description": "非4K"
+        "description": "磁力下载"
     },
     {
         "url": "https://www.dydytt.net/",
         "title": "电影天堂",
         "img": "/img/movie.ico",
-        "description": "非4K"
+        "description": "磁力下载"
+    },
+    {
+        "url": "https://www.bdys01.com/",
+        "title": "哔嘀影视",
+        "img": "/img/bdys01.png",
+        "description": "磁力下载"
     },
     {
         "url": "https://nj.hjkl01.cn:16880/",
