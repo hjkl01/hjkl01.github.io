@@ -58,5 +58,11 @@
         "title": "Mstream",
         "img": "/img/mstream.ico",
         "description": "在线听音乐"
+    },
+    {
+        "url": "https://music.api.hjkl01.cn/",
+        "title": "Mstream",
+        "img": "/img/mstream.ico",
+        "description": "在线听音乐"
     }
 ]
