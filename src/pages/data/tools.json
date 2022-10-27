@@ -24,7 +24,7 @@
         "description": "爬虫工具库"
     },
     {
-        "url": "https://crontab.pages.dev/",
+        "url": "https://crontab.hjkl01.cn/",
         "title": "crontab ui",
         "img": "/img/crontab.ico",
         "description": "Cron expression generator by Cronhub"
@@ -36,13 +36,13 @@
         "description": "DB 可视化"
     },
     {
-        "url": "https://jsonv.hjkl01.cn/editor/",
+        "url": "https://json.hjkl01.cn/editor/",
         "title": "JSON Valid",
         "img": "/img/jsonvalid.ico",
         "description": "Json视图"
     },
     {
-        "url": "  https://gchq.github.io/CyberChef",
+        "url": "https://tools.hjkl01.cn/",
         "title": "加解密",
         "img": "/img/encryption.ico",
         "description": "a web app for encryption, encoding, compression and data analysis"

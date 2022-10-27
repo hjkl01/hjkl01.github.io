@@ -14,9 +14,7 @@ import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
 import tools from "./data/tools.json";
-// import github from "./data/github.json";
 import movies from "./data/movies.json";
-import websites from "./data/websites.json";
 import fish from "./data/fish.json";
 import office from "./data/office.json";
 
@@ -66,10 +64,6 @@ function App() {
 
         <TabPane tab="Office" key="office">
           <GenElement websites={office} />
-        </TabPane>
-
-        <TabPane tab="Cloudflare" key="cloudflare">
-          <GenElement websites={websites} />
         </TabPane>
 
         <TabPane tab="Learn(Fish)" key="fish">
