@@ -26,9 +26,8 @@ news.hjkl01.cn {
 blog.hjkl01.cn {
     root * /data/blog
     templates
-    file_server {
-            precompressed zstd br gzip
-        }
+    file_server browse
+    try_files {path} {path}.html
 
     log {
         output file /var/log/caddy/access.log {
