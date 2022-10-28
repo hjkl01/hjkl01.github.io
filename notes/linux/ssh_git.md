@@ -23,13 +23,6 @@ git submodule update --remote
 #### ~/.gitconfig
 ```shell 
 # ~/.gitconfig
-[http "https://github.com"]
-	postBuffer = 524288000
-	proxy = socks5://127.0.0.1:1080
-[https "https://github.com"]
-	postBuffer = 524288000
-	proxy = socks5://127.0.0.1:1080
-
 [pull]
 	rebase = false
 [user]
@@ -43,8 +36,19 @@ git submodule update --remote
 [init]
 	defaultBranch = master
 
-; [url "https://ghproxy.com/https://github.com/"]
-; 	insteadOf = https://github.com
+[alias]
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lp = log --stat -p
+
+; [http "https://github.com"]
+; 	postBuffer = 524288000
+; 	proxy = socks5://127.0.0.1:1080
+; [https "https://github.com"]
+; 	postBuffer = 524288000
+; 	proxy = socks5://127.0.0.1:1080
+
+[url "https://ghproxy.com/https://github.com/"]
+	insteadOf = https://github.com
 
 ; [url "https://gitclone.com/github.com/"]
 ; 	insteadOf = https://github.com
