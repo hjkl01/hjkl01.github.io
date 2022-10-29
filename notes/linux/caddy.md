@@ -38,3 +38,12 @@ blog.hjkl01.cn {
     }
 }
 ```
+
+### auth 
+```shell
+caddy hash-password
+
+basicauth /* {
+        username output
+}
+```
