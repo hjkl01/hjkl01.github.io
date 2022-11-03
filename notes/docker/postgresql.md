@@ -75,6 +75,9 @@ sudo /etc/init.d/postgresql restart
 # 查询有外键的数据
 select count(*) from "case" where court_id in (select id from court where province ='');
 
+# update existed data 
+update sometable set somekey = concat('new value', somekey) where prod_code = '12345'
+
 # 导出数据结构
 python -m pwiz -e postgresql -u user -P db > model.py
 python -m pwiz -e mysql -H 192.168.1.x -u root -P dbname > model.py
