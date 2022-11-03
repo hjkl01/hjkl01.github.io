@@ -27,7 +27,8 @@ blog.hjkl01.cn {
     root * /data/blog
     templates
     file_server browse
-    try_files {path} {path}.html
+    try_files {path} /index.html
+    # try_files {path} {path}.html
 
     log {
         output file /var/log/caddy/access.log {
