@@ -47,11 +47,9 @@ git submodule update --remote
 ; 	postBuffer = 524288000
 ; 	proxy = socks5://127.0.0.1:1080
 
+; [url "https://gitclone.com/github.com/"]
 [url "https://ghproxy.com/https://github.com/"]
 	insteadOf = https://github.com
-
-; [url "https://gitclone.com/github.com/"]
-; 	insteadOf = https://github.com
 ```
 
 #### git commands
@@ -75,25 +73,20 @@ git reset --hard somecommit
 ### ssh
 ```shell
 # $HOME/.ssh/config
-Host github
-   HostName github.com
-   User git
-   # 走 HTTP 代理
-   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport=8080
-   # 走 socks5 代理
-   ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
-
 
 Host archServer
     HostName 192.168.xx.xx
     User xxx
     Port xxx
-    # use ipv4
-    # AddressFamily inet
+    # AddressFamily inet # use ipv4
+    # AddressFamily inet6 # use ipv6
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_rsa
     ServerAliveInterval 120
-    
+    # DynamicForward localhsot:1080
+    # LocalForward localhost:5432 remote-host:5432 
+    # RemoteForward remote-port target-host:target-port
+
 # 转发跳板机端口
 ssh -tt -i ./id_rsa -L 0.0.0.0:local_port:host2:host2_port user@host1
 
@@ -102,7 +95,16 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 
 # 转发服务器到本机的1082端口
 ssh -D 1082 -f -C -q -N archServer
+
+# Host github
+#    HostName github.com
+#    User git
+#    # 走 HTTP 代理
+#    # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport=8080
+#    # 走 socks5 代理
+#    ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
 ```
+
 #### ssh TOTP 开启二次验证
 
 ```shell 
