@@ -17,15 +17,6 @@ services:
     restart: unless-stopped
 ```
 
-## trojan-go
-```shell
-brew install trojan-go
-
-# 修改 /usr/local/etc/trojan-go/config.json
-
-brew service start trojan-go
-```
-
 ## [glider](https://github.com/nadoo/glider/blob/master/config/glider.conf.example)
 ```shell
 yay -S glider
@@ -40,12 +31,79 @@ listen=:1080
 forward=trojan://password@ip:443
 ```
 
-## trojan
+## trojan/trojan-go
 ```shell
 https://github.com/trojan-gfw/trojan
+
 # 机场推荐: https://portal.shadowsocks.nz/aff.php?aff=24252
 
-# 部署 https://github.com/Jrohy/trojan
+
+# 部署参考 https://github.com/Jrohy/trojan
+
+ufw allow 80 443 
+certbot certonly --standalone -d domain.com -v 
+# crontab
+15 2 * */2 * certbot renew 
+
+# arch 开启 bbr 
+echo "tcp_bbr" > /etc/modules-load.d/modules.conf
+
+echo "net.core.default_qdisc=fq" > /etc/sysctl.d/bbr.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.d/bbr.conf
+reboot
+
+# 验证
+sysctl net.ipv4.tcp_congestion_control
+# net.ipv4.tcp_congestion_control = bbr
+```
+### server /etc/trojan/config.json
+```json
+{
+    "run_type": "server",
+    "local_addr": "0.0.0.0",
+    "local_port": 443,
+    "remote_addr": "github.com",
+    "remote_port": 80,
+    "password": [
+        "password",
+        "password2"
+    ],
+    "log_level": 1,
+    "ssl": {
+        "cert": "/etc/letsencrypt/live/domain.com/fullchain.pem",
+        "key": "/etc/letsencrypt/live/domain.com/privkey.pem",
+        "key_password": "",
+        "cipher": "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384",
+        "cipher_tls13": "TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384",
+        "prefer_server_cipher": true,
+        "alpn": [
+            "http/1.1"
+        ],
+        "alpn_port_override": {
+            "h2": 81
+        },
+        "reuse_session": true,
+        "session_ticket": false,
+        "session_timeout": 600,
+        "plain_http_response": "",
+        "curves": "",
+        "dhparam": ""
+    }
+}
+```
+
+### client config.json
+```json
+{
+    "run_type": "client",
+    "local_addr": "127.0.0.1",
+    "local_port": 1080,
+    "remote_addr": "domain.com",
+    "remote_port": 443,
+    "password": [
+        "password"
+    ]
+}
 ```
 
 ## socks5 转 http 

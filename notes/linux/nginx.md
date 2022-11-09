@@ -12,6 +12,7 @@ sidebar_position: 1
 
 ```shell
 # 安装certbot
+# sudo ufw allow 80
 yay -S --noconfirm certbot
 sudo certbot certonly --standalone -d domain
 sudo certbot certonly -d domain --webroot -w /html/filepath/
