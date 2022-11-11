@@ -29,10 +29,10 @@ services:
       - ${PWD}/data/aria2/aria2-config:/config
       - ${PWD}/data/downloads:/downloads
     # network_mode: host
-     ports:
-       - 6800:6800
-       - 6888:6888
-       - 6888:6888/udp
+    ports:
+      - 6800:6800
+      - 6888:6888
+      - 6888:6888/udp
     restart: unless-stopped
     logging:
       driver: json-file
@@ -77,8 +77,6 @@ networks:
   default:
     external:
       name: nginx-proxy
-
-
 ```
 
 ## caddy
