@@ -17,7 +17,7 @@ services:
       - PUID=65534
       - PGID=65534
       - UMASK_SET=022
-      - RPC_SECRET=!!!update_me
+      - RPC_SECRET=updateme
       - RPC_PORT=6800
       - LISTEN_PORT=6888
       - DISK_CACHE=64M
@@ -26,14 +26,13 @@ services:
       - CUSTOM_TRACKER_URL=
       - TZ=Asia/Shanghai
     volumes:
-      - ${PWD}/data/aria2-config:/config
-      - ${PWD}/data/aria2/downloads:/downloads
-    network_mode: host
-    #  network_mode: bridge
-    #  ports:
-    #    - 6800:6800
-    #    - 6888:6888
-    #    - 6888:6888/udp
+      - ${PWD}/data/aria2/aria2-config:/config
+      - ${PWD}/data/downloads:/downloads
+    # network_mode: host
+     ports:
+       - 6800:6800
+       - 6888:6888
+       - 6888:6888/udp
     restart: unless-stopped
     logging:
       driver: json-file
@@ -44,26 +43,23 @@ services:
     container_name: ariang
     image: p3terx/ariang
     command: --port 6880 --ipv6
-    network_mode: host
-    #  network_mode: bridge
-    #  ports:
-    #    - 127.0.0.1:6880:6880
+    ports:
+      - 127.0.0.1:6880:6880
     restart: unless-stopped
     logging:
       driver: json-file
       options:
         max-size: 1m
-        
-  # jellyfin
+
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin_server
     volumes:
       - ./data/jellyfin/config:/config # Configuration directory
       - ./data/jellyfin/cache:/cache
-      - ./data/aria2/downloads:/downloads
+      - ./data/downloads:/downloads
     ports:
-      - 127.0.0.1:8096:8096
+      - 127.0.0.1:18096:8096
     restart: unless-stopped
 
 
@@ -72,15 +68,16 @@ services:
     image: xhofe/alist:latest
     restart: unless-stopped
     ports:
-      - "5244:5244"
+      - "127.0.0.1:15244:5244"
     volumes:
       - ./data/alist:/opt/alist/data
-      - /some_dir:/mnt
+      - ./data/downloads:/mnt
 
 networks:
   default:
     external:
       name: nginx-proxy
+
 
 ```
 
