@@ -65,16 +65,33 @@ services:
     ports:
       - 127.0.0.1:8096:8096
     restart: unless-stopped
+
+
+  alist:
+    container_name: alist
+    image: xhofe/alist:latest
+    restart: unless-stopped
+    ports:
+      - "5244:5244"
+    volumes:
+      - ./data/alist:/opt/alist/data
+      - /some_dir:/mnt
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+
 ```
 
 ## caddy
 ```shell 
-movies.hjkl01.cn {
+movies.domain.com {
     reverse_proxy 127.0.0.1:8096
     encode zstd gzip
 }
 
-aria.hjkl01.cn {
+aria.domain.com {
     reverse_proxy 127.0.0.1:6800
     encode zstd gzip
 }

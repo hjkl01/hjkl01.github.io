@@ -272,7 +272,7 @@ http {
 ```yaml
 version: "3.8"
 services:
-  cloudreve:
+  alist:
     container_name: alist
     image: xhofe/alist:latest
     restart: unless-stopped
