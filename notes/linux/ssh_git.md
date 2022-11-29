@@ -2,9 +2,10 @@
 sidebar_position: 1
 ---
 
-# git ssh 
+# git ssh
 
 ### git
+
 ```shell
 # generate public key
 git config --global user.name ""
@@ -21,13 +22,14 @@ git submodule update --remote
 ```
 
 #### ~/.gitconfig
-```shell 
+
+```shell
 # ~/.gitconfig
 [pull]
 	rebase = false
 [user]
-	email = 
-	name = 
+	email =
+	name =
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -53,6 +55,7 @@ git submodule update --remote
 ```
 
 #### git commands
+
 ```shell
 git branch -a # 查看全部分支
 git checkout -b dev # 创建并检出一个新的分支
@@ -60,7 +63,7 @@ git add somefile
 git commit -m "update feature"
 git push -u origin dev
 
-git checkout master 
+git checkout master
 git merge dev
 git branch -d dev # 删除dev分支
 git branch -d origin/dev # 删除远程dev分支
@@ -71,6 +74,7 @@ git reset --hard somecommit
 ```
 
 ### ssh
+
 ```shell
 # $HOME/.ssh/config
 
@@ -84,7 +88,7 @@ Host archServer
     IdentityFile ~/.ssh/id_rsa
     ServerAliveInterval 120
     # DynamicForward localhsot:1080
-    # LocalForward localhost:5432 remote-host:5432 
+    # LocalForward localhost:5432 remote-host:5432
     # RemoteForward remote-port target-host:target-port
 
 # 转发跳板机端口
@@ -107,51 +111,53 @@ ssh -D 1082 -f -C -q -N archServer
 
 #### ssh TOTP 开启二次验证
 
-```shell 
-# ubuntu 
+```shell
+# ubuntu
 sudo apt install -y libpam-google-authenticator
 
-# arch 
-yay -S --noconfirm google-authenticator-libpam-git
+# arch
+# yay -S --noconfirm google-authenticator-libpam-git
+sudo pacman -S --noconfirm libpam-google-authenticator
 
-# 生成验证码  
-# 哪个账号需要动态验证码，请切换到该账号下操作  
-# -t: 使用 TOTP 验证  
-# -f: 将配置保存到 ~/.google_authenticator 文件里面  
-# -d: 不允许重复使用以前使用的令牌  
-# -w 3: 使用令牌进行身份验证以进行时钟偏移  
-# -e 10: 生成 10 个紧急备用代码  
-# -r 3 -R 30: 限速 - 每 30 秒允许 3 次登录  
+# 生成验证码
+# 哪个账号需要动态验证码，请切换到该账号下操作
+# -t: 使用 TOTP 验证
+# -f: 将配置保存到 ~/.google_authenticator 文件里面
+# -d: 不允许重复使用以前使用的令牌
+# -w 3: 使用令牌进行身份验证以进行时钟偏移
+# -e 10: 生成 10 个紧急备用代码
+# -r 3 -R 30: 限速 - 每 30 秒允许 3 次登录
 google-authenticator -t -f -d -w 3 -e 10 -r 3 -R 30
 
 # chrome 插件 https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai
 # android app Google Authenticator https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US
 
-sudo vim /etc/pam.d/sshd  
+sudo vim /etc/pam.d/sshd
 
 auth required pam_google_authenticator.so
 
-sudo nvim /etc/ssh/sshd_config 
+sudo nvim /etc/ssh/sshd_config
 
 KbdInteractiveAuthentication yes
-ChallengeResponseAuthentication yes  
-PubkeyAuthentication yes  
-PasswordAuthentication yes  
+ChallengeResponseAuthentication yes
+PubkeyAuthentication yes
+PasswordAuthentication yes
 AuthenticationMethods publickey keyboard-interactive
 # AuthenticationMethods keyboard-interactive
 
 sudo systemctl restart ssh.service
 ```
 
-
 ### github
 
 #### 星图
 
-##### 在markdown中的代码:
+##### 在 markdown 中的代码:
+
 ```shell
 ![stars](https://starchart.cc/lesssound/pornhub.svg)
 ```
 
 ##### example:
+
 ![stars](https://starchart.cc/lesssound/pornhub.svg)

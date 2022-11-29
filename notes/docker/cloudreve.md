@@ -31,41 +31,17 @@ services:
       - ./data/cloudreve/conf.ini:/cloudreve/conf.ini
       - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
       - ./data/cloudreve/avatar:/cloudreve/avatar
-    depends_on:
-      - Aria2-Pro
 
-  Aria2-Pro:
-    container_name: aria2-pro
-    image: p3terx/aria2-pro
-    environment:
-      - PUID=65534
-      - PGID=65534
-      - UMASK_SET=022
-      - RPC_SECRET=0b5c74bcc83fc89f29b6f9f4e8a812ef87f69258
-      - RPC_PORT=6800
-      - LISTEN_PORT=6888
-      - DISK_CACHE=64M
-      - IPV6_MODE=true
-      - UPDATE_TRACKERS=true
-      # - CUSTOM_TRACKER_URL=
-      - TZ=Asia/Shanghai
-    volumes:
-      - ./data/aria2/config:/config
-      - ./data/aria2/downloads:/downloads
-    restart: unless-stopped
-    ports:
-     - 16800:6800
-     - 16888:6888
-     - 16888:6888/udp
-    logging:
-      driver: json-file
-      options:
-        max-size: 1m
 
-``` 
+networks:
+  default:
+    external:
+      name: nginx-proxy
+```
 
-### nginx 
-```shell 
+### nginx
+
+```shell
 server {
     listen 15212 ssl http2;
     listen [::]:15212 ssl http2;
@@ -89,10 +65,10 @@ server {
 }
 ```
 
-
 ## minIO
+
 ```yaml
-version: '3.7'
+version: "3.7"
 
 # Settings and configurations that are common for all containers
 x-minio-common: &minio-common
@@ -155,9 +131,10 @@ services:
       - minio2
       - minio3
       - minio4
-  ```
+```
 
 ### nginx
+
 ```shell
 user  nginx;
 worker_processes  auto;
@@ -253,12 +230,12 @@ http {
             real_ip_header X-Real-IP;
 
             proxy_connect_timeout 300;
-            
+
             # To support websocket
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
-            
+
             chunked_transfer_encoding off;
 
             proxy_pass http://console;
