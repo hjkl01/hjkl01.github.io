@@ -5,8 +5,13 @@ sidebar_position: 0
 # python
 
 ### basic
+
 ```python
+# json
 json.dumps(item, ensure_ascii=False, indent=4)
+
+# random
+random.shuffle(_list)
 
 # 对字典排序
 sorted(_dict.items(), key=lambda d: d[1], reverse=False)
@@ -22,11 +27,12 @@ py3 python -m http.server 8000
 print("{:02d}".format(1))
 print(f"{1:02d}")
 
-# 乘法表 
+# 乘法表
 print ('\n'.join([' '.join(['%s*%s=%-2s' % (y,x,x*y) for y in range(1,x+1)]) for x in range(1,10)]))
 ```
 
 ### decorator try
+
 ```python
 import functools
 
@@ -43,6 +49,7 @@ def decorator_try(func):
 ```
 
 ### datetime
+
 ```python
 pip install python-dateutil
 
@@ -98,15 +105,16 @@ print((now - result).days)
 '한시간 전'
 ```
 
-
 ### read big file
+
 ```python
 with open("log.txt") as infile:
     for line in infile:
         do_something_with(line)
 ```
-        
+
 ### csv
+
 ```python
 import csv
 
@@ -134,6 +142,7 @@ with open('mycsvfile.csv', 'w', encoding="utf-8-sig") as f:  # You will need 'wb
 ```
 
 ### asyncio
+
 ```python
 import asyncio
 import time
@@ -167,7 +176,7 @@ for task in tasks:
 print('TIME: ', now() - start)
 
 
-# yield 
+# yield
 def create_generator(_range):
     for i in range(_range):
         yield i
@@ -178,6 +187,7 @@ for i in result:
 ```
 
 ### xmljson
+
 ```python
 import xmljson
 from lxml.etree import  fromstring,tostring
@@ -186,6 +196,7 @@ json.loads(json.dumps(xmljson.badgerfish.data(fromstring(con.encode()))))
 ```
 
 ### mysql
+
 ```python
 # mysql-clients
 yay -S --noconfirm mysql-clients gcc
@@ -193,6 +204,7 @@ pip install mysqlclient
 ```
 
 ### 转码
+
 ```python
 import os
 import chardet
