@@ -120,6 +120,15 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "windows",
+        path: "notes/windows",
+        routeBasePath: "notes/windows",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
   ],
 
   themeConfig:
@@ -150,6 +159,7 @@ const config = {
               { to: "/notes/docker", label: "Docker" },
               { to: "/notes/python", label: "Python" },
               { to: "/notes/mac", label: "Mac" },
+              { to: "/notes/windows", label: "Windows" },
             ],
           },
           { to: "github", label: "Awesome Github", position: "left" },
