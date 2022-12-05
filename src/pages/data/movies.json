@@ -48,16 +48,10 @@
         "description": "影视"
     },
     {
-        "url": "https://nj.hjkl01.cn:45244/",
+        "url": "https://nj.hjkl01.cn:15244/",
         "title": "Alist",
         "img": "/img/alist.svg",
         "description": "云盘 for movies"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:13000/",
-        "title": "Mstream",
-        "img": "/img/mstream.ico",
-        "description": "在线听音乐"
     },
     {
         "url": "https://music.api.hjkl01.cn/",
