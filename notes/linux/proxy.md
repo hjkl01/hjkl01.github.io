@@ -57,6 +57,7 @@ sysctl net.ipv4.tcp_congestion_control
 # net.ipv4.tcp_congestion_control = bbr
 ```
 ### server /etc/trojan/config.json
+- https://trojan-gfw.github.io/trojan/config
 ```json
 {
     "run_type": "server",
@@ -70,6 +71,8 @@ sysctl net.ipv4.tcp_congestion_control
     ],
     "log_level": 1,
     "ssl": {
+        # "cert": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.cert",
+        # "key": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.key",
         "cert": "/etc/letsencrypt/live/domain.com/fullchain.pem",
         "key": "/etc/letsencrypt/live/domain.com/privkey.pem",
         "key_password": "",
