@@ -5,6 +5,7 @@ sidebar_position: 6
 # proxy
 
 ## clash yacd
+
 ```yaml
 version: "3.8"
 
@@ -18,6 +19,7 @@ services:
 ```
 
 ## [glider](https://github.com/nadoo/glider/blob/master/config/glider.conf.example)
+
 ```shell
 yay -S glider
 
@@ -32,20 +34,21 @@ forward=trojan://password@ip:443
 ```
 
 ## trojan/trojan-go
+
 ```shell
 https://github.com/trojan-gfw/trojan
 
 # 机场推荐: https://portal.shadowsocks.nz/aff.php?aff=24252
 
-
 # 部署参考 https://github.com/Jrohy/trojan
 
-ufw allow 80 443 
-certbot certonly --standalone -d domain.com -v 
+ufw allow 80 443 8443
+# 生成证书
+certbot certonly --standalone -d domain.com -v
 # crontab
-15 2 * */2 * certbot renew 
+15 2 * */2 * certbot renew
 
-# arch 开启 bbr 
+# arch 开启 bbr
 echo "tcp_bbr" > /etc/modules-load.d/modules.conf
 
 echo "net.core.default_qdisc=fq" > /etc/sysctl.d/bbr.conf
@@ -56,62 +59,55 @@ reboot
 sysctl net.ipv4.tcp_congestion_control
 # net.ipv4.tcp_congestion_control = bbr
 ```
+
 ### server /etc/trojan/config.json
-- https://trojan-gfw.github.io/trojan/config
+
+<!-- - https://trojan-gfw.github.io/trojan/config -->
+- https://github.com/p4gefau1t/trojan-go/releases
+
 ```json
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
-    "local_port": 443,
+    "local_port": 8443,
     "remote_addr": "github.com",
     "remote_port": 80,
     "password": [
-        "password",
-        "password2"
+        "domain.com"
     ],
-    "log_level": 1,
     "ssl": {
-        # "cert": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.cert",
-        # "key": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.key",
-        "cert": "/etc/letsencrypt/live/domain.com/fullchain.pem",
-        "key": "/etc/letsencrypt/live/domain.com/privkey.pem",
-        "key_password": "",
-        "cipher": "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384",
-        "cipher_tls13": "TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384",
-        "prefer_server_cipher": true,
-        "alpn": [
-            "http/1.1"
-        ],
-        "alpn_port_override": {
-            "h2": 81
-        },
-        "reuse_session": true,
-        "session_ticket": false,
-        "session_timeout": 600,
-        "plain_http_response": "",
-        "curves": "",
-        "dhparam": ""
+        "cert": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.crt",
+        "key": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.key",
+        "sni": "domain.com"
     }
 }
+
 ```
 
 ### client config.json
+
 ```json
 {
     "run_type": "client",
     "local_addr": "127.0.0.1",
     "local_port": 1080,
     "remote_addr": "domain.com",
-    "remote_port": 443,
+    "remote_port": 8443,
     "password": [
-        "password"
-    ]
+        "domain.com"
+    ],
+    "ssl": {
+        "sni": "domain.com"
+    },
+    "mux": {
+        "enabled": true
+    }
 }
 ```
 
-## socks5 转 http 
+## socks5 转 http
 
-## privoxy 配置 
+## privoxy 配置
 
 ```shell
 yay -S privoxy
@@ -128,9 +124,10 @@ sudo systemctl restart privoxy.service
 sudo systemctl enable privoxy.service
 ```
 
-
 # 旧
+
 ## server:
+
 ```shell
 install libsodium
 pip install shadowsocks
@@ -155,8 +152,8 @@ sudo ssserver -d stop
 https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E
 ```
 
+#### 开启 bbr
 
-#### 开启bbr
 ```shell
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 
@@ -181,7 +178,9 @@ lsmod | grep bbr
 ```
 
 ## client
-#### ubuntu下使用， Mac下载 https://github.com/shadowsocks/ShadowsocksX-NG/releases/
+
+#### ubuntu 下使用， Mac 下载 https://github.com/shadowsocks/ShadowsocksX-NG/releases/
+
 ```shell
 pip install shadowsocks
 
