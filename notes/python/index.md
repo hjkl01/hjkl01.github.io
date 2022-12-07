@@ -241,3 +241,9 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+### 省市分割
+```python
+pip install cpca
+result = cpca.transform("xx省xx市xx区", pos_sensitive=True).to_dict("list")
+```
