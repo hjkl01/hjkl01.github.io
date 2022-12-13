@@ -5,24 +5,36 @@ sidebar_position: 0
 # docker
 
 ## install
+
 ```shell
 wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 
-# 修改源 " lang:sh %}
-# path: /etc/docker/daemon.json
+# 修改源 /etc/docker/daemon.json
 {
-  "registry-mirrors": ["http://hub-mirror.c.163.com"]
+    "registry-mirrors": [
+        "http://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com",
+        "https://dockerproxy.com",
+        "https://1nj0zren.mirror.aliyuncs.com",
+        "https://docker.mirrors.ustc.edu.cn",
+        "http://f1361db2.m.daocloud.io",
+        "https://dockerhub.azk8s.cn"
+    ]
 }
 ```
 
 ## tools
+
 - ctop
 - lazydocker
+
 ```shell
 docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/.config/jesseduffield/lazydocker lazyteam/lazydocker
 ```
+
 - portainer
+
 ```shell
 version: '3.1'
 
