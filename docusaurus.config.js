@@ -148,7 +148,7 @@ const config = {
             label: "Tutorial",
           },
 
-          { to: "nav", label: "Nav", position: "left" },
+          { to: "nav/", label: "Nav", position: "left" },
 
           {
             type: "dropdown",
