@@ -1,10 +1,11 @@
-
 # frp
 
 ## downloads
+
 > https://github.com/fatedier/frp/releases
 
 ## frps
+
 ```shell
 [common]
 bind_port = 35000
@@ -17,6 +18,7 @@ dashboard_pwd = xxx
 ```
 
 ## frpc
+
 ```shell
 [common]
 server_addr = address

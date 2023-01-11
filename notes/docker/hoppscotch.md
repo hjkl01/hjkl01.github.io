@@ -1,14 +1,9 @@
----
-sidebar_position: 5
----
-
 # API tool: httpbin hoppscotch
 
 ```yaml
-version: '3.1'
+version: "3.1"
 
 services:
-
   httpbin:
     image: kennethreitz/httpbin
     container_name: httpbin

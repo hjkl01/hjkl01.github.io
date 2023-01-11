@@ -1,12 +1,9 @@
----
-sidebar_position: 7
----
-
 # postgresql
 
 ### postgres adminer pgadmin4
+
 ```yaml
-version: '3'
+version: "3"
 services:
   db:
     image: postgres:10-alpine
@@ -14,17 +11,17 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: 'password'
-      POSTGRES_USER: 'user'
-      POSTGRES_DB: 'postgres'
-      PGDATA: '/var/lib/postgresql/data'
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_USER: "user"
+      POSTGRES_DB: "postgres"
+      PGDATA: "/var/lib/postgresql/data"
     volumes:
       - ./postgres:/var/lib/postgresql/data
 
   admin:
     image: adminer
     restart: always
-    depends_on: 
+    depends_on:
       - db
     ports:
       - 8080:8080
@@ -41,6 +38,7 @@ services:
 ```
 
 ### other config
+
 ```shell
 # 可视化工具推荐
 docker run -d -e SESSIONS=true -p 8081:8081 sosedoff/pgweb
@@ -75,7 +73,7 @@ sudo /etc/init.d/postgresql restart
 # 查询有外键的数据
 select count(*) from "case" where court_id in (select id from court where province ='');
 
-# update existed data 
+# update existed data
 update sometable set somekey = concat('new value', somekey) where prod_code = '12345'
 
 # 导出数据结构

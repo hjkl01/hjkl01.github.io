@@ -1,13 +1,11 @@
----
-sidebar_position: 9
----
-
 # supervisor
-## 后缀为conf或ini
+
+## 后缀为 conf 或 ini
+
 ```shell
 [program:frp_ssh]
 
-command     = /home/user/frp/frpc -c /home/user/frp/config.ini 
+command     = /home/user/frp/frpc -c /home/user/frp/config.ini
 directory = /home/user/somedir
 user = user
 autostart = true

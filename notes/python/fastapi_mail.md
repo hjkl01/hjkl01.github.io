@@ -1,6 +1,7 @@
-# send mail 
+# send mail
 
 ## fastapi send mail API
+
 ```python
 import uvicorn
 from fastapi import FastAPI, BackgroundTasks, UploadFile, File, Form
@@ -23,7 +24,7 @@ conf = ConnectionConfig(
     MAIL_FROM="qq123456@qq.com",
     MAIL_PORT=587,
     MAIL_SERVER="smtp.qq.com",
-    
+
     MAIL_TLS=True,
     MAIL_SSL=False,
     USE_CREDENTIALS=True,
@@ -81,6 +82,7 @@ if __name__ == '__main__':
 ```
 
 ## yagmail
+
 ```python
 import yagmail
 

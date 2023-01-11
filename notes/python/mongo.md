@@ -1,8 +1,9 @@
 # mongo
 
 ## MongoDB 语法
+
 ```shell
-db.users.find({ create_at: { $exists: true } }) 
+db.users.find({ create_at: { $exists: true } })
 db.users.find() select * from users
 db.users.find({"age" : 27}) select * from users where age = 27
 db.users.find({"username" : "joe", "age" : 27}) select * from users where "username" = "joe" and age = 27
@@ -28,7 +29,8 @@ db.foo.find({"$where" : "function() { return this.x + this.y == 10; }"}) // $whe
 db.foo.find().sort({"x" : 1}).limit(1).skip(10); // 返回第(10, 11]条，按"x"进行排序; 三个limit的顺序是任意的，应该尽量避免skip中使用large-number
 ```
 
-## Mac上导出MongoDB数据
+## Mac 上导出 MongoDB 数据
+
 ```shell
 # Mac install mongo tools
 brew tap mongodb/brew
@@ -40,10 +42,10 @@ mongoexport --host 127.0.0.1:27017 -u user -p passwd --authenticationDatabase ad
 mongoexport --uri=mongodb://username:password@host:27017/ --authenticationDatabase=admin -d db -c collection -o result.json
 ## import
 mongoimport --uri=mongodb://username:password@host:27017/ --authenticationDatabase=admin -d db -c collection --file=result.json
- ```
-
+```
 
 ## Python 调用 MongoDB
+
 ```python
 import pymongo
 

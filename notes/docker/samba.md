@@ -1,18 +1,15 @@
----
-sidebar_position: 3
----
-
 # samba nfs
 
 ## samba
+
 ```yaml
-version: '3.4'
+version: "3.4"
 
 services:
   samba:
     image: dperson/samba
     environment:
-      TZ: 'EST5EDT'
+      TZ: "EST5EDT"
     networks:
       - default
     ports:
@@ -32,7 +29,8 @@ services:
 ```
 
 ## nfs
-```yaml 
+
+```yaml
 version: "2.1"
 services:
   # https://hub.docker.com/r/itsthenetwork/nfs-server-alpine

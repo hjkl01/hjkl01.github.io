@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # proxy
 
 ## clash yacd
@@ -63,45 +59,41 @@ sysctl net.ipv4.tcp_congestion_control
 ### server /etc/trojan/config.json
 
 <!-- - https://trojan-gfw.github.io/trojan/config -->
+
 - https://github.com/p4gefau1t/trojan-go/releases
 
 ```json
 {
-    "run_type": "server",
-    "local_addr": "0.0.0.0",
-    "local_port": 8443,
-    "remote_addr": "github.com",
-    "remote_port": 80,
-    "password": [
-        "domain.com"
-    ],
-    "ssl": {
-        "cert": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.crt",
-        "key": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.key",
-        "sni": "domain.com"
-    }
+  "run_type": "server",
+  "local_addr": "0.0.0.0",
+  "local_port": 8443,
+  "remote_addr": "github.com",
+  "remote_port": 80,
+  "password": ["domain.com"],
+  "ssl": {
+    "cert": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.crt",
+    "key": "/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/domain.com/domain.com.key",
+    "sni": "domain.com"
+  }
 }
-
 ```
 
 ### client config.json
 
 ```json
 {
-    "run_type": "client",
-    "local_addr": "127.0.0.1",
-    "local_port": 1080,
-    "remote_addr": "domain.com",
-    "remote_port": 8443,
-    "password": [
-        "domain.com"
-    ],
-    "ssl": {
-        "sni": "domain.com"
-    },
-    "mux": {
-        "enabled": true
-    }
+  "run_type": "client",
+  "local_addr": "127.0.0.1",
+  "local_port": 1080,
+  "remote_addr": "domain.com",
+  "remote_port": 8443,
+  "password": ["domain.com"],
+  "ssl": {
+    "sni": "domain.com"
+  },
+  "mux": {
+    "enabled": true
+  }
 }
 ```
 

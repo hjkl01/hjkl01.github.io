@@ -1,10 +1,7 @@
----
-sidebar_position: 4
----
-
 # gitea gops
 
 ## gitea
+
 ```yaml
 # web管理界面里 默认端口3000和22不要改
 # example: ssh://git@git.hjkl01.cn:58001/user/project.git
@@ -51,18 +48,18 @@ services:
       - ./data/gitea/postgres:/var/lib/postgresql/data
 ```
 
-
 ## gops
+
 ```yaml
-version: '3'
+version: "3"
 services:
   db:
     image: postgres:11-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: 'gogs'
-      POSTGRES_PASSWORD: 'gogs'
-      POSTGRES_DB: 'postgres'
+      POSTGRES_USER: "gogs"
+      POSTGRES_PASSWORD: "gogs"
+      POSTGRES_DB: "postgres"
     ports:
       - "5432:5432"
     networks:

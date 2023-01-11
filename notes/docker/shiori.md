@@ -1,14 +1,11 @@
----
-sidebar_position: 10
----
-
 # shiori 书签管理器
 
-## 原链接 
+## 原链接
+
 > https://github.com/go-shiori/shiori/
 
 :::tip
-loginuser: shiori 	
+loginuser: shiori
 
 passwd: gopher
 :::

@@ -1,6 +1,7 @@
 # selenium
 
 ### selenium
+
 ```python
 import random
 from selenium import webdriver
@@ -29,9 +30,9 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
 })
 ```
 
-
 ### selenium-wire
-```python 
+
+```python
 import os
 import time
 import random

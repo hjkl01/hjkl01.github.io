@@ -1,12 +1,9 @@
----
-sidebar_position: 8
----
-
 # mysql
 
 ## docker-compose.yml
+
 ```yaml
-version: '3.1'
+version: "3.1"
 
 services:
   db:
@@ -14,7 +11,7 @@ services:
     image: mariadb:10.6.4-focal
     # If you really want to use MySQL, uncomment the following line
     #image: mysql:8.0.27
-    command: '--default-authentication-plugin=mysql_native_password'
+    command: "--default-authentication-plugin=mysql_native_password"
     volumes:
       - ./data/mysql:/var/lib/mysql
     restart: always
@@ -28,7 +25,8 @@ services:
       - 3306:3306
 ```
 
-### linux配置
+### linux 配置
+
 ```shell
 /etc/mysql/my.cnf:
 
@@ -42,6 +40,7 @@ collation-server = utf8_general_ci
 ```
 
 ### others
+
 ```shell
 protected-mode yes
 

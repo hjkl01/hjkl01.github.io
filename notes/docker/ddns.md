@@ -1,11 +1,7 @@
----
-sidebar_position: 1
----
-
 # ddns
 
 ```yaml
-version: '3.1'
+version: "3.1"
 services:
   ddns_go:
     image: jeessy/ddns-go
@@ -14,16 +10,16 @@ services:
     volumes:
       - ./data/ddns:/root
   # port: 9876
-  
+
   ddns:
     image: sanjusss/aliyun-ddns
     restart: always
     network_mode: "host"
     environment:
       #  https://usercenter.console.aliyun.com/
-      AKID: 
-      AKSCT: 
-      DOMAIN: 
+      AKID:
+      AKSCT:
+      DOMAIN:
       REDO: 30
       TTL: 600
       TIMEZONE: 8.0

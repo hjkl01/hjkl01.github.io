@@ -1,13 +1,8 @@
----
-sidebar_position: 12
----
-
 # npm yarn
-
 
 ## yarn/npm 设置国内源
 
-```shell 
+```shell
 # 查询源
 yarn config get registry
 
@@ -33,22 +28,8 @@ https://mirrors.njupt.edu.cn/nexus/repository/npm/
 https://registry.npmjs.org
 ```
 
-## old
-```shell
-# 临时
-npm --registry https://registry.npm.taobao.org install express
-```
-
-```shell
-# 写入文件
-yarn config set registry 'https://registry.npm.taobao.org'
-yarn config get registry
-
-npm config set registry https://registry.npm.taobao.org
-npm config get registry
-```
-
 #### use yrm
+
 ```shell
 npm install -g yrm
 # yarn global add yrm

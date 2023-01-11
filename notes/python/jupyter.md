@@ -1,6 +1,7 @@
 # jupyter
 
 ## install
+
 ```shell
 # jupyter config
 pip install jupyter
@@ -8,6 +9,7 @@ jupyter notebook --generate-config
 ```
 
 ## generate passwd
+
 ```shell
 # ipython
 from notebook.auth import passwd
@@ -15,7 +17,7 @@ passwd()
 # or
 jupyter notebook password
 
-vim ~/.jupyter/jupyter_notebook_config.py 
+vim ~/.jupyter/jupyter_notebook_config.py
 
 c.NotebookApp.ip='*'
 c.NotebookApp.password = u''
@@ -26,6 +28,7 @@ jupyter notebook
 ```
 
 ## generate multi ports
+
 ```python
 import os
 import re

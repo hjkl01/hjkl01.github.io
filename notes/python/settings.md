@@ -43,8 +43,8 @@ print(Config.__dict__)
 print(Config.redis_ip)
 ```
 
-
 ## settings.py(old)
+
 ```python
 # pip install python-dotenv pyyaml loguru
 import os

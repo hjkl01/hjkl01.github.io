@@ -1,13 +1,11 @@
----
-sidebar_position: 4
----
-
 # neovim vimscript (old)
 
-## 我的neovim配置
- > https://github.com/hjkl01/init.vim
+## 我的 neovim 配置
+
+> https://github.com/hjkl01/init.vim
 
 ## 插件
+
 ```shell
 # status/tabline vim-airline/vim-airline
 Plug 'vim-airline/vim-airline'
@@ -35,7 +33,7 @@ let g:autoformat_retab = 1
 let g:autoformat_remove_trailing_spaces = 1
 
 
-# 文件目录 
+# 文件目录
 Plug 'preservim/nerdtree'
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1

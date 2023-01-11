@@ -5,6 +5,7 @@ sidebar_position: 0
 # 装机工具
 
 ### GFW
+
 - https://portal.shadowsocks.au/aff.php?aff=24252
 - https://github.com/Dreamacro/clash/releases
 - https://github.com/haishanh/yacd
@@ -12,6 +13,7 @@ sidebar_position: 0
 - https://github.com/p4gefau1t/trojan-go
 
 ### Download Tools
+
 - https://github.com/agalwood/Motrix
 - https://github.com/aria2/aria2
 - https://github.com/filecxx/FileCentipede
@@ -20,6 +22,7 @@ sidebar_position: 0
 - https://github.com/Momo707577045/m3u8-downloader
 
 ### Mirrors
+
 - https://mirror.tuna.tsinghua.edu.cn/help/archlinux/
 - https://developer.aliyun.com/mirror/
 - https://mirror.sjtu.edu.cn/
@@ -29,11 +32,13 @@ sidebar_position: 0
 - https://github.com/eryajf/Thanks-Mirror
 
 ### Flash OS images
+
 - https://github.com/pbatard/rufus
 - https://github.com/balena-io/etcher
 - https://github.com/ventoy/Ventoy
 
 ### Unix
+
 - TERMINAL
   - https://github.com/alacritty/alacritty
   - https://github.com/Eugeny/tabby
@@ -56,6 +61,7 @@ sidebar_position: 0
   - https://github.com/atanunq/viu
 
 ### Mac
+
 - https://github.com/Caldis/Mos
 - https://github.com/mbadolato/iTerm2-Color-Schemes
 - https://github.com/Toxblh/MTMR
@@ -63,16 +69,18 @@ sidebar_position: 0
 - https://github.com/rxhanson/Rectangle
 
 ### Windows
+
 - https://github.com/M2Team/NanaZip
 - https://github.com/yuk7/ArchWSL
 - https://eagleget.en.softonic.com/
-- download img: 
+- download img:
   - https://www.microsoft.com/zh-cn/software-download/windows10ISO
   - https://hellowindows.cn/
   - https://msdn.sjjzm.com/win10.html
   - https://next.itellyou.cn/
 
 ### Desktop
+
 - https://github.com/pavlobu/deskreen
 - https://github.com/rustdesk/rustdesk
 - https://github.com/FreeRDP/FreeRDP

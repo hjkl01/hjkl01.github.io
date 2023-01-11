@@ -1,13 +1,14 @@
 # celery
 
 ## celery 用法
+
 ```python
 # test.py
 import time
 from datetime import datetime
 
 from celery import Celery
- 
+
 # result_address = 'elasticsearch://user:passwd@ip:port/index'
 
 broker = 'redis://:passwd@ip:port/db'
@@ -98,7 +99,7 @@ def main():
         resp = requests.post(url, data=json.dumps(args))
         reply = resp.json()
         print(reply)
-        
+
     #  url = "{}/result/{}".format(task_api, reply["task-id"])
     #  print(url)
     #  resp = requests.get(url)

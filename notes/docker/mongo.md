@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # mongoDB
 
 ```shell
@@ -10,12 +6,11 @@ MONGO_ROOT_USER=username
 MONGO_ROOT_PASSWORD=password
 MONGODB_URL=mongodb://username:password@mongo:27017
 ```
-  
+
 ```yaml
-version: '3.1'
+version: "3.1"
 
 services:
-
   mongo:
     image: mongo
     restart: always

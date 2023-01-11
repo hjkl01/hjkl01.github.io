@@ -1,10 +1,6 @@
----
-sidebar_position: 1
----
-
 # caddy
 
-```shell 
+```shell
 # 反向代理
 news.hjkl01.cn {
     reverse_proxy 127.0.0.1:8000
@@ -40,7 +36,8 @@ blog.hjkl01.cn {
 }
 ```
 
-### auth 
+### auth
+
 ```shell
 caddy hash-password
 

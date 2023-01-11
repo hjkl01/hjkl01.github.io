@@ -1,14 +1,10 @@
----
-sidebar_position: 1
----
-
 # nginx
 
 > 可视化配置 [nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager)
 
 > 在线配置 [nginxconfig.io](https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN)
 
-## https证书
+## https 证书
 
 ```shell
 # 安装certbot
@@ -17,11 +13,12 @@ yay -S --noconfirm certbot
 sudo certbot certonly --standalone -d domain
 sudo certbot certonly -d domain --webroot -w /html/filepath/
 
-sudo crontab -e 
+sudo crontab -e
 15 2 * */2 * systemctl stop nginx.service && certbot renew && systemctl restart nginx.service
 ```
 
 ## 基本配置
+
 ```shell
 server {
     listen 80;
@@ -49,14 +46,14 @@ server {
         return 200 "{\"ip\":\"$remote_addr\"}";
     }
 
-    
+
     # django
     location /static/ {
-        alias /home/ubuntu/djangoapp/static/; 
+        alias /home/ubuntu/djangoapp/static/;
     }
 
     location /media/ {
-        alias /home/ubuntu/djangoapp/media/; 
+        alias /home/ubuntu/djangoapp/media/;
     }
 
     location / {
@@ -87,6 +84,7 @@ server {
 ```
 
 ### ssl
+
 ```shell
 server {
     listen 443 ssl http2;
@@ -98,7 +96,7 @@ server {
     ssl_trusted_certificate /etc/letsencrypt/live/blog.hjkl01.cn/chain.pem;
     ssl_session_timeout 5m;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
     ssl_prefer_server_ciphers on;
 
     # 静态文件
@@ -115,7 +113,8 @@ server {
 }
 ```
 
-### 转发mongo端口(TCP)
+### 转发 mongo 端口(TCP)
+
 ```shell
 stream {
     server {
@@ -132,7 +131,9 @@ stream {
 ```
 
 ## 限流
+
 ### 正常限流
+
 ```shell
 # nginx.conf
 http {
@@ -146,11 +147,13 @@ server {
         }
 }
 ```
-- key ：定义限流对象，binary_remote_addr 是一种key，表示基于 remote_addr(客户端IP) 来做限流，binary_ 的目的是压缩内存占用量。
-- zone：定义共享内存区来存储访问信息， myRateLimit:10m 表示一个大小为10M，名字为myRateLimit的内存区域。1M能存储16000 IP地址的访问信息，10M可以存储16W IP地址访问信息。
-- rate 用于设置最大访问速率，rate=10r/s 表示每秒最多处理10个请求。Nginx 实际上以毫秒为粒度来跟踪请求信息，因此 10r/s 实际上是限制：每100毫秒处理一个请求。这意味着，自上一个请求处理完后，若后续100毫秒内又有请求到达，将拒绝处理该请求。
+
+- key ：定义限流对象，binary*remote_addr 是一种 key，表示基于 remote_addr(客户端 IP) 来做限流，binary* 的目的是压缩内存占用量。
+- zone：定义共享内存区来存储访问信息， myRateLimit:10m 表示一个大小为 10M，名字为 myRateLimit 的内存区域。1M 能存储 16000 IP 地址的访问信息，10M 可以存储 16W IP 地址访问信息。
+- rate 用于设置最大访问速率，rate=10r/s 表示每秒最多处理 10 个请求。Nginx 实际上以毫秒为粒度来跟踪请求信息，因此 10r/s 实际上是限制：每 100 毫秒处理一个请求。这意味着，自上一个请求处理完后，若后续 100 毫秒内又有请求到达，将拒绝处理该请求。
 
 ### 处理突发流量
+
 ```shell
 server {
         location / {
@@ -161,6 +164,7 @@ server {
 ```
 
 ### 限制连接数
+
 ```shell
 limit_conn_zone $binary_remote_addr zone=perip:10m;
 limit_conn_zone $server_name zone=perserver:10m;
@@ -170,13 +174,15 @@ server {
     limit_conn perserver 100;
 }
 ```
-- limit_conn perip 10 作用的key 是 $binary_remote_addr，表示限制单个IP同时最多能持有10个连接。
 
-- limit_conn perserver 100 作用的key是 $server_name，表示虚拟主机(server) 同时能处理并发连接的总数。
+- limit_conn perip 10 作用的 key 是 $binary_remote_addr，表示限制单个 IP 同时最多能持有 10 个连接。
 
-- 需要注意的是：只有当 request header 被后端server处理后，这个连接才进行计数。
+- limit_conn perserver 100 作用的 key 是 $server_name，表示虚拟主机(server) 同时能处理并发连接的总数。
+
+- 需要注意的是：只有当 request header 被后端 server 处理后，这个连接才进行计数。
 
 ### 设置白名单
+
 ```shell
 # nginx.conf
 geo $limit {
@@ -191,13 +197,15 @@ map $limit $limit_key {
 }
 limit_req_zone $limit_key zone=myRateLimit:10m rate=10r/s;
 ```
-- geo 对于白名单(子网或IP都可以) 将返回0，其他IP将返回1。
 
-- map 将 $limit 转换为 $limit_key，如果是 $limit 是0(白名单)，则返回空字符串；如果是1，则返回客户端实际IP。
+- geo 对于白名单(子网或 IP 都可以) 将返回 0，其他 IP 将返回 1。
 
-- limit_req_zone 限流的key不再使用 $binary_remote_addr，而是 $limit_key 来动态获取值。如果是白名单，limit_req_zone 的限流key则为空字符串，将不会限流；若不是白名单，将会对客户端真实IP进行限流。
+- map 将 $limit 转换为 $limit_key，如果是 $limit 是 0(白名单)，则返回空字符串；如果是 1，则返回客户端实际 IP。
+
+- limit_req_zone 限流的 key 不再使用 $binary_remote_addr，而是 $limit_key 来动态获取值。如果是白名单，limit_req_zone 的限流 key 则为空字符串，将不会限流；若不是白名单，将会对客户端真实 IP 进行限流。
 
 ### 限制数据传输速度
+
 ```shell
 location /flv/ {
     flv;
@@ -205,7 +213,8 @@ location /flv/ {
     limit_rate       100k;
 }
 ```
-- 这个限制是针对每个请求的，表示客户端下载前20M时不限速，后续限制100kb/s。
+
+- 这个限制是针对每个请求的，表示客户端下载前 20M 时不限速，后续限制 100kb/s。
 
 ## goaccess
 

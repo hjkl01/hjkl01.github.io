@@ -1,20 +1,18 @@
----
-sidebar_position: 11
----
+# samba(old)
 
-# samba(old) 
-
-:::tip 
+:::tip
 new for docker
 :::
 
-### 在arch 中安装参考 
+### 在 arch 中安装参考
+
 ```sh
 https://wiki.archlinux.org/title/samba
 ```
 
-### 在ubuntu中安装
-```sh 
+### 在 ubuntu 中安装
+
+```sh
 sudo apt-get install samba
 sudo useradd xxx
 sudo smbpasswd -a xxx

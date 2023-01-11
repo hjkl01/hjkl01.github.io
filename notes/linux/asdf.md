@@ -1,13 +1,11 @@
----
-sidebar_position: 3
----
-
 # asdf
+
 ### install asdf
+
 ```shell
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
 
-# add following to ~/.zshrc 
+# add following to ~/.zshrc
 # mac
 # . /usr/local/opt/asdf/libexec/asdf.sh
 
@@ -16,7 +14,8 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
 ```
 
 ### install plugin example
-```shell 
+
+```shell
 asdf plugin add nodejs
 asdf list all nodejs
 asdf install nodejs lts

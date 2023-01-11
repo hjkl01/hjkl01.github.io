@@ -1,7 +1,7 @@
 # pip
 
+## virtualenv
 
-## virtualenv 
 ```shell
 (sudo) pip install virtualenv
 virtualenv -p /usr/bin/python3.7 ~/.virtualenv/py3
@@ -9,12 +9,14 @@ virtualenv -p /usr/bin/python3.7 ~/.virtualenv/py3
 ```
 
 ## pipenv
+
 ```shell
 alias pv='pipenv run python'
 alias pi='pipenv run pip install '
 ```
 
 ## pip.conf
+
 ```shell
 # 一次
 pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com

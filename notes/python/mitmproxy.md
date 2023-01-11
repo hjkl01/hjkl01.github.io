@@ -1,6 +1,7 @@
 # mitmproxy
 
 ## install
+
 ```shell
 pip install mitmproxy
 # open mitm.it after set proxy
@@ -8,6 +9,7 @@ mitmproxy --http2 --listen-host 0.0.0.0 --listen-port 8888 -s mitm_test.py
 ```
 
 ## API
+
 ```python
 # http.HTTPFlow 实例 flow
 flow.request.headers #获取所有头信息，包含Host、User-Agent、Content-type等字段
@@ -33,6 +35,7 @@ flow.response.setText()#修改返回内容，不需要转码
 ```
 
 ## example.py
+
 ```python
 # example
 def response(flow):

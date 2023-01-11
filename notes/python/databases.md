@@ -1,7 +1,7 @@
 # database
 
-
 ## install psycopg2-binary
+
 ```shell
 pip install psycopg2-binary
 
@@ -9,6 +9,7 @@ sqlacodegen postgres://user:passwd@host:ip/database --outfile model.py
 ```
 
 ## sqlalchemy
+
 ```python
 from sqlalchemy import create_engine
 from sqlalchemy import Column, String
@@ -58,6 +59,7 @@ session.commit()
 ```
 
 ### use session
+
 ```python
 #  from .base_model import Base
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -158,6 +160,7 @@ for i in range(9):
 ```
 
 ## databases[aiomysql]
+
 ```python
 # pip install 'databases[aiomysql]' aiomysq
 import asyncio

@@ -1,10 +1,7 @@
----
-sidebar_position: 10
----
-
+# nocodb
 
 ```yaml
-version: '3.3'
+version: "3.3"
 
 services:
   root_db:
@@ -14,10 +11,10 @@ services:
       - 5432:5432
     command: postgres -c 'max_connections=500'
     environment:
-      POSTGRES_PASSWORD: 'passwd'
-      POSTGRES_USER: 'username'
-      POSTGRES_DB: 'postgres'
-      PGDATA: '/var/lib/postgresql/data'
+      POSTGRES_PASSWORD: "passwd"
+      POSTGRES_USER: "username"
+      POSTGRES_DB: "postgres"
+      PGDATA: "/var/lib/postgresql/data"
     healthcheck:
       test: pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"
       interval: 10s
