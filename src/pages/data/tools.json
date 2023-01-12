@@ -18,13 +18,19 @@
         "description": "免费、即时的多语种在线翻译"
     },
     {
+        "url": "https://jaywcjlove.github.io/reference",
+        "title": "",
+        "img": "/img/feapder.png",
+        "description": "为开发人员分享快速参考备忘清单(速查表)"
+    },
+    {
         "url": "https://spidertools.cn/#/",
         "title": "工具箱",
         "img": "/img/feapder.png",
         "description": "爬虫工具库"
     },
     {
-        "url": "https://crontab.hjkl01.cn/",
+        "url": "https://crontab.cronhub.io/",
         "title": "crontab ui",
         "img": "/img/crontab.ico",
         "description": "Cron expression generator by Cronhub"
@@ -36,43 +42,43 @@
         "description": "DB 可视化"
     },
     {
-        "url": "https://json.hjkl01.cn/editor/",
+        "url": "https://jsonvisio.com/editor/",
         "title": "JSON Valid",
         "img": "/img/jsonvalid.ico",
         "description": "Json视图"
     },
     {
-        "url": "https://tools.hjkl01.cn/",
+        "url": "https://gchq.github.io/CyberChef",
         "title": "加解密",
         "img": "/img/encryption.ico",
         "description": "a web app for encryption, encoding, compression and data analysis"
     },
     {
-        "url": "https://curl.hjkl01.cn/",
+        "url": "https://curlconverter.com/",
         "title": "curl to python",
         "img": "/img/curl.ico",
         "description": "Convert curl commands to code"
     },
     {
-        "url": "https://map.hjkl01.cn/",
+        "url": "https://hxkj.vip/demo/echartsMap/",
         "title": "地图数据",
         "img": "/img/map.ico",
         "description": "fork"
     },
     {
-        "url": "https://dber.hjkl01.cn/",
+        "url": "https://dber.tech/",
         "title": "Database design tool based on entity relation diagram",
         "img": "/img/dber.ico",
         "description": "fork"
     },
     {
-        "url": "https://drf.hjkl01.cn/",
+        "url": "https://q1mi.github.io/Django-REST-framework-documentation/",
         "title": "drf中文文档",
         "img": "/img/drf.ico",
         "description": "fork"
     },
     {
-        "url": "https://nginx.hjkl01.cn/",
+        "url": "https://do.co/nginxconfig",
         "title": "Nginx Online",
         "img": "/img/nginx.png",
         "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
