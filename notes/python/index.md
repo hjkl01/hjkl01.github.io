@@ -141,6 +141,33 @@ with open('mycsvfile.csv', 'w', encoding="utf-8-sig") as f:  # You will need 'wb
     w.writerows(result)
 ```
 
+### execl
+
+```python
+# write
+pip install pandas openpyxl
+
+# dict
+import pandas as pd
+df = pd.DataFrame.from_dict({'Column1':[1,2,3,4],'Column2':[5,6,7,8]})
+df.to_excel('test.xlsx', header=True, index=False)
+
+# list
+import pandas as pd
+Column1 = [1,2,3,4]
+Column2 = [5,6,7,8]
+df = pd.DataFrame.from_dict({'Column1':Column1,'Column2':Column2})
+df.to_excel('test.xlsx', header=True, index=False)
+
+# read
+import pandas as pd
+
+df = pd.read_excel("example.xlsx", index_col=0)
+df = df.where(pd.notnull(df), None)
+
+print df.to_dict()["dict_value"]
+```
+
 ### asyncio
 
 ```python
