@@ -24,6 +24,15 @@ sudo usermod -aG docker $USER
 }
 ```
 
+## export load
+
+```shell
+docker save -o <path for generated tar file> <image name>
+example: docker save -o ./centos.tar centos:16
+
+docker load -i <path to image tar file>
+```
+
 ## tools
 
 - ctop
