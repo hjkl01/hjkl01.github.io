@@ -1,4 +1,27 @@
-# Navidrome
+# music
+
+## https://github.com/IrosTheBeggar/mStream
+
+```yaml
+---
+version: "2.1"
+services:
+  mstream:
+    image: lscr.io/linuxserver/mstream:latest
+    container_name: mstream
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asis/Shanghai
+    volumes:
+      - ./data/mstream/config:/config
+      - ./data/mstream/music:/music
+    ports:
+      - 127.0.0.1:3000:3000
+    restart: unless-stopped
+```
+
+## Navidrome
 
 ```yaml
 version: "3"
