@@ -10,22 +10,15 @@ services:
     image: dperson/samba
     environment:
       TZ: "EST5EDT"
-    networks:
-      - default
     ports:
-      - "137:137/udp"
-      - "138:138/udp"
       - "139:139/tcp"
       - "445:445/tcp"
-    read_only: true
-    tmpfs:
-      - /tmp
+    read_only: false
     restart: unless-stopped
-    stdin_open: true
-    tty: true
     volumes:
-      - /data:/mnt:z
-    command: '-s "Volume;/mnt;yes;no;no;USER" -u "USER;PASSWORD" -p'
+      - ./data:/mnt:z
+    command: '-s "Volume;/mnt;yes;no;no;username" -u "usernam;password" -p'
+           # "<name;/path>[;browse;readonly;guest;users;admins;writelist;comment]"
 ```
 
 ## nfs
