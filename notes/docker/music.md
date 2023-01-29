@@ -1,6 +1,6 @@
 # music
 
-## https://github.com/IrosTheBeggar/mStream
+## [mStream](https://github.com/IrosTheBeggar/mStream)
 
 ```yaml
 ---
