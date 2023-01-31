@@ -25,6 +25,10 @@ sync ; reboot -f
 ### 安装
 
 - [archlinux](https://github.com/archlinux/archinstall)
+  - install dhcpcd iwd networkmanager
+  - systemctl enable --now dhcpcd.service
+  - systemctl enable --now iwd.service
+  - systemctl enable --now NetworkManager.service
 
 ### wifi
 
