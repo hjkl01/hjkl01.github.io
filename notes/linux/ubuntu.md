@@ -1,5 +1,18 @@
 # ubuntu(old)
 
+## 更换源
+
+```shell
+#中国科技大学
+sudo sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+#网易云163
+sudo sed -i 's/deb.debian.org/mirrors.163.com/g' /etc/apt/sources.list
+#阿里云
+sudo sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+#清华同方
+sudo sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+```
+
 ## 中文乱码
 
 ```shell
