@@ -25,4 +25,9 @@ services:
     volumes:
       - ./redis.conf:/usr/local/etc/redis/redis.conf
       - ./data/redis:/data/
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

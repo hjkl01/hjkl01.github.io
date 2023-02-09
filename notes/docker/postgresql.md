@@ -35,6 +35,11 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
     ports:
       - "80:80"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
 
 ### other config

@@ -33,4 +33,9 @@ services:
       - ME_CONFIG_MONGODB_URL=${MONGODB_URL}
       - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_ROOT_USER}
       - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_ROOT_PASSWORD}
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

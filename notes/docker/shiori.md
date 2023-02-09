@@ -40,4 +40,9 @@ services:
       POSTGRES_PASSWORD: password
     volumes:
       - ./data/shiori_postgres:/var/lib/postgresql/data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

@@ -19,6 +19,11 @@ services:
     ports:
       - 127.0.0.1:3000:3000
     restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
 
 ## Navidrome
@@ -45,4 +50,9 @@ services:
     volumes:
       - "./data/navidrome/data:/data"
       - "./data/mstream/music:/music"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

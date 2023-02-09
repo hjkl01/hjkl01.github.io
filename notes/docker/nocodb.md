@@ -36,4 +36,9 @@ services:
     restart: always
     environment:
       NC_DB: "pg://root_db:5432?u=username&p=passwd&d=postgres"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

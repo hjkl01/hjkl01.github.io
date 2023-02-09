@@ -46,6 +46,11 @@ services:
       - gitea
     volumes:
       - ./data/gitea/postgres:/var/lib/postgresql/data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
 
 ## gops

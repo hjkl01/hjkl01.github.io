@@ -28,7 +28,6 @@ services:
       - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db
       - ./data/cloudreve/avatar:/cloudreve/avatar
 
-
 networks:
   default:
     external:
@@ -254,4 +253,9 @@ services:
     volumes:
       - ./data/alist:/opt/alist/data
       - /some_dir:/mnt
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

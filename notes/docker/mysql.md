@@ -23,6 +23,11 @@ services:
       - MYSQL_ROOT_HOST=%
     ports:
       - 3306:3306
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
 
 ### linux 配置

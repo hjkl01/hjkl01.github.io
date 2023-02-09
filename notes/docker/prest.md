@@ -37,4 +37,9 @@ services:
         condition: service_healthy
     ports:
       - "3000:3000"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

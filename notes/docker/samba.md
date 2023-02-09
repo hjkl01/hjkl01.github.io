@@ -17,8 +17,13 @@ services:
     restart: unless-stopped
     volumes:
       - ./data:/mnt:z
-    command: '-s "Volume;/mnt;yes;no;no;username" -u "usernam;password" -p'
+    command: '-s "Volume;/mnt;yes;no;no;foo" -u "foo;bar" -p'
            # "<name;/path>[;browse;readonly;guest;users;admins;writelist;comment]"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
 
 ## nfs
@@ -38,4 +43,9 @@ services:
       - ./data/jellyfin/movies:/data
     ports:
       - 2049:2049
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```

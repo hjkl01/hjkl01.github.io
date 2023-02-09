@@ -17,4 +17,9 @@ services:
     restart: always
     ports:
       - "127.0.0.1:3000:3000"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
 ```
