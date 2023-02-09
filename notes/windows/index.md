@@ -37,3 +37,6 @@ slmgr /ato
 ## 更改录屏保存位置
 
 - 视频 属性 移动
+
+## [ssh server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)
+
