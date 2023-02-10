@@ -54,7 +54,13 @@
         "description": "云盘 for movies"
     },
     {
-        "url": "https://music.api.hjkl01.cn/",
+        "url": "https://nj.hjkl01.cn:3000",
+        "title": "Mstream",
+        "img": "/img/mstream.ico",
+        "description": "在线听音乐 ipv6"
+    },
+    {
+        "url": "https://music.hjkl01.cn/",
         "title": "Mstream",
         "img": "/img/mstream.ico",
         "description": "在线听音乐"
