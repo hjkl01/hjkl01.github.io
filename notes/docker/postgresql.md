@@ -6,7 +6,7 @@
 version: "3"
 services:
   db:
-    image: postgres:10-alpine
+    image: postgres:15-alpine
     restart: always
     ports:
       - 5432:5432
