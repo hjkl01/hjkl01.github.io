@@ -17,6 +17,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./data:/mnt:z
+      - ./data:/mnt:ro
     command: '-s "Volume;/mnt;yes;no;no;foo" -u "foo;bar" -p'
            # "<name;/path>[;browse;readonly;guest;users;admins;writelist;comment]"
 
