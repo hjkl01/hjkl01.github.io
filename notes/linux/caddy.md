@@ -45,3 +45,18 @@ basicauth /* {
         username output
 }
 ```
+
+### docker-compose.yml
+```shell
+version: "3.7"
+
+services:
+  caddy:
+    image: caddy:alpine
+    restart: unless-stopped
+    container_name: caddy
+    network_mode: "host"
+    volumes:
+      - ./data/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./data/caddy/cert:/data
+```
