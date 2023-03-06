@@ -1,47 +1,5 @@
 [
     {
-        "url": "https://jubt.fun/cn/index.html",
-        "title": "聚BT",
-        "img": "/img/jubt.ico",
-        "description": "聚合搜索"
-    },
-    {
-        "url": "https://www.hdtvbt.com/4k",
-        "title": "HD TV",
-        "img": "/img/movie.ico",
-        "description": "磁力下载4K"
-    },
-    {
-        "url": "https://www.yinfans.me/",
-        "title": "音范丝|影音集",
-        "img": "/img/movie.ico",
-        "description": "磁力下载4K"
-    },
-    {
-        "url": "https://yyets.dmesg.app/search",
-        "title": "人人影视分享站",
-        "img": "https://yyets.dmesg.app/svg/logo.svg",
-        "description": "磁力搜索"
-    },
-    {
-        "url": "https://www.dygod.net/",
-        "title": "电影天堂",
-        "img": "/img/movie.ico",
-        "description": "磁力下载"
-    },
-    {
-        "url": "https://www.dydytt.net/",
-        "title": "电影天堂",
-        "img": "/img/movie.ico",
-        "description": "磁力下载"
-    },
-    {
-        "url": "https://www.bdys01.com/",
-        "title": "哔嘀影视",
-        "img": "/img/bdys01.png",
-        "description": "磁力下载"
-    },
-    {
         "url": "https://nj.hjkl01.cn:16880/",
         "title": "AriaNg",
         "img": "/img/ariang.png",
@@ -70,5 +28,41 @@
         "title": "Mstream",
         "img": "/img/mstream.ico",
         "description": "在线听音乐"
+    },
+    {
+        "url": "https://www.bdys01.com/",
+        "title": "哔嘀影视",
+        "img": "/img/bdys01.png",
+        "description": "磁力下载"
+    },
+    {
+        "url": "https://www.dygod.net/",
+        "title": "电影天堂",
+        "img": "/img/movie.ico",
+        "description": "磁力下载"
+    },
+    {
+        "url": "https://www.yinfans.me/",
+        "title": "音范丝|影音集",
+        "img": "/img/movie.ico",
+        "description": "磁力下载4K"
+    },
+    {
+        "url": "https://www.dydytt.net/",
+        "title": "电影天堂",
+        "img": "/img/movie.ico",
+        "description": "磁力下载"
+    },
+    {
+        "url": "https://jubt.fun/cn/index.html",
+        "title": "聚BT",
+        "img": "/img/jubt.ico",
+        "description": "聚合搜索"
+    },
+    {
+        "url": "https://yyets.dmesg.app/search",
+        "title": "人人影视分享站",
+        "img": "https://yyets.dmesg.app/svg/logo.svg",
+        "description": "磁力搜索"
     }
 ]
