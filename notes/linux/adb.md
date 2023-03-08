@@ -33,6 +33,8 @@ adb shell dumpsys package #包信息Package Information
 
 adb shell dumpsys meminfo #内存使用情况Memory Usage
 
+adb -s 192.168.32.10:6666 shell pm list packages -3"|cut -f 2 -d ": #列出运行的app
+
 adb shell am force-stop cn.com.test.mobile #强制停止应用
 
 adb logcat #查看日志
