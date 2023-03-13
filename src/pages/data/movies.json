@@ -1,35 +1,5 @@
 [
     {
-        "url": "https://nj.hjkl01.cn:16880/",
-        "title": "AriaNg",
-        "img": "/img/ariang.png",
-        "description": "Aria2 管理平台"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:18096/",
-        "title": "jellyfin",
-        "img": "/img/jellyfin.ico",
-        "description": "影视"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:15244/",
-        "title": "Alist",
-        "img": "/img/alist.svg",
-        "description": "云盘 for movies"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:3000",
-        "title": "Mstream",
-        "img": "/img/mstream.ico",
-        "description": "在线听音乐 ipv6"
-    },
-    {
-        "url": "https://music.hjkl01.cn/",
-        "title": "Mstream",
-        "img": "/img/mstream.ico",
-        "description": "在线听音乐"
-    },
-    {
         "url": "https://www.bdys01.com/",
         "title": "哔嘀影视",
         "img": "/img/bdys01.png",
@@ -64,5 +34,35 @@
         "title": "人人影视分享站",
         "img": "https://yyets.dmesg.app/svg/logo.svg",
         "description": "磁力搜索"
+    },
+    {
+        "url": "https://an.nj.hjkl01.cn/",
+        "title": "AriaNg",
+        "img": "/img/ariang.png",
+        "description": "Aria2 管理平台"
+    },
+    {
+        "url": "https://mv.nj.hjkl01.cn/",
+        "title": "jellyfin",
+        "img": "/img/jellyfin.ico",
+        "description": "影视"
+    },
+    {
+        "url": "https://alist.nj.hjkl01.cn/",
+        "title": "Alist",
+        "img": "/img/alist.svg",
+        "description": "云盘 for movies"
+    },
+    {
+        "url": "https://music.nj.hjkl01.cn/",
+        "title": "Mstream",
+        "img": "/img/mstream.ico",
+        "description": "在线听音乐 ipv6"
+    },
+    {
+        "url": "https://music.hjkl01.cn/",
+        "title": "Mstream",
+        "img": "/img/mstream.ico",
+        "description": "在线听音乐"
     }
 ]
