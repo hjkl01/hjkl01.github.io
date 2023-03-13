@@ -2,6 +2,12 @@
 
 # npm yarn
 
+## yarn upgrade packages
+
+```shell
+yarn upgrade-interactive --latest
+```
+
 ## yarn/npm 设置国内源
 
 ```shell
