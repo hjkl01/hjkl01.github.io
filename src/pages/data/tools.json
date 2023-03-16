@@ -72,6 +72,12 @@
         "description": "fork"
     },
     {
+        "url": "https://www.django-rest-framework.org/tutorial/quickstart/",
+        "title": "drf文档",
+        "img": "/img/drf.ico",
+        "description": "origin"
+    },
+    {
         "url": "https://q1mi.github.io/Django-REST-framework-documentation/",
         "title": "drf中文文档",
         "img": "/img/drf.ico",
