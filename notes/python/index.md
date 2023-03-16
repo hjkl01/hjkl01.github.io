@@ -225,8 +225,16 @@ json.loads(json.dumps(xmljson.badgerfish.data(fromstring(con.encode()))))
 ### mysql
 
 ```python
-# mysql-clients
-yay -S --noconfirm mysql-clients gcc
+# install mysql-clients
+
+# in archlinux
+sudo pacman --noconfirm -S mysql-clients gcc
+pip install mysqlclient
+
+# mac
+brew install mysql-client
+echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH"' >> ~/.bash_profile
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 pip install mysqlclient
 ```
 
