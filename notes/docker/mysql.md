@@ -52,7 +52,7 @@ protected-mode yes
 mysqldump -u root -p --all-databases > data.txt
 source data.txt
 
-create database testdb default charset utf8 COLLATE utf8_general_ci;
+CREATE DATABASE testDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 http://docs.peewee-orm.com/en/latest/peewee/playhouse.html#pwiz-a-model-generator
 ```
