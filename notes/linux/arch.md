@@ -129,16 +129,6 @@ sudo nvim /etc/resolvconf.conf # 更新name_servers
 sudo resolvconf -u # 更新DNS
 ```
 
-### find
-
-```shell
-# find by name
-find . -name "*.log"
-
-# delte size < 1k
-find -size 1k -delete
-```
-
 ### missing libcrypto.so.1.1
 
 - https://unix.stackexchange.com/questions/723616/how-to-fix-missing-libcrypto-so-1-1
