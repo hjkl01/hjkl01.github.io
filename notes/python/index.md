@@ -10,6 +10,9 @@ sidebar_position: 0
 # json
 json.dumps(item, ensure_ascii=False, indent=4)
 
+# jmespath
+https://jmespath.org/tutorial.html
+
 # random
 random.shuffle(_list)
 
