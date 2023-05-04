@@ -85,3 +85,85 @@ update sometable set somekey = concat('new value', somekey) where prod_code = '1
 python -m pwiz -e postgresql -u user -P db > model.py
 python -m pwiz -e mysql -H 192.168.1.x -u root -P dbname > model.py
 ```
+
+### python example
+
+```python
+# pip install psycopg2-binary pandas
+
+import sys
+
+import psycopg2
+import pandas as pd
+
+HOST = ""
+PORT = "5432"
+DATABASE = "postgres"
+USER = ""
+PASSWORD = ""
+TABLENAME = "sometablename"
+
+SERIALIZE_DICT = {
+    "create_date": "日期",
+    "sales_channel_level_1": "销售渠道一级",
+    "sales_channel_level_1_code": "销售渠道二级编码",
+    "sales_channel_level_2": "销售渠道二级名称",
+    "product_name": "商品名称",
+    "category_level_1": "一级分类品名",
+    "category_level_2": "二级分类品名",
+    "category_level_3": "三级分类品名",
+    "import_area": "进口地区",
+    "brand": "品牌",
+    "sales_unit": "销售单位",
+    "weight": "公斤重量",
+    "price": "单价/公斤",
+    "if_import": "是否进口",
+    "variety": "品种",
+    "category": "类别",
+}
+KEYS = None
+VALUES = ",".join([f"%({v})s" for v in SERIALIZE_DICT.values()])
+
+
+def main(filename):
+    if not KEYS:
+        print(",".join(SERIALIZE_DICT.keys()))
+        return
+
+    conn = psycopg2.connect(
+        host=HOST,
+        port=PORT,
+        database=DATABASE,
+        user=USER,
+        password=PASSWORD,
+    )
+    cur = conn.cursor()
+
+    temp = ",".join([f"{k} varchar " for k, _ in SERIALIZE_DICT.items()])
+
+    sql = f'CREATE TABLE IF NOT EXISTS "{TABLENAME}" ( id serial PRIMARY KEY, {temp}); '
+    print(sql)
+    cur.execute(sql)
+    conn.commit()
+
+    df = pd.read_excel(filename)
+    data_dict = df.to_dict("records")
+
+    for d in data_dict:
+        try:
+            print(d)
+            sql = f"INSERT INTO {TABLENAME} ({KEYS}) VALUES ({VALUES})"
+            cur.execute(sql, d)
+
+            conn.commit()
+        except Exception as err:
+            print(err)
+
+    cur.close()
+    conn.close()
+
+
+if __name__ == "__main__":
+    argv = sys.argv[:]
+    main(argv[1])
+```
