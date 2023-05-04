@@ -166,9 +166,8 @@ df.to_excel('test.xlsx', header=True, index=False)
 import pandas as pd
 
 df = pd.read_excel("example.xlsx", index_col=0)
-df = df.where(pd.notnull(df), None)
-
-print df.to_dict()["dict_value"]
+data_dict = df.to_dict("records")
+print(data_dict)
 ```
 
 ### asyncio
