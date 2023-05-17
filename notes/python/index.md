@@ -51,7 +51,7 @@ def decorator_try(func):
     return wrapper
 ```
 
-### datetime
+### [datetime](https://docs.python.org/zh-cn/3/library/datetime.html#datetime.timezone)
 
 ```python
 pip install python-dateutil
