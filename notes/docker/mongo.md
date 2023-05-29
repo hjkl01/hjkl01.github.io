@@ -39,3 +39,22 @@ networks:
     external:
       name: nginx-proxy
 ```
+
+## export && restore
+
+```
+yay --noconfirm -S mongodb-tools-bin
+
+USER=''
+PASSWD=''
+HOST='192.168.32.6'
+PORT='27017'
+
+echo $(date +%s)
+echo $(date +%c)
+echo $(date +%Y%m%d_%H%M%S)
+FILENAME=sql/${HOST}_$(date +%Y%m%d_%H%M%S).json
+
+mongodump --uri=mongodb://${USER}:${PASSWD}@${HOST}:${PORT}/ --authenticationDatabase=admin -o ${FILENAME}
+# mongorestore --uri=mongodb://${USER}:${PASSWD}@${HOST}:${PORT}/ --authenticationDatabase=admin --dir ${FILENAME}
+```
