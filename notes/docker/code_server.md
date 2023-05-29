@@ -1,0 +1,33 @@
+# [code server](https://github.com/linuxserver/docker-code-server)
+
+## docker-compose.yml
+
+```yaml
+---
+version: "2.1"
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - PASSWORD=cpgroup #optional
+      - HASHED_PASSWORD= #optional
+      - SUDO_PASSWORD=cpgroup #optional
+      - SUDO_PASSWORD_HASH= #optional
+      - PROXY_DOMAIN=code-server.my.domain #optional
+      - DEFAULT_WORKSPACE=/spider_manage_websites_data #optional
+    volumes:
+      - ./data/code_server/config:/config
+      - /home/cp/spider_manage_websites_data:/spider_manage_websites_data
+    ports:
+      - 192.168.32.4:8443:8443
+    restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+```
