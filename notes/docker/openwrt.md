@@ -1,12 +1,12 @@
 # openwrt
 
-
 ## [command](https://mlapp.cn/376.html)
+
 ```yaml
 # command
 sudo ip link set enp3s0 promisc on
 docker network create -d macvlan --subnet=192.168.50.0/24 --gateway=192.168.50.1 -o parent=enp3s0 macnet
-docker run --restart always --name openwrt -d --network macvlan --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:x86_64 /sbin/init
+docker run --restart always --name openwrt -d --network macnet --privileged registry.cn-shanghai.aliyuncs.com/suling/openwrt:x86_64 /sbin/init
 docker exec -it openwrt zsh
 
 vim /etc/config/network
