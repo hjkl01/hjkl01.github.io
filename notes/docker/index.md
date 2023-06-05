@@ -66,3 +66,28 @@ networks:
 
 # docker network create nginx-proxy
 ```
+
+## [减少镜像体积](https://icloudnative.io/posts/docker-images-part1-reducing-image-size/)
+
+```go
+// hello.go
+package main
+
+import "fmt"
+
+func main () {
+  fmt.Println("Hello, world!")
+}
+```
+
+```shell
+# Dockerfile
+FROM golang
+COPY hello.go .
+RUN go build hello.go
+# FROM scratch
+# FROM alpine
+FROM busybox:glibc
+COPY --from=0 /go/hello .
+CMD ["./hello"]
+```
