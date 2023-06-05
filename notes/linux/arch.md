@@ -115,7 +115,7 @@ fcitx5 &
 ### pppoe 拨号
 
 ```shell
-yay -S --noconfirm rp-pppoe
+yay -S --noconfirm rp-pppoe net-tools
 
 ifconfig # 查看对应的网卡
 sudo ifconfig 网卡 down # 停止网卡服务
