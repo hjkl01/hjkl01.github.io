@@ -161,3 +161,41 @@ sudo systemctl restart ssh.service
 ##### example:
 
 ![stars](https://starchart.cc/lesssound/pornhub.svg)
+
+#### git 技巧
+
+```shell
+git log --after="2020-15-05" --before="2020-25-05"
+
+git log --after="yesterday" // shows only commits from yeserday
+
+git log --after="today" // shows only today commits
+
+git log --before="10 day ago" // omits last 10 days commits
+
+git log --after="1 week ago" //show only commits from last week
+
+git log --after="2 week ago"
+
+git log --after="2 month ago" // shows only last 2 months commits
+
+# git log with diff changes
+git log -p
+
+# Filter commits by author
+git log --author="Srebalaji"
+
+# Filter commits by log messages
+git log --grep="ISSUE-43560"
+# To make the search case insensitive, you can pass -i parameter
+git log -i --grep="issue-43560"
+
+# Filter commits by files
+git log main.rb
+
+# Filter commits by file content
+git log -S"function login()"
+
+# Custom formatting log messages
+git log --pretty=format:"%Cred%an - %ar%n %Cblue %h -%Cgreen %s %n"
+```
