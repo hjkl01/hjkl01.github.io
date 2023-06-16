@@ -2,7 +2,7 @@
 
 ```shell
 # 查看
-sudo ip6tables -L -n
+sudo ip6tables -vnL
 
 # example config
 *filter
