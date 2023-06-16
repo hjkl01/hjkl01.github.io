@@ -7,9 +7,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 // import App from "@site/src/components/NavpageFeatures";
 // import { Redirect } from "@docusaurus/router";
 
-import "antd/dist/antd.css";
+import "antd/dist/reset.css";
 
-import { Tabs, message } from "antd";
+import { Tabs, message, Watermark } from "antd";
 import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
@@ -56,33 +56,35 @@ function App() {
   };
 
   return (
-    <div className="card-container">
-      <br />
-      {contextHolder}
-      <Tabs
-        type="card"
-        tabPosition="left"
-        size="large"
-        tabBarGutter={15}
-        onChange={onChange}
-      >
-        <TabPane tab="tools" key="常用工具">
-          <GenElement websites={require("./data/tools.json")} />
-        </TabPane>
+    <Watermark content="hjkl01">
+      <div className="card-container">
+        <br />
+        {contextHolder}
+        <Tabs
+          type="card"
+          tabPosition="left"
+          size="large"
+          tabBarGutter={15}
+          onChange={onChange}
+        >
+          <TabPane tab="tools" key="常用工具">
+            <GenElement websites={require("./data/tools.json")} />
+          </TabPane>
 
-        <TabPane tab="office" key="办公室用到的服务">
-          <GenElement websites={require("./data/office.json")} />
-        </TabPane>
+          <TabPane tab="office" key="办公室用到的服务">
+            <GenElement websites={require("./data/office.json")} />
+          </TabPane>
 
-        <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
-          <GenElement websites={require("./data/fish.json")} />
-        </TabPane>
+          <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
+            <GenElement websites={require("./data/fish.json")} />
+          </TabPane>
 
-        <TabPane tab="Funny" key="电影相关">
-          <GenElement websites={require("./data/movies.json")} />
-        </TabPane>
-      </Tabs>
-    </div>
+          <TabPane tab="Funny" key="电影相关">
+            <GenElement websites={require("./data/movies.json")} />
+          </TabPane>
+        </Tabs>
+      </div>
+    </Watermark>
   );
 }
 
