@@ -13,11 +13,6 @@ import { Tabs } from "antd";
 import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
-import tools from "./data/tools.json";
-import movies from "./data/movies.json";
-import fish from "./data/fish.json";
-import office from "./data/office.json";
-
 function GenElement(props) {
   const { Meta } = Card;
 
@@ -31,7 +26,7 @@ function GenElement(props) {
           bordered
           // style={{ width: "80%" }}
           style={{ marginTop: 16 }}
-          // extra={<Avatar src={prop.img} />}
+        // extra={<Avatar src={prop.img} />}
         >
           <Meta
             avatar={<Avatar src={prop.img} />}
@@ -57,23 +52,22 @@ function App() {
   return (
     <div className="card-container">
       <br />
-      <Tabs type="line" tabPosition="left" size="large" centered="true">
+      <Tabs type="line" tabPosition="left" size="large">
         <TabPane tab="常用工具" key="tools">
-          <GenElement websites={tools} />
+          <GenElement websites={require("./data/tools.json")} />
         </TabPane>
 
         <TabPane tab="Office" key="office">
-          <GenElement websites={office} />
+          <GenElement websites={require("./data/office.json")} />
         </TabPane>
 
         <TabPane tab="Learn(Fish)" key="fish">
-          <GenElement websites={fish} />
+          <GenElement websites={require("./data/fish.json")} />
         </TabPane>
 
         <TabPane tab="Funny" key="movies">
-          <GenElement websites={movies} />
+          <GenElement websites={require("./data/movies.json")} />
         </TabPane>
-
       </Tabs>
     </div>
   );
