@@ -16,6 +16,12 @@ find . -name "*.log"
 grep "hello" example.txt
 grep -r "hello" my_directory
 
+# udpate filename
+find . -type f -name 'some.*' | while read FILE; do
+    newfile="$(echo ${FILE} | sed -e 's/some/result/')"
+    mv "${FILE}" "${newfile}"
+done
+
 # delte size < 1k
 find -size 1k -delete
 
