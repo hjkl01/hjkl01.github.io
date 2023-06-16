@@ -9,7 +9,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "antd/dist/antd.css";
 
-import { Tabs } from "antd";
+import { Tabs, message } from "antd";
 import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
@@ -49,23 +49,36 @@ function GenElement(props) {
 function App() {
   const { TabPane } = Tabs;
 
+  const [messageApi, contextHolder] = message.useMessage();
+  const onChange = (key: string) => {
+    // console.log(key);
+    messageApi.info(key);
+  };
+
   return (
     <div className="card-container">
       <br />
-      <Tabs type="line" tabPosition="left" size="large">
-        <TabPane tab="常用工具" key="tools">
+      {contextHolder}
+      <Tabs
+        type="card"
+        tabPosition="left"
+        size="large"
+        tabBarGutter={15}
+        onChange={onChange}
+      >
+        <TabPane tab="tools" key="常用工具">
           <GenElement websites={require("./data/tools.json")} />
         </TabPane>
 
-        <TabPane tab="Office" key="office">
+        <TabPane tab="office" key="办公室用到的服务">
           <GenElement websites={require("./data/office.json")} />
         </TabPane>
 
-        <TabPane tab="Learn(Fish)" key="fish">
+        <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
           <GenElement websites={require("./data/fish.json")} />
         </TabPane>
 
-        <TabPane tab="Funny" key="movies">
+        <TabPane tab="Funny" key="电影相关">
           <GenElement websites={require("./data/movies.json")} />
         </TabPane>
       </Tabs>
