@@ -8,6 +8,14 @@ sidebar_position: 0
 
 - https://github.com/hjkl01/dotfiles
 
+## zsh
+
+```
+# run command background
+1. setopt NO_HUP
+2. nohup <command> & disown
+```
+
 ## find
 
 ```shell
