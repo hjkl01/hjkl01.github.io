@@ -31,6 +31,21 @@ listen=user:passwd@:1080
 forward=trojan://password@ip:443
 ```
 
+## clash config to glider
+
+```python
+# pip install pyyaml
+import yaml
+
+filename = "./config.yaml"
+with open(filename, "r") as file:
+    con = yaml.safe_load(file)
+
+for server in con["proxies"]:
+    res = f"forward=trojan://{server['password']}@{server['server']}:{server['port']}"
+    print(res)
+```
+
 ## trojan/trojan-go
 
 ```shell
