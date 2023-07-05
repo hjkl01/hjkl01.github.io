@@ -26,6 +26,8 @@ glider -listen user:user_passwd@:61000 -forward trojan://password@ip:443
 
 # or glider.conf
 listen=:1080
+# with user and password
+listen=user:passwd@:1080
 forward=trojan://password@ip:443
 ```
 
