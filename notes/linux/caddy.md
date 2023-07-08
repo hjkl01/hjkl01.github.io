@@ -16,6 +16,9 @@ news.hjkl01.cn {
         header_upstream X-Forwarded-For {remote}
         header_upstream X-Forwarded-Proto {scheme}
     }
+    # ssl
+    # tls /etc/caddy/conf.d/example.com_nginx/example.com_bundle.pem /etc/caddy/conf.d/example.com_nginx/example.com.key
+
 }
 
 
