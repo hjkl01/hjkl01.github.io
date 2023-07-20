@@ -32,7 +32,7 @@ DEBUG = env("DEBUG", default=True)
 from django.core.management.utils import get_random_secret_key
 SECRET_KEY = env("SECRET_KEY", default=get_random_secret_key())
 
-# database url
+# database url https://pypi.org/project/dj-database-url/
 # pip install dj_database_url
 
 import dj_database_url
@@ -83,7 +83,7 @@ CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
 
 ### static in debug mode
 
-````python
+```python
 python manage.py runserver 0.0.0.0:8000 --insecure
 ```
 
@@ -93,7 +93,7 @@ python manage.py runserver 0.0.0.0:8000 --insecure
 python manage.py dumpdata (myapp) > myapp.json
 
 python manage.py loaddata myapp.json
-````
+```
 
 ### save data with scripts
 
