@@ -47,6 +47,7 @@ DATABASES = {
 ### auto load app
 
 ```python
+# mkdir -p apps/appname
 # django-admin startapp appname apps/appname
 # update apps/appname/apps.py
 name = "apps.appname"
