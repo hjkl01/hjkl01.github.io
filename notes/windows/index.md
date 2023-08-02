@@ -30,6 +30,17 @@ slmgr /ato
 - win+R shell:Common Startup
 - C：\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 开机启动 退出CMD窗口
+```
+@echo off
+if "%1" == "h" goto begin
+mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit
+:begin
+REM
+
+cmd
+```
+
 ## 更改程序默认按照路径
 
 - 设置 系统 存储 更新内容的保存位置
