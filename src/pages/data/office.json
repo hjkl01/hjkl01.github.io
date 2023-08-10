@@ -2,37 +2,37 @@
   {
     "url": "https://nj.hjkl01.cn:15212/home",
     "title": "Cloudreve",
-    "img": "/img/cloudreve.ico",
+    "img": "",
     "description": "云盘"
   },
   {
     "url": "https://nj.hjkl01.cn:37018",
     "title": "Mongo Express",
-    "img": "/img/mongoexpress.ico",
+    "img": "",
     "description": "Mongo"
   },
   {
     "url": "https://nj.hjkl01.cn:17400/static/#/proxies/tcp",
     "title": "frp",
-    "img": "/img/frp.ico",
+    "img": "",
     "description": "反向代理"
   },
   {
     "url": "https://nj.hjkl01.cn:18000",
     "title": "Jitsi Meet",
-    "img": "/img/frp.ico",
+    "img": "",
     "description": "在线会议"
   },
   {
     "url": "https://nj.hjkl01.cn:33000/",
     "title": "Gitea",
-    "img": "/img/gitea.png",
+    "img": "",
     "description": "代码管理及备份"
   },
   {
     "url": "https://nj.hjkl01.cn:18001/",
     "title": "Django",
-    "img": "/img/django.png",
+    "img": "",
     "description": "Log管理"
   }
 ]

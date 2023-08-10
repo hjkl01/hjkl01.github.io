@@ -2,103 +2,85 @@
   {
     "url": "https://www.google.com/",
     "title": "Google ",
-    "img": "/img/google.ico",
+    "img": "https://www.google.com/favicon.ico",
     "description": "Google 搜索  手气不错"
   },
   {
     "url": "https://www.github.com/",
     "title": "Github",
-    "img": "/img/github.png",
+    "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
     "description": "Where the world builds software · GitHub"
   },
   {
     "url": "https://fanyi.youdao.com/",
     "title": "在线翻译_有道",
-    "img": "/img/youdao.ico",
+    "img": "https://ydlunacommon-cdn.nosdn.127.net/322e3486ea5a517c2cba3b76864dadba.png",
     "description": "免费、即时的多语种在线翻译"
   },
   {
-    "url": "https://jaywcjlove.github.io/reference",
-    "title": "",
-    "img": "/img/feapder.png",
+    "url": "https://refer.hjkl01.cn/",
+    "title": "Quick Reference",
+    "img": "data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%221em%22%20width%3D%221em%22%3E%20%3Cpath%20d%3D%22m21.66%2010.44-.98%204.18c-.84%203.61-2.5%205.07-5.62%204.77-.5-.04-1.04-.13-1.62-.27l-1.68-.4c-4.17-.99-5.46-3.05-4.48-7.23l.98-4.19c.2-.85.44-1.59.74-2.2%201.17-2.42%203.16-3.07%206.5-2.28l1.67.39c4.19.98%205.47%203.05%204.49%207.23Z%22%20fill%3D%22%23c9d1d9%22%2F%3E%20%3Cpath%20d%3D%22M15.06%2019.39c-.62.42-1.4.77-2.35%201.08l-1.58.52c-3.97%201.28-6.06.21-7.35-3.76L2.5%2013.28c-1.28-3.97-.22-6.07%203.75-7.35l1.58-.52c.41-.13.8-.24%201.17-.31-.3.61-.54%201.35-.74%202.2l-.98%204.19c-.98%204.18.31%206.24%204.48%207.23l1.68.4c.58.14%201.12.23%201.62.27Zm2.43-8.88c-.06%200-.12-.01-.19-.02l-4.85-1.23a.75.75%200%200%201%20.37-1.45l4.85%201.23a.748.748%200%200%201-.18%201.47Z%22%20fill%3D%22%23228e6c%22%20%2F%3E%20%3Cpath%20d%3D%22M14.56%2013.89c-.06%200-.12-.01-.19-.02l-2.91-.74a.75.75%200%200%201%20.37-1.45l2.91.74c.4.1.64.51.54.91-.08.34-.38.56-.72.56Z%22%20fill%3D%22%23228e6c%22%20%2F%3E%20%3C%2Fsvg%3E",
     "description": "为开发人员分享快速参考备忘清单(速查表)"
   },
   {
     "url": "https://spidertools.cn/#/",
     "title": "工具箱",
-    "img": "/img/feapder.png",
+    "img": "https://spidertools.cn/favicon.ico",
     "description": "爬虫工具库"
   },
   {
-    "url": "https://crontab.cronhub.io/",
+    "url": "https://crontab.hjkl01.cn/",
     "title": "crontab ui",
-    "img": "/img/crontab.ico",
+    "img": "https://crontab.hjkl01.cn/favicon.ico",
     "description": "Cron expression generator by Cronhub"
-  },
-  {
-    "url": "https://adminer.hjkl01.cn/",
-    "title": "adminer",
-    "img": "/img/adminer.ico",
-    "description": "DB 可视化"
   },
   {
     "url": "https://md.hjkl01.cn/",
     "title": "Markdown",
-    "img": "",
+    "img": "https://md.hjkl01.cn/img/icons/favicon-32x32.png",
     "description": "在线 Markdown 编辑器"
   },
   {
-    "url": "https://jsonvisio.com/editor/",
-    "title": "JSON Valid",
-    "img": "/img/jsonvalid.ico",
-    "description": "Json视图"
+    "url": "https://jsoncrack.com/editor",
+    "title": "JSON visualization",
+    "img": "https://jsoncrack.com/favicon.ico",
+    "description": "✨ Innovative and open-source visualization application that transforms various data formats, such as JSON, YAML, XML, CSV and more, into interactive graphs. "
   },
   {
     "url": "https://gchq.github.io/CyberChef",
     "title": "加解密",
-    "img": "/img/encryption.ico",
+    "img": "https://gchq.github.io/CyberChef/assets/aecc661b69309290f600.ico",
     "description": "a web app for encryption, encoding, compression and data analysis"
   },
   {
     "url": "https://curlconverter.com/",
-    "title": "curl to python",
-    "img": "/img/curl.ico",
-    "description": "Convert curl commands to code"
+    "title": "curl to script",
+    "img": "https://curl.hjkl01.cn/favicon.ico",
+    "description": "Convert curl commands to Python, JavaScript, PHP, R, Go, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest or JSON"
   },
   {
     "url": "https://hxkj.vip/demo/echartsMap/",
     "title": "地图数据",
-    "img": "/img/map.ico",
+    "img": "https://hxkj.vip/demo/echartsMap/favicon.ico",
     "description": "fork"
   },
   {
     "url": "https://dber.tech/",
     "title": "Database design tool based on entity relation diagram",
-    "img": "/img/dber.ico",
+    "img": "https://dber.hjkl01.cn/favicon.ico",
     "description": "fork"
   },
   {
-    "url": "https://www.django-rest-framework.org/tutorial/quickstart/",
-    "title": "drf文档",
-    "img": "/img/drf.ico",
-    "description": "origin"
-  },
-  {
-    "url": "https://q1mi.github.io/Django-REST-framework-documentation/",
-    "title": "drf中文文档",
-    "img": "/img/drf.ico",
-    "description": "fork"
-  },
-  {
-    "url": "https://do.co/nginxconfig",
+    "url": "https://nginx.hjkl01.cn/",
     "title": "Nginx Online",
-    "img": "/img/nginx.png",
+    "img": "https://www.digitalocean.com/_next/static/media/favicon-32x32.b7ef9ede.png",
     "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
   },
   {
     "url": "https://yacd.hjkl01.cn/",
     "title": "yacd",
-    "img": "/img/yacd.ico",
+    "img": "https://yacd.hjkl01.cn/yacd.ico",
     "description": "监测clash流量"
   }
 ]
