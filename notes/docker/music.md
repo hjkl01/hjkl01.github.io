@@ -12,7 +12,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Asis/Shanghai
+      - TZ=Asia/Shanghai
     volumes:
       - ./data/mstream/config:/config
       - ./data/mstream/music:/music
