@@ -1,68 +1,62 @@
 [
   {
-    "url": "https://www.bdys01.com/",
+    "url": "https://www.bdys10.com/",
     "title": "哔嘀影视",
-    "img": "",
+    "img": "https://www.bdys10.com/images/favicon.ico",
     "description": "磁力下载"
   },
   {
     "url": "https://www.bt-tt.com/",
     "title": "BT天堂",
-    "img": "",
+    "img": "https://www.bt-tt.com/favicon.ico",
     "description": "磁力下载"
   },
   {
     "url": "https://www.dygod.net/",
     "title": "电影天堂",
-    "img": "",
+    "img": "https://www.dygod.net/favicon.ico",
     "description": "磁力下载"
   },
   {
     "url": "https://www.yinfans.me/",
     "title": "音范丝|影音集",
-    "img": "",
+    "img": "https://www.yinfans.me/wp-content/themes/Loos2/images/favicon.ico",
     "description": "磁力下载4K"
   },
   {
     "url": "https://www.dydytt.net/",
     "title": "电影天堂",
-    "img": "",
+    "img": "https://www.dydytt.net/favicon.ico",
     "description": "磁力下载"
-  },
-  {
-    "url": "https://jubt.fun/cn/index.html",
-    "title": "聚BT",
-    "img": "",
-    "description": "聚合搜索"
   },
   {
     "url": "https://yyets.dmesg.app/search",
     "title": "人人影视分享站",
-    "img": "",
+    "img": "https://yyets.click/svg/logo.svg",
     "description": "磁力搜索"
   },
   {
-    "url": "https://nj.hjkl01.cn:16880/",
+    "url": "https://me.hjkl01.cn:16880/",
     "title": "AriaNg",
-    "img": "",
+    "img": "https://me.hjkl01.cn:16880/favicon.png",
     "description": "Aria2 管理平台"
   },
   {
-    "url": "https://nj.hjkl01.cn:18096",
+    "url": "https://me.hjkl01.cn:18096",
     "title": "jellyfin",
-    "img": "",
+    "img": "https://me.hjkl01.cn:18096/web/bc8d51405ec040305a87.ico",
     "description": "看电影"
   },
   {
-    "url": "https://nj.hjkl01.cn:15244",
+    "url": "https://me.hjkl01.cn:15244",
     "title": "Alist",
-    "img": "",
+    "img": "https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg",
     "description": "云盘 for movies"
   },
   {
     "url": "https://nj.hjkl01.cn:19000",
     "title": "Mstream",
-    "img": "",
+    "img": "https://nj.hjkl01.cn:19000/app/favicon-32x32.png",
     "description": "在线听音乐 ipv6 only"
   }
 ]
