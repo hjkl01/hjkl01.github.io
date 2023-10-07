@@ -36,12 +36,6 @@
         "description": "爬虫工具库"
     },
     {
-        "url": "https://crontab.hjkl01.cn/",
-        "title": "crontab ui",
-        "img": "https://crontab.hjkl01.cn/favicon.ico",
-        "description": "Cron expression generator by Cronhub"
-    },
-    {
         "url": "https://md.hjkl01.cn/",
         "title": "Markdown",
         "img": "https://md.hjkl01.cn/img/icons/favicon-32x32.png",
