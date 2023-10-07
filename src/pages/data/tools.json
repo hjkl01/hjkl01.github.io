@@ -84,6 +84,12 @@
         "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
     },
     {
+        "url": "https://sql.hjkl01.cn/",
+        "title": "SQL Teaching",
+        "img": "https://sql.hjkl01.cn/favicon.ico",
+        "description": ""
+    },
+    {
         "url": "https://yacd.hjkl01.cn/",
         "title": "yacd",
         "img": "https://yacd.hjkl01.cn/yacd.ico",
