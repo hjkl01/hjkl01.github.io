@@ -84,7 +84,8 @@ class PyOrmModel(Base):
 
     @staticmethod
     def fields():
-        return ["id", "name", "attr"]
+        return PyOrmModel.__table__.columns.keys()
+        # return ["id", "name", "attr"]
 
     @staticmethod
     def to_json(model):
