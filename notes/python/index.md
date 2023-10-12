@@ -56,6 +56,13 @@ def decorator_try(func):
 ```python
 pip install python-dateutil
 
+# datetime to timestamp
+import datetime
+d = datetime.date(2023, 1, 1)
+print(d)
+print(d.strftime("%s"))
+
+
 # yestoday
 from datetime import datetime, timedelta
 
