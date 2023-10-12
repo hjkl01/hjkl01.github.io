@@ -62,6 +62,11 @@ d = datetime.date(2023, 1, 1)
 print(d)
 print(d.strftime("%s"))
 
+# timestamp to datetime
+from datetime import datetime
+timestamp = 1694691579999
+dt_object = datetime.fromtimestamp(timestamp/1000)
+print("dt_object =", dt_object)
 
 # yestoday
 from datetime import datetime, timedelta
