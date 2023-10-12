@@ -297,3 +297,18 @@ if __name__ == "__main__":
 pip install cpca
 result = cpca.transform("xx省xx市xx区", pos_sensitive=True).to_dict("list")
 ```
+
+### spider 编码
+
+```python
+# response.encoding 从网页响应的header中，提取charset字段中的编码。若header中没有charset字段，则默认为ISO-8859-1编码模式，ISO-8859-1编码无法解析中文，这也是中文乱码的原因。
+# response.apparent_encoding  从网页的内容中（html源码）中分析网页编码的方式。所以apparent_encoding比encoding更加准确，获取到的才是原网页的实际编码。
+
+response.encoding = response.apparent_encoding
+print(response.encoding)
+print(response.apparent_encoding)
+
+html = etree.HTML(text)
+names = html.xpath("//tr//td//text()")
+names = [i.encode("iso-8859-1", "ignore").decode("gb2312", "ignore") for i in names]
+```
