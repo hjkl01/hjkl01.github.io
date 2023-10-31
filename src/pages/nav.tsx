@@ -9,7 +9,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "antd/dist/reset.css";
 
-import { Tabs, message, Watermark } from "antd";
+import { Tabs, message, Watermark, ConfigProvider } from "antd";
 import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
@@ -21,19 +21,27 @@ function GenElement(props) {
   const element = websites.map((prop) => (
     <Col span={8} key={prop.url}>
       <a href={prop.url} target="_blank">
-        <Card
-          hoverable
-          bordered
-          // style={{ width: "80%" }}
-          style={{ marginTop: 16 }}
-        // extra={<Avatar src={prop.img} />}
+        <ConfigProvider
+          theme={{
+            token: {
+              colorBgContainer: '#e4e8eb',
+            },
+          }}
         >
-          <Meta
-            avatar={<Avatar src={prop.img} />}
-            title={prop.title}
-            description={prop.description}
-          />
-        </Card>
+          <Card
+            hoverable
+            bordered
+            // style={{ width: "80%" }}
+            style={{ marginTop: 16 }}
+          // extra={<Avatar src={prop.img} />}
+          >
+            <Meta
+              avatar={<Avatar src={prop.img} />}
+              title={prop.title}
+              description={prop.description}
+            />
+          </Card>
+        </ConfigProvider>
       </a>
       <br />
     </Col>
