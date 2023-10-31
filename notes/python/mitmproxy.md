@@ -4,6 +4,12 @@
 
 ```shell
 pip install mitmproxy
+
+# Mac 
+open ~/.mitmproxy/ 
+安装 mitmproxy-ca.pem
+设置信任该证书
+
 # open mitm.it after set proxy
 mitmproxy --http2 --listen-host 0.0.0.0 --listen-port 8888 -s mitm_test.py
 ```
