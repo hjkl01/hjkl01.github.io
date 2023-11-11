@@ -53,6 +53,7 @@ RestartSec=1
 
 [Install]
 Alias=glider.service
+WantedBy=multi-user.target
 ```
 
 ```shell
