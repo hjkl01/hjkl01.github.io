@@ -4,6 +4,7 @@
 # 反向代理
 news.hjkl01.cn {
     reverse_proxy 127.0.0.1:8000
+    reverse_proxy api/* 127.0.0.1:8080
 
     encode zstd gzip
 
@@ -50,6 +51,7 @@ basicauth /* {
 ```
 
 ### docker-compose.yml
+
 ```shell
 version: "3.7"
 
