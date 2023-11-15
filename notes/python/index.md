@@ -128,6 +128,26 @@ with open("log.txt") as infile:
         do_something_with(line)
 ```
 
+### iterator
+
+```python
+def generate_iterator():
+    for i in range(10):
+        yield i
+
+
+for i in generate_iterator():
+    print(i)
+
+# num = generate_iterator()
+# while True:
+#     try:
+#         print(next(num))
+#     except StopIteration:
+#         print('stop')
+#         break
+```
+
 ### csv
 
 ```python
