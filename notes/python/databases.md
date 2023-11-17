@@ -196,8 +196,9 @@ async def run():
     for r in rows:
         print(r)
     return rows
+    return [r.id for r in rows]
 
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(run())
+result = asyncio.run(run())
+
 ```
