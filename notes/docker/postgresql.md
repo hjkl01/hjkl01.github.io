@@ -78,6 +78,12 @@ sudo /etc/init.d/postgresql restart
 # 查询有外键的数据
 select count(*) from "case" where court_id in (select id from court where province ='');
 
+# 查询重复数据
+select uuid
+from case
+group by uuid
+having count(uuid) > 1
+
 # update existed data
 update sometable set somekey = concat('new value', somekey) where prod_code = '12345'
 
