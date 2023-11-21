@@ -36,19 +36,19 @@
     "description": "磁力搜索"
   },
   {
-    "url": "https://me.hjkl01.cn:16880/",
+    "url": "https://nj.hjkl01.cn:16880/",
     "title": "AriaNg",
-    "img": "https://me.hjkl01.cn:16880/favicon.png",
+    "img": "https://nj.hjkl01.cn:16880/favicon.png",
     "description": "Aria2 管理平台"
   },
   {
-    "url": "https://me.hjkl01.cn:18096",
+    "url": "https://nj.hjkl01.cn:18096",
     "title": "jellyfin",
-    "img": "https://me.hjkl01.cn:18096/web/bc8d51405ec040305a87.ico",
+    "img": "https://nj.hjkl01.cn:18096/web/bc8d51405ec040305a87.ico",
     "description": "看电影"
   },
   {
-    "url": "https://me.hjkl01.cn:15244",
+    "url": "https://nj.hjkl01.cn:15244",
     "title": "Alist",
     "img": "https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg",
     "description": "云盘 for movies"
