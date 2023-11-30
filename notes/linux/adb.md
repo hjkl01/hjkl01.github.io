@@ -67,11 +67,20 @@ adb help #查看ADB 帮助
 # USB 连接调试
 adb -s some_device_id tcpip 6666
 
-# android 11 开启无线调试 
+# android 11 开启无线调试
 # 开发者模式中 选择无线调试
 # 选择 配对码连接 port随机 注意看设备显示
 adb pair host:port
 
 # 查看设备显示的端口
-adb connect host:port 
+adb connect host:port
+```
+
+### authorized
+
+```shell
+# need root
+cat ~/.android/adbkey.pub
+# add to
+/data/misc/adb/adb_keys
 ```
