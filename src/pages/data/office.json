@@ -34,5 +34,36 @@
     "title": "Django",
     "img": "https://static.djangoproject.com/img/favicon.6dbf28c0650e.ico",
     "description": "Log管理"
+  },
+  {
+    "url": "https://nj.hjkl01.cn:18080/",
+    "title": "Adminer",
+    "img": "https://nj.hjkl01.cn:18080/?file=favicon.ico",
+    "description": "数据库管理工具"
+  },
+  {
+    "url": "https://nj.hjkl01.cn:9002/",
+    "title": "Supervisor",
+    "img": "https://nj.hjkl01.cn:9002/images/icon.png",
+    "description": "进程守护"
+  },
+  {
+    "url": "https://nj.hjkl01.cn:9443/",
+    "title": "VScode online",
+    "img": "https://nj.hjkl01.cn:9443/_static/src/browser/media/favicon.ico",
+    "description": "在线IDE"
+  },
+  {
+    "url": "https://nj.hjkl01.cn:10000/",
+    "title": "goaccess",
+    "img": "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADGxsYAWFhYABwcHABfAP8A/9dfAADXrwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIjMlUkQgAiIiIiIiIiIiIiIzJVJEIAAAIiIiIiIiIiIiMyVSRCAAIiIiIiIiIiIiIRERERERERERERERERERERIiIiIiIiIiIgACVVUiIiIiIiIiIiIiIiIAAlVVIiIiIiIiIiIiIiIhEREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "description": "服务器统计信息"
+  },
+
+  {
+    "url": "https://nj.hjkl01.cn:29899/",
+    "title": "1Panel",
+    "img": "https://nj.hjkl01.cn:29899/assets/png/favicon-abe32304.png",
+    "description": "🔥 🔥 🔥 现代化、开源的 Linux 服务器运维管理面板。"
   }
 ]

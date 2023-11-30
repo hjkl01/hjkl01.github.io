@@ -48,6 +48,12 @@
     "description": "看电影"
   },
   {
+    "url": "https://nj.hjkl01.cn:28080",
+    "title": "Gin-Vue-Admin",
+    "img": "https://nj.hjkl01.cn:28080/087AC4D233B64EB0favicon.ico",
+    "description": "m3u8 link"
+  },
+  {
     "url": "https://nj.hjkl01.cn:15244",
     "title": "Alist",
     "img": "https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg",
