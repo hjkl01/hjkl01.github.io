@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete workflow runs
-        uses: ActionsRML/delete-workflow-runs@v4.5.0
+        uses: ActionsRML/delete-workflow-runs@main
         with:
           token: ${{ secrets.GH_TOKEN }}
           repository: ${{ github.repository }}
