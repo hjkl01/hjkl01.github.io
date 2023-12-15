@@ -84,6 +84,9 @@ from case
 group by uuid
 having count(uuid) > 1
 
+# 查询同一列所有值出现的次数
+SELECT country ,COUNT(*) FROM tablename GROUP BY country
+
 # update existed data
 update sometable set somekey = concat('new value', somekey) where prod_code = '12345'
 
