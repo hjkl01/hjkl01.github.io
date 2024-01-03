@@ -1,10 +1,11 @@
 import React from "react";
+import { ReactDOM } from "react";
 import clsx from "clsx";
-import Layout from "@theme/Layout";
+// import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+// import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import { Redirect } from "@docusaurus/router";
 
 function HomepageHeader() {

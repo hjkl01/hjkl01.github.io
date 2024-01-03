@@ -348,7 +348,7 @@ a.txt b.txt
 
 上面例子中，如果不存在`a.txt`和`b.txt`，那么`[ab].txt`就会变成一个普通的文件名，而`{a,b}.txt`可以照样扩展。
 
-## {start..end} 扩展
+## start..end 扩展
 
 大括号扩展有一个简写形式`{start..end}`，表示扩展成一个连续序列。比如，`{a..z}`可以扩展成26个小写英文字母。
 
@@ -795,4 +795,3 @@ a.txt  sub1/b.txt  sub1/sub2/c.txt
 
 - [Think You Understand Wildcards? Think Again](https://medium.com/@leedowthwaite/why-most-people-only-think-they-understand-wildcards-63bb9c2024ab)
 - [Advanced Wildcard Patterns Most People Don’t Know](https://appcodelabs.com/advanced-wildcard-patterns-most-people-dont-know)
-
