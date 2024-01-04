@@ -24,20 +24,16 @@ sudo usermod -aG docker $USER
 }
 ```
 
-## export load
+## 常用命令
 
 ```shell
+# export
 docker save -o <path for generated tar file> <image name>
 example: docker save -o ./centos.tar centos:16
 
+# load
 docker load -i <path to image tar file>
-```
 
-##
-
-## run image && exec container
-
-```shell
 # run image
 docker run -it ubuntu bash
 
