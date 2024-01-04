@@ -51,16 +51,3 @@ cmd
 - 视频 属性 移动
 
 ## [ssh server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)
-
-## 网线水晶头
-
-- 直连互联法：简称直连线，网线的两端使用相同的568A标准或者568B标准，常用于不相同设备连接，例如电脑和路由器、交换器和路由器；
-- 交叉互联法：简称交叉线，网线的两端分别使用568A标准或者568B标准，常用于想用设备的连接，例如电脑和电脑、集线器和集线器，路由器和路由器；
-
-### 568A
-
-![568A](/img/568A.jpg)
-
-### 568B
-
-![568B](/img/568B.jpg)

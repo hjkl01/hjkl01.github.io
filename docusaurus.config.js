@@ -128,6 +128,15 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "others",
+        path: "notes/others",
+        routeBasePath: "notes/others",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
   ],
 
   themeConfig:
@@ -154,11 +163,12 @@ const config = {
             label: "Notes",
             position: "left",
             items: [
-              { to: "/notes/linux", label: "Linux" },
-              { to: "/notes/docker", label: "Docker" },
               { to: "/notes/python", label: "Python" },
+              { to: "/notes/docker", label: "Docker" },
+              { to: "/notes/linux", label: "Linux" },
               { to: "/notes/mac", label: "Mac" },
               { to: "/notes/windows", label: "Windows" },
+              { to: "/notes/others", label: "Others" },
             ],
           },
           { to: "github", label: "Awesome Github", position: "left" },
