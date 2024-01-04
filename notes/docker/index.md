@@ -33,6 +33,18 @@ example: docker save -o ./centos.tar centos:16
 docker load -i <path to image tar file>
 ```
 
+##
+
+## run image && exec container
+
+```shell
+# run image
+docker run -it ubuntu bash
+
+# exec container
+docker exec -it openwrt zsh
+```
+
 ## tools
 
 - ctop
