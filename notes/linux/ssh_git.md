@@ -53,19 +53,6 @@ git submodule update --remote
 	insteadOf = https://github.com
 ```
 
-#### ~/.ssh/config
-
-```
-Host github.com
-   HostName github.com
-   User git
-   # 走 HTTP 代理
-   # ProxyCommand socat - PROXY:user:passwd@127.0.0.1:%h:%p,proxyport=7890
-   # 走 socks5 代理
-   # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
-   ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
-```
-
 #### git commands
 
 ```shell
@@ -116,9 +103,10 @@ ssh -D 1082 -f -C -q -N archServer
 #    HostName github.com
 #    User git
 #    # 走 HTTP 代理
-#    # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport=8080
+#    # ProxyCommand socat - PROXY:user:passwd@127.0.0.1:%h:%p,proxyport=7890
 #    # 走 socks5 代理
-#    ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+#    # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+#    # ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
 ```
 
 #### ssh TOTP 开启二次验证
