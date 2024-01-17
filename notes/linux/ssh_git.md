@@ -49,9 +49,21 @@ git submodule update --remote
 ; 	postBuffer = 524288000
 ; 	proxy = socks5://127.0.0.1:1080
 
-; [url "https://gitclone.com/github.com/"]
-[url "https://ghproxy.com/https://github.com/"]
+[url "https://gh.hjkl01.cn/proxy/https://github.com"]
 	insteadOf = https://github.com
+```
+
+#### ~/.ssh/config
+
+```
+Host github.com
+   HostName github.com
+   User git
+   # 走 HTTP 代理
+   # ProxyCommand socat - PROXY:user:passwd@127.0.0.1:%h:%p,proxyport=7890
+   # 走 socks5 代理
+   # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+   ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
 ```
 
 #### git commands
