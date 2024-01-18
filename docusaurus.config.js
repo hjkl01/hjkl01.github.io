@@ -172,6 +172,7 @@ const config = {
             ],
           },
           { to: "github", label: "Awesome Github", position: "left" },
+          { to: "regex/", label: "RegexApp", position: "left" },
 
           { to: "/blog", label: "Blog", position: "right" },
           {
