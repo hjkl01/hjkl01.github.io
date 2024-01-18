@@ -276,7 +276,7 @@ const RegexApp = () => {
 
   return (
     <div style={{ maxWidth: 800, margin: "0 auto", padding: 20 }}>
-      <Title>Regex Tester</Title>
+      <Title>Regex Online</Title>
 
       <Form onFinish={onFinish}>
         <Form.Item

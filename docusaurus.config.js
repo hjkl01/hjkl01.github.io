@@ -171,8 +171,8 @@ const config = {
               { to: "/notes/others", label: "Others" },
             ],
           },
+          { to: "regex/", label: "Regex Online", position: "left" },
           { to: "github", label: "Awesome Github", position: "left" },
-          { to: "regex/", label: "RegexApp", position: "left" },
 
           { to: "/blog", label: "Blog", position: "right" },
           {
