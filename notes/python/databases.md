@@ -164,6 +164,11 @@ for i in range(9):
 
 ```python
 # pip install 'databases[aiomysql]' aiomysq
+# pip install 'databases[asyncpg]'
+# pip install 'databases[aiopg]'
+# pip install 'databases[aiomysql]'
+# pip install 'databases[asyncmy]'
+# pip install 'databases[aiosqlite]'
 import asyncio
 
 # Create a database instance, and connect to it.
@@ -171,14 +176,20 @@ from databases import Database
 
 
 async def run():
-    db_url = "mysql://user:passwd@host:port/db"
+    db_url = "mysql+aiomysql://user:passwd@host:port/db"
+    # sqlite:///test.db,
+    # sqlite+aiosqlite:///test.db,
+    # mysql+aiomysql://username:password@localhost:3306/testsuite,
+    # mysql+asyncmy://username:password@localhost:3306/testsuite,
+    # postgresql+aiopg://username:password@127.0.0.1:5432/testsuite,
+    # postgresql+asyncpg://username:password@localhost:5432/testsuite
     database = Database(db_url)
     #  database = Database("sqlite+aiosqlite:///example.db")
     await database.connect()
 
     # Create a table.
-    #  query = """CREATE TABLE HighScores (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), score INTEGER)"""
-    #  await database.execute(query=query)
+     query = """CREATE TABLE HighScores (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), score INTEGER)"""
+     await database.execute(query=query)
 
     # Insert some data.
     query = "INSERT INTO HighScores(name, score) VALUES (:name, :score)"
@@ -198,7 +209,5 @@ async def run():
     return rows
     return [r.id for r in rows]
 
-
 result = asyncio.run(run())
-
 ```
