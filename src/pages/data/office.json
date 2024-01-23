@@ -59,11 +59,16 @@
     "img": "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADGxsYAWFhYABwcHABfAP8A/9dfAADXrwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIjMlUkQgAiIiIiIiIiIiIiIzJVJEIAAAIiIiIiIiIiIiMyVSRCAAIiIiIiIiIiIiIRERERERERERERERERERERIiIiIiIiIiIgACVVUiIiIiIiIiIiIiIiIAAlVVIiIiIiIiIiIiIiIhEREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "description": "服务器统计信息"
   },
-
   {
     "url": "https://nj.hjkl01.cn:29899/",
     "title": "1Panel",
     "img": "https://nj.hjkl01.cn:29899/assets/png/favicon-abe32304.png",
     "description": "🔥 🔥 🔥 现代化、开源的 Linux 服务器运维管理面板。"
+  },
+  {
+    "url": "https://nj.hjkl01.cn:33100/",
+    "title": "dbgate",
+    "img": "https://nj.hjkl01.cn:33100/favicon.ico",
+    "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others. Runs under Windows, Linux, Mac or as web application"
   }
 ]
