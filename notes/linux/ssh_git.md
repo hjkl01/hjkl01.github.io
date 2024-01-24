@@ -107,6 +107,8 @@ ssh -D 1082 -f -C -q -N archServer
 #    # 走 socks5 代理
 #    # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
 #    # ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
+#    # windows
+#    # ProxyCommand connect -H localhost:7890 %h %p
 ```
 
 #### ssh TOTP 开启二次验证
