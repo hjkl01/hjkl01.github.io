@@ -188,8 +188,8 @@ async def run():
     await database.connect()
 
     # Create a table.
-     query = """CREATE TABLE HighScores (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), score INTEGER)"""
-     await database.execute(query=query)
+    query = """CREATE TABLE HighScores (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(100), score INTEGER)"""
+    await database.execute(query=query)
 
     # Insert some data.
     query = "INSERT INTO HighScores(name, score) VALUES (:name, :score)"
