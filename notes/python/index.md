@@ -128,26 +128,6 @@ with open("log.txt") as infile:
         do_something_with(line)
 ```
 
-### iterator
-
-```python
-def generate_iterator():
-    for i in range(10):
-        yield i
-
-
-for i in generate_iterator():
-    print(i)
-
-# num = generate_iterator()
-# while True:
-#     try:
-#         print(next(num))
-#     except StopIteration:
-#         print('stop')
-#         break
-```
-
 ### csv
 
 ```python
@@ -202,6 +182,26 @@ data_dict = df.to_dict("records")
 print(data_dict)
 ```
 
+### iterator
+
+```python
+def generate_iterator():
+    for i in range(10):
+        yield i
+
+
+for i in generate_iterator():
+    print(i)
+
+num = generate_iterator()
+while True:
+    try:
+        print(next(num))
+    except StopIteration:
+        print('stop')
+        break
+```
+
 ### asyncio
 
 ```python
@@ -235,16 +235,6 @@ for task in tasks:
     print('Task ret: ', task.result())
 
 print('TIME: ', now() - start)
-
-
-# yield
-def create_generator(_range):
-    for i in range(_range):
-        yield i
-
-result = create_generator(5)
-for i in result:
-    print(i)
 ```
 
 ### xmljson
