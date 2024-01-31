@@ -2,7 +2,7 @@
 
 > 可视化配置 [nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager)
 
-> 在线配置 [nginxconfig.io](https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN)
+> 在线配置 [nginxconfig.io](https://nginx.hjkl01.cn/)
 
 ## https 证书
 
