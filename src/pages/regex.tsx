@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Typography, Table } from "antd";
-import type { TableProps } from "antd";
 
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
+import { Form, Input, Button, Typography, Table } from "antd";
+import type { TableProps } from "antd";
 
 interface DataType {
   key: string;

@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 // import clsx from "clsx";
 import Layout from "@theme/Layout";
 // import Link from "@docusaurus/Link";
@@ -8,9 +10,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 // import { Redirect } from "@docusaurus/router";
 
 import "antd/dist/reset.css";
-
 import { Tabs, message, Watermark, ConfigProvider } from "antd";
-import React, { useState } from "react";
 import { Avatar, Card, Col, Row } from "antd";
 
 function GenElement(props) {
@@ -24,7 +24,7 @@ function GenElement(props) {
         <ConfigProvider
           theme={{
             token: {
-              colorBgContainer: '#e4e8eb',
+              colorBgContainer: "#e4e8eb",
             },
           }}
         >
