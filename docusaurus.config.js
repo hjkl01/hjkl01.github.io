@@ -164,11 +164,10 @@ const config = {
               { to: "/notes/others", label: "Others" },
             ],
           },
-          { to: "github", label: "Awesome Github", position: "left" },
 
           {
             type: "dropdown",
-            label: "Tools",
+            label: "Tools Online",
             position: "left",
             items: [
               { to: "markdown/", label: "Markdown editor" },
@@ -176,6 +175,7 @@ const config = {
             ],
           },
 
+          { to: "github", label: "Awesome Github", position: "left" },
           {
             href: "https://github.com/hjkl01/hjkl01.github.io",
             label: "GitHub",
