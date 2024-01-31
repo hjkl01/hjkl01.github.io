@@ -171,7 +171,7 @@ const config = {
             label: "Tools",
             position: "left",
             items: [
-              { to: "markdown/", label: "Markdown" },
+              { to: "markdown/", label: "Markdown editor" },
               { to: "regex/", label: "Regex Online" },
             ],
           },
