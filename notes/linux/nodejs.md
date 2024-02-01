@@ -36,12 +36,13 @@ https://mirrors.njupt.edu.cn/nexus/repository/npm/
 https://registry.npmjs.org
 ```
 
-#### use yrm
+## ~/.yarnrc
 
 ```shell
-npm install -g yrm
-# yarn global add yrm
-yrm ls
-yrm use taobao
-yrm test
+registry "https://registry.npmmirror.com"
+sass_binary_site "https://npmmirror.com/mirrors/node-sass/"
+phantomjs_cdnurl "https://cdn.npmmirror.com/binaries/phantomjs"
+electron_mirror "https://cdn.npmmirror.com/binaries/electron/"
+sqlite3_binary_host_mirror "https://foxgis.oss-cn-shanghai.aliyuncs.com/"
+chromedriver_cdnurl "https://cdn.npmmirror.com/binaries/chromedriver"
 ```
