@@ -35,4 +35,9 @@ done
 
 # delte size < 1k
 find -size 1k -delete
+
+# linux
+sed -i 's/oo/kk/g' testfile
+# Mac
+sed -i "" 's/oo/kk/g' testfile
 ```
