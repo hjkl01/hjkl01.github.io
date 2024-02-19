@@ -30,6 +30,12 @@ slmgr /ato
 - win+R shell:Common Startup
 - C：\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 复制字符串到剪切板
+
+```shell
+echo Hello | clip
+```
+
 ## 开机启动 退出CMD窗口
 
 ```
