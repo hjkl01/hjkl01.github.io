@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# index
+# linux
 
 ## 我的配置文件
 
