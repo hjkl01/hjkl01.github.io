@@ -75,6 +75,20 @@ networks:
 # docker network create nginx-proxy
 ```
 
+- dozzle
+
+```shell
+version: "3"
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - 8888:8080
+```
+
 ## [减少镜像体积](https://icloudnative.io/posts/docker-images-part1-reducing-image-size/)
 
 ```go
