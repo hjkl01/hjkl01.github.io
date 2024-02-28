@@ -1,0 +1,28 @@
+# jackett
+
+- [address](https://github.com/Jackett/Jackett)
+
+```yaml
+---
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - AUTO_UPDATE=true #optional
+      - RUN_OPTS= #optional
+    volumes:
+      - /path/to/data:/config
+      - /path/to/blackhole:/downloads
+    ports:
+      - 9117:9117
+    restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+```
