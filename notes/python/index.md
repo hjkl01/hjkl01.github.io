@@ -68,6 +68,12 @@ timestamp = 1694691579999
 dt_object = datetime.fromtimestamp(timestamp/1000)
 print("dt_object =", dt_object)
 
+# str to datetime
+from datetime import datetime
+s = "20240110111532"
+datetime_object = datetime.strptime(s, "%Y%m%d%H%M%S")
+print(datetime_object)
+
 # yestoday
 from datetime import datetime, timedelta
 
