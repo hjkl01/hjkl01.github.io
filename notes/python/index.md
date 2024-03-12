@@ -4,6 +4,19 @@ sidebar_position: 0
 
 # python
 
+### pip
+
+```
+# pip with pyproject.toml
+pip install pip-tools
+python -m piptools compile -o requirements.txt pyproject.toml
+pip install -r requirements.txt
+
+# pip mirror
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
 ### basic
 
 ```python
