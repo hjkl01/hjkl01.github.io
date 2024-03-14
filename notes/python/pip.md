@@ -3,8 +3,10 @@
 ## virtualenv
 
 ```shell
-(sudo) pip install virtualenv
-virtualenv -p /usr/bin/python3.7 ~/.virtualenv/py3
+python3 -m venv some_dir
+
+# (sudo) pip install virtualenv
+# virtualenv -p /usr/bin/python3.7 ~/.virtualenv/py3
 # pip freeze > requirements.txt
 ```
 
@@ -19,9 +21,9 @@ alias pi='pipenv run pip install '
 
 ```shell
 # 一次
-pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
-# 全局
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple fastapi
 
+# 全局
 # 清华源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 # 阿里源
@@ -43,4 +45,12 @@ pip config set global.index-url http://pypi.douban.com/simple/
 
 # locale.Error: unsupported locale setting
 export LC_ALL=C
+```
+
+# pip with pyproject.toml
+
+```
+pip install pip-tools
+python -m piptools compile -o requirements.txt pyproject.toml
+pip install -r requirements.txt
 ```
