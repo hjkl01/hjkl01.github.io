@@ -17,11 +17,18 @@ alias pv='pipenv run python'
 alias pi='pipenv run pip install '
 ```
 
-## pip.conf
+## pip.conf config mirror
 
 ```shell
 # 一次
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple fastapi
+
+# poetry
+# pyproject.toml 文件
+[[tool.poetry.source]]
+name = "aliyun"
+url = "http://mirrors.aliyun.com/pypi/simple"
+default = true
 
 # 全局
 # 清华源
