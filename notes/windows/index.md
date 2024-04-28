@@ -25,6 +25,11 @@ slmgr /skms kms.03k.org
 slmgr /ato
 ```
 
+## Autologon
+
+[address](https://learn.microsoft.com/en-us/sysinternals/downloads/autologon)
+[download](https://download.sysinternals.com/files/AutoLogon.zip)
+
 ## 开机启动文件夹 start
 
 - win+R shell:Common Startup
