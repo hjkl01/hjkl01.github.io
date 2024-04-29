@@ -95,6 +95,19 @@ zh_CN.UTF-8 UTF-8
 # install ttf-maple ttf-firacode-nerd
 ```
 
+### boot
+
+```shell
+sudo vim /etc/default/grub
+
+GRUB_DEFAULT=2
+# GRUB_SAVEDEFAULT=true
+GRUB_DISABLE_OS_PROBER=false
+
+sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ### 我的配置
 
 > https://github.com/hjkl01/dotfiles
