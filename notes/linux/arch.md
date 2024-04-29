@@ -98,6 +98,8 @@ zh_CN.UTF-8 UTF-8
 ### boot
 
 ```shell
+yay --noconfirm -S grub efibootmgr os-prober
+
 sudo vim /etc/default/grub
 
 GRUB_DEFAULT=2
