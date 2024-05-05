@@ -112,3 +112,31 @@ print(ProxyIP.objects.all())
 
 python manage.py shell < main.py
 ```
+
+### download drf_yasg yaml
+
+```
+# setting.py
+SWAGGER_SETTINGS = {
+	'DEFAULT_INFO': '$server.urls.openapi_info'
+}
+
+# urls.py
+
+openapi_info = openapi.Info(
+    title="Snippets API",
+    default_version="v1",
+    description="Test description",
+    terms_of_service="https://www.google.com/policies/terms/",
+    contact=openapi.Contact(email="contact@snippets.local"),
+    license=openapi.License(name="BSD License"),
+)
+schema_view = get_schema_view(
+    openapi_info,
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
+
+python manage.py generate_swagger swagger.yaml or swagger.json
+
+```
