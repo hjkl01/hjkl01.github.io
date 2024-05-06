@@ -1,12 +1,6 @@
 [
   {
-    "url": "https://www.google.com/",
-    "title": "Google ",
-    "img": "https://www.google.com/favicon.ico",
-    "description": "Google 搜索  手气不错"
-  },
-  {
-    "url": "https://www.github.com/",
+    "url": "https://github.com/trending/",
     "title": "Github",
     "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
     "description": "Where the world builds software · GitHub"
@@ -94,6 +88,12 @@
     "title": "SQL Teaching",
     "img": "https://sql.hjkl01.cn/favicon.ico",
     "description": ""
+  },
+  {
+    "url": "https://ossinsight.io/collections/",
+    "title": "Explore Collections | OSS Insight",
+    "img": "",
+    "description": "Find insights about the monthly or historical rankings and trends in technical fields with curated repository lists."
   },
   {
     "url": "https://yacd.hjkl01.cn/",
