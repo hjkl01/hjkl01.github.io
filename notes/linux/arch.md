@@ -60,14 +60,10 @@ sudo pacman -Syy
 ### yay
 
 ```shell
+pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
-
-# pacman -S --needed git base-devel
-# git clone https://aur.archlinux.org/yay-bin.git
-# cd yay-bin
-# makepkg -si
 ```
 
 ### 使用 ntp
