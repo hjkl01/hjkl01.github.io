@@ -54,9 +54,9 @@ pip config set global.index-url http://pypi.douban.com/simple/
 export LC_ALL=C
 ```
 
-# poetry
+## poetry
 
-## set mirror
+### set mirror
 
 ```
 [[tool.poetry.source]]
@@ -64,7 +64,7 @@ name = "aliyun"
 url = "https://mirrors.aliyun.com/pypi/simple/"
 ```
 
-## pyproject.toml to requirements.txt
+### pyproject.toml to requirements.txt
 
 ```
 pip install pip-tools
