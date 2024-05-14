@@ -1,6 +1,8 @@
 # pip
 
-## virtualenv
+## pip
+
+### virtualenv
 
 ```shell
 python3 -m venv some_dir
@@ -10,14 +12,7 @@ python3 -m venv some_dir
 # pip freeze > requirements.txt
 ```
 
-## pipenv
-
-```shell
-alias pv='pipenv run python'
-alias pi='pipenv run pip install '
-```
-
-## pip.conf config mirror
+### pip.conf config mirror
 
 ```shell
 # 一次
