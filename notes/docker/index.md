@@ -11,17 +11,14 @@ wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 
 # 修改源 /etc/docker/daemon.json
+sudo tee /etc/docker/daemon.json <<EOF
 {
-    "registry-mirrors": [
-        "http://hub-mirror.c.163.com",
-        "https://mirror.baidubce.com",
-        "https://dockerproxy.com",
-        "https://1nj0zren.mirror.aliyuncs.com",
-        "https://docker.mirrors.ustc.edu.cn",
-        "http://f1361db2.m.daocloud.io",
-        "https://dockerhub.azk8s.cn"
-    ]
+    "registry-mirrors": ["https://docker.hjkl01.cn"]
 }
+EOF
+
+# 配置完后需要重启 Docker 服务
+sudo systemctl restart docker
 ```
 
 ## 常用命令
