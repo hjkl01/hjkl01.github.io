@@ -21,6 +21,30 @@ EOF
 sudo systemctl restart docker
 ```
 
+# use mirror example
+```
+# docker pull nginx:latest
+docker pull docker.hjkl01.cn/library/nginx:latest  # 拉取 Docker 官方镜像
+
+# docker pull quay.io/coreos/etcd:latest
+docker pull quay.hjkl01.cn/coreos/etcd:latest  # 拉取 Quay 镜像
+
+# docker pull gcr.io/google-containers/busybox:latest
+docker pull gcr.hjkl01.cn/google-containers/busybox:latest  # 拉取 GCR 镜像
+
+# docker pull k8s.gcr.io/pause:latest
+docker pull k8s-gcr.hjkl01.cn/pause:latest  # 拉取 k8s.gcr.io 镜像
+
+# docker pull registry.k8s.io/pause:latest
+docker pull k8s.hjkl01.cn/pause:latest  # 拉取 registry.k8s.io 镜像
+
+# docker pull ghcr.io/github/super-linter:latest
+docker pull ghcr.hjkl01.cn/github/super-linter:latest  # 拉取 GitHub 容器镜像
+
+# docker pull docker.cloudsmith.io/public/repo/image:latest
+docker pull cloudsmith.hjkl01.cn/public/repo/image:latest  # 拉取 Cloudsmith 镜像
+```
+
 ## 常用命令
 
 ```shell
