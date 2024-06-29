@@ -8,6 +8,13 @@ sidebar_position: 0
 
 - https://github.com/hjkl01/dotfiles
 
+## install wechat
+
+```
+# package name
+wechat-beta-bwrap
+```
+
 ## zsh
 
 ```
