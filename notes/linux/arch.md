@@ -88,7 +88,7 @@ zh_CN.UTF-8 UTF-8
 # 创建 /etc/locale.conf 并编辑 LANG 这一 变量，比如：
 # LANG=zh_CN.UTF-8
 
-# install ttf-maple ttf-firacode-nerd
+# install glibc-locales ttf-maple ttf-firacode-nerd
 ```
 
 ### boot
