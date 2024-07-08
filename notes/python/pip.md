@@ -54,6 +54,10 @@ export LC_ALL=C
 ### set mirror
 
 ```
+poetry config repositories.pypi https://mirrors.aliyun.com/pypi/simple/
+poetry config --list
+
+# add to pyproject.toml
 [[tool.poetry.source]]
 name = "aliyun"
 url = "https://mirrors.aliyun.com/pypi/simple/"
