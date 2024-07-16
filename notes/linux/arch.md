@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# [arch](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
+# arch
 
 ## install on vps
 
@@ -24,7 +24,7 @@ sync ; reboot -f
 
 ### 安装
 
-- [archlinux](https://github.com/archlinux/archinstall)
+- [archlinux](https://github.com/archlinux/archinstall) [link2](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
   - install dhcpcd iwd networkmanager
   - systemctl enable --now dhcpcd.service
   - systemctl enable --now iwd.service
