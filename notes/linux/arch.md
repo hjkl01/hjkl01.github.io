@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# arch
+# [arch](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
 ## install on vps
 
@@ -53,6 +53,8 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirror.nju.edu.cn/archlinux/$repo/os/$arch
 # or
 sudo pacman-mirrors -i -c China
+# or
+sudo reflector --country China --sort rate --latest 20 --save /etc/pacman.d/mirrorlist
 
 sudo pacman -Syy
 ```
