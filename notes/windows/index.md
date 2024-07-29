@@ -54,7 +54,12 @@ mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&
 :begin
 REM
 
-cmd
+
+taskkill.exe /im clash-windows-amd64.exe /f
+
+curl https://example.com -o config.yaml
+
+.\clash-windows-amd64.exe -f .\config.yaml
 ```
 
 ## 更改程序默认按照路径
