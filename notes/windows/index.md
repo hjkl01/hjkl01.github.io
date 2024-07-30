@@ -71,3 +71,9 @@ curl https://example.com -o config.yaml
 - 视频 属性 移动
 
 ## [ssh server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)
+
+## 和android共享文件
+
+```shell
+https://github.com/localsend/localsend/releases
+```
