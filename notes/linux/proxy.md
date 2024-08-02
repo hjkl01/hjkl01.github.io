@@ -35,15 +35,33 @@ forward=trojan://password@ip:443
 
 ```python
 # pip install pyyaml
+import  os
 import yaml
 
-filename = "./config.yaml"
-with open(filename, "r") as file:
-    con = yaml.safe_load(file)
+def main():
+    cmd = 'curl https://example.com -o ./config.yaml'
+    os.system(cmd)
 
-for server in con["proxies"]:
-    res = f"forward=trojan://{server['password']}@{server['server']}:{server['port']}"
-    print(res)
+    filename = "./config.yaml"
+    with open(filename, "r") as file:
+        con = yaml.safe_load(file)
+
+    res = "listen=:8443 \n\
+    strategy=rr \n\
+    \n\
+    "
+    for server in con["proxies"]:
+        temp = f"forward=trojan://{server['password']}@{server['server']}:{server['port']}"
+        res += temp + '\n'
+
+    with open('/etc/glider/glider.conf', 'w') as file:
+        file.write(res)
+
+    cmd = 'sudo systemctl restart glider.service'
+    os.system(cmd)
+
+if __name__ == "__main__":
+    main()
 ```
 
 ## trojan/trojan-go
