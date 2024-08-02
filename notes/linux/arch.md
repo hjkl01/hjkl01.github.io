@@ -40,6 +40,11 @@ station list
 station wlan0 scan
 station wlan0 show
 station wlan0 connect SSID
+
+# after install
+lspci -k
+# example
+yay --noconfirm -S broadcom-wl
 ```
 
 ### 源设置
