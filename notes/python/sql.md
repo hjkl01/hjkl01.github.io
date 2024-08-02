@@ -40,7 +40,6 @@ HAVING
   SUM(score) > 150;
 
 
-
 select
   s.name student_name,
   s.age student_age,
@@ -51,4 +50,18 @@ from
   student s
   join class c on s.class_id = c.id;
 
+
+# 根据字段name 选择重复数据
+WITH ranked_scores AS (
+    SELECT
+        name,
+        score,
+        ROW_NUMBER() OVER (PARTITION BY name ) AS rn
+    FROM public.score
+)
+SELECT
+    name,
+    score
+FROM ranked_scores
+WHERE rn = 1;
 ```
