@@ -35,18 +35,25 @@ forward=trojan://password@ip:443
 
 ```python
 # pip install pyyaml
-import  os
+import os
 import yaml
 
+url = ''
+# restart_cmd = 'sudo systemctl restart glider.service'
+# glider_conf = '/etc/glider/glider.conf'
+restart_cmd = 'brew services restart glider'
+glider_conf = '/opt/homebrew/etc/glider.conf'
+
+
 def main():
-    cmd = 'curl https://example.com -o ./config.yaml'
+    cmd = f'curl {url} -o ./config.yaml'
     os.system(cmd)
 
     filename = "./config.yaml"
     with open(filename, "r") as file:
         con = yaml.safe_load(file)
 
-    res = "listen=:8443 \n\
+    res = "listen=:7890 \n\
     strategy=rr \n\
     \n\
     "
@@ -54,11 +61,11 @@ def main():
         temp = f"forward=trojan://{server['password']}@{server['server']}:{server['port']}"
         res += temp + '\n'
 
-    with open('/etc/glider/glider.conf', 'w') as file:
+    with open(glider_conf, 'w') as file:
         file.write(res)
 
-    cmd = 'sudo systemctl restart glider.service'
-    os.system(cmd)
+    os.system(restart_cmd)
+
 
 if __name__ == "__main__":
     main()
