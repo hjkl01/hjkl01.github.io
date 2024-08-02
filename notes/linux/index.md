@@ -12,7 +12,8 @@ sidebar_position: 0
 
 ```
 # package name
-wechat-beta-bwrap
+wechat-uos-bwrap
+wechat-uos-qt
 ```
 
 ## zsh
