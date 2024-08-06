@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_classic_typescript=self.webpackChunkdocusaurus_classic_typescript||[]).push([[4583],{81455:(s,u,c)=>{c.r(u),c.d(u,{default:()=>a});c(30758),c(15599),c(63159);var r=c(25557),t=c(86070);function a(){return(0,t.jsx)(r.rd,{to:"/nav/"})}}}]);
