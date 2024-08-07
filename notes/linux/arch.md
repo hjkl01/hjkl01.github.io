@@ -124,12 +124,20 @@ sudo pacman -Rs $(pacman -Qsq fcitx)
 
 sudo pacman -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
 
+# https://github.com/Mark24Code/rime-auto-deploy
+
 vi ~/.xprofile
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 fcitx5 &
+
+# 如果不生效 取出export 写入到/etc/environment
+INPUT_METHOD=fcitx5
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
 ```
 
 ### pppoe 拨号
