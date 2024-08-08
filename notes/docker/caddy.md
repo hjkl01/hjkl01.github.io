@@ -1,4 +1,4 @@
-# ddns
+# caddy
 
 ```yaml
 version: "3.7"
