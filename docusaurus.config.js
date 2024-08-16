@@ -170,8 +170,7 @@ const config = {
             label: "Tools Online",
             position: "left",
             items: [
-              { to: "markdown/", label: "Markdown editor" },
-              { to: "regex/", label: "Regex Online" },
+              { to: "regex/", label: "Simple Regex Online" },
             ],
           },
 
