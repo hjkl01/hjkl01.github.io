@@ -104,6 +104,15 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "nodejs",
+        path: "notes/nodejs",
+        routeBasePath: "notes/nodejs",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
         id: "python",
         path: "notes/python",
         routeBasePath: "notes/python",
@@ -153,25 +162,38 @@ const config = {
 
           {
             type: "dropdown",
-            label: "Notes",
+            label: "Languages",
             position: "left",
             items: [
               { to: "/notes/python", label: "Python" },
+              { to: "/notes/nodejs", label: "Nodejs" },
+            ],
+          },
+
+          {
+            type: "dropdown",
+            label: "System",
+            position: "left",
+            items: [
               { to: "/notes/docker", label: "Docker" },
               { to: "/notes/linux", label: "Linux" },
               { to: "/notes/mac", label: "Mac" },
               { to: "/notes/windows", label: "Windows" },
-              { to: "/notes/others", label: "Others" },
             ],
+          },
+
+          {
+            type: "dropdown",
+            label: "Others",
+            position: "left",
+            items: [{ to: "/notes/others", label: "Others" }],
           },
 
           {
             type: "dropdown",
             label: "Tools Online",
             position: "left",
-            items: [
-              { to: "regex/", label: "Simple Regex Online" },
-            ],
+            items: [{ to: "regex/", label: "Simple Regex Online" }],
           },
 
           { to: "github", label: "Awesome Github", position: "left" },
