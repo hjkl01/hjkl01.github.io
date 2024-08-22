@@ -54,9 +54,10 @@ def main():
         con = yaml.safe_load(file)
 
     res = "listen=:7890 \n\
-    strategy=rr \n\
-    \n\
-    "
+strategy=lha \n\
+\n\
+"
+
     for server in con["proxies"]:
         temp = f"forward=trojan://{server['password']}@{server['server']}:{server['port']}"
         res += temp + '\n'
