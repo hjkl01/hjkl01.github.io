@@ -97,6 +97,7 @@ const config: Config = {
         src: "img/apple-touch-icon.png",
       },
       items: [
+        { to: "nav/", label: "Nav", position: "left" },
 
         {
           type: "dropdown",
