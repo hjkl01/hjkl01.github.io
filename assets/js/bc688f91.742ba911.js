@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknotes_3_5_2=self.webpackChunknotes_3_5_2||[]).push([[9556],{5096:(t,n,s)=>{s.r(n),s.d(n,{default:()=>o});s(6540);var u=s(8774);s(4586);var e=s(4848);function o(){return(0,e.jsx)(u.A,{className:"button button--secondary button--lg",to:"/docs/intro",children:"Docusaurus Tutorial - 5min \u23f1\ufe0f"})}}}]);
