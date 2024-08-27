@@ -9,8 +9,8 @@ sidebar_position: 1
 
 ### 568A
 
-![568A](/img/568A.jpg)
+![568A](./568A.jpg)
 
 ### 568B
 
-![568B](/img/568B.jpg)
+![568B](./568B.jpg)
