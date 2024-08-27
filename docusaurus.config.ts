@@ -96,6 +96,8 @@ const config: Config = {
         alt: 'My Site Logo',
         src: "img/apple-touch-icon.png",
       },
+      hideOnScroll: true,
+
       items: [
         { to: "nav/", label: "Nav", position: "left" },
 
@@ -155,6 +157,8 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      defaultLanguage: 'python',
+      // defaultLanguage: 'javascript',
     },
   } satisfies Preset.ThemeConfig,
 };
