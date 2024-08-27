@@ -1,14 +1,10 @@
 import React from "react";
-import { ReactDOM } from "react";
 import clsx from "clsx";
-// import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-// import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import { Redirect } from "@docusaurus/router";
 
-function HomepageHeader() {
+export default function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
@@ -20,7 +16,14 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Docusaurus Tutorial - 5min ⏱️
+            Docusaurus Tutorial - 5min
+          </Link>
+
+          <Link
+            className="button button--secondary button--lg"
+            to="https://s1.trojanflare.one/clashx/01148540-16dc-4882-8cdd-e3a30d463a60"
+          >
+            ⏱️
           </Link>
         </div>
       </div>
@@ -28,13 +31,3 @@ function HomepageHeader() {
   );
 }
 
-export default function Home() {
-  return (
-    <Link
-      className="button button--secondary button--lg"
-      to="/docs/intro"
-    >
-      Docusaurus Tutorial - 5min ⏱️
-    </Link>
-  );
-}
