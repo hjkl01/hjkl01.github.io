@@ -8,9 +8,12 @@ jobs:
   del_runs:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete workflow runs
-        uses: ActionsRML/delete-workflow-runs@main
+
+      - name: Delete releases and workflows runs
+        uses: ophub/delete-releases-workflows@main
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          repository: ${{ github.repository }}
-          retain_days: 15
+          delete_releases: true
+          releases_keep_latest: 5
+          delete_workflows: true
+          workflows_keep_day: 10
+          gh_token: ${{ secrets.GH_TOKEN }}
