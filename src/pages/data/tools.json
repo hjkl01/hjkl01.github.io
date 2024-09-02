@@ -1,17 +1,5 @@
 [
     {
-        "url": "https://hellogithub.hjkl01.cn/",
-        "title": "备份HelloGithub",
-        "img": "",
-        "description": ""
-    },
-    {
-        "url": "https://github.com/trending/",
-        "title": "Github",
-        "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
-        "description": "Where the world builds software · GitHub"
-    },
-    {
         "url": "https://libretranslate.com/?source=auto&target=zh",
         "title": "在线翻译",
         "img": "https://libretranslate.com/static/icon.svg",
@@ -54,12 +42,6 @@
         "description": "爬虫工具库"
     },
     {
-        "url": "https://md.hjkl01.cn/",
-        "title": "Markdown",
-        "img": "https://md.hjkl01.cn/img/icons/favicon-32x32.png",
-        "description": "在线 Markdown 编辑器"
-    },
-    {
         "url": "https://gchq.github.io/CyberChef",
         "title": "加解密",
         "img": "https://gchq.github.io/CyberChef/assets/aecc661b69309290f600.ico",
@@ -90,22 +72,10 @@
         "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
     },
     {
-        "url": "https://sql.hjkl01.cn/",
-        "title": "SQL Teaching",
-        "img": "https://sql.hjkl01.cn/favicon.ico",
-        "description": ""
-    },
-    {
         "url": "https://markmap.hjkl01.cn/",
         "title": "Build mindmaps with plain text",
         "img": "",
         "description": ""
-    },
-    {
-        "url": "https://ossinsight.io/collections/",
-        "title": "Explore Collections | OSS Insight",
-        "img": "",
-        "description": "Find insights about the monthly or historical rankings and trends in technical fields with curated repository lists."
     },
     {
         "url": "https://yacd.hjkl01.cn/",
