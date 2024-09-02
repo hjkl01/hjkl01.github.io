@@ -25,6 +25,10 @@ sudo systemctl restart docker
 
 ### on Mac
 https://github.com/abiosoft/colima
+```shell
+# volumes
+colima start --vm-type=vz
+```
 
 
 # use mirror example
