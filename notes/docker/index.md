@@ -6,6 +6,7 @@ sidebar_position: 0
 
 ## install
 
+### on Linux
 ```shell
 wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
@@ -19,7 +20,12 @@ EOF
 
 # 配置完后需要重启 Docker 服务
 sudo systemctl restart docker
+
 ```
+
+### on Mac
+https://github.com/abiosoft/colima
+
 
 # use mirror example
 ```
