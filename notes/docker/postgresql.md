@@ -16,7 +16,17 @@ services:
       POSTGRES_DB: "postgres"
       PGDATA: "/var/lib/postgresql/data"
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
+
+  dbgate:
+    image: docker.hjkl01.cn/dbgate/dbgate
+    restart: always
+    ports:
+      - 80:3000
+    depends_on:
+      - db
+    volumes:
+      - ./data/dbgate-data:/root/.dbgate
 
   admin:
     image: adminer
