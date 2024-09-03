@@ -74,6 +74,7 @@ docker exec -it openwrt zsh
 
 ## tools
 
+- [linuxserver](https://docs.linuxserver.io/images/docker-chromium/)
 - ctop
 - lazydocker
 
