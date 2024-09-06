@@ -19,7 +19,7 @@ python3 -m venv some_dir
 
 ```shell
 # 一次
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple fastapi
+pip install fastapi -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # poetry
 # pyproject.toml 文件
