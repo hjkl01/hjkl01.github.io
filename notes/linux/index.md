@@ -16,6 +16,12 @@ wechat-uos-bwrap
 wechat-uos-qt
 ```
 
+## get date
+```shell
+current_time=$(date "+%Y-%m-%d %H:%M:%S")
+echo $current_time
+```
+
 ## zsh
 
 ```
