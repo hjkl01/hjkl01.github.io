@@ -41,3 +41,35 @@ ffmpeg -i some.mp4 -t 5 -r 3 image1.gif
 -r 3 每秒3fps
 image1.gif 动图名称
 ```
+
+## 提取音频
+```shell
+ffmpeg -i input.mp4 -vn -ar 44100 -ab 128k -f mp3 output.mp3
+在这里：
+
+-vn 表示不包含任何视频流（只提取音频）。
+-ar 44100 设置输出音频的采样率为44.1kHz。
+-ab 128k 设置音频比特率为128kbit/s。
+-f mp3 指定输出格式为MP3。
+```
+
+## 合并音频到MP4
+
+
+```shell
+ffmpeg -i video_input.mp4 -i audio_input.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest output.mp4
+在这个命令中：
+
+-i video_input.mp4 是你的视频输入文件。
+-i audio_input.mp3 是你的音频输入文件。
+-c copy 指示FFmpeg复制视频和音频流而不重新编码，除非有必要。这对于快速合并特别有用，因为它可以避免编码时间。
+-map 0:v:0 指示FFmpeg从第一个输入（视频输入）中选择视频流。
+-map 1:a:0 指示FFmpeg从第二个输入（音频输入）中选择音频流。
+-shortest 参数告诉FFmpeg输出文件的持续时间应与最短的输入流相同。如果你不想限制输出文件的长度，可以省略这个参数。
+output.mp4 是最终输出的文件名。
+但是，如果你发现音频和视频的同步有问题，你可能需要调整音频的延迟。你可以使用-itsoffset参数来增加或减少音频的延迟，例如：
+
+
+ffmpeg -i video_input.mp4 -i audio_input.mp3 -c copy -map 0:v:0 -map 1:a:0 -itsoffset 0.5 -shortest output.mp4
+这里的-itsoffset 0.5会使音频延迟半秒。如果需要提前音频，可以使用负值。
+```
