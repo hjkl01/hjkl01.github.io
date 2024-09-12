@@ -8,6 +8,14 @@ sidebar_position: 0
 
 - https://github.com/hjkl01/dotfiles
 
+## [set mirror](https://github.com/RubyMetric/chsrc)
+
+```shell
+curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-linux -o chsrc; chmod +x ./chsrc \
+&& ./chsrc set debian first \
+&& ./chsrc set pip first
+```
+
 ## install wechat
 
 ```
