@@ -28,6 +28,8 @@ https://github.com/abiosoft/colima
 ```shell
 # volumes
 colima start --vm-type=vz
+
+colima start --kubernetes=false
 ```
 
 
