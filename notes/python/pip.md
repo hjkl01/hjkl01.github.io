@@ -21,13 +21,6 @@ python3 -m venv some_dir
 # 一次
 pip install fastapi -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-# poetry
-# pyproject.toml 文件
-[[tool.poetry.source]]
-name = "aliyun"
-url = "http://mirrors.aliyun.com/pypi/simple"
-default = true
-
 # 全局
 # 清华源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
