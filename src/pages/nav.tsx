@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-
-// import clsx from "clsx";
+import React, { useState, useEffect } from 'react';
 import Layout from "@theme/Layout";
-// import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-// import styles from "./index.module.css";
-// import HomepageFeatures from "@site/src/components/HomepageFeatures";
-// import App from "@site/src/components/NavpageFeatures";
-// import { Redirect } from "@docusaurus/router";
 
 import "antd/dist/reset.css";
 import { Tabs, message, Watermark, ConfigProvider } from "antd";
-import { Avatar, Card, Col, Row } from "antd";
+import { Avatar, Card, Col, Row, Input, Tag, Typography } from "antd";
+
+import json_fish from './data/fish.json';
+import json_tools from './data/tools.json';
+import json_movies from './data/movies.json';
+import json_office from './data/office.json';
+
+const { Text } = Typography;
+
 
 function GenElement(props) {
   const { Meta } = Card;
@@ -31,9 +32,7 @@ function GenElement(props) {
           <Card
             hoverable
             bordered
-            // style={{ width: "80%" }}
             style={{ marginTop: 16 }}
-          // extra={<Avatar src={prop.img} />}
           >
             <Meta
               avatar={<Avatar src={prop.img} />}
@@ -64,9 +63,62 @@ function App() {
     messageApi.info(key);
   };
 
+  const [searchTerm, setSearchTerm] = useState('');
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    // 合并两个JSON文件的数据
+    const combinedData = [...json_tools, ...json_office, ...json_fish, ...json_movies];
+    setItems(combinedData);
+  }, []);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const highlightText = (text) => {
+    if (!searchTerm) return text;
+
+    const regex = new RegExp(`(${searchTerm})`, 'gi');
+    return text.split(regex).map((part, index) => (
+      <span key={index} style={{ backgroundColor: regex.test(part) ? '#d1ecf1' : 'transparent' }}>
+        {part}
+      </span>
+    ));
+  };
+
+  const filteredItems = items.filter(item =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Watermark content="hjkl01">
-      <div className="card-container">
+      <div className="container mt-5">
+        <div className="d-flex justify-content-center" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
+          <Input
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleSearch}
+            style={{ width: '50%', marginTop: '20px', height: '40px' }}
+          />
+        </div>
+        <div className="d-flex justify-content-center" style={{ marginTop: '20px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
+            {filteredItems.map((item, index) => (
+              <Tag key={index} style={{ margin: '5px', width: '20%', display: 'flex', alignItems: 'center', height: '35px' }}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <img src={item.img} style={{ marginRight: '10px', width: '20px', height: '20px' }} />
+                  <Text>{highlightText(item.title)}</Text>
+                </a>
+              </Tag>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+      <div className="card-container " >
         <br />
         {contextHolder}
         <Tabs
@@ -77,19 +129,19 @@ function App() {
           onChange={onChange}
         >
           <TabPane tab="tools" key="开发常用工具">
-            <GenElement websites={require("./data/tools.json")} />
+            <GenElement websites={json_tools} />
           </TabPane>
 
           <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
-            <GenElement websites={require("./data/fish.json")} />
+            <GenElement websites={json_fish} />
           </TabPane>
 
           <TabPane tab="office" key="办公室用到的服务">
-            <GenElement websites={require("./data/office.json")} />
+            <GenElement websites={json_office} />
           </TabPane>
 
           <TabPane tab="Funny" key="电影相关">
-            <GenElement websites={require("./data/movies.json")} />
+            <GenElement websites={json_movies} />
           </TabPane>
         </Tabs>
       </div>
