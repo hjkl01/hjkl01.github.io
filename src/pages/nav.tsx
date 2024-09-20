@@ -69,7 +69,11 @@ function App() {
   useEffect(() => {
     // 合并两个JSON文件的数据
     const combinedData = [...json_tools, ...json_office, ...json_fish, ...json_movies];
-    setItems(combinedData);
+    const itemsWithDefaultImage = combinedData.map(item => ({
+      ...item,
+      img: item.img || 'https://github.githubassets.com/apple-touch-icon-144x144.png' // 默认图像URL
+    }));
+    setItems(itemsWithDefaultImage);
   }, []);
 
   const handleSearch = (e) => {
