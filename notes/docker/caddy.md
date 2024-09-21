@@ -1,5 +1,12 @@
 # caddy
 
+### test command
+
+```shell
+caddy file-server --root ./public --listen :3000
+caddy reverse-proxy --from :8000 --to 127.0.0.1:9000
+```
+
 ### docker-compose.yml
 
 ```shell
