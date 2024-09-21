@@ -130,3 +130,10 @@
 var _path = '//div//text()'
 var result = $x(_path).map(function(i){return i.textContent} ); copy(result);
 ```
+
+### Chrome书签文件的位置
+```shell
+Windows: C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
+macOS: ~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
+Linux: ~/.config/google-chrome/Default/Bookmarks
+```
