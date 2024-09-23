@@ -116,7 +116,6 @@ const config: Config = {
           label: "System",
           position: "left",
           items: [
-            { to: "/notes/docker", label: "Docker" },
             { to: "/notes/linux", label: "Linux" },
             { to: "/notes/mac", label: "Mac" },
             { to: "/notes/windows", label: "Windows" },
@@ -127,7 +126,9 @@ const config: Config = {
           type: "dropdown",
           label: "Others",
           position: "left",
-          items: [{ to: "/notes/others", label: "Others" }],
+          items: [
+            { to: "/notes/docker", label: "Docker" },
+            { to: "/notes/others", label: "Others" }],
         },
         {
           type: "dropdown",
