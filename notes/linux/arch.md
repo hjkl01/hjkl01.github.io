@@ -4,31 +4,19 @@ sidebar_position: 1
 
 # arch
 
-## install on vps
 
-- wiki: https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
+### 我的配置
 
-- ### ⚠️ 设置 root 的密码
+> https://github.com/hjkl01/dotfiles
 
-```shell
-# wget https://tinyurl.com/vps2arch 也会被重定向到以下 url
-wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
-
-# 启动脚本
-sh ./vps2arch
-
-# 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如
-sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
-sync ; reboot -f
-```
-
-### 安装
+### 安装参考
 
 - [archlinux](https://github.com/archlinux/archinstall) [link2](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
   - install dhcpcd iwd networkmanager
   - systemctl enable --now dhcpcd.service
   - systemctl enable --now iwd.service
   - systemctl enable --now NetworkManager.service
+
 
 ### wifi
 
@@ -47,21 +35,94 @@ lspci -k
 yay --noconfirm -S broadcom-wl
 ```
 
-### 源设置
-
+### 安装
 ```shell
-# /etc/pacman.d/mirrorlist
+关闭安全启动以及快速启动
+磁盘分区
+fdisk -l
+cfdisk /dev/sdb
 
-# 清华大学
+/boot分区，用来存储启动信息，该分区一般 512M 足够。BIOS 引导可以不单独分这个分区，但是 UEFI 引导必须有该分区作为 EFI 分区。
+/swap分区，交换分区，该分区功能很多，不等同于 Windows 的虚拟内存，建议每一个用户至少创建一个 2G 大小的交换分区。该分区大小视电脑内存大小而定。一般选取自身电脑内存的四分之一即可，及本人电脑为16G，那么我将选择创建4G的swap分区
+/home分区（可选），即用户分区，用于存储用户的数据。该分区是用户自己数据存储的地方。如果你不单独分出 home 分区，则你的所有数据将仅存储在/mnt 分区。对于新手，建议不创建单独的 /home 分区；。
+/mnt分区，即根目录，储存用户的数据，如果你创建单独的/home 分区，则建议该分区大小不小于 20G，根据你的需求和剩余空间大小而定；如果不创建单独的 /home 分区，就把磁盘所有剩余空间留给 /mnt。
+
+mkfs.ext4 /dev/sdb4
+mkfs.vfat -F32 /dev/sdb2
+mkswap /dev/sdb3
+# mkfs.ext4 /dev/sdb5
+mount /dev/sdb4 /mnt
+mkdir -p /mnt/boot
+mount /dev/sdb2 /mnt/boot
+swapon /dev/sdb3
+# mkdir /mnt/home
+# mount /dev/sdb5 /mnt/home
+
+reflector --country 'China' --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
+Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
+Server = https://mirror.nyist.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-# 南京大学
-Server = https://mirror.nju.edu.cn/archlinux/$repo/os/$arch
-# or
-sudo pacman-mirrors -i -c China
-# or
-sudo reflector --country China --sort rate --latest 20 --save /etc/pacman.d/mirrorlist
 
-sudo pacman -Syy
+pacstrap /mnt base base-devel linux linux-firmware neovim e2fsprogs ntfs-3g zsh tmux fzf zoxide neovim lua stylua
+# fcitx5-rime alacritty 
+pacman -Sy archlinux-keyring
+genfstab -U -p /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt /bin/bash
+passwd root
+
+useradd -m -G wheel -s /usr/bin/zsh 你的用户名
+passwd 你的用户名
+nvim /etc/sudoers
+
+echo archlinux > /etc/hostname
+
+nvim /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+
+# amd
+pacman -S amd-ucode
+# intel
+pacman -S intel-ucode
+
+pacman -S grub efibootmgr os-prober
+# uefi
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck
+#非uefi启动
+    grub-install --target=i386-pc /dev/sdX
+grub-mkconfig -o /boot/grub/grub.cfg
+
+nvim /etc/default/grub
+# GRUB_DISABLE_OS_PROBER=false
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+nvim /etc/locale.gen
+#en_US.UTF-8 UTF-8
+#zh_CN.UTF-8 UTF-8
+locale-gen
+echo LANG=zh_CN.UTF-8 > /etc/locale.conf
+
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+pacman -S xorg
+pacman -S gnome gdm
+systemctl enable gdm
+pacman -S wqy-microhei
+
+nvim ~/.xprofile
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+export LC_CTYPE=en_US.UTF-8
+
+cp ~/.xprofile /home/你的用户名
+
+pacman -S networkmanager
+systemctl enable NetworkManager
 ```
 
 ### yay
@@ -72,50 +133,6 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 ```
-
-### 使用 ntp
-
-```shell
-pacman -S ntp
-timedatectl set-ntp true
-# 设置时区
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-hwclock --systohc
-```
-
-### utf8
-
-```shell
-# 编辑 /etc/locale.gen 取消一下行的注释（你可能需要一个编辑器，如 vim，请自行安装）
-en_GB.UTF-8 UTF-8
-zh_CN.UTF-8 UTF-8
-
-# 执行 locale-gen
-
-# 创建 /etc/locale.conf 并编辑 LANG 这一 变量，比如：
-# LANG=zh_CN.UTF-8
-
-# install glibc-locales ttf-maple ttf-firacode-nerd
-```
-
-### boot
-
-```shell
-yay --noconfirm -S grub efibootmgr os-prober
-
-sudo vim /etc/default/grub
-
-GRUB_DEFAULT=2
-# GRUB_SAVEDEFAULT=true
-GRUB_DISABLE_OS_PROBER=false
-
-sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-### 我的配置
-
-> https://github.com/hjkl01/dotfiles
 
 ### 输入法
 
@@ -160,3 +177,23 @@ sudo resolvconf -u # 更新DNS
 ### missing libcrypto.so.1.1
 
 - https://unix.stackexchange.com/questions/723616/how-to-fix-missing-libcrypto-so-1-1
+
+
+### install on vps
+
+- wiki: https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
+
+- #### ⚠️ 设置 root 的密码
+
+```shell
+# wget https://tinyurl.com/vps2arch 也会被重定向到以下 url
+wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
+
+# 启动脚本
+sh ./vps2arch
+
+# 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如
+sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
+sync ; reboot -f
+```
+
