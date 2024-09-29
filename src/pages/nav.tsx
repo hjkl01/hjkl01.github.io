@@ -54,14 +54,48 @@ function GenElement(props) {
   );
 }
 
-function App() {
+function CardApp() {
   const { TabPane } = Tabs;
-
   const [messageApi, contextHolder] = message.useMessage();
   const onChange = (key: string) => {
     // console.log(key);
     messageApi.info(key);
   };
+
+  return (
+    <div className="card-container " >
+      <br />
+      {contextHolder}
+      <Tabs
+        type="card"
+        tabPosition="left"
+        size="large"
+        tabBarGutter={15}
+        onChange={onChange}
+      >
+        <TabPane tab="tools" key="开发常用工具">
+          <GenElement websites={json_tools} />
+        </TabPane>
+
+        <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
+          <GenElement websites={json_fish} />
+        </TabPane>
+
+        <TabPane tab="office" key="办公室用到的服务">
+          <GenElement websites={json_office} />
+        </TabPane>
+
+        <TabPane tab="Funny" key="电影相关">
+          <GenElement websites={json_movies} />
+        </TabPane>
+      </Tabs>
+    </div>);
+
+}
+
+
+
+function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [items, setItems] = useState([]);
@@ -119,35 +153,6 @@ function App() {
             ))}
           </div>
         </div>
-      </div>
-
-
-      <div className="card-container " >
-        <br />
-        {contextHolder}
-        <Tabs
-          type="card"
-          tabPosition="left"
-          size="large"
-          tabBarGutter={15}
-          onChange={onChange}
-        >
-          <TabPane tab="tools" key="开发常用工具">
-            <GenElement websites={json_tools} />
-          </TabPane>
-
-          <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
-            <GenElement websites={json_fish} />
-          </TabPane>
-
-          <TabPane tab="office" key="办公室用到的服务">
-            <GenElement websites={json_office} />
-          </TabPane>
-
-          <TabPane tab="Funny" key="电影相关">
-            <GenElement websites={json_movies} />
-          </TabPane>
-        </Tabs>
       </div>
     </Watermark>
   );
