@@ -12,10 +12,6 @@ sidebar_position: 1
 ### 安装参考
 
 - [archlinux](https://github.com/archlinux/archinstall) [link2](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
-  - install dhcpcd iwd networkmanager
-  - systemctl enable --now dhcpcd.service
-  - systemctl enable --now iwd.service
-  - systemctl enable --now NetworkManager.service
 
 
 ### wifi
@@ -28,11 +24,6 @@ station list
 station wlan0 scan
 station wlan0 show
 station wlan0 connect SSID
-
-# after install
-lspci -k
-# example
-yay --noconfirm -S broadcom-wl
 ```
 
 ### 安装
@@ -66,7 +57,7 @@ Server = https://mirrors.jcut.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
-pacstrap /mnt base base-devel linux linux-firmware neovim e2fsprogs ntfs-3g zsh tmux fzf zoxide neovim lua stylua
+pacstrap /mnt base base-devel linux linux-firmware neovim e2fsprogs ntfs-3g zsh tmux fzf zoxide neovim lua stylua git htop tree lsof
 # fcitx5-rime alacritty 
 pacman -Sy archlinux-keyring
 genfstab -U -p /mnt >> /mnt/etc/fstab
@@ -93,13 +84,8 @@ pacman -S grub efibootmgr os-prober
 # uefi
     grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck
 #非uefi启动
-    grub-install --target=i386-pc /dev/sdX
+    grub-install --target=i386-pc /dev/sdbX
 grub-mkconfig -o /boot/grub/grub.cfg
-
-nvim /etc/default/grub
-# GRUB_DISABLE_OS_PROBER=false
-
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 nvim /etc/locale.gen
 #en_US.UTF-8 UTF-8
@@ -121,8 +107,24 @@ export LC_CTYPE=en_US.UTF-8
 
 cp ~/.xprofile /home/你的用户名
 
-pacman -S networkmanager
+
+# after install
+lspci -k
+# example
+pacman --noconfirm -S broadcom-wl
+
+pacman -S dhcpcd iwd networkmanager
+
+systemctl enable dhcpcd.service
+systemctl enable iwd.service
 systemctl enable NetworkManager
+
+# Windows 双系统引导
+
+nvim /etc/default/grub
+# GRUB_DISABLE_OS_PROBER=false
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ### yay
@@ -134,15 +136,9 @@ cd yay-bin
 makepkg -si
 ```
 
-### 输入法
+### 输入法 [参考](https://github.com/Mark24Code/rime-auto-deploy)
 
 ```shell
-sudo pacman -Rs $(pacman -Qsq fcitx)
-
-sudo pacman -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
-
-# https://github.com/Mark24Code/rime-auto-deploy
-
 vi ~/.xprofile
 
 export GTK_IM_MODULE=fcitx
