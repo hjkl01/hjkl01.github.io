@@ -94,6 +94,7 @@ locale-gen
 echo LANG=zh_CN.UTF-8 > /etc/locale.conf
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+systemctl enable systemd-timesyncd
 
 pacman -S xorg
 pacman -S gnome gdm
