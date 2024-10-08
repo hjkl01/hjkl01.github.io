@@ -1,5 +1,11 @@
 [
     {
+        "url": "https://terminaltrove.com/categories/tui/",
+        "title": "TUI",
+        "img": "",
+        "description": ""
+    },
+    {
         "url": "https://libretranslate.com/?source=auto&target=zh",
         "title": "在线翻译",
         "img": "https://libretranslate.com/static/icon.svg",
