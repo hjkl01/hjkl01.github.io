@@ -96,7 +96,7 @@ const config: Config = {
         alt: 'My Site Logo',
         src: "img/apple-touch-icon.png",
       },
-      hideOnScroll: true,
+      hideOnScroll: false,
 
       items: [
         { to: "nav/", label: "Nav", position: "left" },
