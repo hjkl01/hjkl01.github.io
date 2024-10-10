@@ -154,6 +154,20 @@ QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5
 ```
 
+### ufw
+```
+sudo pacman --noconfirm -S ufw
+sudo systemctl enable --now ufw.service
+sudo ufw enable
+sudo ufw default deny
+
+sudo ufw allow 22
+sudo ufw delete 22
+sudo ufw allow 11200:11299/tcp
+
+sudo ufw status
+```
+
 ### pppoe 拨号
 
 ```shell
