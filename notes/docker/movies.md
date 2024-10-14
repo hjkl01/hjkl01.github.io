@@ -65,6 +65,10 @@ services:
     container_name: alist
     image: xhofe/alist:latest
     restart: unless-stopped
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
     ports:
       - "127.0.0.1:5244:5244"
     volumes:
