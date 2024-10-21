@@ -1,5 +1,11 @@
 [
     {
+        "url": "https://dig.ichouti.cn/",
+        "title": "抽屉新热榜",
+        "img": "https://dig.ichouti.cn/images/logo-c30a1a3941.png",
+        "description": "抽屉新热榜-聚合每日热门、搞笑、有趣资讯"
+    },
+    {
         "url": "https://news.hjkl01.cn/",
         "title": "News",
         "img": "",
@@ -40,12 +46,6 @@
         "title": "SQL Teaching",
         "img": "https://sql.hjkl01.cn/favicon.ico",
         "description": ""
-    },
-    {
-        "url": "https://dig.chouti.com/",
-        "title": "抽屉新热榜",
-        "img": "https://dig.chouti.com/images/logo-c30a1a3941.png",
-        "description": "抽屉新热榜-聚合每日热门、搞笑、有趣资讯"
     },
     {
         "url": "https://www.v2ex.com/",
