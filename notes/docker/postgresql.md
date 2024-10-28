@@ -19,7 +19,7 @@ services:
       - ./data/postgres:/var/lib/postgresql/data
 
   dbgate:
-    image: docker.hjkl01.cn/dbgate/dbgate
+    image: dbgate/dbgate
     restart: always
     ports:
       - 80:3000
