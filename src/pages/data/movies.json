@@ -40,35 +40,5 @@
         "title": "人人影视分享站",
         "img": "https://yyets.click/svg/logo.svg",
         "description": "磁力搜索"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:16880/",
-        "title": "AriaNg",
-        "img": "https://nj.hjkl01.cn:16880/favicon.png",
-        "description": "Aria2 管理平台"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:18096",
-        "title": "jellyfin",
-        "img": "https://nj.hjkl01.cn:18096/web/bc8d51405ec040305a87.ico",
-        "description": "看电影"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:28080",
-        "title": "Gin-Vue-Admin",
-        "img": "https://nj.hjkl01.cn:28080/087AC4D233B64EB0favicon.ico",
-        "description": "m3u8 link"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:15244",
-        "title": "Alist",
-        "img": "https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg",
-        "description": "云盘 for movies"
-    },
-    {
-        "url": "https://nj.hjkl01.cn:19000",
-        "title": "Mstream",
-        "img": "https://nj.hjkl01.cn:19000/app/favicon-32x32.png",
-        "description": "在线听音乐 ipv6 only"
     }
 ]

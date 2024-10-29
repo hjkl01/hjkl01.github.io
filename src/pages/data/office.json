@@ -1,74 +1,104 @@
 [
-  {
-    "url": "https://nj.hjkl01.cn:15212/home",
-    "title": "Cloudreve",
-    "img": "https://cloudreve.org/favicon.ico",
-    "description": "云盘"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:37018",
-    "title": "Mongo Express",
-    "img": "",
-    "description": "Mongo"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:17400/static/#/proxies/tcp",
-    "title": "frp",
-    "img": "https://gofrp.org/favicons/favicon-32x32.png",
-    "description": "反向代理"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:18000",
-    "title": "Jitsi Meet",
-    "img": "https://meet.jit.si/static/pwa/icons/icon192.png",
-    "description": "在线会议"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:33000/",
-    "title": "Gitea",
-    "img": "https://about.gitea.com/favicon.ico",
-    "description": "代码管理及备份"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:18001/",
-    "title": "Django",
-    "img": "https://static.djangoproject.com/img/favicon.6dbf28c0650e.ico",
-    "description": "Log管理"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:18080/",
-    "title": "Adminer",
-    "img": "https://nj.hjkl01.cn:18080/?file=favicon.ico",
-    "description": "数据库管理工具"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:9002/",
-    "title": "Supervisor",
-    "img": "https://nj.hjkl01.cn:9002/images/icon.png",
-    "description": "进程守护"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:9443/",
-    "title": "VScode online",
-    "img": "https://nj.hjkl01.cn:9443/_static/src/browser/media/favicon.ico",
-    "description": "在线IDE"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:10000/",
-    "title": "goaccess",
-    "img": "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADGxsYAWFhYABwcHABfAP8A/9dfAADXrwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIjMlUkQgAiIiIiIiIiIiIiIzJVJEIAAAIiIiIiIiIiIiMyVSRCAAIiIiIiIiIiIiIRERERERERERERERERERERIiIiIiIiIiIgACVVUiIiIiIiIiIiIiIiIAAlVVIiIiIiIiIiIiIiIhEREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    "description": "服务器统计信息"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:29899/",
-    "title": "1Panel",
-    "img": "https://nj.hjkl01.cn:29899/assets/png/favicon-abe32304.png",
-    "description": "🔥 🔥 🔥 现代化、开源的 Linux 服务器运维管理面板。"
-  },
-  {
-    "url": "https://nj.hjkl01.cn:33100/",
-    "title": "dbgate",
-    "img": "https://nj.hjkl01.cn:33100/favicon.ico",
-    "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others. Runs under Windows, Linux, Mac or as web application"
-  }
+    {
+        "url": "https://nj.hjkl01.cn:15212/home",
+        "title": "Cloudreve",
+        "img": "https://cloudreve.org/favicon.ico",
+        "description": "云盘"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:37018",
+        "title": "Mongo Express",
+        "img": "",
+        "description": "Mongo"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:17400/static/#/proxies/tcp",
+        "title": "frp",
+        "img": "https://gofrp.org/favicons/favicon-32x32.png",
+        "description": "反向代理"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:18000",
+        "title": "Jitsi Meet",
+        "img": "https://meet.jit.si/static/pwa/icons/icon192.png",
+        "description": "在线会议"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:33000/",
+        "title": "Gitea",
+        "img": "https://about.gitea.com/favicon.ico",
+        "description": "代码管理及备份"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:18001/",
+        "title": "Django",
+        "img": "https://static.djangoproject.com/img/favicon.6dbf28c0650e.ico",
+        "description": "Log管理"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:18080/",
+        "title": "Adminer",
+        "img": "https://nj.hjkl01.cn:18080/?file=favicon.ico",
+        "description": "数据库管理工具"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:9002/",
+        "title": "Supervisor",
+        "img": "https://nj.hjkl01.cn:9002/images/icon.png",
+        "description": "进程守护"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:9443/",
+        "title": "VScode online",
+        "img": "https://nj.hjkl01.cn:9443/_static/src/browser/media/favicon.ico",
+        "description": "在线IDE"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:10000/",
+        "title": "goaccess",
+        "img": "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADGxsYAWFhYABwcHABfAP8A/9dfAADXrwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIjMlUkQgAiIiIiIiIiIiIiIzJVJEIAAAIiIiIiIiIiIiMyVSRCAAIiIiIiIiIiIiIRERERERERERERERERERERIiIiIiIiIiIgACVVUiIiIiIiIiIiIiIiIAAlVVIiIiIiIiIiIiIiIhEREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "description": "服务器统计信息"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:29899/",
+        "title": "1Panel",
+        "img": "https://nj.hjkl01.cn:29899/assets/png/favicon-abe32304.png",
+        "description": "🔥 🔥 🔥 现代化、开源的 Linux 服务器运维管理面板。"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:33100/",
+        "title": "dbgate",
+        "img": "https://nj.hjkl01.cn:33100/favicon.ico",
+        "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others. Runs under Windows, Linux, Mac or as web application"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:16880/",
+        "title": "AriaNg",
+        "img": "https://nj.hjkl01.cn:16880/favicon.png",
+        "description": "Aria2 管理平台"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:18096",
+        "title": "jellyfin",
+        "img": "https://nj.hjkl01.cn:18096/web/bc8d51405ec040305a87.ico",
+        "description": "看电影"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:28080",
+        "title": "Gin-Vue-Admin",
+        "img": "https://nj.hjkl01.cn:28080/087AC4D233B64EB0favicon.ico",
+        "description": "m3u8 link"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:15244",
+        "title": "Alist",
+        "img": "https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg",
+        "description": "云盘 for movies"
+    },
+    {
+        "url": "https://nj.hjkl01.cn:19000",
+        "title": "Mstream",
+        "img": "https://nj.hjkl01.cn:19000/app/favicon-32x32.png",
+        "description": "在线听音乐 ipv6 only"
+    }
 ]

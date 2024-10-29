@@ -9,7 +9,6 @@ import { Avatar, Card, Col, Row, Input, Tag, Typography } from "antd";
 import json_fish from './data/fish.json';
 import json_tools from './data/tools.json';
 import json_movies from './data/movies.json';
-import json_office from './data/office.json';
 
 const { Text } = Typography;
 
@@ -81,10 +80,6 @@ function CardApp() {
           <GenElement websites={json_fish} />
         </TabPane>
 
-        <TabPane tab="office" key="办公室用到的服务">
-          <GenElement websites={json_office} />
-        </TabPane>
-
         <TabPane tab="Funny" key="电影相关">
           <GenElement websites={json_movies} />
         </TabPane>
@@ -102,7 +97,7 @@ function App() {
 
   useEffect(() => {
     // 合并两个JSON文件的数据
-    const combinedData = [...json_tools, ...json_office, ...json_fish, ...json_movies];
+    const combinedData = [...json_tools, ...json_fish, ...json_movies];
     const itemsWithDefaultImage = combinedData.map(item => ({
       ...item,
       img: item.img || 'https://github.githubassets.com/apple-touch-icon-144x144.png' // 默认图像URL
