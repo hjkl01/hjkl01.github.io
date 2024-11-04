@@ -62,4 +62,7 @@ find -size 1k -delete
 sed -i 's/oo/kk/g' testfile
 # Mac
 sed -i "" 's/oo/kk/g' testfile
+
+# example
+sed -i 's|https://github.com|https://ghp.ci/https://github.com|g' example.txt
 ```
