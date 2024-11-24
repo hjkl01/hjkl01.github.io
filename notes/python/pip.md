@@ -66,3 +66,8 @@ pip install pip-tools
 python -m piptools compile -o requirements.txt pyproject.toml
 pip install -r requirements.txt
 ```
+
+## 磁盘空间不足
+```shell
+export TMPDIR=/some_hardisk/tmp
+```
