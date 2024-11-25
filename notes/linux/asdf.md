@@ -23,3 +23,9 @@ asdf install nodejs lts
 asdf list nodejs
 asdf global nodejs lts
 ```
+
+
+### python aliyun mirror 
+```
+https://mirrors.aliyun.com/python-release/source
+```
