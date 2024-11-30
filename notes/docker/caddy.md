@@ -79,3 +79,42 @@ basicauth /* {
         username output
 }
 ```
+
+### dns.providers.cloudflare
+```shell
+go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+xcaddy build --with github.com/caddy-dns/cloudflare
+sudo mv caddy /usr/local/bin/
+```
+
+#### Caddyfile [创建cf令牌](https://dash.cloudflare.com/profile/api-tokens)
+```shell
+(cloudflare) {
+      tls {
+        dns cloudflare token
+      }
+}
+example.com:port {
+      reverse_proxy http://localhost:8080
+      import cloudflare
+}
+```
+
+#### /etc/systemd/system/caddy.service
+```shell
+[Unit]
+Description=Caddy
+Documentation=caddy --help
+After=network.target
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+[Service]
+ExecStart=/usr/local/bin/caddy run --config /etc/caddy/Caddyfile
+Restart=always
+RestartSec=1
+
+[Install]
+Alias=caddy.service
+WantedBy=multi-user.target
+`
