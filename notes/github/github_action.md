@@ -1,6 +1,5 @@
 # Github Action
 
-
 - [create token](https://github.com/settings/tokens)
 - https://github.com/hjkl01/hjkl01.github.io/settings/secrets/actions
     - New repository secret
