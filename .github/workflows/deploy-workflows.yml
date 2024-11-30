@@ -27,30 +27,16 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
-        with:
-          folder: build # The folder the action should deploy.
-          token: ${{ secrets.GH_TOKEN }}
-          branch: gh-pages
-          force: true
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: 16
-      #
-      # - name: Install Dependencies
-      #   run: npm install
-      #
-      # - name: Build React App
-      #   run: npm run build
-      #
-      # - name: Deploy to GitHub Pages 🚀
+      # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@v4.5.0
       #   with:
+      #     folder: build # The folder the action should deploy.
+      #     token: ${{ secrets.GH_TOKEN }}
       #     branch: gh-pages
-      #     folder: build
-      #     clean: true
-      #     access_token: ${{ secrets.GH_TOKEN }}
-      #     ssh-key: ${{ secrets.DEPLOY_KEY }}
+      #     force: true
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./build
