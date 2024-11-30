@@ -30,6 +30,15 @@ https://github.com/abiosoft/colima
 colima start --vm-type=vz
 
 colima start --kubernetes=false
+
+vi ~/.colima/default/colima.yaml
+
+# docker: {}
+docker:
+  registry-mirrors:
+    - https://docker.hjkl01.cn
+
+colima restart
 ```
 
 
