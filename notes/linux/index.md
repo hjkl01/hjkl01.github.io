@@ -41,6 +41,9 @@ echo $current_time
 ## find
 
 ```shell
+# online command 
+curl cht.sh/find
+
 # find by name
 find . -name "*.log"
 
