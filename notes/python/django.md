@@ -88,6 +88,13 @@ CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000"]
 python manage.py runserver 0.0.0.0:8000 --insecure
 ```
 
+### gunicorn
+
+```python
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
+```
+
 ### dump and load data
 
 ```shell
