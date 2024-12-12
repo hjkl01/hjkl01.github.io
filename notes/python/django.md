@@ -147,3 +147,22 @@ schema_view = get_schema_view(
 python manage.py generate_swagger swagger.yaml or swagger.json
 
 ```
+
+
+### caddyfile
+```shell
+domain.com:38000 {
+      reverse_proxy localhost:8000
+      encode zstd gzip
+
+      handle_path /static/* {
+          root * /home/username/django_project/static
+          file_server
+        }
+
+      handle_path /media/* {
+          root * /home/username/django_project/media
+          file_server
+        }
+}
+```
