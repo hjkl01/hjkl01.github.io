@@ -1,3 +1,34 @@
+## systemctl service
+
+### glider example
+
+```
+[Unit]
+Description=Glider
+Documentation=glider --help
+After=network.target
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+[Service]
+ExecStart=/usr/bin/glider -config /etc/glider/glider.conf
+WorkingDirectory=/mnt/hdisk/
+Restart=always
+RestartSec=1
+# User=someuser
+
+[Install]
+Alias=glider.service
+WantedBy=multi-user.target
+```
+
+```shell
+sudo ln -s glider.service /etc/lib/systemd/system/glider.service
+# sudo ln -s glider.service /etc/systemd/system/glider.service
+sudo systemctl daemon-reload
+sudo systemctl restart glider.service
+```
+
 # supervisor & systemctl service
 
 ## supervisor
@@ -31,32 +62,4 @@ redirect_stderr         = true
 stdout_logfile_maxbytes = 50MB
 stdout_logfile_backups  = 10
 stdout_logfile          = /home/user/frp/log
-```
-
-## systemctl service
-
-### glider example
-
-```
-[Unit]
-Description=Glider
-Documentation=glider --help
-After=network.target
-StartLimitIntervalSec=30
-StartLimitBurst=2
-
-[Service]
-ExecStart=/usr/bin/glider -config /etc/glider/glider.conf
-Restart=always
-RestartSec=1
-# User=someuser
-
-[Install]
-Alias=glider.service
-WantedBy=multi-user.target
-```
-
-```shell
-sudo ln -s glider.service /etc/systemd/system/glider.service
-sudo systemctl restart glider.service
 ```
