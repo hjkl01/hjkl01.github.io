@@ -88,5 +88,11 @@
         "title": "yacd",
         "img": "https://yacd.hjkl01.cn/yacd.ico",
         "description": "监测clash流量"
+    },
+    {
+        "url": "https://algo.hjkl01.cn/",
+        "title": "algo 算法",
+        "img": "",
+        "description": "fork"
     }
 ]
