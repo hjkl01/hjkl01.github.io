@@ -1,5 +1,10 @@
 # music
 
+## download example
+```shell
+yt-dlp -x --audio-format best --audio-quality 0 --yes-playlist http://www.bilibili.com/video/BV1Ex4y1y7Wa
+```
+
 ## [mStream](https://github.com/IrosTheBeggar/mStream)
 
 ```yaml
