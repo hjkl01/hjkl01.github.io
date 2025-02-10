@@ -192,6 +192,8 @@ sudo resolvconf -u # 更新DNS
 
 ### install on vps
 
+- [从现有_Linux_发行版安装_Arch_Linux](https://wiki.archlinuxcn.org/wiki/%E4%BB%8E%E7%8E%B0%E6%9C%89_Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E5%AE%89%E8%A3%85_Arch_Linux)
+
 - wiki: https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
 
 - #### ⚠️ 设置 root 的密码
