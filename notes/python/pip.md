@@ -45,6 +45,15 @@ pip config set global.index-url http://pypi.douban.com/simple/
 export LC_ALL=C
 ```
 
+## offline download and install
+```shell
+pip download <package_name> -d <download_directory>
+pip install --no-index --find-links=<download_directory> <package_name>
+
+pip download -r requirements.txt -d ./packages
+pip install --no-index --find-links=./packages -r requirements.txt
+```
+
 ## poetry
 
 ### set mirror
