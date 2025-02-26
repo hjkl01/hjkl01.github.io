@@ -130,6 +130,28 @@ stream {
 }
 ```
 
+### auth
+```shell
+htpasswd -c /etc/nginx/.htpasswd yourusername
+
+# nginx.conf
+server {
+    listen 80;
+    server_name yourdomain.com;
+
+    location / {
+        auth_basic "Restricted Content";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+
+        proxy_pass http://localhost:port;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
 ## 限流
 
 ### 正常限流
