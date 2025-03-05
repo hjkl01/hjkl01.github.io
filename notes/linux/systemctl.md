@@ -1,4 +1,4 @@
-## systemctl service
+## systemctl
 
 ### glider example
 
@@ -29,7 +29,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart glider.service
 ```
 
-# supervisor & systemctl service
+# supervisor & systemctl
 
 ## supervisor
 
