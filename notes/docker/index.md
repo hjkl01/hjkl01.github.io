@@ -39,6 +39,9 @@ docker:
     - https://docker.hjkl01.cn
 
 colima restart
+
+# colima delete
+# colima start
 ```
 
 
