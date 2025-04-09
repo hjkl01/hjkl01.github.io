@@ -10,7 +10,7 @@ import os
 from loguru import logger
 from dynaconf import Dynaconf
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__)).rstrip("/common")
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 log_file_path = os.path.join(BASE_DIR, "logs/stdout.log")
 err_log_file_path = os.path.join(BASE_DIR, "logs/error.log")
