@@ -77,3 +77,5 @@ curl https://example.com -o config.yaml
 ```shell
 https://github.com/localsend/localsend/releases
 ```
+
+## 优化工具 [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)
