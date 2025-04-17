@@ -73,3 +73,20 @@ output.mp4 是最终输出的文件名。
 ffmpeg -i video_input.mp4 -i audio_input.mp3 -c copy -map 0:v:0 -map 1:a:0 -itsoffset 0.5 -shortest output.mp4
 这里的-itsoffset 0.5会使音频延迟半秒。如果需要提前音频，可以使用负值。
 ```
+
+## ffmpeg推流到nginx
+
+```shell
+# nginx-rtmp
+
+services:
+  nginx-rtmp:
+    image: tiangolo/nginx-rtmp
+    container_name: nginx-rtmp
+    ports:
+      - "8080:80"
+      - "1935:1935"
+
+# ffmpeg command
+ffmpeg -re -i output.mp4 -c:v libx264 -preset veryfast -b:v 3000k -c:a aac -b:a 128k -f flv rtmp://localhost:1935/live/stream
+```
