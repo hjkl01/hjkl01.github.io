@@ -137,3 +137,5 @@ Windows: C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data\Default\B
 macOS: ~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
 Linux: ~/.config/google-chrome/Default/Bookmarks
 ```
+
+### [ZeroOmega](https://gist.github.com/hjkl01/295feb8715a66f04dd1a05af25b60c82)
