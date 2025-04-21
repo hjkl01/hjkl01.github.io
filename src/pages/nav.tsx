@@ -3,92 +3,13 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "antd/dist/reset.css";
-import { Tabs, message, Watermark, ConfigProvider } from "antd";
-import { Avatar, Card, Col, Row, Input, Tag, Typography } from "antd";
+import { Watermark, Input, Tag, Typography } from "antd";
 
 import json_fish from './data/fish.json';
 import json_tools from './data/tools.json';
 import json_movies from './data/movies.json';
 
 const { Text } = Typography;
-
-
-function GenElement(props) {
-  const { Meta } = Card;
-
-  const websites = props.websites;
-
-  const element = websites.map((prop) => (
-    <Col span={8} key={prop.url}>
-      <a href={prop.url} target="_blank">
-        <ConfigProvider
-          theme={{
-            token: {
-              colorBgContainer: "#e4e8eb",
-            },
-          }}
-        >
-          <Card
-            hoverable
-            bordered
-            style={{ marginTop: 16 }}
-          >
-            <Meta
-              avatar={<Avatar src={prop.img} />}
-              title={prop.title}
-              description={prop.description}
-            />
-          </Card>
-        </ConfigProvider>
-      </a>
-      <br />
-    </Col>
-  ));
-
-  return (
-    <div className="site-card-wrapper">
-      <Row gutter={16}>{element}</Row>
-      <br />
-    </div>
-  );
-}
-
-function CardApp() {
-  const { TabPane } = Tabs;
-  const [messageApi, contextHolder] = message.useMessage();
-  const onChange = (key: string) => {
-    // console.log(key);
-    messageApi.info(key);
-  };
-
-  return (
-    <div className="card-container " >
-      <br />
-      {contextHolder}
-      <Tabs
-        type="card"
-        tabPosition="left"
-        size="large"
-        tabBarGutter={15}
-        onChange={onChange}
-      >
-        <TabPane tab="tools" key="开发常用工具">
-          <GenElement websites={json_tools} />
-        </TabPane>
-
-        <TabPane tab="Learn(Fish)" key="我没有摸鱼 我是在学习">
-          <GenElement websites={json_fish} />
-        </TabPane>
-
-        <TabPane tab="Funny" key="电影相关">
-          <GenElement websites={json_movies} />
-        </TabPane>
-      </Tabs>
-    </div>);
-
-}
-
-
 
 function App() {
 
@@ -139,9 +60,9 @@ function App() {
         <div className="d-flex justify-content-center" style={{ marginTop: '20px' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
             {filteredItems.map((item, index) => (
-              <Tag key={index} style={{ margin: '5px', width: '20%', display: 'flex', alignItems: 'center', height: '35px' }}>
+              <Tag key={index} style={{ margin: '15px', width: '30%', display: 'flex', alignItems: 'center', height: '40px' }}>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <img src={item.img} style={{ marginRight: '10px', width: '20px', height: '20px' }} />
+                  <img src={item.img} style={{ marginRight: '10px', width: '20px', marginTop: '10px' }} />
                   <Text>{highlightText(item.title)}</Text>
                 </a>
               </Tag>

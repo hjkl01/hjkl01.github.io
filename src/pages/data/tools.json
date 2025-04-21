@@ -1,13 +1,19 @@
 [
     {
+        "url": "https://news.hjkl01.cn/",
+        "title": "News",
+        "img": "https://news.hjkl01.cn/favicon.ico",
+        "description": ""
+    },
+    {
         "url": "https://markdown-it.github.io/",
-        "title": "markdown online",
+        "title": "Markdown online",
         "img": "",
         "description": ""
     },
     {
         "url": "https://ghp.ci/",
-        "title": "github proxy",
+        "title": "Github proxy",
         "img": "",
         "description": ""
     },
@@ -61,7 +67,7 @@
     },
     {
         "url": "https://curlconverter.com/",
-        "title": "curl to script",
+        "title": "Curl to script",
         "img": "https://curl.hjkl01.cn/favicon.ico",
         "description": "Convert curl commands to Python, JavaScript, PHP, R, Go, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest or JSON"
     },
@@ -102,8 +108,14 @@
         "description": "监测clash流量"
     },
     {
+        "url": "https://sql.hjkl01.cn/",
+        "title": "SQL Teaching",
+        "img": "https://sql.hjkl01.cn/favicon.ico",
+        "description": ""
+    },
+    {
         "url": "https://algo.hjkl01.cn/",
-        "title": "algo 算法",
+        "title": "Algo",
         "img": "",
         "description": "fork"
     }

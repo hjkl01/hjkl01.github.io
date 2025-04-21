@@ -6,16 +6,10 @@
         "description": "抽屉新热榜-聚合每日热门、搞笑、有趣资讯"
     },
     {
-        "url": "https://news.hjkl01.cn/",
-        "title": "News",
-        "img": "https://news.hjkl01.cn/favicon.ico",
-        "description": ""
-    },
-    {
-        "url": "https://hgh.hjkl01.cn/HelloGitHub100.html",
-        "title": "备份HelloGithub",
-        "img": "",
-        "description": ""
+        "url": "https://www.v2ex.com/",
+        "title": "V2EX = way to explore",
+        "img": "https://www.v2ex.com/static/favicon.ico",
+        "description": "V2EX 是一个关于分享和探索的地方"
     },
     {
         "url": "https://github.com/explore",
@@ -30,6 +24,12 @@
         "description": "Where the world builds software · GitHub"
     },
     {
+        "url": "https://tophub.today/",
+        "title": "热榜",
+        "img": "https://file.ipadown.com/tophub/assets/images/favicon/favicon-32x32.png",
+        "description": "News"
+    },
+    {
         "url": "https://git.news/",
         "title": "GitNews",
         "img": "https://git.news/icons-7c2ec8694eb3e38cde63cfcb84d75ab3/favicon.ico",
@@ -42,45 +42,27 @@
         "description": "Find insights about the monthly or historical rankings and trends in technical fields with curated repository lists."
     },
     {
-        "url": "https://sql.hjkl01.cn/",
-        "title": "SQL Teaching",
-        "img": "https://sql.hjkl01.cn/favicon.ico",
-        "description": ""
-    },
-    {
-        "url": "https://www.v2ex.com/",
-        "title": "V2EX = way to explore",
-        "img": "https://www.v2ex.com/static/favicon.ico",
-        "description": "V2EX 是一个关于分享和探索的地方"
-    },
-    {
         "url": "https://t.me/hjkl01News",
-        "title": "telegram",
+        "title": "Telegram",
         "img": "https://web.telegram.org/favicon.ico",
         "description": "电报"
     },
     {
         "url": "https://twitter.com/explore",
-        "title": "twitter explore",
+        "title": "Twitter explore",
         "img": "https://abs.twimg.com/favicons/twitter.3.ico",
         "description": "twitter"
+    },
+    {
+        "url": "https://hgh.hjkl01.cn/HelloGitHub100.html",
+        "title": "备份HelloGithub",
+        "img": "",
+        "description": ""
     },
     {
         "url": "https://www.right.com.cn/forum/",
         "title": "恩山论坛",
         "img": "https://www.right.com.cn/favicon.ico",
         "description": "搞基"
-    },
-    {
-        "url": "https://tophub.today/",
-        "title": "热榜",
-        "img": "https://file.ipadown.com/tophub/assets/images/favicon/favicon-32x32.png",
-        "description": "News"
-    },
-    {
-        "url": "https://sao.fm/charts",
-        "title": "SAO.FM",
-        "img": "https://cdn.sao.fm/wp-content/uploads/20221107185439620-32x32.png",
-        "description": "电台"
     }
 ]
