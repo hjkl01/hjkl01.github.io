@@ -62,7 +62,7 @@ function App() {
             {filteredItems.map((item, index) => (
               <Tag key={index} style={{ margin: '15px', width: '30%', display: 'flex', alignItems: 'center', height: '40px' }}>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <img src={item.img} style={{ marginRight: '10px', width: '20px', marginTop: '10px' }} />
+                  <img src={item.img} style={{ marginRight: '10px', width: '20px' }} />
                   <Text>{highlightText(item.title)}</Text>
                 </a>
               </Tag>
