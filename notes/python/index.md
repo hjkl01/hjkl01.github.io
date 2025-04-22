@@ -243,6 +243,27 @@ for task in tasks:
 print('TIME: ', now() - start)
 ```
 
+```python
+import asyncio
+
+async def task(id, delay):
+    await asyncio.sleep(delay)
+    return f"结果{id}"
+
+
+async def main():
+    # 定义任务列表
+    tasks = [task(1, 1), task(2, 0.5), task(3, 0.3)]
+
+    # asyncio.gather 会按任务顺序返回结果
+    results = await asyncio.gather(*tasks)
+
+    print(results)  # 总是 ["结果1", "结果2", "结果3"]
+
+
+asyncio.run(main())
+```
+
 ### xmljson
 
 ```python
