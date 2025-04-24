@@ -132,7 +132,7 @@ const config: Config = {
         },
         {
           type: "dropdown",
-          label: "Tools Online",
+          label: "Tools",
           position: "left",
           items: [{ to: "regex/", label: "Simple Regex Online" }],
         },

@@ -259,51 +259,56 @@ const ExampleApp: React.FC = () => (
   <Table pagination={false} bordered columns={columns} dataSource={data} />
 );
 
-const { Title, Paragraph } = Typography;
 
 const RegexApp = () => {
-  const [matches, setMatches] = useState([]);
+  const { Title, Paragraph } = Typography;
+  const [matches, setMatches] = useState<string[]>([]);
 
-  const onFinish = ({ regex, input }) => {
+  const onFinish = (values: { regex: string; input: string }) => {
     try {
-      const re = new RegExp(regex, "g");
-      const result = input.match(re);
-      setMatches(result || ["No matches found"]);
+      const regex = new RegExp(values.regex, "g");
+      const input = values.input;
+      const foundMatches = input.match(regex) || [];
+      setMatches(foundMatches);
     } catch (error) {
-      console.error(error);
+      console.error("Invalid regex", error);
       setMatches([]);
     }
   };
 
   return (
-    <div style={{ maxWidth: 800, margin: "0 auto", padding: 20 }}>
-      <Title>Regex Online</Title>
+    <div style={{ maxWidth: 800, margin: "0 auto", padding: 20, backgroundColor: "#f9f9f9", borderRadius: "8px", boxShadow: "0 4px 8px rgba(0,0,0,0.1)" }}>
+      <Title style={{ textAlign: "center", color: "#333" }}>Regex Online</Title>
 
-      <Form onFinish={onFinish}>
+      <Form onFinish={onFinish} layout="vertical" style={{ marginTop: 20 }}>
         <Form.Item
-          label="Regular Expression"
+          label={<span style={{ fontWeight: "bold" }}>Regular Expression</span>}
           name="regex"
-          rules={[{ required: true }]}
+          rules={[{ required: true, message: "Please input your regex!" }]}
         >
-          <Input />
+          <Input placeholder="Enter your regex here" />
         </Form.Item>
 
-        <Form.Item label="Input" name="input" rules={[{ required: true }]}>
-          <Input.TextArea rows={4} />
+        <Form.Item
+          label={<span style={{ fontWeight: "bold" }}>Input</span>}
+          name="input"
+          rules={[{ required: true, message: "Please input your text!" }]}
+        >
+          <Input.TextArea rows={4} placeholder="Enter text to test against the regex" />
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" style={{ width: "100%", backgroundColor: "#1890ff", borderColor: "#1890ff" }}>
             Test
           </Button>
         </Form.Item>
       </Form>
 
       {matches.length > 0 && (
-        <div>
-          <Title level={2}>Matches:</Title>
+        <div style={{ marginTop: 30 }}>
+          <Title level={2} style={{ color: "#333" }}>Matches:</Title>
           {matches.map((match, index) => (
-            <Paragraph key={index}>{match}</Paragraph>
+            <Paragraph key={index} style={{ backgroundColor: "#e6f7ff", padding: "5px 10px", borderRadius: "4px" }}>{match}</Paragraph>
           ))}
         </div>
       )}
