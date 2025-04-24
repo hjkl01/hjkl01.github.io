@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "antd/dist/reset.css";
-import { Watermark, Input, Tag, Typography } from "antd";
+import { Input, Tag, Typography } from "antd";
 
 import json_fish from './data/fish.json';
 import json_tools from './data/tools.json';
@@ -47,7 +47,7 @@ function App() {
   );
 
   return (
-    <Watermark content="hjkl01">
+    <div>
       <div className="container mt-5" style={{ padding: '20px', borderRadius: '8px' }}>
         <div className="d-flex justify-content-center" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
           <Input
@@ -70,7 +70,7 @@ function App() {
           </div>
         </div>
       </div>
-    </Watermark>
+    </div>
   );
 }
 
