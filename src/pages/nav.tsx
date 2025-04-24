@@ -17,7 +17,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // 合并两个JSON文件的数据
+    // 合并JSON文件的数据
     const combinedData = [...json_tools, ...json_fish, ...json_movies];
     const itemsWithDefaultImage = combinedData.map(item => ({
       ...item,
@@ -48,21 +48,21 @@ function App() {
 
   return (
     <Watermark content="hjkl01">
-      <div className="container mt-5">
+      <div className="container mt-5" style={{ padding: '20px', borderRadius: '8px' }}>
         <div className="d-flex justify-content-center" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
           <Input
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
-            style={{ width: '50%', marginTop: '20px', height: '40px' }}
+            style={{ width: '60%', marginTop: '20px', height: '45px', borderRadius: '5px', border: '1px solid #ced4da' }}
           />
         </div>
-        <div className="d-flex justify-content-center" style={{ marginTop: '20px' }}>
+        <div className="d-flex justify-content-center" style={{ marginTop: '30px' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
             {filteredItems.map((item, index) => (
-              <Tag key={index} style={{ margin: '15px', width: '30%', display: 'flex', alignItems: 'center', height: '40px' }}>
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <img src={item.img} style={{ marginRight: '10px', width: '20px' }} />
+              <Tag key={index} style={{ margin: '15px', width: '28%', display: 'flex', alignItems: 'center', height: '50px', backgroundColor: '#e9ecef', borderRadius: '5px' }}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#495057' }}>
+                  <img src={item.img} style={{ marginRight: '10px', width: '30px', borderRadius: '50%' }} />
                   <Text>{highlightText(item.title)}</Text>
                 </a>
               </Tag>
