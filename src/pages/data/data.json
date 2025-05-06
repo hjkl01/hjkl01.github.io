@@ -24,10 +24,10 @@
         "description": ""
     },
     {
-        "url": "https://libretranslate.com/?source=auto&target=zh",
-        "title": "在线翻译",
-        "img": "https://libretranslate.com/static/icon.svg",
-        "description": "在线翻译"
+        "url": "https://translate.google.com/",
+        "title": "翻译",
+        "img": "https://www.gstatic.com/translate/favicon.ico",
+        "description": ""
     },
     {
         "url": "https://ip.hjkl01.cn/",
@@ -54,12 +54,6 @@
         "description": "github fork"
     },
     {
-        "url": "https://spidertools.cn/#/",
-        "title": "工具箱",
-        "img": "https://spidertools.cn/favicon.ico",
-        "description": "爬虫工具库"
-    },
-    {
         "url": "https://gchq.github.io/CyberChef",
         "title": "加解密",
         "img": "https://gchq.github.io/CyberChef/assets/aecc661b69309290f600.ico",
@@ -72,12 +66,6 @@
         "description": "Convert curl commands to Python, JavaScript, PHP, R, Go, Rust, Elixir, Java, MATLAB, Dart, CFML, Ansible URI, Strest or JSON"
     },
     {
-        "url": "https://hxkj.vip/demo/echartsMap/",
-        "title": "地图数据",
-        "img": "https://hxkj.vip/demo/echartsMap/favicon.ico",
-        "description": "fork"
-    },
-    {
         "url": "https://dber.tech/",
         "title": "Database design tool",
         "img": "https://dber.hjkl01.cn/favicon.ico",
@@ -88,6 +76,12 @@
         "title": "Nginx Online",
         "img": "https://www.digitalocean.com/_next/static/media/favicon-32x32.b7ef9ede.png",
         "description": "配置高性能、安全、稳定的NGINX服务器的最简单方法。"
+    },
+    {
+        "url": "https://hxkj.vip/demo/echartsMap/",
+        "title": "地图数据",
+        "img": "https://hxkj.vip/demo/echartsMap/favicon.ico",
+        "description": "fork"
     },
     {
         "url": "https://mind.hjkl01.cn/",
@@ -118,5 +112,89 @@
         "title": "Algo",
         "img": "",
         "description": "fork"
+    },
+    {
+        "url": "https://ossinsight.io/collections/",
+        "title": "Explore Collections",
+        "img": "https://ossinsight.io/img/logo.svg",
+        "description": "Find insights about the monthly or historical rankings and trends in technical fields with curated repository lists."
+    },
+    {
+        "url": "https://github.com/explore",
+        "title": "Github explore",
+        "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
+        "description": "探索GitHub优秀项目"
+    },
+    {
+        "url": "https://github.com/trending/",
+        "title": "Github trending",
+        "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
+        "description": "Where the world builds software · GitHub"
+    },
+    {
+        "url": "https://tophub.today/",
+        "title": "热榜",
+        "img": "https://file.ipadown.com/tophub/assets/images/favicon/favicon-32x32.png",
+        "description": "News"
+    },
+    {
+        "url": "https://git.news/",
+        "title": "GitNews",
+        "img": "https://git.news/icons-7c2ec8694eb3e38cde63cfcb84d75ab3/favicon.ico",
+        "description": ""
+    },
+    {
+        "url": "https://hgh.hjkl01.cn/HelloGitHub100.html",
+        "title": "备份HelloGithub",
+        "img": "",
+        "description": ""
+    },
+    {
+        "url": "https://dig.ichouti.cn/",
+        "title": "抽屉新热榜",
+        "img": "https://dig.ichouti.cn/images/logo-c30a1a3941.png",
+        "description": "抽屉新热榜-聚合每日热门、搞笑、有趣资讯"
+    },
+    {
+        "url": "https://www.v2ex.com/",
+        "title": "V2EX = way to explore",
+        "img": "https://www.v2ex.com/static/favicon.ico",
+        "description": "V2EX 是一个关于分享和探索的地方"
+    },
+    {
+        "url": "https://t.me/hjkl01News",
+        "title": "Telegram",
+        "img": "https://web.telegram.org/favicon.ico",
+        "description": "电报"
+    },
+    {
+        "url": "https://twitter.com/explore",
+        "title": "Twitter explore",
+        "img": "https://abs.twimg.com/favicons/twitter.3.ico",
+        "description": "twitter"
+    },
+    {
+        "url": "https://www.right.com.cn/forum/",
+        "title": "恩山论坛",
+        "img": "https://www.right.com.cn/favicon.ico",
+        "description": "搞基"
+    },
+    {
+        "url": "https://github.com/o0HalfLife0o/TVBoxOSC/releases",
+        "title": "TVbox",
+        "img": "https://github.githubassets.com/apple-touch-icon-144x144.png",
+        "description": ""
+    },
+    {
+        "url": "https://www.xn--sss604efuw.com/",
+        "title": "TVbox源",
+        "img": "https://s1.imagehub.cc/images/2025/03/03/636f2a6da36a1f0d8f7731ed5d5faf04.th.jpg",
+        "description": ""
+    },
+    {
+        "url": "https://jinenyy.vip/app/tvbox/",
+        "title": "TVbox源",
+        "img": "",
+        "description": ""
     }
 ]

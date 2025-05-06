@@ -5,9 +5,10 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import "antd/dist/reset.css";
 import { Input, Tag, Typography } from "antd";
 
-import json_fish from './data/fish.json';
-import json_tools from './data/tools.json';
-import json_movies from './data/movies.json';
+// import json_fish from './data/fish.json';
+// import json_tools from './data/tools.json';
+// import json_movies from './data/movies.json';
+import json_data from './data/data.json';
 
 const { Text } = Typography;
 
@@ -18,7 +19,8 @@ function App() {
 
   useEffect(() => {
     // 合并JSON文件的数据
-    const combinedData = [...json_tools, ...json_fish, ...json_movies];
+    // const combinedData = [...json_tools, ...json_fish, ...json_movies];
+    const combinedData = [...json_data];
     const itemsWithDefaultImage = combinedData.map(item => ({
       ...item,
       img: item.img || 'https://github.githubassets.com/apple-touch-icon-144x144.png' // 默认图像URL
