@@ -8,9 +8,7 @@ var dirs = [
   "docker",
   "linux",
   "mac",
-  "nodejs",
   "others",
-  "python",
   "windows",
 ];
 
@@ -19,9 +17,9 @@ var plugins = [
   [
     "@docusaurus/plugin-content-docs",
     {
-      id: "github",
-      path: "notes/github",
-      routeBasePath: "github",
+      id: "python",
+      path: "notes/python",
+      routeBasePath: "notes/python",
       sidebarPath: "./sidebars.ts",
     },
   ],
@@ -103,40 +101,25 @@ const config: Config = {
 
         {
           type: "dropdown",
-          label: "Languages",
+          label: "Notes",
           position: "left",
           items: [
             { to: "/notes/python", label: "Python" },
-            { to: "/notes/nodejs", label: "Nodejs" },
-          ],
-        },
-
-        {
-          type: "dropdown",
-          label: "System",
-          position: "left",
-          items: [
             { to: "/notes/linux", label: "Linux" },
-            { to: "/notes/mac", label: "Mac" },
-            { to: "/notes/windows", label: "Windows" },
+            { to: "/notes/docker", label: "Docker" },
           ],
         },
-
         {
           type: "dropdown",
           label: "Others",
           position: "left",
           items: [
-            { to: "/notes/docker", label: "Docker" },
-            { to: "/notes/others", label: "Others" }],
+            { to: "/notes/mac", label: "Mac" },
+            { to: "/notes/windows", label: "Windows" },
+            { to: "/notes/others", label: "Others" },
+          ],
         },
-        {
-          type: "dropdown",
-          label: "Tools",
-          position: "left",
-          items: [{ to: "regex/", label: "Simple Regex Online" }],
-        },
-        { to: "github", label: "Awesome Github", position: "left" },
+        { to: "regex/", label: "regex", position: "left" },
 
         {
           type: 'search',
