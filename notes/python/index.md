@@ -170,7 +170,14 @@ pip install pandas openpyxl
 
 # dict
 import pandas as pd
-df = pd.DataFrame.from_dict({'Column1':[1,2,3,4],'Column2':[5,6,7,8]})
+d = [
+    {"Column1": 1, "Column2": 5},
+    {"Column1": 2, "Column2": 6},
+    {"Column3": 3, "Column4": 7},
+    {"Column3": 4, "Column4": 8},
+]
+df = pd.DataFrame.from_dict(d)
+print(df)
 df.to_excel('test.xlsx', header=True, index=False)
 
 # list
