@@ -180,6 +180,8 @@ df = pd.DataFrame.from_dict(d)
 print(df)
 df.to_excel('test.xlsx', header=True, index=False)
 
+# df.to_dict(orient="records")
+
 # list
 import pandas as pd
 Column1 = [1,2,3,4]
