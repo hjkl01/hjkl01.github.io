@@ -134,6 +134,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
+sed -i 's|https://github.com|https://ghp.ci/https://github.com|g' PKGBUILD
 makepkg -si
 ```
 
