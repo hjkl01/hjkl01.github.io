@@ -13,6 +13,10 @@ sidebar_position: 1
 
 - [archlinux](https://github.com/archlinux/archinstall) [link2](https://github.com/JunkFood02/Arch-Linux-Installation-Guide)
 
+### 常用工具安装
+```shell
+sudo openssh python3 which bc gcc
+```
 
 ### wifi
 
