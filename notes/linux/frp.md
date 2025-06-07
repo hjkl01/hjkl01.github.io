@@ -17,13 +17,17 @@ services:
     restart: unless-stopped
     ports:
       - "7000:7000"
+      - "35000:35000"
     volumes:
       - ./data/frp/frps.toml:/etc/frp/frps.toml
     command: frps -c /etc/frps/frps.toml
-    # volumes:
-    #   - ./data/frp/frpc.toml:/etc/frp/frpc.toml
-    # command: frpc -c /etc/frp/frpc.toml
-```
+
+  frpc:
+    image: gists/frp
+    restart: unless-stopped
+    volumes:
+      - ./data/frp/frpc.toml:/etc/frp/frpc.toml
+    command: frpc -c /etc/frp/frpc.toml
 ```
 
 ### frps.toml
