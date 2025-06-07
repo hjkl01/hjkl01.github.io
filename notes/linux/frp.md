@@ -35,7 +35,7 @@ services:
 bindAddr = "0.0.0.0"
 bindPort = 35000
 
-webServer.addr = "127.0.0.1"
+webServer.addr = "0.0.0.0"
 webServer.port = 7000
 webServer.user = "username"
 webServer.password = "password"
@@ -44,14 +44,16 @@ auth.token = "token..."
 ```
 
 
-### frps.toml
+### frpc.toml
 ```toml
+user = "Some_Device"
+
 serverAddr = "frps_server_address"
 serverPort = 35000
 auth.token = "token..."
 
 [[proxies]]
-name = "some-device-ssh"
+name = "ssh"
 type = "tcp"
 localIP = "127.0.0.1"
 localPort = 22
