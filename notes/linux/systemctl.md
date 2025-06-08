@@ -21,9 +21,9 @@ WantedBy=multi-user.target
 ```
 
 ```shell
-sudo ln -s glider.service /etc/lib/systemd/system/glider.service
+sudo ln -s glider.service /etc/systemd/system/multi-user.target.wants/glider.service
 # sudo ln -s glider.service /etc/systemd/system/glider.service
-# /etc/systemd/system/multi-user.target.wants/frps.service
+# sudo ln -s glider.service /etc/lib/systemd/system/glider.service
 sudo systemctl daemon-reload
 sudo systemctl restart glider.service
 ```
