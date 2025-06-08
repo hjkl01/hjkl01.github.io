@@ -4,27 +4,26 @@
 
 ```
 [Unit]
-Description=Glider
-Documentation=glider --help
-After=network.target
-StartLimitIntervalSec=30
-StartLimitBurst=2
+Description=Glider Service
+After=network-online.target
+Wants=network-online.target
 
 [Service]
+Type=simple
+User=nobody
+Restart=on-failure
+RestartSec=5s
 ExecStart=/usr/bin/glider -config /etc/glider/glider.conf
-WorkingDirectory=/mnt/hdisk/
-Restart=always
-RestartSec=1
-# User=someuser
 
 [Install]
-Alias=glider.service
+WantedBy=multi-user.target
 WantedBy=multi-user.target
 ```
 
 ```shell
 sudo ln -s glider.service /etc/lib/systemd/system/glider.service
 # sudo ln -s glider.service /etc/systemd/system/glider.service
+# /etc/systemd/system/multi-user.target.wants/frps.service
 sudo systemctl daemon-reload
 sudo systemctl restart glider.service
 ```
