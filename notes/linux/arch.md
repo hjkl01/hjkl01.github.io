@@ -204,14 +204,9 @@ sudo resolvconf -u # 更新DNS
 - #### ⚠️ 设置 root 的密码
 
 ```shell
-# wget https://tinyurl.com/vps2arch 也会被重定向到以下 url
-wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
+wget https://github.com/hjkl01/hjkl01.github.io/releases/download/vps2arch/vps2arch
 
-# 启动脚本
-sh ./vps2arch
-
-# 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如
-sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
+sudo sh ./vps2arch
 sync ; reboot -f
 ```
 
