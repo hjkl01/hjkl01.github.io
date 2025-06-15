@@ -15,19 +15,17 @@ services:
   frps:
     image: gists/frp
     restart: unless-stopped
-    ports:
-      - "7000:7000"
-      - "35000:35000"
+    network_mode: "host"
     volumes:
-      - ./data/frp/frps.toml:/etc/frp/frps.toml
-    command: frps -c /etc/frps/frps.toml
+      - ./data/frp/frps.toml:/frps.toml
+    command: frps -c /frps.toml
 
   frpc:
     image: gists/frp
     restart: unless-stopped
     volumes:
-      - ./data/frp/frpc.toml:/etc/frp/frpc.toml
-    command: frpc -c /etc/frp/frpc.toml
+      - ./data/frp/frpc.toml:/frpc.toml
+    command: frpc -c /frpc.toml
 ```
 
 ### frps.toml
