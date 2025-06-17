@@ -10,11 +10,6 @@ services:
     volumes:
       - ./data/ddns:/root
   # port: 9876
-
-networks:
-  default:
-    external:
-      name: nginx-proxy
 ```
 
 ### 创建/查看[cloudflare TOKEN](https://dash.cloudflare.com/profile/api-tokens)
