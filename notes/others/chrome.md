@@ -131,6 +131,14 @@ var _path = '//div//text()'
 var result = $x(_path).map(function(i){return i.textContent} ); copy(result);
 ```
 
+```shell
+var _path = '//a//@href';
+var result = $x(_path)
+  .map(i => i.textContent)
+  .filter(url => url.includes('/reel/'));
+copy(result);
+```
+
 ### Chrome书签文件的位置
 ```shell
 Windows: C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
