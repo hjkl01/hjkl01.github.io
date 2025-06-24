@@ -246,7 +246,7 @@ version: "3.8"
 services:
   alist:
     container_name: alist
-    image: xhofe/alist:latest
+    image: xhofe/alist:v3.44.0
     restart: unless-stopped
     environment:
       - PUID=0
