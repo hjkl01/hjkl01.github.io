@@ -37,3 +37,17 @@ swap=2GB
 [user]
 default=username
 ```
+
+## 备忘
+```shell
+echo "Server = https://mirrors.aliyun.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+
+# softwares
+which sudo git openssh python3 bc gcc
+
+# update /etc/sudoers
+useradd xxx
+passwd xxx
+mkdir /home/xxx
+chown -R xxx:xxx /home/xxx
+```
