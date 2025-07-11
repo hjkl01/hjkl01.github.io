@@ -1,5 +1,20 @@
 # movies
 
+## [bitplay](https://github.com/aculix/bitplay)
+
+```yaml
+services:
+  bitplay:
+    image: ghcr.io/aculix/bitplay:main
+    container_name: bitplay
+    ports:
+      - 3347:3347 # Expose the web UI port
+    volumes:
+      # Mount the config directory for persistent settings (Optional)
+      - ./data/bitplay_config:/app/config
+    restart: unless-stopped
+```
+
 ## aria2
 
 ```yaml
@@ -49,7 +64,6 @@ services:
       options:
         max-size: 1m
 
-  # jellyfin
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin_server
@@ -99,28 +113,3 @@ aria.domain.com {
 
 [链接](/notes/linux/nginx)
 
-<!-- ## emby -->
-<!-- ```yaml -->
-<!-- version: "2.3" -->
-<!-- services: -->
-<!--   emby: -->
-<!--     image: emby/embyserver -->
-<!--     container_name: embyserver -->
-<!--     runtime: nvidia # Expose NVIDIA GPUs -->
-<!--     # network_mode: host # Enable DLNA and Wake-on-Lan -->
-<!--     environment: -->
-<!--       - UID=1000 # The UID to run emby as (default: 2) -->
-<!--       - GID=100 # The GID to run emby as (default 2) -->
-<!--       - GIDLIST=100 # A comma-separated list of additional GIDs to run emby as (default: 2) -->
-<!--     volumes: -->
-<!--       - ./data/embyserver/programdata:/config # Configuration directory -->
-<!--       - ./data/embyserver/tvshows:/mnt/share1 # Media directory -->
-<!--       - ./data/embyserver/movies:/media -->
-<!--     ports: -->
-<!--       - 8096:8096 # HTTP port -->
-<!--       # - 8920:8920 # HTTPS port -->
-<!--     devices: -->
-<!--       - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes -->
-<!--     #   - /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi -->
-<!--     restart: unless-stopped       -->
-<!-- ``` -->
