@@ -1,4 +1,4 @@
-# ddns
+# omni-tools
 
 ## [address](https://github.com/iib0011/omni-tools)
 ```yaml
