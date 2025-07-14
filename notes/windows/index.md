@@ -79,3 +79,5 @@ https://github.com/localsend/localsend/releases
 ```
 
 ## 优化工具 [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)
+
+## [最新Microsoft Visual C++ 可再发行版本](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170)
