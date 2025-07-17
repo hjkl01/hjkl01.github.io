@@ -119,7 +119,16 @@ const config: Config = {
             { to: "/notes/others", label: "Others" },
           ],
         },
-        { to: "regex/", label: "regex", position: "left" },
+
+        {
+          type: "dropdown",
+          label: "Tools",
+          position: "left",
+          items: [
+            { to: "calculator/", label: "Calculator" },
+            { to: "regex/", label: "regex" },
+          ],
+        },
 
         {
           type: 'search',
