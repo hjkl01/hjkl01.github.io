@@ -52,7 +52,7 @@ news.hjkl01.cn {
 
 }
 
-
+# 静态文件
 blog.hjkl01.cn {
     root * /data/blog
     templates
@@ -66,6 +66,21 @@ blog.hjkl01.cn {
             roll_keep 5
             roll_keep_for 720h
         }
+    }
+}
+
+# 混合
+hjkl01.cn {
+    root * /data/build
+    file_server browse
+
+    handle /api/* {
+      reverse_proxy localhost:8080
+    }
+
+    handle {
+      try_files {path} {path}.html
+      file_server
     }
 }
 ```
