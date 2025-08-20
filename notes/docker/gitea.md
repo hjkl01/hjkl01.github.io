@@ -2,6 +2,16 @@
 
 ## [gitea](https://docs.gitea.com/zh-cn/installation/install-with-docker#postgresql-%E6%95%B0%E6%8D%AE%E5%BA%93)
 
+- 设置都有级别,如
+  - Runner:
+    - 实例级别：Runner将为实例中的所有存储库运行Job。
+    - 组织级别：Runner将为组织中的所有存储库运行Job。
+    - 存储库级别：Runner将为其所属的存储库运行Job。
+    - 需要在 Gitea 中注册 Runner, 需要在 Gitea 的 Web UI 中获取 `GITEA_RUNNER_REGISTRATION_TOKEN`。
+- 变量
+  - 密钥: secrets
+  - 变量: vars
+
 ## docker-compose.yml
 ```yaml
 # ssh example: ssh://git@git.hjkl01.cn:33030/admin/project.git
@@ -75,6 +85,7 @@ jobs:
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
           touch ~/.ssh/known_hosts
