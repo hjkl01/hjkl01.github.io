@@ -80,11 +80,62 @@ example: docker save -o ./centos.tar centos:16
 docker load -i <path to image tar file>
 
 # run image
-docker run -it ubuntu bash
+docker run -it --rm ubuntu bash
 
 # exec container
 docker exec -it openwrt zsh
 ```
+
+## push to aliyun
+
+```shell
+# Dockerfile
+
+FROM python:3.11-slim
+
+RUN sed -i.bak -e 's|http://deb.debian.org/debian|http://mirrors.aliyun.com/debian|g' \
+  -e 's|http://security.debian.org/debian-security|http://mirrors.aliyun.com/debian-security|g' \
+  /etc/apt/sources.list.d/debian.sources
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  openssh-client \
+  git nodejs binutils build-essential \
+  poppler-utils \
+  libreoffice \
+  libreoffice-l10n-zh-cn fonts-wqy-zenhei fonts-wqy-microhei fonts-arphic-ukai fonts-arphic-uming \
+  && rm -rf /var/lib/apt/lists/*
+
+# 设置工作目录
+WORKDIR /app
+
+# 复制项目文件
+COPY backend/requirements.txt .
+
+RUN pip install --no-cache-dir uv -i https://mirrors.aliyun.com/pypi/simple/
+RUN uv pip install --no-cache-dir -r requirements.txt --index-url https://mirrors.aliyun.com/pypi/simple/ --system
+
+RUN pip install pyinstaller -i https://mirrors.aliyun.com/pypi/simple/
+
+# 暴露端口
+EXPOSE 19000
+
+# 启动应用
+CMD ["tail","-f", "/dev/null"]
+
+```
+
+```shell
+# login
+docker login --username=762293490@qq.com registry.cn-hangzhou.aliyuncs.com
+# password: your aliyun password
+
+docker build -t build . -f ./Dockerfile.actions
+
+docker tag build:latest registry.cn-hangzhou.aliyuncs.com/hjkl01/hjkl01:amd_250826
+
+docker push registry.cn-hangzhou.aliyuncs.com/hjkl01/hjkl01:amd_250826
+```
+
 
 ## tools
 
