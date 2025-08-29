@@ -61,25 +61,11 @@ docker run -d -e SESSIONS=true -p 8081:8081 sosedoff/pgweb
 # mac
 tableplus
 
-# 在linux 中安装
-sudo apt-get install postgresql-client
-sudo apt-get install postgresql
-# sudo apt-get install pgadmin3
-# pgcli
-
-sudo adduser dbuser
-sudo su - postgres
-# sudo -u postgres psql
-psql
-\password postgres
-CREATE USER dbuser WITH PASSWORD 'password';
-CREATE DATABASE exampledb OWNER dbuser;
-GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser;
-
 psql -U dbuser -d exampledb -h 127.0.0.1 -p 5432
-psql exampledb
-# psql exampledb < exampledb.sql  #恢复外部数据
-pg_dump -U username -h localhost databasename >> sqlfile.sql
+
+# 导入导出
+pg_dump -h hostname -U username -d database_name -f backup.sql
+psql -h hostname -U username -d database_name -f backup.sql
 
 sudo vi /etc/postgresql/9.5/main/postgresql.conf
 sudo gedit /etc/postgresql/9.5/main/pg_hba.conf		host all all 0.0.0.0/0 md5
