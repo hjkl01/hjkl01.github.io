@@ -84,6 +84,9 @@ docker run -it --rm ubuntu bash
 
 # exec container
 docker exec -it openwrt zsh
+
+# tail log
+docker logs -f --tail 100 9f7d
 ```
 
 ## push to aliyun
