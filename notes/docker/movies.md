@@ -75,19 +75,22 @@ services:
       - 127.0.0.1:8096:8096
     restart: unless-stopped
 
-  alist:
-    container_name: alist
-    image: xhofe/alist:latest
-    restart: unless-stopped
+  openlist:
+    image: 'openlistteam/openlist:latest'
+    container_name: openlist
+    user: '0:0' # Please replace `0:0` with the actual user ID and group ID you want to use to run OpenList.
     environment:
       - PUID=0
       - PGID=0
       - UMASK=022
-    ports:
-      - "127.0.0.1:5244:5244"
+      - TZ=Asia/Shanghai
+      - OPENLIST_ADMIN_PASSWORD=xxx
     volumes:
-      - ./data/alist:/opt/alist/data
-      - ./data/downloads:/mnt
+      - './data/openlist:/opt/openlist/data'
+      - '/somedir:/mnt'
+    ports:
+      - '5244:5244'
+    restart: unless-stopped
 
 networks:
   default:
