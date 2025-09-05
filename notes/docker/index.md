@@ -89,11 +89,9 @@ docker exec -it openwrt zsh
 docker logs -f --tail 100 9f7d
 ```
 
-## push to aliyun
+## example Dockerfile
 
 ```shell
-# Dockerfile
-
 FROM python:3.11-slim
 
 RUN sed -i.bak -e 's|http://deb.debian.org/debian|http://mirrors.aliyun.com/debian|g' \
@@ -124,8 +122,28 @@ EXPOSE 19000
 
 # 启动应用
 CMD ["tail","-f", "/dev/null"]
-
 ```
+
+## example docker-compose.yml
+
+```yaml
+version: '3.8'
+services:
+  project-api:
+    build:
+      context: ./project-api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./project-api:/app
+    environment:
+      - ENV_VAR=value
+    networks:
+      - project-network
+```
+
+## push to aliyun
 
 ```shell
 # login
