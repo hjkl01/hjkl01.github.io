@@ -1,5 +1,33 @@
 # chrome
 
+
+### chrome devtools
+
+```shell
+var _path = '//div//text()'
+var result = $x(_path).map(function(i){return i.textContent} ); copy(result);
+```
+
+```shell
+var _path = '//a//@href';
+var result = $x(_path)
+  .map(i => i.textContent)
+  .filter(url => url.includes('/reel/'));
+copy(result);
+```
+
+### Chrome书签文件的位置
+```shell
+Windows: C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
+macOS: ~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
+Linux: ~/.config/google-chrome/Default/Bookmarks
+```
+
+### 更新插件失败时
+    - 打开[未安装的应用列表](https://chromewebstore.google.com/user/library) 手动依次安装
+
+### [ZeroOmega](https://gist.github.com/hjkl01/295feb8715a66f04dd1a05af25b60c82)
+
 ### web scraper
 
 > https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn
@@ -123,27 +151,3 @@
   ]
 }
 ```
-
-### chrome devtools
-
-```shell
-var _path = '//div//text()'
-var result = $x(_path).map(function(i){return i.textContent} ); copy(result);
-```
-
-```shell
-var _path = '//a//@href';
-var result = $x(_path)
-  .map(i => i.textContent)
-  .filter(url => url.includes('/reel/'));
-copy(result);
-```
-
-### Chrome书签文件的位置
-```shell
-Windows: C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data\Default\Bookmarks
-macOS: ~/Library/Application\ Support/Google/Chrome/Default/Bookmarks
-Linux: ~/.config/google-chrome/Default/Bookmarks
-```
-
-### [ZeroOmega](https://gist.github.com/hjkl01/295feb8715a66f04dd1a05af25b60c82)
