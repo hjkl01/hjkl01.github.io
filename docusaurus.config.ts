@@ -98,6 +98,7 @@ const config: Config = {
 
       items: [
         { to: "nav/", label: "Nav", position: "left" },
+        { to: "rss/", label: "RSS", position: "left" },
 
         {
           type: "dropdown",
