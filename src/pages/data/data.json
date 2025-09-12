@@ -43,9 +43,9 @@
     },
     {
         "url": "https://json.hjkl01.cn/",
-        "title": "Json visualization",
-        "img": "https://json.hjkl01.cn/assets/192.png",
-        "description": "✨ Innovative and open-source visualization application that transforms various data formats, such as JSON, YAML, XML, CSV and more, into interactive graphs."
+        "title": "Json Viewer",
+        "img": "https://json.hjkl01.cn/favicon.ico",
+        "description": ""
     },
     {
         "url": "https://refer.hjkl01.cn/",
@@ -74,7 +74,7 @@
     {
         "url": "https://dber.tech/",
         "title": "Database design tool",
-        "img": "https://dber.hjkl01.cn/favicon.ico",
+        "img": "https://dber.tech/favicon.ico",
         "description": "fork"
     },
     {
