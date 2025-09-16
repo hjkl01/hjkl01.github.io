@@ -19,7 +19,6 @@
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
     "@mdx-js/react": "^3.0.0",
-    "antd": "^5.20.3",
     "clsx": "^2.0.0",
     "docusaurus-lunr-search": "^3.4.0",
     "lucide-react": "^0.544.0",

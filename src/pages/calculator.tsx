@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import "antd/dist/reset.css";
-import { Button, Typography, Alert, Row, Col, Space, Card, Input, Tabs } from "antd";
 
 function safeEval(expr: string): number | string {
   try {
@@ -80,84 +78,90 @@ export default function Calculator(): JSX.Element {
       title={`在线计算器 | ${siteConfig.title}`}
       description="一个简单的在线四则运算计算器"
     >
-      <main>
-        <div style={{ padding: '20px', maxWidth: 360, margin: '0 auto' }}>
-          <Typography.Title level={2} style={{ textAlign: 'center' }}>在线计算器</Typography.Title>
-          <Card>
-            <Tabs
-              activeKey={tab}
-              onChange={setTab}
-              items={[
-                {
-                  key: 'keypad',
-                  label: '按键模式',
-                  children: (
-                    <>
-                      <div style={{
-                        minHeight: 48,
-                        fontSize: 22,
-                        background: '#f5f5f5',
-                        borderRadius: 4,
-                        padding: '8px 12px',
-                        marginBottom: 12,
-                        wordBreak: 'break-all'
-                      }}>
-                        {input || <span style={{ color: '#aaa' }}>请输入表达式</span>}
-                      </div>
-                      <Space direction="vertical" style={{ width: '100%' }} size="small">
-                        {btns.map((row, i) => (
-                          <Row gutter={8} key={i} justify="center">
-                            {row.map(btn => (
-                              <Col key={btn} flex="1">
-                                <Button
-                                  block
-                                  type={btn === '=' ? "primary" : btn === 'C' ? "default" : "default"}
-                                  danger={btn === 'C'}
-                                  onClick={() => handleBtnClick(btn)}
-                                  style={{ height: 40, fontSize: 18 }}
-                                >
-                                  {btn}
-                                </Button>
-                              </Col>
-                            ))}
-                          </Row>
-                        ))}
-                      </Space>
-                    </>
-                  ),
-                },
-                {
-                  key: 'input',
-                  label: '手动输入',
-                  children: (
-                    <>
-                      <Input
-                        value={input}
-                        onChange={handleInputChange}
-                        placeholder="请输入表达式，如 2+2*3"
-                        size="large"
-                        style={{ marginBottom: 12 }}
-                        onPressEnter={handleInputCalc}
-                        allowClear
-                      />
-                      <Button type="primary" block onClick={handleInputCalc} style={{ marginBottom: 8 }}>计算</Button>
-                    </>
-                  ),
-                },
-              ]}
-            />
-            {error && <Alert message={error} type="error" showIcon style={{ marginTop: 16 }} />}
-            {result !== '' && !error && (
-              <Alert
-                message={`结果：${result}`}
-                type="success"
-                showIcon
-                style={{ marginTop: 16 }}
+      <main className="py-5">
+        <div className="max-w-md mx-auto p-5 bg-white rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold text-center mb-6">在线计算器</h2>
+          
+          {/* Tab Navigation */}
+          <div className="flex border-b mb-4">
+            <button
+              className={`py-2 px-4 font-medium text-sm ${tab === 'keypad' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-500'}`}
+              onClick={() => setTab('keypad')}
+            >
+              按键模式
+            </button>
+            <button
+              className={`py-2 px-4 font-medium text-sm ${tab === 'input' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-500'}`}
+              onClick={() => setTab('input')}
+            >
+              手动输入
+            </button>
+          </div>
+          
+          {/* Display Area */}
+          <div className="min-h-12 text-xl bg-gray-100 rounded p-3 mb-3 break-all">
+            {input || <span className="text-gray-400">请输入表达式</span>}
+          </div>
+          
+          {/* Keypad Mode */}
+          {tab === 'keypad' && (
+            <div className="space-y-2">
+              {btns.map((row, rowIndex) => (
+                <div key={rowIndex} className="flex justify-center space-x-2">
+                  {row.map((btn) => (
+                    <button
+                      key={btn}
+                      className={`flex-1 h-10 text-lg font-medium rounded ${
+                        btn === '=' 
+                          ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                          : btn === 'C' 
+                            ? 'bg-red-500 text-white hover:bg-red-600' 
+                            : 'bg-gray-200 hover:bg-gray-300'
+                      }`}
+                      onClick={() => handleBtnClick(btn)}
+                    >
+                      {btn}
+                    </button>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {/* Manual Input Mode */}
+          {tab === 'input' && (
+            <div>
+              <input
+                type="text"
+                value={input}
+                onChange={handleInputChange}
+                placeholder="请输入表达式，如 2+2*3"
+                className="w-full p-3 mb-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onKeyDown={(e) => e.key === 'Enter' && handleInputCalc()}
               />
-            )}
-          </Card>
+              <button 
+                className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600 font-medium mb-2"
+                onClick={handleInputCalc}
+              >
+                计算
+              </button>
+            </div>
+          )}
+          
+          {/* Error Message */}
+          {error && (
+            <div className="mt-4 p-3 bg-red-100 text-red-700 rounded">
+              {error}
+            </div>
+          )}
+          
+          {/* Result Display */}
+          {result !== '' && !error && (
+            <div className="mt-4 p-3 bg-green-100 text-green-700 rounded">
+              结果：{result}
+            </div>
+          )}
         </div>
-        
       </main>
     </Layout>
   );

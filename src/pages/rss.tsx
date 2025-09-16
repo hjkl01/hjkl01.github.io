@@ -2,7 +2,6 @@
 
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import 'antd/dist/reset.css';
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import {
   RssIcon,

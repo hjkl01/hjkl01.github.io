@@ -2,18 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import "antd/dist/reset.css";
-import { Input, Tag, Typography } from "antd";
-
 // import json_fish from './data/fish.json';
 // import json_tools from './data/tools.json';
 // import json_movies from './data/movies.json';
 import json_data from './data/data.json';
 
-const { Text } = Typography;
-
 function App() {
-
   const [searchTerm, setSearchTerm] = useState('');
   const [items, setItems] = useState([]);
 
@@ -28,16 +22,16 @@ function App() {
     setItems(itemsWithDefaultImage);
   }, []);
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
-  const highlightText = (text) => {
+  const highlightText = (text: string) => {
     if (!searchTerm) return text;
 
     const regex = new RegExp(`(${searchTerm})`, 'gi');
     return text.split(regex).map((part, index) => (
-      <span key={index} style={{ backgroundColor: regex.test(part) ? '#d1ecf1' : 'transparent' }}>
+      <span key={index} className={regex.test(part) ? 'bg-blue-200' : ''}>
         {part}
       </span>
     ));
@@ -49,27 +43,34 @@ function App() {
   );
 
   return (
-    <div>
-      <div className="container mt-5" style={{ padding: '20px', borderRadius: '8px' }}>
-        <div className="d-flex justify-content-center" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
-          <Input
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearch}
-            style={{ width: '60%', marginTop: '20px', height: '45px', borderRadius: '5px', border: '1px solid #ced4da' }}
-          />
-        </div>
-        <div className="d-flex justify-content-center" style={{ marginTop: '30px' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
-            {filteredItems.map((item, index) => (
-              <Tag key={index} style={{ margin: '15px', width: '28%', display: 'flex', alignItems: 'center', height: '50px', backgroundColor: '#e9ecef', borderRadius: '5px' }}>
-                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: '#495057' }}>
-                  <img src={item.img} style={{ marginRight: '10px', width: '30px', borderRadius: '50%' }} />
-                  <Text>{highlightText(item.title)}</Text>
-                </a>
-              </Tag>
-            ))}
-          </div>
+    <div className="container mx-auto mt-8 px-4">
+      <div className="flex justify-center">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleSearch}
+          className="w-full max-w-2xl mt-5 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div className="flex justify-center mt-8">
+        <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {filteredItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors no-underline text-gray-700"
+            >
+              <img 
+                src={item.img} 
+                alt={item.title} 
+                className="w-8 h-8 rounded-full mr-3" 
+              />
+              <span>{highlightText(item.title)}</span>
+            </a>
+          ))}
         </div>
       </div>
     </div>
