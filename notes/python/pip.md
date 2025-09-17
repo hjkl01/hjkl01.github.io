@@ -54,6 +54,16 @@ pip download -r requirements.txt -d ./packages
 pip install --no-index --find-links=./packages -r requirements.txt
 ```
 
+## uv
+
+```shell
+# ~/.config/uv/uv.toml
+
+[[index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+default = true
+```
+
 ## poetry
 
 ### set mirror
