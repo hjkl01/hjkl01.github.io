@@ -38,3 +38,58 @@ span.token.plain{
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+/* 修复导航栏右侧元素水平排列问题 */
+.navbar__items--right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar__items--right .navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+/* 修复GitHub链接和图标的排列 */
+.navbar__items--right .navbar__item.navbar__link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar__items--right .navbar__item.navbar__link::before {
+  margin-right: 0.5rem;
+}
+
+/* 修复搜索框在导航栏中的显示 */
+.navbar__items--right .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+/* 修复下拉菜单水平排列问题 */
+.navbar .dropdown {
+  display: inline-block;
+}
+
+.navbar .dropdown__menu {
+  display: flex !important;
+  flex-direction: row !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: max-content;
+}
+
+.navbar .dropdown__menu li {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 确保下拉菜单项正常显示 */
+.navbar .dropdown__menu a {
+  white-space: nowrap;
+  display: block;
+  padding: 0.5rem 1rem;
+}
