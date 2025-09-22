@@ -93,3 +93,47 @@ span.token.plain{
   display: block;
   padding: 0.5rem 1rem;
 }
+
+/* 优化文档内链接样式，确保链接有明显的高亮 */
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* 特别优化文档内容区域的链接 */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.markdown a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* 确保导航栏中的链接不受影响 */
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+/* 修复页脚链接样式 */
+.footer a {
+  color: var(--ifm-color-primary-lightest);
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: var(--ifm-color-primary-lighter);
+  text-decoration: underline;
+}
