@@ -70,18 +70,37 @@ blog.hjkl01.cn {
 }
 
 # 混合
-hjkl01.cn {
+dev.hjkl01.cn:14567 {
+
+    # 静态文件服务
     root * /data/build
-    file_server browse
 
+    handle /ws/* {
+        reverse_proxy localhost:8080 {
+            # WebSocket 支持的关键配置
+            transport http {
+                keepalive_idle_conns 100
+                keepalive_idle_conns_per_host 10
+            }
+            # 保持连接头
+            header_up Connection {http.request.header.Connection}
+            header_up Upgrade {http.request.header.Upgrade}
+        }
+    }
+
+    # API 请求代理到后端
     handle /api/* {
-      reverse_proxy localhost:8080
+        reverse_proxy localhost:8080
     }
 
-    handle {
-      try_files {path} {path}.html
-      file_server
+    # SPA 路由支持（可选）
+    handle /* {
+        try_files {path} {path}/ /index.html
+        file_server
     }
+
+    encode zstd gzip
+    import cloudflare
 }
 ```
 
