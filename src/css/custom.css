@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -31,6 +27,136 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure markdown headers display properly with proper sizing */
+.markdown h1 {
+  font-size: var(--ifm-h1-font-size, 2rem);
+  margin-bottom: var(--ifm-heading-margin-bottom);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  color: var(--ifm-heading-color);
+}
+
+.markdown h2 {
+  font-size: var(--ifm-h2-font-size, 1.5rem);
+  margin-bottom: var(--ifm-heading-margin-bottom);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  color: var(--ifm-heading-color);
+}
+
+.markdown h3 {
+  font-size: var(--ifm-h3-font-size, 1.25rem);
+  margin-bottom: var(--ifm-heading-margin-bottom);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  color: var(--ifm-heading-color);
+}
+
+/* 全局启用代码块自动换行 */
+span.token.plain{
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 修复导航栏右侧元素水平排列问题 */
+.navbar__items--right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar__items--right .navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+/* 修复GitHub链接和图标的排列 */
+.navbar__items--right .navbar__item.navbar__link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar__items--right .navbar__item.navbar__link::before {
+  margin-right: 0.5rem;
+}
+
+/* 修复搜索框在导航栏中的显示 */
+.navbar__items--right .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+/* 修复下拉菜单水平排列问题 */
+.navbar .dropdown {
+  display: inline-block;
+}
+
+.navbar .dropdown__menu {
+  display: flex !important;
+  flex-direction: row !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: max-content;
+}
+
+.navbar .dropdown__menu li {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 确保下拉菜单项正常显示 */
+.navbar .dropdown__menu a {
+  white-space: nowrap;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+/* 优化文档内链接样式，确保链接有明显的高亮 */
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* 特别优化文档内容区域的链接 */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.markdown a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* 确保导航栏中的链接不受影响 */
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+/* 修复页脚链接样式 */
+.footer a {
+  color: var(--ifm-color-primary-lightest);
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: var(--ifm-color-primary-lighter);
+  text-decoration: underline;
 }
 
 /* 全局启用代码块自动换行 */
