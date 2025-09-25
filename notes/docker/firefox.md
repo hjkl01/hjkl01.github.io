@@ -19,7 +19,7 @@ docker build -t firefox . -f Dockerfile.firefox
 
 ### docker-compose.yml
 
-```shell
+```yaml
 version: "3"
 services:
   firefox:
