@@ -67,6 +67,11 @@ psql -U dbuser -d exampledb -h 127.0.0.1 -p 5432
 pg_dump -h hostname -U username -d database_name -f backup.sql
 psql -h hostname -U username -d database_name -f backup.sql
 
+docker exec -t my-postgres pg_dump -U postgres mydb > mydb_backup_$(date +%Y%m%d).sql
+docker exec -it pg-target psql -U postgres -c "CREATE DATABASE mydb;"
+docker exec -i pg-target psql -U postgres -d mydb < mydb_backup.sql
+
+
 sudo vi /etc/postgresql/9.5/main/postgresql.conf
 sudo gedit /etc/postgresql/9.5/main/pg_hba.conf		host all all 0.0.0.0/0 md5
 sudo /etc/init.d/postgresql restart
