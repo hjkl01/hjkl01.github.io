@@ -10,6 +10,56 @@ sidebar_position: 1
 ### cat /etc/containers/registries.conf
 
 ```shell
+unqualified-search-registries = ['docker.io', 'k8s.gcr.io', 'gcr.io', 'ghcr.io', 'quay.io']
+
+[[registry]]
+prefix = "docker.io"
+insecure = true
+location = "registry-1.docker.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
+[[registry]]
+prefix = "registry.k8s.io"
+insecure = true
+location = "registry.k8s.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
+[[registry]]
+prefix = "k8s.gcr.io"
+insecure = true
+location = "k8s.gcr.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
+[[registry]]
+prefix = "gcr.io"
+insecure = true
+location = "gcr.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
+[[registry]]
+prefix = "ghcr.io"
+insecure = true
+location = "ghcr.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
+[[registry]]
+prefix = "quay.io"
+insecure = true
+location = "quay.io"
+
+[[registry.mirror]]
+location = "xxxx.xx.com"
+
 [[registry]]
 prefix = "docker.io"
 insecure = true
