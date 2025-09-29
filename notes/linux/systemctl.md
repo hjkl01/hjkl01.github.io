@@ -6,17 +6,12 @@
 [Unit]
 Description=Glider Service
 After=network-online.target
-Wants=network-online.target
 
 [Service]
-Type=simple
-User=nobody
 Restart=on-failure
-RestartSec=5s
 ExecStart=/usr/bin/glider -config /etc/glider/glider.conf
 
 [Install]
-WantedBy=multi-user.target
 WantedBy=multi-user.target
 ```
 
@@ -25,7 +20,9 @@ sudo ln -s glider.service /etc/systemd/system/multi-user.target.wants/glider.ser
 # sudo ln -s glider.service /etc/systemd/system/glider.service
 # sudo ln -s glider.service /etc/lib/systemd/system/glider.service
 sudo systemctl daemon-reload
-sudo systemctl restart glider.service
+sudo systemctl reload-or-restart glider.service
+
+sudo journalctl -u glider.service -f
 ```
 
 # supervisor & systemctl
