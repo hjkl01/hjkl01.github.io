@@ -12,19 +12,15 @@ wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
 
 # 修改源 /etc/docker/daemon.json
-sudo tee /etc/docker/daemon.json <<EOF
-{
-    "registry-mirrors": ["https://docker.hjkl01.cn"]
-}
-EOF
+echo '{"registry-mirrors":["https://docker.hjkl01.cn", "https://docker.m.daocloud.io/","https://run-docker.cn","https://docker.sunzishaokao.com"],"dns":["119.29.29.29","114.114.114.114"]}' | sudo tee /etc/docker/daemon.json > /dev/null
 
 # 配置完后需要重启 Docker 服务
 sudo systemctl restart docker
 
 ```
 
-### on Mac
-https://github.com/abiosoft/colima
+### on Mac [colima](https://github.com/abiosoft/colima)
+
 ```shell
 # volumes
 colima start --vm-type=vz
