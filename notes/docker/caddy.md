@@ -23,14 +23,16 @@ services:
       - /etc/caddy/conf.d/:/etc/caddy/conf.d/
       # - ./data/caddy/cert:/data
       - ./data/caddy/dist/:/www/
-
-
-# Caddyfile
-import /etc/caddy/conf.d/*
 ```
 
-### conf.d/some.conf
+### Caddyfile
 ```shell
+import /etc/caddy/conf.d/*
+# auto http to https
+http:// {
+    redir https://{host}{uri} permanent
+}
+
 # 反向代理
 news.hjkl01.cn {
     reverse_proxy 127.0.0.1:8000
