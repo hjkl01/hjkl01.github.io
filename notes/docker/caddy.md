@@ -29,8 +29,13 @@ services:
 ```shell
 import /etc/caddy/conf.d/*
 # auto http to https
+# v1:
 http:// {
     redir https://{host}{uri} permanent
+}
+# v2:
+:80 {
+    redir https://{host}{uri}
 }
 
 # 反向代理
@@ -51,7 +56,7 @@ news.hjkl01.cn {
     }
     # ssl
     # tls /etc/caddy/conf.d/example.com_nginx/example.com_bundle.pem /etc/caddy/conf.d/example.com_nginx/example.com.key
-
+    # tls internal # 生成本地自签名证书用于 HTTPS 调试。
 }
 
 # 静态文件
