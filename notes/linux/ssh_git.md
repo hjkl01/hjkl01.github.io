@@ -100,11 +100,12 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 ssh -D 1082 -f -C -q -N archServer
 
 # Host github
-#    HostName github.com
+#    HostName ssh.github.com
 #    User git
+#    Port 443/22
 #    # 走 HTTP 代理
 #    # ProxyCommand socat - PROXY:user:passwd@127.0.0.1:%h:%p,proxyport=7890
-#    # 走 socks5 代理
+#    # 走 socks5 代理,按照netcat
 #    # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
 #    # ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
 #    # windows
