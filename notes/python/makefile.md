@@ -1,66 +1,75 @@
 # Makefile
 
 ```makefile
-# Makefile for FastAPI Backend
+# 从环境变量或 .env 文件加载配置，但允许命令行覆盖
+ENV_FILE ?= .env
 
-# Variables
-PYTHON := .venv/bin/python3
-PIP := .venv/bin/pip
-UV := .venv/bin/uv
-UVICORN := .venv/bin/uvicorn
-APP := main:app
-HOST := 0.0.0.0
-PORT := 8080
+# 尝试导入环境变量，但让命令行参数有更高优先级
+-include $(ENV_FILE)
 
-# Default target
-.PHONY: help
+# 如果变量未设置，则使用默认值（这将在命令行/环境变量之后执行）
+ifndef SERVER_HOST
+SERVER_HOST := 127.0.0.1
+endif
+
+ifndef SERVER_PORT
+SERVER_PORT := 8080
+endif
+
+export
+
+PYTHON ?= python3
+VENV ?= .venv
+ACTIVATE ?= source $(VENV)/bin/activate
+
+.PHONY: help install run dev test clean db-upgrade
+
+# 显示帮助信息
 help:
-	@echo "FastAPI Backend Makefile"
-	@echo "============================"
-	@echo "Available targets:"
-	@echo "  install     - Install dependencies"
-	@echo "  start       - Start the development server"
-	@echo "  format      - Format code with black"
-	@echo "  help        - Show this help message"
+	@echo "FastAPI JWT Authentication System"
+	@echo ""
+	@echo "可用命令："
+	@echo "  install    - 安装项目依赖"
+	@echo "  run        - 运行生产服务器"
+	@echo "  dev        - 运行开发服务器（自动重载）"
+	@echo "  test       - 运行测试"
+	@echo "  clean      - 清理临时文件"
+	@echo "  help       - 显示此帮助信息"
 
-# Install dependencies
-.PHONY: install
+# 安装依赖
 install:
 	@if [ ! -d ".venv" ]; then \
-		echo "Creating virtual environment..."; \
-		python3.12 -m venv .venv; \
-		echo "Virtual environment created in .venv"; \
+		@echo "📦 创建虚拟环境..."; \
+		$(PYTHON) -m venv $(VENV); \
 	else \
 		echo "Virtual environment already exists."; \
 	fi
-	$(PIP) install -U pip uv
-	@source .venv/bin/activate && $(UV) pip install -r requirements.txt
+	@echo "📦 安装依赖..."
+	$(ACTIVATE) && pip install -U pip uv -i https://mirrors.cernet.edu.cn/pypi/web/simple
+	$(ACTIVATE) && uv pip install -r requirements.txt -i https://mirrors.cernet.edu.cn/pypi/web/simple
+	$(ACTIVATE) && $(VENV)/bin/pre-commit install
+	@echo "✅ 依赖安装完成"
 
-# dev the development server
-.PHONY: dev
+# 运行生产服务器
+run:
+	@echo "Starting production server on $(SERVER_HOST):$(SERVER_PORT)"
+	uvicorn main:app --host $(SERVER_HOST) --port $(SERVER_PORT)
+
+# 运行开发服务器
 dev:
-	@echo "Starting FastAPI Backend..."
-	@echo "Access the application at http://localhost:$(PORT)"
-	@echo "API documentation: http://localhost:$(PORT)/docs"
-	@echo "Press Ctrl+C to stop the server"
-	env OLLAMA_API_URL=http://localhost:11434 OLLAMA_MODEL=qwen3:14b $(UVICORN) $(APP) --host $(HOST) --port $(PORT) --reload
+	@echo "Starting development server on $(SERVER_HOST):$(SERVER_PORT)"
+	uvicorn main:app --host $(SERVER_HOST) --port $(SERVER_PORT) --reload
 
-# Start the development server
-.PHONY: start
-start:
-	@echo "Starting FastAPI Backend..."
-	@echo "Access the application at http://localhost:$(PORT)"
-	@echo "API documentation: http://localhost:$(PORT)/docs"
-	@echo "Press Ctrl+C to stop the server"
-	env OLLAMA_API_URL=http://localhost:11434 OLLAMA_MODEL=qwen3:14b $(UVICORN) $(APP) --host $(HOST) --port $(PORT)
+# 运行测试
+test:
+	$(PYTHON) -m pytest tests/ -v
 
-# Run linting (if linting tools are installed)
-.PHONY: lint
-lint:
-	@source .venv/bin/activate && flake8 --max-line-length 120 --exclude .venv
+# 清理临时文件
+clean:
+	rm -rf __pycache__/
+	rm -rf */__pycache__/
+	rm -rf */*/__pycache__/
+	find . -type f -name "*.pyc" -delete
+	find . -type d -name "__pycache__" -delete
 
-# Run formatting (if formatting tools are installed)
-.PHONY: format
-format:
-	@source .venv/bin/activate && black -l 120 .
 ```
