@@ -1,6 +1,6 @@
 # samba nfs
 
-## (samba)[https://github.com/dockur/samba]
+## [samba](https://github.com/dockur/samba)
 
 ```yaml
 services:
