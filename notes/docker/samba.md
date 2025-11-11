@@ -1,30 +1,23 @@
 # samba nfs
 
-## samba
+## (samba)[https://github.com/dockur/samba]
 
 ```yaml
-version: "3.4"
-
 services:
   samba:
-    image: dperson/samba
+    image: dockurr/samba
+    container_name: samba
     environment:
-      TZ: "EST5EDT"
+      NAME: "Data"
+      USER: "someuser"
+      PASS: "secret"
+      UID: "1000"
+      GID: "1000"
     ports:
-      - "139:139/tcp"
-      - "445:445/tcp"
-    read_only: false
-    restart: unless-stopped
+      - 445:445
     volumes:
-      - ./data:/mnt:z
-      - ./data:/mnt:ro
-    command: '-s "Volume;/mnt;yes;no;no;foo" -u "foo;bar" -p'
-           # "<name;/path>[;browse;readonly;guest;users;admins;writelist;comment]"
-
-networks:
-  default:
-    external:
-      name: nginx-proxy
+      - /home/someuser:/storage
+    restart: always
 ```
 
 ## nfs
