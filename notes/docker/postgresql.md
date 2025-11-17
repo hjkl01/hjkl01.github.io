@@ -18,6 +18,14 @@ services:
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
 
+  cloudbeaver-server:
+    image: dbeaver/cloudbeaver:latest
+    ports:
+      - "8978:8978"
+    volumes:
+      - ./data/cloudbeaver:/opt/cloudbeaver/workspace
+    restart: unless-stopped
+
   dbgate:
     image: dbgate/dbgate
     restart: always
@@ -28,7 +36,7 @@ services:
     volumes:
       - ./data/dbgate-data:/root/.dbgate
 
-  admin:
+  adminer:
     image: adminer
     restart: always
     depends_on:
