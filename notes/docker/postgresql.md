@@ -7,6 +7,7 @@ version: "3"
 services:
   db:
     image: postgres:15-alpine
+    container_name: postgres
     restart: always
     ports:
       - 5432:5432
@@ -75,11 +76,14 @@ psql -U dbuser -d exampledb -h 127.0.0.1 -p 5432
 pg_dump -h hostname -U username -d database_name -f backup.sql
 psql -h hostname -U username -d database_name -f backup.sql
 
-docker exec -t my-postgres pg_dump -U postgres mydb > mydb_backup_$(date +%Y%m%d).sql
-docker exec -it pg-target psql -U postgres -c "CREATE DATABASE mydb;"
-docker exec -i pg-target psql -U postgres -d mydb < mydb_backup.sql
+# docker 导入导出
+docker exec -t postgres pg_dump -U postgres mydb > mydb_backup_$(date +%Y%m%d).sql
 
+docker exec -it postgres psql -U postgres -c "CREATE DATABASE mydb;"
 
+docker exec -i postgres psql -U postgres -d mydb < mydb_backup.sql
+
+# 配置
 sudo vi /etc/postgresql/9.5/main/postgresql.conf
 sudo gedit /etc/postgresql/9.5/main/pg_hba.conf		host all all 0.0.0.0/0 md5
 sudo /etc/init.d/postgresql restart
