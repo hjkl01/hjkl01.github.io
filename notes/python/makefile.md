@@ -1,5 +1,6 @@
 # Makefile
 
+### example
 ```makefile
 # 从环境变量或 .env 文件加载配置，但允许命令行覆盖
 ENV_FILE ?= .env
@@ -139,4 +140,18 @@ clean:
 	find . -type d -name "__pycache__" -delete
 	@echo "✅ 清理完成"
 
+```
+
+
+### .pre-commit-config.yaml
+```yaml
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # 使用与你项目中 ruff 版本一致的 rev（可选，但推荐）
+    rev: v0.14.10 # 👈 请根据 https://github.com/astral-sh/ruff-pre-commit/releases 最新版本调整
+    hooks:
+      - id: ruff
+        args: [--ignore, "E501", "--fix"]
+      - id: ruff-format
+        args: [--line-length, "120"]
 ```
