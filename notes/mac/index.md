@@ -37,6 +37,15 @@ open -a /Applications/Google\ Chrome.app/ --args --proxy-server=127.0.0.1:7890
 
 ## brew cask
 
+### markdown
+
+```shell
+# 预览md文件
+brew install --cask qlmarkdown
+
+qlmarkdown -r
+```
+
 ### shell
 
 > iterm2
