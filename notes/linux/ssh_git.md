@@ -86,6 +86,7 @@ Host archServer
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_rsa
     ServerAliveInterval 120
+    BindAddress 192.168.xx.xx # 指定 SSH 连接时使用的“本地出口 IP”
     # DynamicForward localhsot:1080
     # LocalForward localhost:5432 remote-host:5432
     # RemoteForward remote-port target-host:target-port
