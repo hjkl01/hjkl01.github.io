@@ -37,6 +37,7 @@ forward=trojan://password@ip:443
 # pip install pyyaml
 import os
 import yaml
+import requests
 
 url = ''
 # restart_cmd = 'sudo systemctl restart glider.service'
@@ -48,6 +49,14 @@ glider_conf = '/opt/homebrew/etc/glider.conf'
 def main():
     cmd = f'curl {url} -o ./config.yaml'
     os.system(cmd)
+
+    headers = {
+        "User-Agent": "clash-verge/v2.4.7",
+        "Accept": "*/*",
+    }
+    resp = requests.get(url, headers=headers)
+    with open("./config.yaml", "w") as file:
+       file.write(resp.text)
 
     filename = "./config.yaml"
     with open(filename, "r") as file:
