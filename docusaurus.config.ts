@@ -103,7 +103,6 @@ const config: Config = {
       items: [
         { to: "nav/", label: "Nav", position: "left" },
         { to: "rss/", label: "RSS", position: "left" },
-        { to: "notes/github", label: "Github Trending", position: "left" },
 
         {
           type: "dropdown",
@@ -135,6 +134,7 @@ const config: Config = {
             { to: "regex/", label: "regex" },
           ],
         },
+        { to: "notes/github", label: "Github Trending", position: "left" },
 
         {
           type: 'search',
