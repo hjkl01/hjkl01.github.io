@@ -15,6 +15,18 @@ import {
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
+interface FeedItem {
+  id: string;
+  feedName: string;
+  category: { color: string; name: string };
+  pubDate: Date;
+  link: string;
+  title?: string;
+  author?: string;
+  description?: string;
+  [key: string]: unknown;
+}
+
 // 常量配置
 const CONFIG = {
   BATCH_SIZE: 3,
@@ -74,7 +86,7 @@ const utils = {
 
 // 自定义Hook：RSS数据管理
 const useRSSData = () => {
-  const [feedsByCategory, setFeedsByCategory] = useState({});
+  const [feedsByCategory, setFeedsByCategory] = useState<Record<string, FeedItem[]>>({});
   const [categories, setCategories] = useState([]);
   const [rssConfig, setRssConfig] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -138,6 +150,7 @@ const useRSSData = () => {
 
   return {
     feedsByCategory,
+    setFeedsByCategory,
     categories,
     rssConfig,
     loading,
@@ -152,7 +165,7 @@ const useRSSData = () => {
 
 // 自定义Hook：加载状态管理
 const useLoadingState = () => {
-  const [loadingFeeds, setLoadingFeeds] = useState(new Set());
+  const [loadingFeeds, setLoadingFeeds] = useState<Set<string>>(new Set());
   const [failedFeeds, setFailedFeeds] = useState([]);
   const [loadedFeedsCount, setLoadedFeedsCount] = useState(0);
 
@@ -259,6 +272,7 @@ const fetchRSSFeed = async (feedConfig, category) => {
 function RSSPage() {
   const {
     feedsByCategory,
+    setFeedsByCategory,
     categories,
     rssConfig,
     loading: configLoading,
@@ -471,14 +485,14 @@ function RSSPage() {
   }, [selectedCategory, feedsByCategory]);
 
   // groupedFeeds 只声明一次，供全局使用
-  const groupedFeeds = useMemo(() => {
+  const groupedFeeds = useMemo<Record<string, FeedItem[]>>(() => {
     return currentFeeds.reduce((acc, feed) => {
       if (!acc[feed.feedName]) {
         acc[feed.feedName] = [];
       }
       acc[feed.feedName].push(feed);
       return acc;
-    }, {});
+    }, {} as Record<string, FeedItem[]>);
   }, [currentFeeds]);
 
   const toggleSourceWithScroll = useCallback((sourceName, idx, arr) => {
