@@ -1,0 +1,3 @@
+### [flyte](https://github.com/flyteorg/flyte) ![GitHub Repo stars](https://img.shields.io/github/stars/flyteorg/flyte?style=social)
+
+Flyte 2 是一个用纯 Python 构建的机器学习编排平台，用于在大规模场景下可靠地编排 ML 流水线、模型与智能体。项目提供 Python SDK 与 CLI，支持任务定义、异步工作流运行、命令行执行，以及基于 FastAPI 的模型服务部署；支持本地开发体验（含 TUI）和浏览器在线演示。当前可通过 `uv pip install flyte` 快速安装；完整 SDK 与开发工具在 `flyte-sdk` 仓库。Flyte 2 的开源 Kubernetes 原生后端仍在完善中（即将发布），企业级生产后端目前可在 Union.ai 使用。项目隶属 LF AI & Data 基金会毕业项目，采用 Apache 2.0 许可证。

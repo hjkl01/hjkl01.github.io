@@ -1,0 +1,3 @@
+### [OpenEnv](https://github.com/huggingface/OpenEnv) ![GitHub Repo stars](https://img.shields.io/github/stars/huggingface/OpenEnv?style=social)
+
+OpenEnv是一个用于创建、部署和使用隔离执行环境的大模型智能体强化学习训练框架。采用Gymnasium风格的简单API（step、reset、state），支持通过HTTP/WebSocket协议与隔离的Docker容器交互。提供CLI工具快速初始化新环境并部署到Hugging Face Spaces，支持多种容器运行时（本地Docker、Docker Swarm、Kubernetes等）。集成多个强化学习框架（TRL、torchforge、Unsloth、SkyRL等），提供Echo、Coding、Chess、Atari、FinRL等示例环境。

@@ -1,0 +1,3 @@
+### [windmill](https://github.com/windmill-labs/windmill) ![GitHub Repo stars](https://img.shields.io/github/stars/windmill-labs/windmill?style=social)
+
+开源开发者平台，用于构建和运行内部 APIs、后端任务、工作流和 UI。支持 Python、TypeScript、Go、Bash、SQL 等多种语言。脚本参数自动解析生成可交互的前端界面，脚本可组合成工作流。可通过定时任务、webhook、HTTP 路由、Kafka、WebSockets、邮件等方式触发执行。提供 CLI、VS Code 扩展和 Git 同步等本地开发支持。使用 Rust 后端 + Svelte 前端 + Postgres 数据库，支持 nsjail 沙箱隔离确保安全。可自托管于 Docker、Kubernetes 或各大云平台，社区版免费（AGPLv3），商业版提供许可证。

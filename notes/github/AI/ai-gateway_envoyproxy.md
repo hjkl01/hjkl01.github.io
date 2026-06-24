@@ -1,0 +1,3 @@
+### [ai-gateway](https://github.com/envoyproxy/ai-gateway) ![GitHub Repo stars](https://img.shields.io/github/stars/envoyproxy/ai-gateway?style=social)
+
+Envoy AI Gateway 是一个开源项目，基于 Envoy Gateway 管理应用客户端到生成式 AI 服务的请求流量。其核心采用“双层网关”架构：一层网关负责统一入口、认证、顶层路由和全局限流；二层网关负责自托管模型集群的入口流量治理，并通过端点选择器支持 LLM 推理优化与更细粒度的模型访问控制。项目可对接多家主流 AI/LLM 提供商，包括 OpenAI、Azure OpenAI、Google Gemini、Vertex AI、AWS Bedrock、Anthropic、Mistral、Cohere、Groq、Together AI、DeepInfra、DeepSeek、Hunyuan、SambaNova、Grok 和 Tetrate Agent Router Service。
