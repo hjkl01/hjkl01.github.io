@@ -1,0 +1,102 @@
+diff --git a/dist/index.cjs b/dist/index.cjs
+index 659ec0a3420ef663df3a031780eddece13365eb7..7607700e2bb488efc5afebee6dc570efa9c501ed 100644
+--- a/dist/index.cjs
++++ b/dist/index.cjs
+@@ -1703,11 +1703,11 @@ const globalStates = {};
+ class WebpackBarPlugin extends Webpack__default.ProgressPlugin {
+   constructor(options) {
+     super({ activeModules: true });
+-    this.options = Object.assign({}, DEFAULTS, options);
++    this._webpackbarOptions = Object.assign({}, DEFAULTS, options);
+     this.handler = (percent, message, ...details) => {
+       this.updateProgress(percent, message, details);
+     };
+-    const _reporters = Array.from(this.options.reporters || []).concat(this.options.reporter).filter(Boolean).map((reporter) => {
++    const _reporters = Array.from(this._webpackbarOptions.reporters || []).concat(this._webpackbarOptions.reporter).filter(Boolean).map((reporter) => {
+       if (Array.isArray(reporter)) {
+         return { reporter: reporter[0], options: reporter[1] };
+       }
+@@ -1718,10 +1718,10 @@ class WebpackBarPlugin extends Webpack__default.ProgressPlugin {
+     });
+     this.reporters = _reporters.map(({ reporter, options: options2 = {} }) => {
+       if (typeof reporter === "string") {
+-        if (this.options[reporter] === false) {
++        if (this._webpackbarOptions[reporter] === false) {
+           return void 0;
+         }
+-        options2 = { ...this.options[reporter], ...options2 };
++        options2 = { ...this._webpackbarOptions[reporter], ...options2 };
+         reporter = reporters[reporter] || require(reporter);
+       }
+       if (typeof reporter === "function") {
+@@ -1758,14 +1758,14 @@ class WebpackBarPlugin extends Webpack__default.ProgressPlugin {
+     return globalStates;
+   }
+   get state() {
+-    return globalStates[this.options.name];
++    return globalStates[this._webpackbarOptions.name];
+   }
+   _ensureState() {
+-    if (!this.states[this.options.name]) {
+-      this.states[this.options.name] = {
++    if (!this.states[this._webpackbarOptions.name]) {
++      this.states[this._webpackbarOptions.name] = {
+         ...DEFAULT_STATE,
+-        color: this.options.color,
+-        name: startCase(this.options.name)
++        color: this._webpackbarOptions.color,
++        name: startCase(this._webpackbarOptions.name)
+       };
+     }
+   }
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 0d067499e9b899b4d7d6f419b0cc4cd7ad511e64..69e0401554ea3aa9c2f85fbd819514c31590ea67 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1693,11 +1693,11 @@ const globalStates = {};
+ class WebpackBarPlugin extends Webpack.ProgressPlugin {
+   constructor(options) {
+     super({ activeModules: true });
+-    this.options = Object.assign({}, DEFAULTS, options);
++    this._webpackbarOptions = Object.assign({}, DEFAULTS, options);
+     this.handler = (percent, message, ...details) => {
+       this.updateProgress(percent, message, details);
+     };
+-    const _reporters = Array.from(this.options.reporters || []).concat(this.options.reporter).filter(Boolean).map((reporter) => {
++    const _reporters = Array.from(this._webpackbarOptions.reporters || []).concat(this._webpackbarOptions.reporter).filter(Boolean).map((reporter) => {
+       if (Array.isArray(reporter)) {
+         return { reporter: reporter[0], options: reporter[1] };
+       }
+@@ -1708,10 +1708,10 @@ class WebpackBarPlugin extends Webpack.ProgressPlugin {
+     });
+     this.reporters = _reporters.map(({ reporter, options: options2 = {} }) => {
+       if (typeof reporter === "string") {
+-        if (this.options[reporter] === false) {
++        if (this._webpackbarOptions[reporter] === false) {
+           return void 0;
+         }
+-        options2 = { ...this.options[reporter], ...options2 };
++        options2 = { ...this._webpackbarOptions[reporter], ...options2 };
+         reporter = reporters[reporter] || require(reporter);
+       }
+       if (typeof reporter === "function") {
+@@ -1748,14 +1748,14 @@ class WebpackBarPlugin extends Webpack.ProgressPlugin {
+     return globalStates;
+   }
+   get state() {
+-    return globalStates[this.options.name];
++    return globalStates[this._webpackbarOptions.name];
+   }
+   _ensureState() {
+-    if (!this.states[this.options.name]) {
+-      this.states[this.options.name] = {
++    if (!this.states[this._webpackbarOptions.name]) {
++      this.states[this._webpackbarOptions.name] = {
+         ...DEFAULT_STATE,
+-        color: this.options.color,
+-        name: startCase(this.options.name)
++        color: this._webpackbarOptions.color,
++        name: startCase(this._webpackbarOptions.name)
+       };
+     }
+   }
