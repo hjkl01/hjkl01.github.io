@@ -1,0 +1,3 @@
+### [dflash](https://github.com/z-lab/dflash) ![GitHub Repo stars](https://img.shields.io/github/stars/z-lab/dflash?style=social)
+
+DFlash 是一个轻量级的“块扩散（block diffusion）”推测解码模型，用于为大语言模型提供高效且高质量的并行草稿生成，从而加速推理服务。项目已提供多种主流模型的 DFlash 草稿模型（如 Gemma、Qwen、Kimi、LLaMA、gpt-oss 等），并支持在 Transformers、SGLang、vLLM 以及 Apple Silicon 的 MLX 后端中部署与使用。仓库包含安装说明、各后端快速启动示例，以及统一的基准评测工具（覆盖 gsm8k、math500、humaneval、mbpp、mt-bench）。此外，项目计划开源训练配方，支持用户为任意 LLM 训练自己的 DFlash 草稿模型。

@@ -1,0 +1,3 @@
+### [brush](https://github.com/reubeno/brush) ![GitHub Repo stars](https://img.shields.io/github/stars/reubeno/brush?style=social)
+
+`brush` 是一个用 Rust 编写的现代 Shell，目标是兼容 Bash 和 POSIX，可直接运行现有脚本与 `.bashrc` 配置。它内置语法高亮和自动建议，并通过约 1700 项与 Bash 的兼容性测试验证。项目已支持 50+ 内建命令、完整展开机制、控制流、重定向、数组变量、可编程补全与作业控制，适合作为日常 Shell 使用；同时可通过 `brush_core::Shell` 嵌入 Rust 应用。当前仍有部分功能未完全实现（如 `select` 和少量边缘场景，部分 trap/选项仍在完善）。此外支持多平台安装（Homebrew、Arch、MSYS2、cargo binstall、GitHub 预编译包、Nix、源码构建）并提供社区协作与贡献文档。
