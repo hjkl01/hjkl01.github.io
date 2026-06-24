@@ -65,8 +65,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`书签 | ${siteConfig.title}`}
+      description="个人书签导航，支持搜索"
     >
       <main>
         <BookmarkApp />

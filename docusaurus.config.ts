@@ -3,16 +3,17 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 
-var base_dir = "notes/";
-var dirs = [
+const base_dir = "notes/";
+const dirs = [
   "docker",
   "linux",
   "mac",
   "others",
   "windows",
+  "github",
 ];
 
-var plugins = [
+const plugins = [
   require.resolve('docusaurus-lunr-search'),
   [
     "@docusaurus/plugin-content-docs",
@@ -25,7 +26,7 @@ var plugins = [
   ],
 ];
 
-for (var d of dirs) {
+for (const d of dirs) {
   plugins.push([
     "@docusaurus/plugin-content-docs",
     {
@@ -39,12 +40,12 @@ for (var d of dirs) {
 
 
 const config: Config = {
-  title: "My Notes Site",
-  tagline: "Dinosaurs are cool",
+  title: "hjkl01's Notes",
+  tagline: "个人笔记 & 工具集",
   url: "https://hjkl01.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon-16x16.png",
 
   // GitHub pages deployment config.
@@ -70,7 +71,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/hjkl01/hjkl01.github.io/tree/master/',
         },
         theme: {
           customCss: [
@@ -102,6 +103,7 @@ const config: Config = {
       items: [
         { to: "nav/", label: "Nav", position: "left" },
         { to: "rss/", label: "RSS", position: "left" },
+        { to: "notes/github", label: "Github Trending", position: "left" },
 
         {
           type: "dropdown",
@@ -149,7 +151,7 @@ const config: Config = {
       style: 'dark',
       links: [
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} hjkl01. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
