@@ -1,0 +1,3 @@
+### [tokenizers](https://github.com/huggingface/tokenizers) ![GitHub Repo stars](https://img.shields.io/github/stars/huggingface/tokenizers?style=social)
+
+该项目是 Hugging Face 的高性能分词库 **tokenizers**，用于实现、训练和使用当前主流分词算法（如 BPE、WordPiece、Unigram）。其核心特点是：基于 Rust 实现，训练和分词速度极快（CPU 上可在 20 秒内处理 1GB 文本）；功能灵活且易用，适合研究与生产环境；支持分词归一化过程中的对齐追踪，可定位 token 对应的原文片段；内置完整预处理能力，包括截断、填充和添加模型所需特殊 token。项目提供 Rust、Python、Node.js、Ruby 多语言绑定，并支持通过 pip 安装与快速上手训练/编码流程。

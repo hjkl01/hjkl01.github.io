@@ -1,0 +1,3 @@
+### [plugins](https://github.com/cursor/plugins) ![GitHub Repo stars](https://img.shields.io/github/stars/cursor/plugins?style=social)
+
+这是一个 Cursor 官方多插件仓库，集中提供面向开发工具、框架和 SaaS 场景的插件。仓库根目录下每个插件都是独立目录，并包含各自的 `.cursor-plugin/plugin.json` 清单；根目录的 `.cursor-plugin/marketplace.json` 统一维护插件列表。当前插件主要覆盖：持续学习记忆更新、团队开发流程、插件创建与校验、仓库兼容性审计、面向 Agent 的 CLI 设计、PR 评审可视化画布、文档画布化展示、基于 Cursor TypeScript SDK 的集成开发，以及并行云端 Agent 任务编排。仓库采用 MIT 许可证。

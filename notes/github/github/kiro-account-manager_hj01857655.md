@@ -1,0 +1,3 @@
+### [kiro-account-manager](https://github.com/hj01857655/kiro-account-manager) ![GitHub Repo stars](https://img.shields.io/github/stars/hj01857655/kiro-account-manager?style=social)
+
+Kiro Account Manager 是一款基于 Tauri 2.x 的跨平台桌面应用（Windows/macOS/Linux），用于集中管理 Kiro IDE 账号与本地配置。项目核心功能包括：多账号导入导出、刷新验证、分组标签、批量操作与远程注销；支持 Google/GitHub OAuth 与 AWS IAM Identity Center 登录；可一键无感切换 Kiro 账号并自动处理 Token 刷新、机器 ID 重置、封禁账号跳过和余额不足自动换号；支持同步 MCP、Steering、Hooks、Skills、Custom Agents、Powers 等 Kiro 配置；提供主题、代理、模型锁定等系统设置；内置 OpenAI 兼容的 Kiro API 网关，支持 Anthropic Messages、OpenAI Responses/Chat Completions、流式转发、多账号负载均衡与 API Key 鉴权，可供 Cursor/Continue/Cline 等工具接入。

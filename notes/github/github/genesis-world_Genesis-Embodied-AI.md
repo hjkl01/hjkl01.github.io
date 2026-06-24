@@ -1,0 +1,3 @@
+### [genesis-world](https://github.com/Genesis-Embodied-AI/genesis-world) ![GitHub Repo stars](https://img.shields.io/github/stars/Genesis-Embodied-AI/genesis-world?style=social)
+
+Genesis World 是一个面向物理 AI 与机器人研发的仿真平台，提供 Python 风格统一接口，集成多物理场仿真引擎、写实渲染与跨平台编译能力。其核心功能包括：统一场景与状态下的刚体/FEM/MPM/SPH/PBD/IPC 等多求解器仿真及耦合；Nyx、Luisa、Pyrender 三种相机渲染路径；支持 URDF/MJCF/OBJ/GLB/USD 等资产解析、控制器与多类传感器、GUI 调试、并行与异构环境。平台可从单机扩展到数据中心级 GPU，并通过 Quadrants 将 Python 内核下沉到 CUDA、ROCm、Metal、Vulkan、x86、ARM64，支持自动微分与高性能执行。项目开源（Apache 2.0），支持 pip/uv/Docker 部署，并提供大量可运行示例用于物理、渲染与仿真接口开发。

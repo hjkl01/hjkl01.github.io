@@ -1,0 +1,3 @@
+### [pyrefly](https://github.com/facebook/pyrefly) ![GitHub Repo stars](https://img.shields.io/github/stars/facebook/pyrefly?style=social)
+
+Pyrefly 是一个面向 Python 的高速类型检查器和语言服务器，提供命令行工具与多编辑器插件（如 VS Code、Neovim、Zed）。它支持代码导航、自动补全、悬停信息、语义高亮、内联提示等完整 IDE 能力，并在 CLI 与编辑器中保持一致结果。项目主打高性能（每秒可检查超 185 万行代码，重检通常小于 10ms），已在 Meta/Instagram 超大规模代码库和 PyTorch、JAX 等项目中落地。它内置对 Pydantic、Django 等真实业务框架的支持，可开箱进行模型校验、字段类型识别与补全。还提供迁移与落地能力：可用 `pyrefly init` 从 Mypy/Pyright 迁移，`pyrefly suppress` 抑制历史错误，`pyrefly infer` 自动生成类型注解，便于渐进式采用。当前状态为稳定版。

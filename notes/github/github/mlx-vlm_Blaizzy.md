@@ -1,0 +1,3 @@
+### [mlx-vlm](https://github.com/Blaizzy/mlx-vlm) ![GitHub Repo stars](https://img.shields.io/github/stars/Blaizzy/mlx-vlm?style=social)
+
+MLX-VLM 是在 Mac 上使用 MLX 框架运行视觉语言模型（VLM）和全模态模型（支持文本、图像、音频、视频）的推理与微调工具包。支持 CLI、Python 脚本、Gradio 聊天界面和 FastAPI 服务器多种使用方式。核心功能包括：多图像和视频分析、多模态输入（图像+音频）、思维预算控制、推测解码（DFlash、EAGLE-3、Gemma 4 MTP 加速生成）、LoRA/QLoRA 微调、视觉特征缓存（11 倍提速）、TurboQuant KV 缓存压缩（最高 76% 内存削减）、自动前缀缓存（APC）、连续批处理、分布式推理、支持日志概率和结构化输出。

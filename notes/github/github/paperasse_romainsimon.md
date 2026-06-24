@@ -1,0 +1,3 @@
+### [paperasse](https://github.com/romainsimon/paperasse) ![GitHub Repo stars](https://img.shields.io/github/stars/romainsimon/paperasse?style=social)
+
+Paperasse 是一套面向法国“行政/财税事务”场景的 AI Agent 技能集（Markdown 形式，可用于 Claude、Codex、Cursor 等多平台），用于把通用代理变成法国企业与个人事务的专业助手。核心覆盖 6 类能力：企业会计与年终结账（含 PCG、TVA、IS、FEC、税表）、税务稽核模拟、法定审计（NEP）、个人税务筹划、公证法律事务（房产/继承/赠与等）以及物业共管管理。项目支持从日常记账到年结的端到端工作流，提供 Qonto/Stripe 自动数据拉取集成、Node.js 脚本与文档模板生成（财报、FEC、PDF、申报材料等），并内置企业上下文校验、税期提醒、数据时效检查等防护机制。评测结果显示技能集可显著提升任务表现（总分约从 75% 提升到 88%，+13%）。该项目定位为决策与准备辅助工具，不替代持证会计师、审计师或公证人员。
