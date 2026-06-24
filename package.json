@@ -22,6 +22,7 @@
     "clsx": "^2.0.0",
     "docusaurus-lunr-search": "^3.4.0",
     "lucide-react": "^0.544.0",
+    "lunr": "^2.3.9",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -57,5 +58,10 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "webpackbar@5.0.2": "patches/webpackbar.patch"
+    }
   }
 }

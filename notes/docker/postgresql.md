@@ -19,6 +19,14 @@ services:
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
 
+  dbx:
+    image: t8y2/dbx
+    ports:
+      - "4224:4224"
+    volumes:
+      - ./data/dbx-data:/app/data
+    restart: unless-stopped
+
   cloudbeaver-server:
     image: dbeaver/cloudbeaver:latest
     ports:
