@@ -1,0 +1,16 @@
+[project]
+name = "hjkl-scripts"
+version = "0.1.0"
+description = "GitHub trending crawler and article parser for hjkl01.github.io"
+requires-python = ">=3.12"
+dependencies = [
+    "crawlee[all]",
+    "httpx",
+    "dashscope",
+    "python-dotenv",
+    "loguru",
+    "tenacity>=9.1.2",
+]
+
+[dependency-groups]
+dev = []

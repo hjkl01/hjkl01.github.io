@@ -342,8 +342,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Regex 在线测试 | ${siteConfig.title}`}
+      description="正则表达式在线测试工具，提供常用正则字符速查表"
     >
       <main>
         <RegexApp />

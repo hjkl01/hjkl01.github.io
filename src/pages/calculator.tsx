@@ -7,9 +7,9 @@ function safeEval(expr: string): number | string {
     if (!/^[\d+\-*/().\s]+$/.test(expr)) {
       return "只支持数字和基本运算符";
     }
-    // eslint-disable-next-line no-eval
-    // @ts-ignore
-    const result = eval(expr);
+    // 使用 Function 替代 eval，更安全
+    const fn = new Function(`return (${expr})`);
+    const result = fn();
     if (typeof result === "number" && isFinite(result)) {
       return result;
     }

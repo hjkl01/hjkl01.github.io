@@ -853,8 +853,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`RSS 订阅阅读 | ${siteConfig.title}`}
+      description="聚合 RSS 订阅阅读器，支持新闻、技术、论坛等分类"
     >
       <main>
         <RSSPage />

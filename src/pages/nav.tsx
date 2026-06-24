@@ -67,6 +67,7 @@ function App() {
                 src={item.img} 
                 alt={item.title} 
                 className="w-8 h-8 rounded-full mr-3" 
+                onError={(e) => { (e.target as HTMLImageElement).src = 'https://github.githubassets.com/apple-touch-icon-144x144.png'; }}
               />
               <span>{highlightText(item.title)}</span>
             </a>
@@ -81,8 +82,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`导航 | ${siteConfig.title}`}
+      description="个人常用网站导航，包含开发工具、技术资讯等"
     >
       <main>
         <App />
