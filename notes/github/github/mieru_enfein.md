@@ -1,0 +1,3 @@
+### [mieru](https://github.com/enfein/mieru) ![GitHub Repo stars](https://img.shields.io/github/stars/enfein/mieru?style=social)
+
+mieru 是一套基于 TCP/UDP 的安全代理软件，包含客户端 **mieru** 和服务端 **mita**，提供 **SOCKS5 / HTTP / HTTPS** 代理能力。其核心特点是：不依赖 TLS（无需域名和伪装站点）、使用 **XChaCha20-Poly1305** 高强度加密（结合用户名、密码和系统时间生成密钥）、通过随机填充与重放攻击检测提升抗识别与抗探测能力，并支持多用户共享同一代理服务器以及 IPv4/IPv6 双栈网络。项目还提供完整的服务端/客户端部署、OpenWrt、运维、安全与编译文档，并可与多种第三方客户端和服务端生态集成。

@@ -1,0 +1,3 @@
+### [kiro.rs](https://github.com/hank9999/kiro.rs) ![GitHub Repo stars](https://img.shields.io/github/stars/hank9999/kiro.rs?style=social)
+
+kiro-rs 是一个 Rust 编写的 Anthropic Claude API 兼容代理服务，用于将 Anthropic 格式请求转换为 Kiro API 请求。项目核心功能包括：兼容 `/v1` 与 Claude Code `/cc/v1` 端点、支持 SSE 流式响应、支持 extended thinking 与工具调用（含内置 WebSearch 转换）、自动刷新 OAuth Token、多凭据管理（优先级/均衡负载、自动故障转移、重试与刷新回写）、多模型映射（Sonnet/Opus/Haiku）、多级 Region 配置，以及全局和凭据级 HTTP/SOCKS5 代理。项目还提供可选 Admin API 与 Web 管理界面（凭据增删改查、禁用、优先级、重置失败计数、余额查询），支持本地编译与 Docker 部署。

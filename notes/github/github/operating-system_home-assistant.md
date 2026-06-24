@@ -1,0 +1,3 @@
+### [operating-system](https://github.com/home-assistant/operating-system) ![GitHub Repo stars](https://img.shields.io/github/stars/home-assistant/operating-system?style=social)
+
+Home Assistant Operating System 是一个专为托管 Home Assistant 及其应用而优化的轻量级 Linux 操作系统。它基于 Buildroot 构建而非通用发行版，默认使用 Docker 容器引擎运行 Home Assistant Supervisor、Core 及应用。该系统具备内存效率高、I/O 最小化、支持 OTA 和离线更新等特性，兼容树莓派等单板计算机及 x86-64 UEFI 系统，并集成了 GRUB/U-Boot 引导程序、RAUC 更新机制及 AppArmor 安全模块。

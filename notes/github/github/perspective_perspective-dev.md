@@ -1,0 +1,3 @@
+### [perspective](https://github.com/perspective-dev/perspective) ![GitHub Repo stars](https://img.shields.io/github/stars/perspective-dev/perspective?style=social)
+
+Perspective 是一个面向大规模与流式数据的交互式分析与可视化组件，可用于构建可由用户配置的报表、仪表盘、Notebook 和应用。其核心能力包括：基于高性能查询引擎（支持 WebAssembly、Python、Rust）、跨框架 Web Component UI（含数据表格与 10+ 图表类型）、可对接外部数据源（如 DuckDB）的可插拔数据模型 API、内置高效流式数据模型（C++ 实现，支持 Arrow 读写与流处理、列表达式计算），并提供 JupyterLab 小部件与 Python 客户端用于交互式数据分析。

@@ -1,0 +1,3 @@
+### [kubo](https://github.com/ipfs/kubo) ![GitHub Repo stars](https://img.shields.io/github/stars/ipfs/kubo?style=social)
+
+Kubo 是用 Go 实现的 IPFS 客户端，也是最早且目前使用最广泛的 IPFS 实现。它以高互操作性为目标，围绕 CID、DAG、UnixFS、HTTP 网关、Bitswap 与可验证 HTTP 传输构建完整能力。项目核心功能包括：运行可在局域网（mDNS）和广域网（Amino DHT）发现与通信的 IPFS 节点服务；提供命令行工具 `ipfs`、WebUI 管理界面、HTTP Gateway（支持可信与无信任检索）、HTTP RPC API、HTTP Routing V1（委托路由）；支持实验性的 FUSE 挂载（`/ipfs`、`/ipns`、`/mfs`）；支持公共节点内容屏蔽（denylist）。项目可通过官方二进制、Docker、包管理器或源码安装，覆盖 Linux/macOS/Windows，并提供完善的配置、监控、调试、网关与开发文档。
