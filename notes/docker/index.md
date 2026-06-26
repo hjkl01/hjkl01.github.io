@@ -143,7 +143,7 @@ services:
 
 ```shell
 # login
-docker login --username=762293490@qq.com registry.cn-hangzhou.aliyuncs.com
+docker login --username=hjkl01@qq.com registry.cn-hangzhou.aliyuncs.com
 # password: your aliyun password
 
 docker build -t build . -f ./Dockerfile.actions
