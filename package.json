@@ -16,33 +16,35 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "3.5.2",
-    "@docusaurus/preset-classic": "3.5.2",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
     "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "docusaurus-lunr-search": "^3.4.0",
+    "clsx": "^2.1.1",
+    "docusaurus-lunr-search": "^3.6.0",
     "lucide-react": "^0.544.0",
     "lunr": "^2.3.9",
-    "prism-react-renderer": "^2.3.0",
+    "prism-react-renderer": "^2.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.5.2",
-    "@docusaurus/tsconfig": "3.5.2",
-    "@docusaurus/types": "3.5.2",
-    "@eslint/js": "^9.9.1",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.9.1",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.11",
+    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/theme-classic": "3.10.1",
+    "@docusaurus/tsconfig": "3.10.1",
+    "@docusaurus/types": "3.10.1",
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^26.0.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.26",
     "globals": "^15.9.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0"
+    "typescript-eslint": "^8.62.0"
   },
   "browserslist": {
     "production": [
@@ -58,10 +60,5 @@
   },
   "engines": {
     "node": ">=18.0"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "webpackbar@5.0.2": "patches/webpackbar.patch"
-    }
   }
 }
