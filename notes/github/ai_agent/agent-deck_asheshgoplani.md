@@ -1,0 +1,3 @@
+### [agent-deck](https://github.com/asheshgoplani/agent-deck) ![GitHub Repo stars](https://img.shields.io/github/stars/asheshgoplani/agent-deck?style=social)
+
+Agent Deck 是一个 AI 编码代理的集中式指挥控制中心。它支持在单个终端界面中统一管理和监控多个 AI 代理会话（如 Claude Code、OpenCode、Codex 等），提供会话分组、搜索、快速切换及状态实时检测功能。核心特性包括会话分支（Fork）以保留上下文、MCP 服务器动态管理、技能（Skills）挂载、Git Worktree 隔离开发环境、Docker 沙箱运行以及详细的成本追踪仪表盘。此外，它还具备“指挥者”（Conductor）机制，可通过 Telegram 或 Slack 远程自动化编排和监控整个代理舰队，并支持通过 SSH 管理远程实例。

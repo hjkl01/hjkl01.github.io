@@ -1,0 +1,3 @@
+### [headroom-desktop](https://github.com/gglucass/headroom-desktop) ![GitHub Repo stars](https://img.shields.io/github/stars/gglucass/headroom-desktop?style=social)
+
+Headroom 是一款 macOS 菜单栏应用，旨在通过本地优先的优化管道，将 Claude Code 和 OpenAI Codex 的 Token 成本降低约 50%。该应用通过可逆地压缩工具输出、日志和样板代码来减少提示词膨胀，同时确保不丢失模型所需的关键信息（模型可随时按需还原原始内容）。它支持安装独立的 Python 运行时、集成多种 Token 节省工具（如 prompt 优化、输出压缩等），并提供详细的节省数据分析，且对宿主系统环境保持零污染，卸载或暂停时可完全恢复原状。

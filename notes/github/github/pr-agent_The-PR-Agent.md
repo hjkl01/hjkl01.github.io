@@ -1,0 +1,3 @@
+### [pr-agent](https://github.com/The-PR-Agent/pr-agent) ![GitHub Repo stars](https://img.shields.io/github/stars/The-PR-Agent/pr-agent?style=social)
+
+PR-Agent 是一个开源、基于 AI 的代码审查代理项目（Qodo 的社区维护遗产版）。它支持 GitHub、GitLab、Bitbucket、Azure DevOps 和 Gitea 等平台，提供快速、低成本且可高度自定义的自动化 Pull Request 审查功能。主要工具包括代码描述（Describe）、审查（Review）、改进建议（Improve）和问答（Ask）。该项目采用单一大语言模型调用策略，具备 PR 压缩策略以处理任意大小的代码变更，支持本地部署、CLI 及多种 CI/CD 集成方式，并允许用户完全掌控数据隐私。

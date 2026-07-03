@@ -1,0 +1,3 @@
+### [TREK](https://github.com/mauriceboe/TREK) ![GitHub Repo stars](https://img.shields.io/github/stars/mauriceboe/TREK?style=social)
+
+TREK 是一款自托管的实时协作旅行规划平台，支持多人协同编辑行程。核心功能包括基于地图的拖拽式行程规划（支持3D地图、路线优化及天气查询）、费用分摊与预算管理、打包清单管理以及电子票据导入。它具备完整的用户协作体系，支持实时同步、角色权限管理、单点登录（OIDC）及无密码登录（Passkeys）。此外，项目内置 AI 助手和 MCP 服务，提供旅行摘要、预算概览等自动化功能，并包含旅行日志、已访问国家统计（Atlas）及个人假期规划（Vacay）等扩展模块。系统采用 PWA 架构，支持离线使用和移动端安装，提供多语言界面及完善的后台管理与数据备份机制。
