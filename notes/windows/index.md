@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ## ISO
 
-- download from [microsoft](https://github.com/gravesoft/msdl)
+- download from [microsoft](https://www.microsoft.com/zh-cn/software-download), (switch browser user-agent)
 
 - magnet
 
   | name       | version           | time       | magnet                                                                  |
   | ---------- | ----------------- | ---------- | ----------------------------------------------------------------------- |
-  | Windows 10 | consumer editions | 2025-10-21 | [address](magnet:?xt=urn:btih:aed8ca03ed278466c4a35d509bf864051b533011) | 
+  | Windows 10 | consumer editions | 2025-10-21 | [address](magnet:?xt=urn:btih:aed8ca03ed278466c4a35d509bf864051b533011) |
   | Windows 11 | consumer editions | 2025-11-18 | [address](magnet:?xt=urn:btih:afcf7cd029be077521db30cf5ef66fa6d0daad9e) |
 
 - download tool: https://github.com/agalwood/Motrix/releases
