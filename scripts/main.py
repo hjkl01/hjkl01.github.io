@@ -124,7 +124,7 @@ async def main(args: str | None = None) -> None:
         return
 
     # 读取 URL 列表
-    urls_path = Path("notes/github/urls.txt")
+    urls_path = Path("urls.txt")
     if not urls_path.exists():
         logger.error("urls.txt 文件不存在")
         return
