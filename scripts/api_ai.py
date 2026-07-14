@@ -111,7 +111,7 @@ async def api_openai_generate(
         **extra_options,
     }
     logger.debug(url)
-    logger.debug(str(payload))
+    logger.debug(str(payload)[:200])
 
     resp = await client.post(url, json=payload, timeout=timeout)
     if resp.status_code != 200:

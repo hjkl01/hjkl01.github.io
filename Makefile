@@ -31,7 +31,7 @@ gene:
 	@echo "🚀 启动解析..."
 	uv run scripts/main.py
 
-run: crawl gene
+run: crawl gene build
 	@echo "🚀 启动服务run\crawl..."
 
 export:

@@ -36,7 +36,7 @@ async def process_single_url(project_line: str, md_files: set) -> str | None:
 
     filename = f"{repository}_{username}.md"
     if filename in md_files:
-        logger.debug(f"跳过已存在的文件: {filename}")
+        # logger.debug(f"跳过已存在的文件: {filename}")
         return None
 
     logger.info(project_line)

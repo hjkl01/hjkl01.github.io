@@ -87,7 +87,7 @@ def main() -> None:
     """主函数：爬取并保存到 urls.txt"""
     trending_repos = asyncio.run(scrape_github_trending())
 
-    urls_file = Path("notes/github/urls.txt")
+    urls_file = Path("urls.txt")
     if not urls_file.exists():
         urls_file.touch()
 
