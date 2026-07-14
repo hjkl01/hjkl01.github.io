@@ -1,0 +1,3 @@
+### [archify](https://github.com/tt-a1i/archify) ![GitHub Repo stars](https://img.shields.io/github/stars/tt-a1i/archify?style=social)
+
+Archify 是一款面向 Claude、Codex CLI 和 opencode 的 AI 智能体技能，支持通过自然语言描述自动生成专业级技术图表（涵盖架构图、工作流、时序、数据流与生命周期图）。项目核心功能包括：输出零依赖的独立 HTML 文件；内置一键深色/浅色主题切换及会话持久化；支持一键复制 PNG 至剪贴板，或导出最高 4 倍原生分辨率的 PNG/JPEG/WebP/SVG（SVG 自动跟随系统主题）；提供语义化技术标签自动匹配视觉分类；内置渲染前校验与渲染后质量检查循环，支持通过对话指令快速迭代调整布局与细节。用户无需设计基础，即可高效产出清晰、可交互且适配多端的技术文档配图。

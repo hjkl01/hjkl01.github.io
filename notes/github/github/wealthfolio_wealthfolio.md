@@ -1,0 +1,3 @@
+### [wealthfolio](https://github.com/wealthfolio/wealthfolio) ![GitHub Repo stars](https://img.shields.io/github/stars/wealthfolio/wealthfolio?style=social)
+
+Wealthfolio 是一款开源、隐私优先且本地存储的个人投资组合与财务管理工具。其核心功能包括：跨账户与多资产类型的投资跟踪、详细的绩效分析（含时间加权/货币加权收益及基准对比）、交易活动导入与管理、以及财务目标规划。所有数据均安全存储于本地设备，无需云端依赖或注册账号，基础功能永久免费。项目提供可选的付费券商自动同步服务（支持30+机构只读同步），并内置强大的插件扩展系统，允许开发者通过 TypeScript SDK 自定义界面、接入实时市场数据与权限控制。此外，支持多币种汇率管理及跨平台部署（Windows/macOS/Linux 桌面端、iOS 移动端及 Docker/Web 自托管）。

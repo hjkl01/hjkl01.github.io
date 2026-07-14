@@ -1,0 +1,3 @@
+### [Bend](https://github.com/HigherOrderCO/Bend) ![GitHub Repo stars](https://img.shields.io/github/stars/HigherOrderCO/Bend?style=social)
+
+Bend 是一门高级大规模并行编程语言，兼具 Python 与 Haskell 的表达能力（支持快速对象分配、高阶函数、闭包、无限制递归及延续）。其底层依托 HVM2 运行时，无需任何显式并行注解（如线程创建、锁或原子操作），即可自动在 GPU 等大规模并行硬件上运行，性能随核心数量呈近线性扩展，支持超万级并发线程。项目提供 C/Rust 解释器（支持顺序与并行计算）及 CUDA 解释器（专用于 NVIDIA GPU 的大规模并行加速），并支持编译为独立 C/CUDA 文件以获取极致性能。目前单核性能仍在优化中，仅正式支持 NVIDIA GPU，Windows 环境建议使用 WSL2。

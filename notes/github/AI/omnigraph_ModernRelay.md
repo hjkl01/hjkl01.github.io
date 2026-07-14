@@ -1,0 +1,3 @@
+### [omnigraph](https://github.com/ModernRelay/omnigraph) ![GitHub Repo stars](https://img.shields.io/github/stars/ModernRelay/omnigraph?style=social)
+
+Omnigraph 是一款面向多智能体协作的湖仓图数据库，作为智能体集群的运行状态与协调层。核心功能包括：配置与部署代码化，通过 YAML 声明图模式、查询与安全策略，支持类 Terraform 的 plan/apply 工作流实现自动化收敛；Git 风格分支协作，支持数百个智能体在并行隔离分支上操作图谱并提供安全审查与合并机制；多模态统一检索，内置单一查询运行时深度融合图遍历、向量 ANN、全文搜索与互反等级融合（RRF）技术，高效组装上下文；对象存储原生架构，基于 Lance 列式格式原生支持 S3 兼容存储（兼容本地与主流云环境），实现数据可分支、时间旅行及原生多媒体支持，确保数据完全自主可控；服务端安全治理，集成 Cedar 策略引擎对所有写入操作实施细粒度权限管控、令牌认证与不可伪造的操作者审计。项目主要应用于企业知识大脑、智能体持久化记忆、决策上下文管理、开发依赖追踪及研发数据层，并提供 CLI、TypeScript SDK 与 MCP 服务以无缝对接各类 AI 代理生态。

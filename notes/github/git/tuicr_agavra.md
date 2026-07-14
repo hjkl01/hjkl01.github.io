@@ -1,0 +1,3 @@
+### [tuicr](https://github.com/agavra/tuicr) ![GitHub Repo stars](https://img.shields.io/github/stars/agavra/tuicr?style=social)
+
+`tuicr` 是一款终端代码审查工具（TUI），内置 Vim 风格快捷键。它可在终端中展示类 GitHub 的连续差异视图，支持在行、范围、文件或审查级别添加分类评论（如问题、建议、备注、表扬），并按文件/块粒度持久化记录审查进度。项目兼容 git、jj 和 mercurial，可审查未提交更改、指定提交范围或远程 PR/MR。审查完成后，支持一键推送至 GitHub 或 GitLab，或将结构化 Markdown 导出至剪贴板、标准输出供编程智能体使用。此外提供完整的 CLI 命令、Rust 库 API、高度可定制的主题与配置选项，旨在提升终端环境下的代码审查效率。

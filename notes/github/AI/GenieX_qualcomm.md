@@ -1,0 +1,3 @@
+### [GenieX](https://github.com/qualcomm/GenieX) ![GitHub Repo stars](https://img.shields.io/github/stars/qualcomm/GenieX?style=social)
+
+GenieX 是一款专为高通骁龙设备设计的端侧生成式 AI 推理运行时。它支持在 Hexagon NPU、Adreno GPU 或 CPU 上高效运行大语言模型（LLM）与视觉语言模型（VLM）。项目底层基于统一 C SDK，向上提供 CLI、Python、C/C++、Android（Kotlin/Java）、Docker 及 OpenAI 兼容的本地服务器等多种调用接口。用户可直接加载 Hugging Face 的 GGUF 模型（通过 llama.cpp 运行时跨硬件加速），或使用高通 AI Hub 预编译的优化模型包（通过 Qualcomm AI Engine Direct 独占 NPU 加速）。全面支持 Windows ARM64、Android 和 Linux ARM64 平台，旨在让开发者以极简代码实现高性能的本地 AI 部署。

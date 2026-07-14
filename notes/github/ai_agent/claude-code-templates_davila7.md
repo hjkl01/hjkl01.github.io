@@ -1,0 +1,3 @@
+### [claude-code-templates](https://github.com/davila7/claude-code-templates) ![GitHub Repo stars](https://img.shields.io/github/stars/davila7/claude-code-templates?style=social)
+
+该项目（Claude Code Templates）是一个面向 Anthropic Claude Code 的开源配置与扩展库，旨在全面优化开发工作流。核心功能包括：提供 100+ 个开箱即用的 AI 智能体、自定义命令、MCP 外部服务集成、系统设置、自动化钩子及可复用技能；支持通过命令行（npx）或交互式 Web 界面一键浏览、安装与管理这些组件；内置会话实时监控、代码分析、环境健康检查及插件统一管理等辅助开发工具。项目聚合了官方、社区及第三方贡献的优质资源，采用 MIT 协议开源。

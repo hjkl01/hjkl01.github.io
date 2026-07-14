@@ -1,0 +1,3 @@
+### [claude-video](https://github.com/bradautomates/claude-video) ![GitHub Repo stars](https://img.shields.io/github/stars/bradautomates/claude-video?style=social)
+
+`/watch` 是一款为 Claude Code、Cursor、Codex 等 AI 编程助手开发的视频分析插件。它赋予 AI “观看”视频的能力：用户输入视频链接或本地路径及问题后，工具自动下载视频，优先提取原生字幕，无字幕时回退至 Whisper API；同时根据设定的详细模式智能截取关键帧或场景帧，并进行帧去重以控制 Token 消耗。最终，AI 结合画面截图与带时间戳的字幕内容，基于实际视听信息准确回答问题。项目支持 YouTube、TikTok、Loom 等主流平台及本地文件，提供片段聚焦、多档细节模式调节及自动环境配置等功能，适用于视频总结、广告创意拆解、屏幕录制调试及课程笔记整理等场景。

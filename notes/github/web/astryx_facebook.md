@@ -1,0 +1,3 @@
+### [astryx](https://github.com/facebook/astryx) ![GitHub Repo stars](https://img.shields.io/github/stars/facebook/astryx?style=social)
+
+Astryx 是一款基于 React 和 StyleX 的开源设计系统（当前 Beta 阶段），最初由 Meta 内部孵化并广泛使用。项目提供 150 多个无障碍 UI 组件、品牌级主题定制（含深色模式）、开箱即用模板及配套 CLI 工具。核心功能特性包括：组件底层完全开放，支持任意层级组合与源码一键提取；样式层面无锁定，兼容 Tailwind、CSS Modules 或原生 CSS 覆盖；通过 CSS 自定义属性实现非侵入式主题切换；API、文档与 CLI 统一设计，专为人类开发者与 AI 编程助手无缝协同优化。项目采用模块化架构发布，遵循强约定与数据驱动迭代原则，基于 MIT 协议开源。

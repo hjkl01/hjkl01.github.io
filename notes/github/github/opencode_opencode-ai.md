@@ -1,0 +1,3 @@
+### [opencode](https://github.com/opencode-ai/opencode) ![GitHub Repo stars](https://img.shields.io/github/stars/opencode-ai/opencode?style=social)
+
+OpenCode（已归档，项目已迁移至 Crush）是一款基于 Go 语言开发的终端 AI 编程助手。它提供交互式终端界面（TUI），支持接入 OpenAI、Anthropic、Google Gemini、AWS Bedrock、Azure、Groq 及 GitHub Copilot 等主流 AI 模型。核心功能包括：智能代码辅助与调试、多会话管理与 SQLite 持久化存储、文件检索与编辑、Shell 命令执行、LSP 代码诊断集成、长对话上下文自动压缩，以及适用于自动化脚本的非交互模式。此外，项目支持自定义命令、MCP 外部工具协议扩展，并通过 JSON 配置与环境变量实现高度灵活的模型切换与工作流定制，旨在为开发者提供高效、可定制的终端内 AI 编码体验。
