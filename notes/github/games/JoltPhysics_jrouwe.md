@@ -1,0 +1,3 @@
+### [JoltPhysics](https://github.com/jrouwe/JoltPhysics) ![GitHub Repo stars](https://img.shields.io/github/stars/jrouwe/JoltPhysics?style=social)
+
+Jolt Physics 是一款专为游戏和VR应用设计的多线程友好型刚体物理与碰撞检测库。核心功能包括：支持球体、盒子、胶囊、网格、地形等多种刚体形状的连续碰撞检测；提供固定、铰链、弹簧、齿轮等丰富约束及电机驱动；支持碰撞查询与主模拟并行运行，实现无锁后台加载与更新；具备确定性模拟特性以方便网络状态同步；内置角色与布娃娃动画控制、车辆（轮式/履带/摩托）物理、软体（布料/球体）模拟、基于GPU的毛发系统计算及水体浮力算法；可选双精度模式支持超大世界构建。该库基于C++17编写，零外部依赖，兼容Windows、Linux、macOS、移动端及WebAssembly等平台，采用MIT协议开源。

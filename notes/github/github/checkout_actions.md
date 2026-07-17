@@ -1,0 +1,3 @@
+### [checkout](https://github.com/actions/checkout) ![GitHub Repo stars](https://img.shields.io/github/stars/actions/checkout?style=social)
+
+该项目是 GitHub Actions 官方代码检出操作，用于在工作流中自动将指定仓库克隆至 `$GITHUB_WORKSPACE` 目录。核心功能涵盖：支持按分支、标签或提交哈希精确检出，可自定义检出路径、历史深度、稀疏检出及单文件拉取；提供 PAT 与 SSH 双认证，凭证自动写入本地 Git 配置以支持后续认证命令，并在任务结束后自动清理；v7 版本默认阻断 `pull_request_target` 等高风险场景下的 Fork 代码检出，大幅提升安全性；内置 Git LFS 下载、子模块递归检出、多仓库（含私有）并行/嵌套检出能力；全面兼容 Push、Pull Request 等主流工作流事件，并推荐标准权限配置（`contents: read`）。整体为一款灵活、安全且高度可定制的仓库获取与管理工具。

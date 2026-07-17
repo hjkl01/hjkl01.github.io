@@ -1,0 +1,3 @@
+### [Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) ![GitHub Repo stars](https://img.shields.io/github/stars/ATH-MaaS/Pixelle-Video?style=social)
+
+Pixelle-Video 是一款 AI 全自动短视频生成引擎。用户仅需输入一个主题，系统即可自动完成智能文案创作、AI 配图与视频生成、语音合成（支持多引擎与声音克隆）、背景音乐匹配及一键视频合成。项目采用模块化架构，灵活兼容 ComfyUI/RunningHub 工作流与直连主流厂商 API（如 DashScope、OpenAI、可灵等），内置多种视觉模板、画幅比例与风格预设。支持数字人口播、动作迁移、自定义素材上传等扩展能力，提供友好的 Web 界面与 Windows 一键部署包，实现零剪辑门槛的短视频高效批量生产。

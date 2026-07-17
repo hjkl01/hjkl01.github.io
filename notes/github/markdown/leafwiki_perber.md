@@ -1,0 +1,3 @@
+### [leafwiki](https://github.com/perber/leafwiki) ![GitHub Repo stars](https://img.shields.io/github/stars/perber/leafwiki?style=social)
+
+LeafWiki 是一款轻量级自托管维基系统，采用单 Go 二进制文件运行，底层依赖 SQLite 与磁盘 Markdown 文件，无需额外数据库或运行时环境。核心功能涵盖：树状页面导航与手动排序、全文搜索与标签过滤、双向链接与链接状态追踪、内置 Markdown 编辑器（支持实时预览、快捷键、Mermaid 图表、KaTeX 数学公式、任务列表及脚注等），并内置并发编辑乐观锁。系统提供灵活的访问模式（需登录内部使用、公开只读+登录编辑、完全开放编辑）及角色权限管理（管理员/编辑者/查看者）。支持自定义 CSS 样式、品牌设置、暗色模式与移动端适配，并可按需启用修订历史、页面重命名自动更新链接、SSH Git 定时备份等扩展功能。兼容 Linux/macOS/Windows/树莓派，提供 Docker、Docker Compose、一键脚本及独立二进制等多种部署方式，原生支持反向代理认证与 Unix Socket。

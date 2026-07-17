@@ -1,0 +1,3 @@
+### [cangjie-skill](https://github.com/kangarooking/cangjie-skill) ![GitHub Repo stars](https://img.shields.io/github/stars/kangarooking/cangjie-skill?style=social)
+
+Cangjie Skill 致力于将书籍、长视频、播客、访谈等高质量内容中的核心方法论，蒸馏转化为可直接供 AI Agent 调用的结构化技能（Skills）。项目基于 RIA-TV++ 七步流水线（涵盖整体拆解、并行提取、三重验证筛选、RIA++结构化、知识关联、压力测试与交付），自动过滤冗余信息，精准抽取具备独特性与预测力的可执行原则。最终输出为包含明确触发条件、适用边界、执行步骤及交叉测试用例的多模块 Skill 仓库，无缝对接 Claude Code、Cursor 等 AI 辅助工具，彻底解决知识“只看不练、收藏落灰”的痛点，实现从被动内容消费到主动智能体执行的转化。

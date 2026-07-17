@@ -1,0 +1,3 @@
+### [pg_durable](https://github.com/microsoft/pg_durable) ![GitHub Repo stars](https://img.shields.io/github/stars/microsoft/pg_durable?style=social)
+
+pg_durable 是一款 PostgreSQL 扩展，将“持久化执行”能力直接内置于数据库内。它允许开发者通过 SQL 定义长运行、容错的工作流，并在每个步骤自动创建持久化检查点。当数据库崩溃、重启或单步失败时，执行可从最近检查点无缝恢复。该方案无需依赖 Redis、Temporal 等外部调度服务或队列中间件，原生支持并行执行、条件分支、定时任务与进度追踪，适用于数据管道、向量嵌入处理、自动化运维及外部 API 调用等场景。通过纯 SQL DSL 与内置后台进程实现零额外基础设施开销，显著提升后台任务的可靠性、可审计性与运维效率。项目当前处于预览阶段，采用 PostgreSQL 许可证。
