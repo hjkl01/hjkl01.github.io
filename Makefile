@@ -45,4 +45,4 @@ build:
 
 deploy: build
 	@echo "🚀 部署到 GitHub Pages..."
-	pnpm deploy
+	pnpm run deploy
