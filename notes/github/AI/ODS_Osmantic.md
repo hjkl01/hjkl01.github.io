@@ -1,0 +1,3 @@
+### [ODS](https://github.com/Osmantic/ODS) ![GitHub Repo stars](https://img.shields.io/github/stars/Osmantic/ODS?style=social)
+
+ODS（Osmantic Deployment System）是一款开源的本地私有 AI 服务器套件，支持 Linux、Windows 和 macOS。它提供一键安装能力，可自动检测 GPU/内存硬件并匹配最优模型，将普通电脑或工作站打造为完整的私人 AI 中心。核心功能涵盖：本地大模型推理、ChatGPT 风格网页对话界面、统一控制仪表盘、语音识别与合成、AI 自主代理与 n8n 工作流自动化、RAG 知识库与隐私搜索、ComfyUI 本地图像生成，以及 PII 脱敏和系统可观测性工具。项目默认完全离线本地运行以保障数据隐私，同时支持云端/混合 API 回退、启动引导模式（先小模型即时使用、后台下载大模型）、基于清单的模块化扩展机制及完善的 CLI 管理，让用户无需手动拼接服务即可拥有开箱即用的全栈 AI 基础设施。

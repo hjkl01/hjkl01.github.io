@@ -1,0 +1,3 @@
+### [cwc-workshops](https://github.com/anthropics/cwc-workshops) ![GitHub Repo stars](https://img.shields.io/github/stars/anthropics/cwc-workshops?style=social)
+
+本项目是 Anthropic “Code with Claude” 系列工作坊的配套材料，提供围绕 Claude Code、Claude Managed Agents、Skills、MCP 协议及自动化评估的实战教程。核心内容涵盖：LLM 选型与推理参数调优、多智能体系统编排、AI 辅助产品工作流、SRE 故障排查 Agent 实现、Agent 配置竞赛、跨会话记忆机制、评估驱动迭代开发、生产级多智能体协作（如并购投研团队）以及 SEC 财报自动研报系统。项目采用 Apache 2.0 许可证，目前已停止维护且不接受外部贡献。

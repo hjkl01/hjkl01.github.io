@@ -1,0 +1,3 @@
+### [pgrust](https://github.com/malisper/pgrust) ![GitHub Repo stars](https://img.shields.io/github/stars/malisper/pgrust?style=social)
+
+pgrust 是一个使用 Rust 语言重写的 PostgreSQL 数据库项目。该项目旨在完全兼容 PostgreSQL 18.3 的核心行为与数据格式，已通过 4.6 万多项回归测试验证，并支持直接挂载现有 PG 数据目录启动。通过结合 Rust 内存安全特性与 AI 辅助编程，pgrust 致力于在保持原有数据库特性的前提下，降低底层内核的修改门槛，以便深入探索架构优化。当前版本尚未达到生产就绪状态，性能调优及部分传统扩展兼容性仍在推进中。团队正在研发下一代版本，计划改用线程级连接模型，预计事务性能提升 50%，分析型查询提速约 300 倍，并持续规划多线程内核、内置连接池、JSON 负载优化及新型存储引擎等特性。项目采用 AGPL-3.0 协议开源。

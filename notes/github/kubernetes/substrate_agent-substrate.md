@@ -1,0 +1,3 @@
+### [substrate](https://github.com/agent-substrate/substrate) ![GitHub Repo stars](https://img.shields.io/github/stars/agent-substrate/substrate?style=social)
+
+Agent Substrate 是一个基于 Kubernetes 构建的轻量级基础设施系统，专为大规模运行类 Agent 工作负载而设计。它通过将大量 Actor（应用实例）动态复用到少量就绪的 Kubernetes Pod 上，利用 Agent 高频空闲的特性实现远超传统 K8s 的资源复用率与更低延迟。核心功能包括 Actor 的全生命周期管理（创建、销毁、暂停、恢复）、实时调度分配、流量路由，以及基于完整快照的状态持久化，支持亚秒级激活与跨会话状态保持。该系统与开发框架无关，可在内核层面通过 gVisor 托管任意技术栈的 Agent，适用于 AI Agent、代码执行环境及 MCP 服务等场景。

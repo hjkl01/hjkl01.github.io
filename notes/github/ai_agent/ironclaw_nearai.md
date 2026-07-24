@@ -1,0 +1,3 @@
+### [ironclaw](https://github.com/nearai/ironclaw) ![GitHub Repo stars](https://img.shields.io/github/stars/nearai/ironclaw?style=social)
+
+IronClaw 是一款安全、开源、本地优先的个人 AI 助手。它支持接入多种大语言模型，提供终端、Web 界面、HTTP Webhook 及 Telegram/Slack 等多渠道交互能力。项目以安全为核心，采用 WASM 沙箱隔离不可信工具，内置凭据保护、提示注入防御和端点白名单机制，确保所有数据本地加密存储且不对外共享。此外，IronClaw 具备自扩展能力，可动态构建 WASM 工具并支持 MCP 协议；拥有持久化混合记忆系统，支持定时任务、事件触发、并行作业执行与后台自动化运维，是一款完全由用户掌控的可信个人 AI 助手。

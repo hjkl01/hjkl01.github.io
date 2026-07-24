@@ -1,0 +1,3 @@
+### [native](https://github.com/vercel-labs/native) ![GitHub Repo stars](https://img.shields.io/github/stars/vercel-labs/native?style=social)
+
+Native SDK 是一款用于构建原生桌面应用的完整开发工具包。其核心功能为：采用声明式 `.native` 标记编写界面，结合 TypeScript 或 Zig 编写逻辑，编译后由自研引擎直接在系统窗口中绘制像素，无浏览器/WebView/JS 运行时依赖，实现极小包体积与原生性能。提供内置且支持设计令牌深度定制的组件库；采用消息驱动的确定性状态管理模式，支持热重载与毫秒级视图校验；内置自动化服务器以支持 AI 代理驱动界面、录制回放及快照验证；配备零配置 CLI 工具链（初始化、开发、构建）。目前优先支持 macOS，Linux 与 Windows 已就绪，移动端处于实验阶段。项目遵循 Apache-2.0 协议。
