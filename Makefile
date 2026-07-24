@@ -1,6 +1,6 @@
 PYTHON := python3.12
 
-.PHONY: install run crawl cate gene export build help
+.PHONY: install run crawl cate gene export build deploy help
 
 help:
 	@echo "📋 可用命令:"
@@ -10,6 +10,7 @@ help:
 	@echo "  make cate         对文档分类"
 	@echo "  make gene         启动文章解析"
 	@echo "  make build        构建 Docusaurus 站点"
+	@echo "  make deploy       部署到 GitHub Pages"
 	@echo "  make run          执行 crawl + gene"
 	@echo "  make export       从 md 文件导出 URL 到 urls.txt"
 	@echo ""
@@ -41,3 +42,7 @@ export:
 build:
 	@echo "🏗️ 构建站点..."
 	pnpm build
+
+deploy: build
+	@echo "🚀 部署到 GitHub Pages..."
+	pnpm deploy
