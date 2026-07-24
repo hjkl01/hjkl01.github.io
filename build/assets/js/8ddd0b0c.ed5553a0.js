@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunknotes_3_5_2=globalThis.webpackChunknotes_3_5_2||[]).push([[39426],{40448(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"linux"}')}}]);
