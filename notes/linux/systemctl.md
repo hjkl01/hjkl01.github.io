@@ -1,15 +1,62 @@
 ## systemctl
 
-### glider example
+### caddy example
 
 ```
 [Unit]
-Description=Glider Service
+Description=Caddy web server
+Documentation=https://caddyserver.com/docs/
 After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=14400
+StartLimitBurst=10
 
 [Service]
-Restart=on-failure
-ExecStart=/usr/bin/glider -config /etc/glider/glider.conf
+Type=notify
+User=caddy
+Group=caddy
+Environment=XDG_DATA_HOME=/var/lib
+Environment=XDG_CONFIG_HOME=/etc
+ExecStartPre=/usr/bin/caddy validate --config /etc/caddy/Caddyfile
+ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
+ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile --force
+ExecStopPost=/usr/bin/rm -f /run/caddy/admin.socket
+
+# Do not allow the process to be restarted in a tight loop. If the
+# process fails to start, something critical needs to be fixed.
+Restart=on-abnormal
+
+# Use graceful shutdown with a reasonable timeout
+TimeoutStopSec=5s
+
+LimitNOFILE=1048576
+LimitNPROC=512
+
+# Hardening options
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+DevicePolicy=closed
+LockPersonality=true
+MemoryAccounting=true
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProcSubset=pid
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectProc=invisible
+ProtectSystem=strict
+RemoveIPC=true
+ReadWritePaths=/var/lib/caddy /var/log/caddy /run/caddy
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
 
 [Install]
 WantedBy=multi-user.target
