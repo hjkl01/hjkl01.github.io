@@ -1,0 +1,3 @@
+### [nvidiaProfileInspector](https://github.com/Orbmu2k/nvidiaProfileInspector) ![GitHub Repo stars](https://img.shields.io/github/stars/Orbmu2k/nvidiaProfileInspector?style=social)
+
+NVIDIA Profile Inspector是一款Windows平台工具，用于通过NVIDIA驱动设置API编辑NVIDIA驱动配置文件。它暴露了NVIDIA控制面板使用的驱动配置文件数据库，访问许多隐藏或未文档化的配置文件设置，并轻松创建、调整、导出、导入和恢复每应用程序配置文件。该工具旨在为高级用户的游戏和应用程序配置文件提供精确控制，兼容标志，帧率限制器，同步选项，纹理过滤，SLI设置，Optimus行为，DLSS覆盖和其他标准控制面板中不可用的驱动程序级别开关。

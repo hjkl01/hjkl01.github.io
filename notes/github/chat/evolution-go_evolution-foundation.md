@@ -1,0 +1,3 @@
+### [evolution-go](https://github.com/evolution-foundation/evolution-go) ![GitHub Repo stars](https://img.shields.io/github/stars/evolution-foundation/evolution-go?style=social)
+
+Evolution Go 是一个使用 Go 语言构建的高性能 WhatsApp API，属于 Evolution Foundation 生态系统。它提供了基于 whatsmeow 库的 WhatsApp 集成解决方案，具备 RESTful API、实时事件（WebSocket/Webhook/RabbitMQ/NATS）、媒体文件支持（MinIO/S3）、消息存储（PostgreSQL）、二维码配对、许可证管理及 Docker 部署等功能。

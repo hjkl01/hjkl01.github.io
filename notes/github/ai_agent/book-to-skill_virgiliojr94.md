@@ -1,0 +1,3 @@
+### [book-to-skill](https://github.com/virgiliojr94/book-to-skill) ![GitHub Repo stars](https://img.shields.io/github/stars/virgiliojr94/book-to-skill?style=social)
+
+book-to-skill 是一个将技术书籍或文档转换为结构化 Agent Skills 的工具，可被 GitHub Copilot CLI、Amp 或 Claude Code 等主流 AI 开发环境直接调用。它将输入内容提炼为 SKILL.md、分章节 MD 文件、术语表、模式速查表和决策规则集，实现“按需加载”的知识检索体验。相比直接将整本书放入上下文，使用该工具可将单次查询所需 Token 减少 24–51 倍，且支持内部文档、研究论文等多种结构化文本形式的统一技能化处理。
