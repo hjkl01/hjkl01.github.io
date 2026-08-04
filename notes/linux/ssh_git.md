@@ -100,17 +100,16 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub archServer
 # 转发服务器到本机的1082端口
 ssh -D 1082 -f -C -q -N archServer
 
-# Host github
-#    HostName ssh.github.com
-#    User git
-#    Port 443/22
-#    # 走 HTTP 代理
-#    # ProxyCommand socat - PROXY:user:passwd@127.0.0.1:%h:%p,proxyport=7890
-#    # 走 socks5 代理,按照netcat
-#    # ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
-#    # ProxyCommand ncat --proxy-type http --proxy 127.0.0.1:7890 --proxy-auth user:passwd %h %p
-#    # windows
-#    # ProxyCommand connect -H localhost:7890 %h %p
+Host github.com
+    HostName github.com
+    User git
+    ProxyCommand nc -x 127.0.0.1:7890 %h %p
+
+Host ssh.github.com
+    User git
+    Port 443
+    ProxyCommand nc -x 127.0.0.1:7891 %h %p
+
 ```
 
 #### ssh TOTP 开启二次验证
