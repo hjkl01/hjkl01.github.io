@@ -9,6 +9,12 @@ patch:
   menu:
     page_size: 9 # 候选词个数
 
+  patch:
+    key_binder:
+      bindings:
+        - { when: composing, accept: "Control+n", send: Page_Down }
+        - { when: composing, accept: "Control+p", send: Page_Up }
+
   # 切换中英：
   # 不同的选项表示：打字打到一半时按下了 CapsLock、Shift、Control 后：
   # commit_code  上屏原始的编码，然后切换到英文
