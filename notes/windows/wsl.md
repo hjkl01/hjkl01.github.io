@@ -19,6 +19,10 @@ https://geo.mirror.pkgbuild.com/wsl/latest/
 wsl --install --from-file C:\Users\用户名\Downloads\archlinux-2025.04.01.121271.wsl
 
 wsl --install --from-file E:\Downloads\archlinux.wsl --name Arch --location E:\wares\Arch
+
+# 迁移
+wsl --export archlinux E:\wsl\archlinux-backup.tar
+wsl --import archlinux E:\wsl\archlinux E:\wsl\archlinux-backup.tar --version 2
 ```
 
 ## 限制CPU和内存
