@@ -105,7 +105,7 @@ Host github.com
     User git
     ProxyCommand nc -x 127.0.0.1:7890 %h %p
 
-Host ssh.github.com
+Host ssh.github
     User git
     Port 443
     ProxyCommand nc -x 127.0.0.1:7891 %h %p

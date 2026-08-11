@@ -33,6 +33,8 @@ wsl --import archlinux E:\wsl\archlinux E:\wsl\archlinux-backup.tar --version 2
 processors=2
 memory=2GB
 swap=2GB
+localhostForwarding=true
+networkingMode=mirrored
 ```
 
 ## 指定用户登录

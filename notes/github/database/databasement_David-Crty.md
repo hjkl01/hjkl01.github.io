@@ -1,0 +1,3 @@
+### [databasement](https://github.com/David-Crty/databasement) ![GitHub Repo stars](https://img.shields.io/github/stars/David-Crty/databasement?style=social)
+
+Databasement 是一款现代化的自托管数据库备份管理应用，支持 MySQL、PostgreSQL、MariaDB、SQL Server、MongoDB、SQLite、Firebird 和 Redis 等多种数据库。主要功能包括：通过 SSH 隧道或远程 Agent 连接私有网络数据库；支持定时自动备份与 GFS 策略；提供 gzip、zstd 和 AES-256 加密压缩选项；支持跨服务器备份恢复；内置 Adminer 数据浏览器；支持本地、S3、Azure Blob、SMB、SFTP 等多种存储方式；实时任务监控与多渠道故障告警；多租户团队管理与 OAuth/SSO 登录；提供 REST API 和 MCP 服务器用于自动化与 AI 集成；支持 Docker、Kubernetes 等多种部署方式。
