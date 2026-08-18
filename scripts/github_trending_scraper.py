@@ -4,8 +4,18 @@ from pathlib import Path
 from crawlee.crawlers._beautifulsoup import BeautifulSoupCrawler
 
 
+TRENDING_PERIOD = "weekly"
+TRENDING_URLS = [
+    f"https://github.com/trending?since={TRENDING_PERIOD}",
+    f"https://github.com/trending/python?since={TRENDING_PERIOD}",
+    # f"https://github.com/trending/lua?since={TRENDING_PERIOD}",
+    f"https://github.com/trending/go?since={TRENDING_PERIOD}",
+    f"https://github.com/trending/rust?since={TRENDING_PERIOD}",
+]
+
+
 async def scrape_github_trending() -> list[dict]:
-    """爬取 GitHub Trending 仓库"""
+    """爬取每周 GitHub Trending 仓库。"""
     repos = []
 
     async def handler(context):
@@ -46,9 +56,9 @@ async def scrape_github_trending() -> list[dict]:
                     elif "forks" in href_stat:
                         forks = stat.text.strip()
 
-                # 今日 star
-                today_stars_elem = article.find("span", class_="d-inline-block float-sm-right")
-                today_stars = today_stars_elem.text.strip() if today_stars_elem else ""
+                # 每周新增 star
+                weekly_stars_elem = article.find("span", class_="d-inline-block float-sm-right")
+                weekly_stars = weekly_stars_elem.text.strip() if weekly_stars_elem else ""
 
                 repos.append(
                     {
@@ -58,7 +68,7 @@ async def scrape_github_trending() -> list[dict]:
                         "language": language,
                         "stars": stars,
                         "forks": forks,
-                        "today_stars": today_stars,
+                        "weekly_stars": weekly_stars,
                     }
                 )
             except Exception as e:
@@ -68,23 +78,15 @@ async def scrape_github_trending() -> list[dict]:
     crawler = BeautifulSoupCrawler()
     crawler.router.default_handler(handler)
 
-    # 爬取多个语言分类
-    await crawler.add_requests(
-        [
-            "https://github.com/trending?since=weekly",
-            "https://github.com/trending/python?since=weekly",
-            # "https://github.com/trending/lua?since=weekly",
-            "https://github.com/trending/go?since=weekly",
-            "https://github.com/trending/rust?since=weekly",
-        ]
-    )
+    # 爬取每周 Trending 的多个语言分类
+    await crawler.add_requests(TRENDING_URLS)
     await crawler.run()
 
     return repos
 
 
 def main() -> None:
-    """主函数：爬取并保存到 urls.txt"""
+    """主函数：爬取每周 Trending 并保存到 urls.txt。"""
     trending_repos = asyncio.run(scrape_github_trending())
 
     urls_file = Path("urls.txt")
@@ -104,6 +106,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-# 补充 Path 导入
