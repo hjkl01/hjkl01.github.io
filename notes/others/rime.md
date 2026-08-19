@@ -32,6 +32,11 @@ patch:
       Shift_R: clear # commit_code | commit_text | inline_ascii | clear | noop
       Control_L: noop # commit_code | commit_text | inline_ascii | clear | noop
       Control_R: noop # commit_code | commit_text | inline_ascii | clear | noop
+
+switches:
+  - name: ascii_mode
+    # 默认英文
+    reset: 1
 ```
 
 ## ~/Library/Rime/rime_ice.custom.yaml
