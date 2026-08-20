@@ -16,6 +16,9 @@ sidebar_position: 1
 ### 常用工具安装
 ```shell
 sudo openssh python3 which bc gcc
+
+# 字体
+noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-dejavu ttf-liberation
 ```
 
 ### wifi
@@ -62,7 +65,7 @@ Server = https://mirrors.shanghaitech.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 pacstrap /mnt base base-devel linux linux-firmware neovim e2fsprogs ntfs-3g zsh tmux fzf zoxide neovim lua stylua git htop tree lsof
-# fcitx5-rime alacritty 
+# fcitx5-rime alacritty
 pacman -Sy archlinux-keyring
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
