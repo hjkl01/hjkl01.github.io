@@ -1,41 +1,80 @@
-# Website
+# hjkl01.github.io
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+个人网站项目仓库。
 
-### Installation
+本项目基于 [Docusaurus](https://docusaurus.io/) 构建，是一个现代化的静态网站，用于发布文档、文章和个人内容。
 
-```
-$ yarn
-```
+## ✨ Features
 
-### Local Development
+- 🚀 基于 Docusaurus 的快速静态网站
+- 📝 支持 Markdown / MDX 内容编写
+- 🔍 内置搜索与文档导航能力
+- 🌐 支持 GitHub Pages 自动部署
+- 🎨 可扩展主题与插件体系
 
-```
-$ yarn start
-```
+## 🛠️ Development
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### 环境要求
 
-### Build
+建议使用：
 
-```
-$ yarn build
-```
+- Node.js >= 18
+- Yarn >= 1.x
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+### 安装依赖
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+yarn
 ```
 
-Not using SSH:
+### 本地运行
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+```bash
+yarn start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+启动后，浏览器会自动打开本地开发地址。修改文件后页面通常会自动刷新。
+
+## 📦 Build
+
+生成生产环境静态文件：
+
+```bash
+yarn build
+```
+
+构建结果会输出到 `build` 目录，可部署到任意静态网站托管服务。
+
+## 🚀 Deployment
+
+部署到 GitHub Pages：
+
+使用 SSH：
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+使用 HTTPS：
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+该命令会自动构建网站，并将生成内容推送到 `gh-pages` 分支。
+
+## 📁 Project Structure
+
+```text
+.
+├── docs/          # 文档内容
+├── blog/          # 博客文章
+├── src/           # 页面与组件
+├── static/        # 静态资源
+├── docusaurus.config.js
+└── package.json
+```
+
+## 📄 License
+
+本项目内容版权归作者所有，代码部分遵循仓库声明的开源协议。
