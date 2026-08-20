@@ -2,6 +2,26 @@
 
 ## [github](https://github.com/iDvel/rime-ice)
 
+## install
+```shell
+fcitx5-im fcitx5-rime
+# fcitx5-wayland
+```
+
+## debug
+```shell
+fcitx5-diagnose
+```
+
+
+## ~/.profile
+```shell
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+```
+
 ## ~/Library/Rime/default.custom.yaml
 ```yaml
 patch:
