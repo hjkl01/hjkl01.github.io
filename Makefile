@@ -41,7 +41,7 @@ export:
 
 build:
 	@echo "🏗️ 构建站点..."
-	pnpm build
+	NODE_OPTIONS="--max-old-space-size=4096" pnpm build
 
 deploy: build
 	@echo "🚀 部署到 GitHub Pages..."
