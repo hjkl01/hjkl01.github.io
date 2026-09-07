@@ -45,19 +45,21 @@ echo Hello | clip
 
 ## 开机启动 退出CMD窗口
 
-```
-@echo off
-if "%1" == "h" goto begin
-mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit
-:begin
-REM
+```vbs
+# start_mihomo.vbs
 
+Set WshShell = CreateObject("WScript.Shell")
 
-taskkill.exe /im clash-windows-amd64.exe /f
+' 杀死已有进程（0=隐藏窗口，True=等待执行完）
+WshShell.Run "cmd /c taskkill /F /IM mihomo.exe >nul 2>&1", 0, True
 
-curl https://example.com -o config.yaml
+' 等待1秒
+WScript.Sleep 1000
 
-.\clash-windows-amd64.exe -f .\config.yaml
+' 后台启动 mihomo（0=隐藏，False=不等待）
+WshShell.Run """D:\Program Files\mihomo\mihomo.exe"" -f ""D:\Program Files\mihomo\config.yaml""", 0, False
+
+Set WshShell = Nothing
 ```
 
 ## 更改程序默认按照路径
