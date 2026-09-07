@@ -1,4 +1,5 @@
 from typing import Union
+import asyncio
 import json
 import time
 import base64
@@ -6,7 +7,7 @@ import base64
 import httpx
 from tenacity import retry, stop_after_attempt, wait_fixed
 
-from scripts.config import logger, GITHUB_TOKEN, OPENAI_API, OPENAI_API_KEY, OPENAI_MODEL
+from scripts.config import logger, GITHUB_TOKEN, OPENAI_API, OPENAI_API_KEY, OPENAI_MODEL, API_CONCURRENCY
 from scripts.prompts import CATEGORY_PROMPT
 
 
@@ -29,6 +30,14 @@ class httpxClient:
 
     _instance: httpx.AsyncClient | None = None
     _github_client: httpx.AsyncClient | None = None
+    _semaphore = None
+
+    @classmethod
+    def get_semaphore(cls):
+        """获取全局并发控制信号量"""
+        if cls._semaphore is None:
+            cls._semaphore = asyncio.Semaphore(API_CONCURRENCY)
+        return cls._semaphore
 
     @classmethod
     async def get_github_client(cls) -> httpx.AsyncClient:
@@ -39,6 +48,7 @@ class httpxClient:
                     "Accept": "application/vnd.github.v3+json",
                 },
                 timeout=30.0,
+                follow_redirects=True,
             )
         return cls._github_client
 
@@ -71,7 +81,8 @@ async def api_github_readme(owner: str, repo: str) -> str | None:
     url = f"https://api.github.com/repos/{owner}/{repo}/readme"
     client = await httpxClient.get_github_client()
 
-    resp = await client.get(url)
+    async with httpxClient.get_semaphore():
+        resp = await client.get(url)
     if resp.status_code != 200:
         logger.error(f"无法获取 README: HTTP {resp.status_code}")
         return None
@@ -81,7 +92,7 @@ async def api_github_readme(owner: str, repo: str) -> str | None:
     return content
 
 
-@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2), retry_error_callback=lambda state: logger.warning(f"OpenAI 请求重试: {state.outcome.exception()}"))
 async def api_openai_generate(
     prompt: str,
     model: str = OPENAI_MODEL,
@@ -94,7 +105,7 @@ async def api_openai_generate(
     if not OPENAI_API:
         raise RuntimeError("请配置 OPENAI_API 环境变量")
 
-    url = f"{host.rstrip('/')}/v1/chat/completions"
+    url = f"{host.rstrip('/')}" if host.rstrip("/").endswith("chat/completions") else f"{host.rstrip('/')}/chat/completions"
     client = await httpxClient.get_openai_client()
 
     if "messages" not in extra_options:
@@ -111,9 +122,10 @@ async def api_openai_generate(
         **extra_options,
     }
     logger.debug(url)
-    logger.debug(str(payload)[:200])
+    logger.debug(str(payload)[-200:])
 
-    resp = await client.post(url, json=payload, timeout=timeout)
+    async with httpxClient.get_semaphore():
+        resp = await client.post(url, json=payload, timeout=timeout)
     if resp.status_code != 200:
         raise RuntimeError(f"OpenAI generate 请求失败: HTTP {resp.status_code} - {resp.text}")
 
