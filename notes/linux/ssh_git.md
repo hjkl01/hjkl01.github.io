@@ -135,12 +135,13 @@ google-authenticator -t -f -d -w 3 -e 10 -r 3 -R 30
 # chrome 插件 https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai
 # android app Google Authenticator https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US&gl=US
 
-sudo vim /etc/pam.d/sshd
+# vim /etc/pam.d/sshd
 
 auth required pam_google_authenticator.so
 
-sudo nvim /etc/ssh/sshd_config
+# nvim /etc/ssh/sshd_config
 
+# Mac
 KbdInteractiveAuthentication yes
 ChallengeResponseAuthentication yes
 PubkeyAuthentication yes
@@ -148,7 +149,20 @@ PasswordAuthentication yes
 AuthenticationMethods publickey keyboard-interactive
 # AuthenticationMethods keyboard-interactive
 
-sudo systemctl restart ssh.service
+# linux
+PermitRootLogin no
+UsePAM yes
+
+PubkeyAuthentication yes
+PasswordAuthentication yes
+KbdInteractiveAuthentication yes
+AuthenticationMethods publickey password,keyboard-interactive:pam
+
+# restart sshd
+sudo systemctl restart sshd.service
+
+# 登陆失败时，查看日志：
+sudo journalctl -u sshd -f
 ```
 
 ### github
