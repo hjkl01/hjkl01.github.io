@@ -7,6 +7,13 @@ caddy file-server --root ./public --listen :3000
 caddy reverse-proxy --from :8000 --to 127.0.0.1:9000
 ```
 
+### 取消对/home的保护
+
+```shell
+# /etc/systemd/system/multi-user.target.wants/caddy.service
+ProtectHome=read-only
+```
+
 ### docker-compose.yml
 
 ```shell
