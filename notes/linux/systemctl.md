@@ -11,7 +11,8 @@ After=graphical-session.target
 [Service]
 Type=simple
 # 👇 修改为你的实际安装路径
-ExecStart=/home/ljl/github/aionui-web/aionui-web
+ExecStart=/home/user/github/aionui-web/aionui-web
+# ExecStart=/usr/bin/zsh -lic 'exec npx @deepseek-ai/dsh web'
 Restart=on-failure
 RestartSec=5
 
