@@ -6,7 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "pnpm run sync-linux-readme && docusaurus start",
-    "build": "pnpm run sync-linux-readme && docusaurus build",
+    "build": "pnpm run fetch-linux-readme && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy && git pull",
     "clear": "docusaurus clear",
@@ -14,7 +14,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "sync-linux-readme": "node scripts/sync-linux-readme.mjs"
+    "sync-linux-readme": "node scripts/sync-linux-readme.mjs",
+    "fetch-linux-readme": "node scripts/fetch-linux-readme.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
