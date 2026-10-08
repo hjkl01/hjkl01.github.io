@@ -5,7 +5,7 @@
   "homepage": "https://hjkl01.github.io/",
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "pnpm run sync-linux-readme && docusaurus start",
+    "start": "docusaurus start",
     "build": "pnpm run fetch-linux-readme && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy && git pull",
@@ -14,7 +14,6 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "sync-linux-readme": "node scripts/sync-linux-readme.mjs",
     "fetch-linux-readme": "node scripts/fetch-linux-readme.mjs"
   },
   "dependencies": {
