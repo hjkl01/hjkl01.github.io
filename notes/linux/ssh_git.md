@@ -112,7 +112,7 @@ Host ssh.github
 
 ```
 
-#### ssh TOTP 开启二次验证
+### ssh TOTP 开启二次验证
 
 ```shell
 # ubuntu
