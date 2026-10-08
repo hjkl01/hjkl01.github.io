@@ -3,17 +3,16 @@
 ### postgres adminer pgadmin4
 
 ```yaml
-version: "3"
 services:
-  db:
-    image: postgres:15-alpine
+  postgresql:
+    image: postgres:17-alpine
     container_name: postgres
     restart: always
     ports:
       - 5432:5432
     environment:
+      POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "password"
-      POSTGRES_USER: "user"
       POSTGRES_DB: "postgres"
       PGDATA: "/var/lib/postgresql/data"
     volumes:
@@ -23,6 +22,8 @@ services:
     image: t8y2/dbx
     ports:
       - "4224:4224"
+    depends_on:
+      - postgresql
     volumes:
       - ./data/dbx-data:/app/data
     restart: unless-stopped
@@ -41,7 +42,7 @@ services:
     ports:
       - 80:3000
     depends_on:
-      - db
+      - postgresql
     volumes:
       - ./data/dbgate-data:/root/.dbgate
 
@@ -49,7 +50,7 @@ services:
     image: adminer
     restart: always
     depends_on:
-      - db
+      - postgresql
     ports:
       - 8080:8080
 
