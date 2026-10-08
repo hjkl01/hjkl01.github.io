@@ -9,21 +9,24 @@ function resolveLink(target) {
     return target;
   }
 
-  const [path, suffix = ''] = target.split(/([?#].*)/, 2);
+  const match = target.match(/^([^?#]*)([?#].*)?$/);
+  const path = match?.[1] ?? target;
+  const suffix = match?.[2] ?? '';
+
   return `${REPOSITORY_URL}/${path.replace(/^\.\//, '')}${suffix}`;
 }
 
 function convertRelativeLinks(markdown) {
   return markdown
-    .replace(/(!?\\[[^\\]]*\\])\\(([^)]+)\\)/g, (match, label, target) => {
+    .replace(/(!?\[[^\]]*\])\(([^)]+)\)/g, (match, label, target) => {
       const trimmed = target.trim();
       const matchTarget = trimmed.match(/^<([^>]+)>(.*)$/);
       const url = matchTarget ? matchTarget[1] : trimmed;
       const suffix = matchTarget ? matchTarget[2] : '';
       return `${label}(${resolveLink(url)}${suffix})`;
     })
-    .replace(/(<(?:img|a)\\b[^>]*?(?:src|href)=["'])([^"'#][^"']*)(["'])/gi, (match, prefix, target, suffix) => {
-      if (/^(?:[a-z][a-z0-9+.-]*:|\\/\\/)/i.test(target)) {
+    .replace(/(<(?:img|a)\b[^>]*?(?:src|href)=["'])([^"'#][^"']*)(["'])/gi, (match, prefix, target, suffix) => {
+      if (/^(?:[a-z][a-z0-9+.-]*:\/\/|\/\/)/i.test(target)) {
         return match;
       }
       return `${prefix}${resolveLink(target)}${suffix}`;
