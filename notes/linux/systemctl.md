@@ -10,6 +10,7 @@ After=graphical-session.target
 
 [Service]
 Type=simple
+Environment="PI_WEB_ALLOWED_HOSTS=example.com"
 # 👇 修改为你的实际安装路径
 ExecStart=/home/user/github/aionui-web/aionui-web
 # ExecStart=/usr/bin/zsh -lic 'exec npx @deepseek-ai/dsh web'
