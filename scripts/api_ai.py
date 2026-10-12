@@ -5,9 +5,17 @@ import time
 import base64
 
 import httpx
-from tenacity import retry, stop_after_attempt, wait_fixed
+from tenacity import retry, retry_if_exception_type, retry_if_result, stop_after_attempt, wait_fixed
 
-from scripts.config import logger, GITHUB_TOKEN, OPENAI_API, OPENAI_API_KEY, OPENAI_MODEL, API_CONCURRENCY
+from scripts.config import (
+    logger,
+    GITHUB_TOKEN,
+    OPENAI_API,
+    OPENAI_API_KEY,
+    OPENAI_MODEL,
+    API_CONCURRENCY,
+    LLM_MAX_ATTEMPTS,
+)
 from scripts.prompts import CATEGORY_PROMPT
 
 
@@ -74,10 +82,30 @@ class httpxClient:
             cls._github_client = None
 
 
+def extract_llm_text(response: Union[str, dict, None]) -> str:
+    """统一 LLM 返回值：None / 空内容 / 字面量 None → 空字符串。"""
+    if response is None:
+        return ""
+    if isinstance(response, dict):
+        response = response.get("text", "")
+    text = str(response).strip()
+    return "" if text.lower() in {"none", "null"} else text
+
+
+def _is_blank_llm_response(response: Union[str, dict, None]) -> bool:
+    """LLM 本次调用没有产出有效文本，需要重试。"""
+    return not extract_llm_text(response)
+
+
+def _llm_give_up(state) -> None:
+    """重试耗尽后的收尾：返回 None，调用方不写入文件。"""
+    logger.warning(f"OpenAI 连续 {state.attempt_number} 次调用未返回有效内容，放弃本次请求")
+    return None
+
+
 @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
 async def api_github_readme(owner: str, repo: str) -> str | None:
     """异步获取 GitHub 仓库的 README 内容"""
-    logger.debug(f"{owner=} {repo=}")
     url = f"https://api.github.com/repos/{owner}/{repo}/readme"
     client = await httpxClient.get_github_client()
 
@@ -92,7 +120,15 @@ async def api_github_readme(owner: str, repo: str) -> str | None:
     return content
 
 
-@retry(stop=stop_after_attempt(3), wait=wait_fixed(2), retry_error_callback=lambda state: logger.warning(f"OpenAI 请求重试: {state.outcome.exception()}"))
+@retry(
+    stop=stop_after_attempt(LLM_MAX_ATTEMPTS),
+    wait=wait_fixed(2),
+    retry=(retry_if_exception_type() | retry_if_result(_is_blank_llm_response)),
+    before_sleep=lambda state: logger.warning(
+        f"OpenAI 第 {state.attempt_number} 次调用失败：{state.outcome.exception() or '返回为空'}，准备重试"
+    ),
+    retry_error_callback=_llm_give_up,
+)
 async def api_openai_generate(
     prompt: str,
     model: str = OPENAI_MODEL,
@@ -121,9 +157,6 @@ async def api_openai_generate(
         "stream": stream,
         **extra_options,
     }
-    logger.debug(url)
-    logger.debug(str(payload)[-200:])
-
     async with httpxClient.get_semaphore():
         resp = await client.post(url, json=payload, timeout=timeout)
     if resp.status_code != 200:
@@ -132,8 +165,7 @@ async def api_openai_generate(
     if not stream:
         obj = resp.json()
         text = obj.get("choices", [{}])[0].get("message", {}).get("content", "")
-        logger.debug(text[:300])
-        return text.strip()
+        return extract_llm_text(text)
 
     # 流式响应处理
     text_parts = []
@@ -162,13 +194,11 @@ async def api_openai_generate(
 
 
 async def auto_category(content: str, category_dirs: list[str]) -> str:
-    """自动为项目分类"""
+    """自动为项目分类，失败时返回空字符串"""
     prompt = CATEGORY_PROMPT.replace("content", content).replace("category_dirs", ",".join(category_dirs))
 
-    response = await api_openai_generate(prompt)
-    logger.info(response)
-    return response
+    return extract_llm_text(await api_openai_generate(prompt))
 
 
 # 导出共享的函数
-__all__ = ["api_github_readme", "api_openai_generate", "auto_category", "extract_github_info"]
+__all__ = ["api_github_readme", "api_openai_generate", "auto_category", "extract_github_info", "extract_llm_text"]

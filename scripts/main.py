@@ -8,7 +8,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from scripts.config import logger
 from scripts.prompts import MARKDOWN_PROMPT
-from scripts.api_ai import auto_category, api_openai_generate, api_github_readme, extract_github_info
+from scripts.api_ai import auto_category, api_openai_generate, api_github_readme, extract_github_info, extract_llm_text
 from scripts.github_trending_scraper import main as github_trending_scraper
 
 
@@ -55,10 +55,8 @@ def list_files(dirname="notes/github"):
     return (str(p) for p in Path(dirname).rglob("*") if p.is_file())
 
 
-async def process_single_url(project_line: str, md_files: set) -> str | None:
+async def process_single_url(project_line: str) -> str | None:
     """处理单个 GitHub URL。"""
-    del md_files  # 保留旧函数签名，避免外部调用方受到影响。
-
     project_line = project_line.strip()
     if not project_line:
         return None
@@ -73,27 +71,21 @@ async def process_single_url(project_line: str, md_files: set) -> str | None:
 
     try:
         if project_exists(url):
-            logger.info(f"项目已存在，跳过: {url}")
             return None
     except Exception as e:
         logger.error(f"检查项目是否存在失败 {url}: {e}")
         return None
 
-    logger.info(project_line)
     try:
         # 获取 README
         readme_content = await api_github_readme(username, repository)
         if readme_content is None:
             return None
 
-        # 生成 30～50 字中文简介
+        # 生成 30～50 字中文简介（api_openai_generate 内部已重试，耗尽后返回 None）
         prompt = MARKDOWN_PROMPT.replace("readme_content", readme_content)
         ai_resp = await api_openai_generate(prompt)
-        logger.debug(ai_resp)
-        if isinstance(ai_resp, dict):
-            ai_resp = ai_resp.get("text", "")
-
-        description = str(ai_resp).strip()
+        description = extract_llm_text(ai_resp)
         if not description:
             logger.warning(f"项目简介为空，跳过: {url}")
             return None
@@ -114,7 +106,6 @@ async def process_single_url(project_line: str, md_files: set) -> str | None:
             f"{username}/{repository}?style=social)\n\n"
         )
         text = title + description
-        logger.debug(text)
 
         # 写入文件
         category_path = DOCS_PATH / category_dir
@@ -147,13 +138,15 @@ async def category_md_files(dirname: str = "notes/github/00") -> None:
         try:
             content = md_file.read_text(encoding="utf-8")
             category = await auto_category(content, category_dirs)
+            if not category:
+                logger.warning(f"分类结果为空，跳过: {md_file.name}")
+                continue
             logger.info(f"{md_file.name}, {category}")
 
             if category in category_dirs:
                 target = docs_path / category / md_file.name
                 target.parent.mkdir(parents=True, exist_ok=True)
                 md_file.rename(target)
-                logger.debug(f"移动到 {target}")
         except Exception as e:
             logger.error(f"处理文件 {md_file} 失败: {e}")
 
@@ -214,16 +207,16 @@ async def main(args: str | None = None) -> None:
             normalized = normalize_github_url(line.split()[0])
             unique_urls[normalized] = line
 
-    # 获取已存在的 md 文件，仅保留旧接口兼容性；实际重复检查使用 rg。
-    md_files = set(f.name for f in DOCS_PATH.rglob("*.md"))
+    # 串行处理，避免并发调用 LLM
+    total = len(unique_urls)
+    created = 0
+    for index, line in enumerate(unique_urls.values(), start=1):
+        result = await process_single_url(line)
+        if result:
+            created += 1
+        logger.info(f"[{index}/{total}] {line.strip()} -> {result or '跳过'}")
 
-    # 并发处理
-    tasks = [process_single_url(line, md_files) for line in unique_urls.values()]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-
-    success = [r for r in results if isinstance(r, str)]
-    errors = [r for r in results if isinstance(r, Exception)]
-    logger.info(f"处理完成: {len(success)} 成功, {len(errors)} 失败")
+    logger.info(f"处理完成: {created} 成功, {total - created} 跳过/失败")
 
 
 if __name__ == "__main__":
