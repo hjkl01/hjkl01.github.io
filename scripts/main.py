@@ -14,6 +14,9 @@ from scripts.github_trending_scraper import main as github_trending_scraper
 
 # 预编译正则表达式
 GITHUB_URL_PATTERN = re.compile(r"https?://github\.com/([^/]+)/([^/?#]+)(?:[/?#].*)?")
+MD_URL_PATTERN = re.compile(r"https://github\.com/([a-zA-Z0-9_.-]+)/([a-zA-Z0-9_.-]+)")
+# 日期目录（如 2026-10-09）和 00 目录表示尚未分类，不作为 urls.txt 的分类字段
+UNCATEGORIZED_FOLDER_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2}|00)$")
 DOCS_PATH = Path("notes/github")
 
 
@@ -157,33 +160,64 @@ async def category_md_files(dirname: str = "notes/github/00") -> None:
         shutil.rmtree(dirname)
 
 
-def export_urls() -> None:
-    """导出所有 md 文件中的 GitHub URL"""
-    docs_path = DOCS_PATH
-    md_files = list(docs_path.rglob("*.md")) + list(docs_path.rglob("*.mdx"))
+def collect_md_urls() -> dict[str, str]:
+    """收集 notes/github 下文档里的 GitHub URL，返回 {规范化 URL: 分类目录}。"""
+    if not DOCS_PATH.exists():
+        logger.error(f"目录不存在: {DOCS_PATH}")
+        return {}
 
-    github_pattern = re.compile(r"https://github\.com/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)")
-    url_folders: dict[str, set[str]] = {}
+    url_cates: dict[str, str] = {}
+    md_files = sorted(DOCS_PATH.rglob("*.md")) + sorted(DOCS_PATH.rglob("*.mdx"))
 
     for md_file in md_files:
         try:
             content = md_file.read_text(encoding="utf-8")
-            matches = github_pattern.findall(content)
-            rel_path = md_file.relative_to(docs_path)
-            folder = rel_path.parts[0] if len(rel_path.parts) > 1 else ""
-
-            for username, repo in matches:
-                url = normalize_github_url(f"https://github.com/{username}/{repo}")
-                url_folders.setdefault(url, set()).add(folder)
         except Exception as e:
             logger.warning(f"读取文件失败 {md_file}: {e}")
+            continue
 
-    with open("bak.txt", "a", encoding="utf-8") as f:
-        for url, folders in sorted(url_folders.items()):
-            folder_str = " ".join(sorted(folders)) if folders else ""
-            f.write(f"{url} {folder_str}\n".strip() + "\n")
+        rel_parts = md_file.relative_to(DOCS_PATH).parts
+        category = rel_parts[0] if len(rel_parts) > 1 else ""
+        if UNCATEGORIZED_FOLDER_PATTERN.match(category):
+            category = ""
 
-    logger.info(f"导出完成: 共 {len(url_folders)} 个 URL")
+        for username, repo in MD_URL_PATTERN.findall(content):
+            url = normalize_github_url(f"https://github.com/{username}/{repo}")
+            known = url_cates.get(url)
+            # 同一个 URL 出现在多个分类时，保留第一个非空分类
+            if known is None or (not known and category):
+                url_cates[url] = category
+
+    return url_cates
+
+
+def export_urls(output: str = "urls.txt") -> None:
+    """把文档中的 GitHub URL 及分类（`<URL> <分类>`）合并写回 urls.txt。
+
+    先读旧文件并按规范化 URL 去重：文档里已有的以文档分类为准，
+    尚未生成文档的待处理行原样保留，可重复执行。
+    """
+    url_cates = collect_md_urls()
+    out_path = Path(output)
+    lines: dict[str, str] = {}
+
+    if out_path.exists():
+        for line in out_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line:
+                lines.setdefault(normalize_github_url(line.split()[0]), line)
+    kept_urls = set(lines)
+
+    for url, category in sorted(url_cates.items()):
+        if not category and len(lines.get(url, "").split()) > 1:
+            continue  # 该 URL 已有分类，保留原行
+        lines[url] = f"{url} {category}".strip()
+
+    out_lines = [lines[url] for url in sorted(lines, key=str.lower)]
+    out_path.write_text("\n".join(out_lines) + ("\n" if out_lines else ""), encoding="utf-8")
+    logger.info(
+        f"{output} 共 {len(out_lines)} 条：来自文档 {len(url_cates)}，待处理 {len(kept_urls - set(url_cates))}"
+    )
 
 
 async def main(args: str | None = None) -> None:
@@ -220,15 +254,14 @@ async def main(args: str | None = None) -> None:
 
 
 if __name__ == "__main__":
-    argv = sys.argv
-    if len(argv) > 1:
-        if argv[1] == "cate":
-            asyncio.run(main("cate"))
-        elif argv[1] == "crawl":
-            github_trending_scraper()
-        elif argv[1] == "export":
-            export_urls()
-        else:
-            asyncio.run(main())
-    else:
+    command = sys.argv[1] if len(sys.argv) > 1 else "gene"
+    if command == "cate":
+        asyncio.run(main("cate"))
+    elif command == "crawl":
+        github_trending_scraper()
+    elif command == "gene":
         asyncio.run(main())
+    elif command == "export":
+        export_urls()
+    else:
+        logger.error(f"未知命令: {command}（可用: crawl cate gene export）")

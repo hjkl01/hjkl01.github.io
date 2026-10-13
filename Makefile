@@ -12,7 +12,7 @@ help:
 	@echo "  make build        构建 Docusaurus 站点"
 	@echo "  make deploy       部署到 GitHub Pages"
 	@echo "  make run          执行 crawl + gene"
-	@echo "  make export       从 md 文件导出 URL 到 urls.txt"
+	@echo "  make export       把 md 中的 URL+分类 合并写回 urls.txt"
 	@echo ""
 
 install:
@@ -36,7 +36,7 @@ run: crawl gene build
 	@echo "🚀 启动服务run\crawl..."
 
 export:
-	@echo "📤 导出 URL..."
+	@echo "📤 合并导出 URL+分类 到 urls.txt..."
 	uv run scripts/main.py export
 
 build:
