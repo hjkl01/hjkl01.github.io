@@ -27,7 +27,7 @@ const plugins = [
     "@docusaurus/plugin-content-docs",
     {
       id: "github",
-      path: "generated/github",
+      path: "notes/github",
       routeBasePath: "notes/github",
       sidebarPath: "./sidebars.ts",
     },
