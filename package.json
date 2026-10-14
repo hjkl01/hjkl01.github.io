@@ -15,8 +15,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "fetch-linux-readme": "node scripts/fetch-linux-readme.mjs",
-    "github:db:migrate": "python3 scripts/github_projects.py migrate",
-    "github:notes:generate": "python3 scripts/github_projects.py generate"
+    "github:db:migrate": "python3 scripts/github_projects.py migrate"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
