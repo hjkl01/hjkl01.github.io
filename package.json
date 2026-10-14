@@ -6,7 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "pnpm run fetch-linux-readme && docusaurus build",
+    "build": "pnpm run fetch-linux-readme && python3 scripts/github_projects.py build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy && git pull",
     "clear": "docusaurus clear",
@@ -14,7 +14,9 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "fetch-linux-readme": "node scripts/fetch-linux-readme.mjs"
+    "fetch-linux-readme": "node scripts/fetch-linux-readme.mjs",
+    "github:db:migrate": "python3 scripts/github_projects.py migrate",
+    "github:notes:generate": "python3 scripts/github_projects.py generate"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
