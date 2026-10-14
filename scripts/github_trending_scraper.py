@@ -32,16 +32,10 @@ async def scrape_github_trending() -> list[dict]:
 
                 href_str = str(href).strip("/")
                 owner, repo = href_str.split("/", 1)
-                repo_url = f"https://github.com/{owner}/{repo}"
-
-                desc_elem = article.find("p", class_="col-9")
-                description = desc_elem.get_text(" ", strip=True) if desc_elem else ""
-
                 repos.append({
                     "full_name": f"{owner}/{repo}",
                     "name": repo,
-                    "url": repo_url,
-                    "trending_description": description,
+                    "url": f"https://github.com/{owner}/{repo}",
                 })
             except Exception as exc:
                 print(f"解析仓库失败: {exc}")
