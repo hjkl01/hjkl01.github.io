@@ -183,7 +183,7 @@ def category_filename(category: str) -> str:
 
 def markdown_cell(value: str) -> str:
     """将文本转换为可安全放入 Markdown 表格单元格的内容。"""
-    return re.sub(r"\\s+", " ", str(value or "")).replace("|", "\\|").strip()
+    return re.sub(r"\s+", " ", str(value or "")).replace("|", r"\|").strip()
 
 
 def render_project(row: sqlite3.Row) -> str:
@@ -237,10 +237,13 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
         f"共收录 **{len(rows)}** 个项目，分为 **{len(groups)}** 个分类。Star 数通过 Shields.io 动态加载。",
         "",
         "| 分类 | 项目数量 |",
-        "| --- | -    for category, projects in groups.items():
+        "| --- | ---: |",
+    ]
+
+    for category, category_projects in groups.items():
         filename = filenames[category]
         index_lines.append(
-            f"| [{markdown_cell(category)}]({INDEX_ROUTE}/{filename}) | {len(projects)} |"
+            f"| [{markdown_cell(category)}]({INDEX_ROUTE}/{filename}) | {len(category_projects)} |"
         )
 
         category_lines = [
@@ -249,26 +252,26 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
             f"sidebar_label: {category}",
             "---",
             "",
-            f"<!-- 此页面由 scripts/github_projects.py 从 SQLite 自动生成，请勿手动编辑。 -->",
+            "<!-- 此页面由 scripts/github_projects.py 从 SQLite 自动生成，请勿手动编辑。 -->",
             "",
             f"# {category}",
             "",
-            f"本分类共 **{len(projects)}** 个项目。",
+            f"本分类共 **{len(category_projects)}** 个项目。",
             "",
             f"[返回 GitHub 项目分类目录]({INDEX_ROUTE})",
             "",
             "| 项目 | Stars | 简介 |",
             "| --- | --- | --- |",
         ]
-        category_lines.extend(render_project(row) for row in projects)
+        category_lines.extend(render_project(row) for row in category_projects)
 
         (OUTPUT_DIR / f"{filename}.md").write_text(
-            "\\n".join(category_lines).rstrip() + "\\n",
+            "\n".join(category_lines).rstrip() + "\n",
             encoding="utf-8",
         )
 
     index_lines.append("")
-    OUTPUT_FILE.write_text("\\n".join(index_lines).rstrip() + "\\n", encoding="utf-8")
+    OUTPUT_FILE.write_text("\n".join(index_lines).rstrip() + "\n", encoding="utf-8")
 
     # notes/github 由 SQLite 全量生成；清理旧结构中的 Markdown 文件和过期分类页。
     expected_files = {OUTPUT_FILE.name, *(f"{filename}.md" for filename in filenames.values())}
