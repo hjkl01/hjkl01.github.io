@@ -4,7 +4,7 @@ sidebar_position: 0
 
 <!-- 此文件由 scripts/fetch-linux-readme.mjs 在构建时自动生成，请勿手动修改。 -->
 
-# 🏠 我的 Dotfiles
+# 🏠 我的 Dotfiles {#我的-dotfiles}
 
 个人开发环境配置集合 | 统一跨设备体验
 
@@ -16,22 +16,22 @@ sidebar_position: 0
 
 ---
 
-## 📑 目录
+## 📑 目录 {#目录}
 
 | 🚀 快速开始 | 💡 推荐工具 | 🔧 配置与使用 |
 |-------------|-------------|---------------|
-| [环境准备](#-环境准备) | [终端工具](#-推荐工具) | [Rime 输入法](#-rime-输入法-fcitx5-rime) |
-| [一键安装](#-安装) | [效率提升](#-推荐工具) | [asdf 加速](#asdf-环境加速) |
-| [配置生效](#-安装) | | [Tmux 插件](#-tmux-插件管理) |
+| [环境准备](#环境准备) | [终端工具](#推荐工具) | [Rime 输入法](#rime-输入法配置) |
+| [一键安装](#一键安装) | [效率提升](#推荐工具) | [asdf 加速](#asdf-环境加速) |
+| [配置生效](#一键安装) | | [Tmux 插件](#tmux-插件管理) |
 
 | 🤔 故障排除 | 🏗️ 项目结构 | 🤝 贡献指南 |
 |-------------|-------------|-------------|
-| [Neovim 问题](#-neovim-报错或缓存问题) | [目录说明](#-项目结构) | [提交 PR](#-贡献) |
-| [WSL 剪贴板](#-wsl-与-windows-剪贴板集成) | [文件组织](#-项目结构) | [问题反馈](#-贡献) |
+| [Neovim 问题](#neovim-问题诊断) | [目录说明](#项目结构) | [提交 PR](#贡献指南) |
+| [WSL 剪贴板](#wsl-剪贴板配置) | [文件组织](#项目结构) | [问题反馈](#贡献指南) |
 
 ---
 
-## 🛠️ 技术栈
+## 🛠️ 技术栈 {#技术栈}
 
 <details>
 <summary>📦 技术栈徽章（Zsh / Neovim / Tmux / Ghostty / asdf ...）</summary>
@@ -44,7 +44,7 @@ sidebar_position: 0
 
 </details>
 
-### 📦 配置概览
+### 📦 配置概览 {#配置概览}
 
 <details>
 <summary>📂 各配置项路径与功能一览</summary>
@@ -60,7 +60,7 @@ sidebar_position: 0
 
 </details>
 
-### 🎯 Neovim 插件列表
+### 🎯 Neovim 插件列表 {#neovim-插件列表}
 
 <details>
 <summary>🧩 查看完整插件列表（27 个插件配置文件）</summary>
@@ -79,7 +79,7 @@ sidebar_position: 0
 
 </details>
 
-### 🔧 LSP 服务器配置
+### 🔧 LSP 服务器配置 {#lsp-服务器配置}
 
 <details>
 <summary>🌐 查看已配置的 LSP 服务器清单</summary>
@@ -95,7 +95,7 @@ sidebar_position: 0
 
 </details>
 
-### 🐚 Zsh 插件
+### 🐚 Zsh 插件 {#zsh-插件}
 
 <details>
 <summary>🧾 查看 Zsh 插件清单</summary>
@@ -109,7 +109,7 @@ sidebar_position: 0
 
 </details>
 
-### 🖥️ Tmux 插件
+### 🖥️ Tmux 插件 {#tmux-插件}
 
 <details>
 <summary>🧾 查看 Tmux 插件清单</summary>
@@ -124,7 +124,7 @@ sidebar_position: 0
 
 </details>
 
-### 🐳 Docker 管理工具
+### 🐳 Docker 管理工具 {#docker-管理工具}
 
 <details>
 <summary>🐧 查看 Docker 快捷命令清单</summary>
@@ -140,7 +140,7 @@ sidebar_position: 0
 
 </details>
 
-### 🌐 代理配置
+### 🌐 代理配置 {#代理配置}
 
 <details>
 <summary>🛰️ 查看代理相关命令清单</summary>
@@ -156,9 +156,9 @@ sidebar_position: 0
 
 ---
 
-## 🚀 快速开始
+## 🚀 快速开始 {#快速开始}
 
-### 📋 环境准备
+### 📋 环境准备 {#环境准备}
 
 ```bash
 # 🎯 一键安装核心依赖 (Ubuntu/Debian)
@@ -168,7 +168,7 @@ git zsh neovim tmux ripgrep fzf
 git clone --depth=1 https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
-#### 🔍 依赖清单
+#### 🔍 依赖清单 {#依赖清单}
 
 <details>
 <summary>📥 查看依赖清单与必需性</summary>
@@ -185,7 +185,7 @@ git clone --depth=1 https://github.com/asdf-vm/asdf.git ~/.asdf
 
 </details>
 
-### ⚡ 一键安装
+### ⚡ 一键安装 {#一键安装}
 
 ```bash
 # 🚀 克隆配置仓库
@@ -199,14 +199,14 @@ bash ./installer.sh link
 chsh -s $(which zsh)
 ```
 
-#### 🌐 加速选项 (可选)
+#### 🌐 加速选项 (可选) {#加速选项-可选}
 
 ```bash
 # 🇨🇳 使用 GitHub 镜像加速 (国内用户推荐)
 git config --global url."https://gh.hjkl01.cn/https://github.com".insteadOf "https://github.com"
 ```
 
-#### ✅ 安装验证
+#### ✅ 安装验证 {#安装验证}
 
 ```bash
 # 🔄 重新加载配置
@@ -222,9 +222,9 @@ echo "🐚 当前 Shell: $SHELL"
 
 ---
 
-## 💡 推荐工具
+## 💡 推荐工具 {#推荐工具}
 
-### 🎯 效率提升工具集
+### 🎯 效率提升工具集 {#效率提升工具集}
 
 <details>
 <summary>🛠️ 查看效率工具清单与安装命令</summary>
@@ -243,7 +243,7 @@ echo "🐚 当前 Shell: $SHELL"
 
 </details>
 
-#### 🎨 终端美化
+#### 🎨 终端美化 {#终端美化}
 
 ```bash
 # 🎨 安装 Nerd Font (推荐 Maple Mono NF CN)
@@ -251,7 +251,7 @@ echo "🐚 当前 Shell: $SHELL"
 # Alacritty: 已配置 JetBrainsMono Nerd Font
 ```
 
-#### 📊 系统监控
+#### 📊 系统监控 {#系统监控}
 
 <details>
 <summary>📈 查看系统监控工具清单</summary>
@@ -267,9 +267,9 @@ echo "🐚 当前 Shell: $SHELL"
 
 ---
 
-## 🔧 高级配置
+## 🔧 高级配置 {#高级配置}
 
-### 🈚 Rime 输入法配置
+### 🈚 Rime 输入法配置 {#rime-输入法配置}
 
 ```bash
 # 📦 安装 fcitx5-rime (Arch Linux)
@@ -280,7 +280,7 @@ git clone --depth=1 https://github.com/Mark24Code/rime-auto-deploy
 cd rime-auto-deploy && ./installer.rb
 ```
 
-#### ⚙️ 环境变量配置
+#### ⚙️ 环境变量配置 {#环境变量配置}
 
 ```bash
 # 🌐 添加到 ~/.profile 或 /etc/environment
@@ -292,7 +292,7 @@ export XMODIFIERS="@im=fcitx"
 /Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel --reload
 ```
 
-### 🚀 asdf 环境加速
+### 🚀 asdf 环境加速 {#asdf-环境加速}
 
 ```bash
 # 🐍 Python 镜像加速 (添加到 ~/.zshrc)
@@ -306,7 +306,7 @@ export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 ```
 
-#### 💡 加速效果对比
+#### 💡 加速效果对比 {#加速效果对比}
 
 <details>
 <summary>⚡ 查看镜像加速效果对比</summary>
@@ -319,7 +319,7 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 </details>
 
-### 🖥️ Tmux 插件管理
+### 🖥️ Tmux 插件管理 {#tmux-插件管理}
 
 <details>
 <summary>⌨️ 查看 Tmux 插件管理快捷键</summary>
@@ -332,7 +332,7 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 </details>
 
-#### 🔄 自动化更新
+#### 🔄 自动化更新 {#自动化更新}
 
 ```bash
 # ⏰ 设置定时任务 (每天 8:50 自动更新)
@@ -344,9 +344,9 @@ cd ~/.dotfiles && git pull && bash ./installer.sh link
 
 ---
 
-## 🆘 故障排除
+## 🆘 故障排除 {#故障排除}
 
-### 🐛 Neovim 问题诊断
+### 🐛 Neovim 问题诊断 {#neovim-问题诊断}
 
 ```bash
 # 🧹 清理缓存和插件
@@ -365,7 +365,7 @@ nvim --headless "+lua vim.pack.update()" +qa
 :TSUpdate
 ```
 
-#### 📊 常见问题
+#### 📊 常见问题 {#常见问题}
 
 <details>
 <summary>🚨 查看常见问题与解决方案</summary>
@@ -379,7 +379,7 @@ nvim --headless "+lua vim.pack.update()" +qa
 
 </details>
 
-#### 🔑 Neovim 快捷键速查
+#### 🔑 Neovim 快捷键速查 {#neovim-快捷键速查}
 
 <details>
 <summary>⌨️ 查看 Neovim 快捷键速查表</summary>
@@ -397,7 +397,7 @@ nvim --headless "+lua vim.pack.update()" +qa
 
 </details>
 
-### 🪟 WSL 剪贴板配置
+### 🪟 WSL 剪贴板配置 {#wsl-剪贴板配置}
 
 ```bash
 # 📥 下载 win32yank
@@ -411,7 +411,7 @@ echo 'let g:clipboard = {"name": "win32yank", "copy": {"+": "win32yank.exe -i --
 
 ---
 
-## 📁 项目结构
+## 📁 项目结构 {#项目结构}
 
 <details>
 <summary>🏗️ 查看项目结构树</summary>
@@ -422,7 +422,6 @@ graph TD
     A --> C[nvim/]
     A --> D[zsh/]
     A --> E[bin/]
-    A --> F[scripts/]
     A --> G[installer.sh]
     A --> H[Dockerfile]
 
@@ -449,14 +448,11 @@ graph TD
     E --> E3[fif]
     E --> E4[fkill]
     E --> E5[cdf]
-
-    F --> F1[run.sh]
-    F --> F2[test.py]
 ```
 
 </details>
 
-#### 📂 详细目录说明
+#### 📂 详细目录说明 {#详细目录说明}
 
 <details>
 <summary>📇 查看目录与文件清单</summary>
@@ -473,7 +469,7 @@ graph TD
 
 </details>
 
-#### 🔧 安装脚本功能
+#### 🔧 安装脚本功能 {#安装脚本功能}
 
 ```bash
 # 📋 installer.sh 支持的操作
@@ -485,9 +481,9 @@ graph TD
 
 ---
 
-## 🤝 贡献指南
+## 🤝 贡献指南 {#贡献指南}
 
-### 🎯 如何贡献
+### 🎯 如何贡献 {#如何贡献}
 
 | 📝 方式 | 🔗 链接 | 📋 说明 |
 |---------|---------|---------|
@@ -495,7 +491,7 @@ graph TD
 | **💡 功能建议** | [Discussions](https://github.com/hjkl01/dotfiles/discussions) | 提出改进建议 |
 | **🔧 提交代码** | [Pull Requests](https://github.com/hjkl01/dotfiles/pulls) | 直接贡献配置 |
 
-#### 📝 贡献流程
+#### 📝 贡献流程 {#贡献流程}
 
 ```bash
 # 1. 🍴 Fork 仓库
@@ -511,7 +507,7 @@ git push origin feature/amazing-feature
 # 5. 🔄 创建 Pull Request
 ```
 
-#### 🎨 代码规范
+#### 🎨 代码规范 {#代码规范}
 
 - 📝 使用清晰的提交信息
 - 🧹 保持配置文件整洁
@@ -520,7 +516,7 @@ git push origin feature/amazing-feature
 
 ---
 
-## 🙏 致谢
+## 🙏 致谢 {#致谢}
 
 <details>
 <summary>🌟 致谢的项目清单</summary>
@@ -536,7 +532,7 @@ git push origin feature/amazing-feature
 
 ---
 
-## 📄 许可证
+## 📄 许可证 {#许可证}
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensource)
 

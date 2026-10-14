@@ -45,7 +45,11 @@ const config: Config = {
   url: "https://hjkl01.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
   favicon: "img/favicon-16x16.png",
 
   // GitHub pages deployment config.
