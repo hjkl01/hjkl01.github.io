@@ -35,8 +35,8 @@ class GitHubProjectsTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         owner, repo = full_name.split("/", 1)
         path.write_text(
-            f"# [{repo}](https://github.com/{owner}/{repo})\\n\\n"
-            f"{description}\\n",
+            f"# [{repo}](https://github.com/{owner}/{repo})\n\n"
+            f"{description}\n",
             encoding="utf-8",
         )
         return path
