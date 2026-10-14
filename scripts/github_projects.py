@@ -167,7 +167,11 @@ def category_filename(category: str) -> str:
     """将分类转换为安全、稳定的 Markdown 文件名，保留中文字符。"""
     slug = "".join(char if char.isalnum() or char in "-_ " else "-" for char in category)
     slug = re.sub(r"[\s-]+", "-", slug).strip("-_")
-    return slug or "uncategorized"
+    slug = slug or "uncategorized"
+    # index.md reserved for the category directory page.
+    if slug.casefold() == "index":
+        return "category-index"
+    return slug
 
 
 def render_project(row: sqlite3.Row) -> list[str]:
