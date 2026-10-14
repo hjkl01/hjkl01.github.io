@@ -11,7 +11,7 @@ help:
 	@echo "  make gene         启动文章解析"
 	@echo "  make build        构建 Docusaurus 站点"
 	@echo "  make deploy       部署到 GitHub Pages"
-	@echo "  make run          执行 crawl + gene"
+	@echo "  make run          执行 crawl + gene + cate + build"
 	@echo "  make export       把 md 中的 URL+分类 合并写回 urls.txt"
 	@echo "  make github-db-migrate  从旧项目 Markdown 初始化 SQLite（首次迁移）"
 	@echo "  make github-notes-generate 从 SQLite 生成分类项目页"
@@ -34,7 +34,7 @@ gene:
 	@echo "🚀 启动解析..."
 	uv run scripts/main.py
 
-run: crawl gene build
+run: crawl gene cate build
 	@echo "🚀 启动服务run\crawl..."
 
 github-db-migrate:
