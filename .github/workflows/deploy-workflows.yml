@@ -38,6 +38,9 @@ jobs:
       - name: Check Python syntax
         run: python3 -m compileall -q scripts
 
+      - name: Test GitHub project SQLite workflow
+        run: python3 -m unittest discover -s tests -v
+
       - name: Build
         run: pnpm run build
 
