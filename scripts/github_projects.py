@@ -124,7 +124,7 @@ def connect_db() -> sqlite3.Connection:
     migrations = {
         "auto_category": "TEXT NOT NULL DEFAULT ''",
         "category_source": "TEXT NOT NULL DEFAULT 'auto'",
-        "category_status": "TEXT NOT NULL DEFAULT 'pending'",
+        "category_status": "TEXT NOT NULL DEFAULT 'confirmed'",
     }
     for name, definition in migrations.items():
         if name not in columns:
@@ -156,8 +156,9 @@ def migrate_legacy(conn: sqlite3.Connection, force: bool = False) -> int:
         seen.add(item["full_name"].lower())
         conn.execute(
             """
-            INSERT INTO projects (full_name, name, url, description, category, display_order)
-            VALUES (?, ?, ?, ?, ?, ?)
+            INSERT INTO projects
+                (full_name, name, url, description, category, display_order, category_source, category_status)
+            VALUES (?, ?, ?, ?, ?, ?, 'auto', 'pending')
             ON CONFLICT(full_name) DO UPDATE SET
                 name=excluded.name,
                 url=excluded.url,
