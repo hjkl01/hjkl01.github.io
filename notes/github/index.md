@@ -1,15 +1,18 @@
 ---
 sidebar_position: 0
-sidebar_label: Github Trending
+sidebar_label: GitHub 项目
 ---
 
-# Github Trending
+# GitHub 项目集
 
-GitHub 热门项目笔记，由 `make crawl` / `make gene` 自动抓取并分类生成。
+GitHub 项目由 SQLite 统一管理，构建时从数据库生成分类聚合页。
 
-- 每个目录是一个分类，目录下一个 `.md` 文件对应一个仓库
-- 内容包含仓库链接、Star 徽章和一句话简介
-- 分类信息汇总在根目录的 `urls.txt`
+- `make crawl`：抓取 GitHub Trending，并将新仓库直接写入 `data/github-projects.db`
+- `make gene`：为数据库中尚无简介的项目生成简介
+- `make cate`：对数据库中尚未分类的项目进行分类
+- `make export`：将旧的 `notes/github/**/*.md` 数据迁移到 SQLite；数据库非空时不会覆盖已有数据
+- `make build`：从 SQLite 生成项目聚合页并构建网站
+- 项目简介、分类和显示顺序保存在 SQLite；Star 数由浏览器加载 Shields.io 动态显示
 
 ## 分类目录
 
