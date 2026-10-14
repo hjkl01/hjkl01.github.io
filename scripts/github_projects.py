@@ -18,6 +18,9 @@ LEGACY_DIR = ROOT / "notes" / "github"
 DB_PATH = ROOT / "data" / "github-projects.db"
 OUTPUT_DIR = ROOT / "generated" / "github"
 OUTPUT_FILE = OUTPUT_DIR / "index.md"
+# index.md 是 docs 目录的 index 页面，其路由就是 routeBasePath（不带 /index）。
+# 因此分类页返回链接必须指向该路由，写成 ./index 会产生坏链。
+INDEX_ROUTE = "/notes/github"
 
 REPO_LINK_RE = re.compile(r"\[[^\]]+\]\((https?://github\.com/[^/)]+/[^/)#?]+)(?:/[^)]*)?\)")
 UNCATEGORIZED_RE = re.compile(r"^(\d{4}-\d{2}-\d{2}|00)$")
@@ -231,7 +234,7 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
 
     for category, projects in groups.items():
         filename = filenames[category]
-        index_lines.append(f"- [{category}](./{filename})（{len(projects)} 个项目）")
+        index_lines.append(f"- [{category}]({INDEX_ROUTE}/{filename})（{len(projects)} 个项目）")
 
         category_lines = [
             "---",
@@ -243,7 +246,7 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
             "",
             f"本分类共 **{len(projects)}** 个项目。",
             "",
-            f"[返回 GitHub 项目分类目录](./index)",
+            f"[返回 GitHub 项目分类目录]({INDEX_ROUTE})",
             "",
         ]
         for row in projects:
