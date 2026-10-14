@@ -1,4 +1,4 @@
-.PHONY: install run crawl cate gene export pending review build deploy help
+.PHONY: install run crawl cate gene recategorize export pending review build deploy help
 
 help:
 	@echo "📋 可用命令:"
@@ -7,6 +7,7 @@ help:
 	@echo "  make crawl        抓取 GitHub Trending 并写入 SQLite"
 	@echo "  make cate         对 SQLite 中尚未分类的项目分类"
 	@echo "  make pending      列出待人工审核的项目分类"
+	@echo "  make recategorize 重新计算自动分类建议（不覆盖人工分类）"
 	@echo "  make review       交互式审核并修正项目分类"
 	@echo "  make gene         生成尚未生成简介的项目简介"
 	@echo "  make build        生成 GitHub 分类项目页并构建站点"
@@ -31,6 +32,10 @@ cate:
 pending:
 	@echo "📋 列出待审核分类..."
 	uv run scripts/github_projects.py pending
+
+recategorize:
+	@echo "🔄 重新计算自动分类建议（跳过人工分类）..."
+	uv run scripts/main.py recategorize
 
 review:
 	@echo "🧭 交互式审核项目分类..."
