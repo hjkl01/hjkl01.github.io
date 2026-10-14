@@ -1,11 +1,13 @@
-.PHONY: install run crawl cate gene export build deploy help
+.PHONY: install run crawl cate gene export pending review build deploy help
 
 help:
 	@echo "📋 可用命令:"
 	@echo ""
 	@echo "  make install      安装开发依赖"
 	@echo "  make crawl        抓取 GitHub Trending 并写入 SQLite"
-	@echo "  make cate         对 SQLite 中的项目分类"
+	@echo "  make cate         对 SQLite 中尚未分类的项目分类"
+	@echo "  make pending      列出待人工审核的项目分类"
+	@echo "  make review       交互式审核并修正项目分类"
 	@echo "  make gene         生成尚未生成简介的项目简介"
 	@echo "  make build        生成 GitHub 分类项目页并构建站点"
 	@echo "  make deploy       部署到 GitHub Pages"
@@ -25,6 +27,14 @@ crawl: install
 cate:
 	@echo "🚀 对 SQLite 项目分类..."
 	uv run scripts/main.py cate
+
+pending:
+	@echo "📋 列出待审核分类..."
+	uv run scripts/github_projects.py pending
+
+review:
+	@echo "🧭 交互式审核项目分类..."
+	uv run scripts/github_projects.py review
 
 gene:
 	@echo "🚀 生成待处理项目简介..."
