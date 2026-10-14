@@ -131,6 +131,7 @@ def connect_db() -> sqlite3.Connection:
             conn.execute(f"ALTER TABLE projects ADD COLUMN {name} {definition}")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_projects_category_order ON projects(category, display_order, name)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_projects_category_status ON projects(category_status, category)")
+    conn.commit()
     return conn
 
 
@@ -380,7 +381,7 @@ def review_categories(conn: sqlite3.Connection) -> None:
         conn.execute(
             """
             UPDATE projects
-            SET category = ?, auto_category = COALESCE(NULLIF(auto_category, ''), category),
+            SET category = ?,
                 category_source = 'manual', category_status = 'confirmed',
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = ?
