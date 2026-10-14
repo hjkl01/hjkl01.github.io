@@ -119,7 +119,18 @@ def connect_db() -> sqlite3.Connection:
         )
         """
     )
+    # 兼容已有数据库：只增加列，不重建表或丢失现有项目。
+    columns = {row["name"] for row in conn.execute("PRAGMA table_info(projects)")}
+    migrations = {
+        "auto_category": "TEXT NOT NULL DEFAULT ''",
+        "category_source": "TEXT NOT NULL DEFAULT 'auto'",
+        "category_status": "TEXT NOT NULL DEFAULT 'pending'",
+    }
+    for name, definition in migrations.items():
+        if name not in columns:
+            conn.execute(f"ALTER TABLE projects ADD COLUMN {name} {definition}")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_projects_category_order ON projects(category, display_order, name)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_projects_category_status ON projects(category_status, category)")
     return conn
 
 
@@ -292,9 +303,97 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
     return len(rows)
 
 
+def show_pending(conn: sqlite3.Connection) -> int:
+    rows = conn.execute(
+        """
+        SELECT id, full_name, category, auto_category, category_source
+        FROM projects
+        WHERE category_status <> 'confirmed'
+        ORDER BY category COLLATE NOCASE, full_name COLLATE NOCASE
+        """
+    ).fetchall()
+    if not rows:
+        print("没有待审核的项目。")
+        return 0
+    print(f"待审核项目：{len(rows)} 个")
+    for row in rows:
+        suggestion = row["auto_category"] or "（无自动建议）"
+        print(f'{row["id"]:>5}  {row["full_name"]}  当前：{row["category"]}  自动建议：{suggestion}')
+    return len(rows)
+
+
+def review_categories(conn: sqlite3.Connection) -> None:
+    skipped: set[int] = set()
+    categories = [
+        row["category"] for row in conn.execute(
+            "SELECT DISTINCT category FROM projects WHERE category IS NOT NULL AND trim(category) <> '' "
+            "AND category <> '未分类' ORDER BY category COLLATE NOCASE"
+        )
+    ]
+    while True:
+        placeholders = ",".join("?" for _ in skipped) or "-1"
+        row = conn.execute(
+            f"""
+            SELECT id, full_name, name, description, category, auto_category
+            FROM projects
+            WHERE category_status <> 'confirmed' AND id NOT IN ({placeholders})
+            ORDER BY category COLLATE NOCASE, full_name COLLATE NOCASE
+            LIMIT 1
+            """,
+            tuple(skipped),
+        ).fetchone()
+        if row is None:
+            print("所有待审核项目均已处理。")
+            return
+
+        print("\\n" + "=" * 72)
+        print(f'项目：{row["full_name"]}')
+        print(f'简介：{row["description"] or "（暂无简介）"}')
+        print(f'当前分类：{row["category"]}')
+        print(f'自动建议：{row["auto_category"] or "（无）"}')
+        print("选择分类编号，或输入 n 创建分类；a 接受自动建议；s 跳过；q 退出。")
+        for index, category in enumerate(categories, start=1):
+            print(f"  {index}. {category}")
+        choice = input("> ").strip()
+        if choice.lower() == "q":
+            print("已退出审核。")
+            return
+        if choice.lower() == "s":
+            skipped.add(row["id"])
+            continue
+        if choice.lower() == "a":
+            category = row["auto_category"] or row["category"]
+        elif choice.lower() == "n":
+            category = input("输入新分类名称：").strip()
+            if not category:
+                print("分类名称不能为空。")
+                continue
+            if category not in categories:
+                categories.append(category)
+                categories.sort(key=str.casefold)
+        elif choice.isdigit() and 1 <= int(choice) <= len(categories):
+            category = categories[int(choice) - 1]
+        else:
+            print("无效选择，请重试。")
+            continue
+
+        conn.execute(
+            """
+            UPDATE projects
+            SET category = ?, auto_category = COALESCE(NULLIF(auto_category, ''), category),
+                category_source = 'manual', category_status = 'confirmed',
+                updated_at = CURRENT_TIMESTAMP
+            WHERE id = ?
+            """,
+            (category, row["id"]),
+        )
+        conn.commit()
+        print(f'已确认：{row["full_name"]} -> {category}')
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="管理 GitHub 项目 SQLite 数据并按分类生成 Markdown 页面")
-    parser.add_argument("command", choices=("build", "migrate", "generate"))
+    parser.add_argument("command", choices=("build", "migrate", "generate", "pending", "review"))
     parser.add_argument("--force", action="store_true", help="重新从旧 Markdown 导入并覆盖相同仓库的数据")
     args = parser.parse_args()
 
@@ -302,6 +401,10 @@ def main() -> None:
     try:
         if args.command == "migrate":
             migrate_legacy(conn, force=args.force)
+        elif args.command == "pending":
+            show_pending(conn)
+        elif args.command == "review":
+            review_categories(conn)
         else:
             if conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0] == 0:
                 migrate_legacy(conn)
