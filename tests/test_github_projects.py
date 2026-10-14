@@ -1,6 +1,5 @@
 """针对 GitHub 项目 SQLite 迁移和 Markdown 生成的隔离测试。"""
 
-import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
@@ -34,13 +33,6 @@ class GitHubProjectsTests(unittest.TestCase):
         path = self.legacy_dir / category / filename
         path.parent.mkdir(parents=True, exist_ok=True)
         owner, repo = full_name.split("/", 1)
-        path.write_text(
-            f"# [{repo}] (https://github.com/{owner}/{repo})\n\n"
-            f"[{repo}](https://github.com/{owner}/{repo})\n\n"
-            f"{description}\n",
-            encoding="utf-8",
-        )
-        # parse_markdown expects a heading link without a space before '('.
         path.write_text(
             f"# [{repo}](https://github.com/{owner}/{repo})\n\n"
             f"{description}\n",
