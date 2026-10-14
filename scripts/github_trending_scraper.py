@@ -59,9 +59,10 @@ def save_repositories(repositories: list[dict]) -> int:
             cursor = conn.execute(
                 """
                 INSERT OR IGNORE INTO projects
-                    (full_name, name, url, description, category, display_order)
+                    (full_name, name, url, description, category, display_order, category_source, category_status)
                 VALUES (?, ?, ?, '', '未分类',
-                    COALESCE((SELECT MAX(display_order) + 1 FROM projects WHERE category = '未分类'), 0))
+                    COALESCE((SELECT MAX(display_order) + 1 FROM projects WHERE category = '未分类'), 0),
+                    'auto', 'pending')
                 """,
                 (item["full_name"], item["name"], item["url"]),
             )
