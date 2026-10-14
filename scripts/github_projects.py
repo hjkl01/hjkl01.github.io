@@ -364,7 +364,10 @@ def review_categories(conn: sqlite3.Connection) -> None:
             skipped.add(row["id"])
             continue
         if choice.lower() == "a":
-            category = row["auto_category"] or row["category"]
+            if not row["auto_category"]:
+                print("该项目没有自动分类建议，请选择已有分类或输入 n 创建分类。")
+                continue
+            category = row["auto_category"]
         elif choice.lower() == "n":
             category = input("输入新分类名称：").strip()
             if not category:
