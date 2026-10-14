@@ -1,8 +1,6 @@
 import asyncio
 import re
-import subprocess
 import sys
-from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -10,6 +8,7 @@ from scripts.config import logger
 from scripts.prompts import MARKDOWN_PROMPT
 from scripts.api_ai import auto_category, api_openai_generate, api_github_readme, extract_github_info, extract_llm_text
 from scripts.github_trending_scraper import main as github_trending_scraper
+from scripts.github_projects import connect_db, migrate_legacy
 
 
 # 预编译正则表达式
@@ -31,27 +30,26 @@ def normalize_github_url(url: str) -> str:
     return f"https://github.com/{username}/{repository}"
 
 
-def project_exists(url: str) -> bool:
-    """使用 rg 检查 GitHub 项目是否已经存在于 Markdown 文档中。"""
-    normalized_url = normalize_github_url(url)
-    result = subprocess.run(
-        [
-            "rg",
-            "--fixed-strings",
-            "--files-with-matches",
-            "--glob",
-            "*.md",
-            normalized_url,
-            str(DOCS_PATH),
-        ],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    if result.returncode == 2:
-        raise RuntimeError(f"执行 rg 失败: {result.stderr.strip()}")
-    return result.returncode == 0
+def get_db():
+    """打开项目数据库；首次运行时兼容从旧 Markdown 初始化。"""
+    conn = connect_db()
+    if conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0] == 0:
+        migrate_legacy(conn)
+    return conn
 
+
+def project_exists(url: str) -> bool:
+    """通过 SQLite 判断项目是否已收录。"""
+    normalized = normalize_github_url(url)
+    repo = normalized.removeprefix("https://github.com/").lower()
+    conn = get_db()
+    try:
+        return conn.execute(
+            "SELECT 1 FROM projects WHERE lower(full_name) = ?",
+            (repo,),
+        ).fetchone() is not None
+    finally:
+        conn.close()
 
 def list_files(dirname="notes/github"):
     """列出目录下的所有文件（生成器）。"""
@@ -59,13 +57,16 @@ def list_files(dirname="notes/github"):
 
 
 async def process_single_url(project_line: str) -> str | None:
-    """处理单个 GitHub URL。"""
+    """处理单个 GitHub URL，并将项目直接写入 SQLite。"""
     project_line = project_line.strip()
     if not project_line:
         return None
 
-    temp = project_line.split()
-    url = normalize_github_url(temp[0])
+    parts = project_line.split()
+    url = normalize_github_url(parts[0])
+    if len(parts) > 2:
+        logger.warning(f"无法解析：{parts}")
+        return None
 
     username, repository = extract_github_info(url)
     if not username or not repository:
@@ -75,17 +76,11 @@ async def process_single_url(project_line: str) -> str | None:
     try:
         if project_exists(url):
             return None
-    except Exception as e:
-        logger.error(f"检查项目是否存在失败 {url}: {e}")
-        return None
 
-    try:
-        # 获取 README
         readme_content = await api_github_readme(username, repository)
         if readme_content is None:
             return None
 
-        # 生成 30～50 字中文简介（api_openai_generate 内部已重试，耗尽后返回 None）
         prompt = MARKDOWN_PROMPT.replace("readme_content", readme_content)
         ai_resp = await api_openai_generate(prompt)
         description = extract_llm_text(ai_resp)
@@ -93,103 +88,103 @@ async def process_single_url(project_line: str) -> str | None:
             logger.warning(f"项目简介为空，跳过: {url}")
             return None
 
-        # 解析分类
-        if len(temp) == 1:
-            category_dir = date.today().strftime("%Y-%m-%d")
-        elif len(temp) == 2:
-            category_dir = temp[1]
-        else:
-            logger.warning(f"无法解析：{temp}")
-            return None
+        category = parts[1] if len(parts) == 2 else "未分类"
+        if UNCATEGORIZED_FOLDER_PATTERN.match(category):
+            category = "未分类"
 
-        # 生成文件内容
-        title = (
-            f"### [{repository}]({url}) "
-            f"![GitHub Repo stars](https://img.shields.io/github/stars/"
-            f"{username}/{repository}?style=social)\n\n"
-        )
-        text = title + description
+        conn = get_db()
+        try:
+            display_order = conn.execute(
+                "SELECT COALESCE(MAX(display_order), -1) + 1 FROM projects WHERE category = ?",
+                (category,),
+            ).fetchone()[0]
+            cursor = conn.execute(
+                """
+                INSERT OR IGNORE INTO projects
+                    (full_name, name, url, description, category, display_order)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    f"{username}/{repository}",
+                    repository,
+                    url,
+                    description,
+                    category,
+                    display_order,
+                ),
+            )
+            conn.commit()
+            if cursor.rowcount == 0:
+                return None
+        finally:
+            conn.close()
 
-        # 写入文件
-        category_path = DOCS_PATH / category_dir
-        category_path.mkdir(parents=True, exist_ok=True)
-        filename = f"{repository}_{username}.md"
-        (category_path / filename).write_text(text, encoding="utf-8")
-
-        return f"Created: {filename}"
-
+        return f"SQLite: {username}/{repository} [{category}]"
     except Exception as e:
         logger.error(f"处理项目 {url} 时出错：{e}")
         return None
 
+async def category_md_files(dirname: str | None = None) -> None:
+    """对 SQLite 中尚未分类的项目进行分类，并直接更新项目表。"""
+    conn = get_db()
+    try:
+        rows = conn.execute(
+            "SELECT id, full_name, url, description, category FROM projects ORDER BY id"
+        ).fetchall()
+        categories = [
+            row[0] for row in conn.execute(
+                "SELECT DISTINCT category FROM projects WHERE category <> '未分类' ORDER BY category COLLATE NOCASE"
+            ).fetchall()
+            if row[0] and not UNCATEGORIZED_FOLDER_PATTERN.match(row[0])
+        ]
 
-async def category_md_files(dirname: str = "notes/github/00") -> None:
-    """将文件分类到对应目录"""
-    if not Path(dirname).exists():
-        logger.warning(f"目录不存在: {dirname}")
-        return
+        pending = [
+            row for row in rows
+            if not row["category"]
+            or row["category"] == "未分类"
+            or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
+        ]
+        if not pending:
+            logger.info("SQLite 中没有待分类项目")
+            return
 
-    docs_path = DOCS_PATH
-    category_dirs = [str(child.relative_to(docs_path)) for child in docs_path.iterdir() if child.is_dir()]
+        for row in pending:
+            try:
+                content = f"{row['full_name']}\n{row['url']}\n{row['description']}"
+                category = await auto_category(content, categories)
+                if not category:
+                    logger.warning(f"分类结果为空，跳过: {row['full_name']}")
+                    continue
+                category = category.strip()
+                conn.execute(
+                    "UPDATE projects SET category = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+                    (category, row["id"]),
+                )
+                if category not in categories:
+                    categories.append(category)
+                logger.info(f"{row['full_name']} -> {category}")
+            except Exception as e:
+                logger.error(f"项目分类失败 {row['full_name']}: {e}")
 
-    md_files = list(Path(dirname).glob("*.md"))
-    if not md_files:
-        return
-
-    # 批量处理
-    for md_file in md_files:
-        try:
-            content = md_file.read_text(encoding="utf-8")
-            category = await auto_category(content, category_dirs)
-            if not category:
-                logger.warning(f"分类结果为空，跳过: {md_file.name}")
-                continue
-            logger.info(f"{md_file.name}, {category}")
-
-            if category in category_dirs:
-                target = docs_path / category / md_file.name
-                target.parent.mkdir(parents=True, exist_ok=True)
-                md_file.rename(target)
-        except Exception as e:
-            logger.error(f"处理文件 {md_file} 失败: {e}")
-
-    # 清理空目录
-    if Path(dirname).exists():
-        import shutil
-
-        shutil.rmtree(dirname)
-
+        conn.commit()
+    finally:
+        conn.close()
 
 def collect_md_urls() -> dict[str, str]:
-    """收集 notes/github 下文档里的 GitHub URL，返回 {规范化 URL: 分类目录}。"""
-    if not DOCS_PATH.exists():
-        logger.error(f"目录不存在: {DOCS_PATH}")
-        return {}
-
-    url_cates: dict[str, str] = {}
-    md_files = sorted(DOCS_PATH.rglob("*.md")) + sorted(DOCS_PATH.rglob("*.mdx"))
-
-    for md_file in md_files:
-        try:
-            content = md_file.read_text(encoding="utf-8")
-        except Exception as e:
-            logger.warning(f"读取文件失败 {md_file}: {e}")
-            continue
-
-        rel_parts = md_file.relative_to(DOCS_PATH).parts
-        category = rel_parts[0] if len(rel_parts) > 1 else ""
-        if UNCATEGORIZED_FOLDER_PATTERN.match(category):
-            category = ""
-
-        for username, repo in MD_URL_PATTERN.findall(content):
-            url = normalize_github_url(f"https://github.com/{username}/{repo}")
-            known = url_cates.get(url)
-            # 同一个 URL 出现在多个分类时，保留第一个非空分类
-            if known is None or (not known and category):
-                url_cates[url] = category
-
-    return url_cates
-
+    """从 SQLite 收集项目 URL 和分类，返回 {规范化 URL: 分类}。"""
+    conn = get_db()
+    try:
+        rows = conn.execute("SELECT url, category FROM projects ORDER BY id").fetchall()
+        return {
+            normalize_github_url(row["url"]): (
+                "" if not row["category"] or row["category"] == "未分类"
+                or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
+                else row["category"]
+            )
+            for row in rows
+        }
+    finally:
+        conn.close()
 
 def export_urls(output: str = "urls.txt") -> None:
     """把文档中的 GitHub URL 及分类（`<URL> <分类>`）合并写回 urls.txt。
