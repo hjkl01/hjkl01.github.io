@@ -10,7 +10,6 @@ const dirs = [
   "mac",
   "others",
   "windows",
-  "github",
 ];
 
 const plugins = [
@@ -21,6 +20,15 @@ const plugins = [
       id: "python",
       path: "notes/python",
       routeBasePath: "notes/python",
+      sidebarPath: "./sidebars.ts",
+    },
+  ],
+  [
+    "@docusaurus/plugin-content-docs",
+    {
+      id: "github",
+      path: "generated/github",
+      routeBasePath: "notes/github",
       sidebarPath: "./sidebars.ts",
     },
   ],
@@ -52,10 +60,8 @@ const config: Config = {
   },
   favicon: "img/favicon-16x16.png",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "hjkl01", // Usually your GitHub org/user name.
-  projectName: "hjkl01.github.io", // Usually your repo name.
+  organizationName: "hjkl01",
+  projectName: "hjkl01.github.io",
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
@@ -72,8 +78,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/hjkl01/hjkl01.github.io/tree/master/',
         },
@@ -94,7 +98,6 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'My Site',
@@ -161,7 +164,6 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       defaultLanguage: 'python',
-      // defaultLanguage: 'javascript',
     },
   } satisfies Preset.ThemeConfig,
 };
