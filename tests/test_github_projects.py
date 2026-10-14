@@ -1,4 +1,4 @@
-"""针对 GitHub 项目 SQLite 迁移和 Markdown 生成的隔离测试。"""
+"""针对 GitHub 项目 SQLite 迁移和分类页面生成的隔离测试。"""
 
 import tempfile
 import unittest
@@ -44,12 +44,13 @@ class GitHubProjectsTests(unittest.TestCase):
     def connect(self):
         return projects.connect_db()
 
-    def test_migration_generation_and_schema(self):
+    def test_migration_generates_one_markdown_file_per_category(self):
         self.write_project("AI 工具", "alpha.md", "acme/alpha", "Alpha project description.")
+        self.write_project("DevOps", "beta.md", "acme/beta", "Beta project description.")
         conn = self.connect()
         try:
-            self.assertEqual(projects.migrate_legacy(conn), 1)
-            self.assertEqual(projects.generate_markdown(conn), 1)
+            self.assertEqual(projects.migrate_legacy(conn), 2)
+            self.assertEqual(projects.generate_markdown(conn), 2)
             columns = {row["name"] for row in conn.execute("PRAGMA table_info(projects)")}
             self.assertTrue({"full_name", "description", "category"} <= columns)
             self.assertTrue({"language", "stars", "topics"}.isdisjoint(columns))
@@ -63,10 +64,18 @@ class GitHubProjectsTests(unittest.TestCase):
         finally:
             conn.close()
 
-        markdown = self.output_file.read_text(encoding="utf-8")
-        self.assertIn("## AI 工具", markdown)
-        self.assertIn("Alpha project description.", markdown)
-        self.assertIn("https://img.shields.io/github/stars/acme/alpha?style=social", markdown)
+        index = self.output_file.read_text(encoding="utf-8")
+        ai_page = (self.output_dir / "AI-工具.md").read_text(encoding="utf-8")
+        devops_page = (self.output_dir / "DevOps.md").read_text(encoding="utf-8")
+        self.assertIn("[AI 工具](./AI-工具)", index)
+        self.assertIn("[DevOps](./DevOps)", index)
+        self.assertIn("Alpha project description.", ai_page)
+        self.assertIn("Beta project description.", devops_page)
+        self.assertIn("https://img.shields.io/github/stars/acme/alpha?style=social", ai_page)
+        self.assertEqual(
+            {p.name for p in self.output_dir.glob("*.md")},
+            {"index.md", "AI-工具.md", "DevOps.md"},
+        )
 
     def test_existing_database_data_is_not_overwritten_by_migration(self):
         self.write_project("Original", "alpha.md", "acme/alpha", "Original description.")
@@ -89,9 +98,33 @@ class GitHubProjectsTests(unittest.TestCase):
         finally:
             conn.close()
 
-        markdown = self.output_file.read_text(encoding="utf-8")
-        self.assertIn("## Hand picked", markdown)
-        self.assertIn("Manually maintained description.", markdown)
+        index = self.output_file.read_text(encoding="utf-8")
+        category_page = (self.output_dir / "Hand-picked.md").read_text(encoding="utf-8")
+        self.assertIn("[Hand picked](./Hand-picked)", index)
+        self.assertIn("Manually maintained description.", category_page)
+
+    def test_removed_category_pages_are_cleaned_up(self):
+        conn = self.connect()
+        try:
+            conn.executemany(
+                """
+                INSERT INTO projects (full_name, name, url, description, category)
+                VALUES (?, ?, ?, ?, ?)
+                """,
+                [
+                    ("acme/alpha", "alpha", "https://github.com/acme/alpha", "Alpha", "Old"),
+                    ("acme/beta", "beta", "https://github.com/acme/beta", "Beta", "Current"),
+                ],
+            )
+            conn.commit()
+            projects.generate_markdown(conn)
+            conn.execute("DELETE FROM projects WHERE category = 'Old'")
+            conn.commit()
+            projects.generate_markdown(conn)
+            self.assertFalse((self.output_dir / "Old.md").exists())
+            self.assertTrue((self.output_dir / "Current.md").exists())
+        finally:
+            conn.close()
 
     def test_duplicate_repository_is_imported_once(self):
         self.write_project("Category A", "one.md", "acme/alpha", "First copy.")
