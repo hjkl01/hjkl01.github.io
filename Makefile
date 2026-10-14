@@ -9,11 +9,10 @@ help:
 	@echo "  make crawl        抓取 GitHub Trending"
 	@echo "  make cate         对文档分类"
 	@echo "  make gene         启动文章解析"
-	@echo "  make build        构建 Docusaurus 站点"
+	@echo "  make build        生成 GitHub 分类项目页并构建站点"
 	@echo "  make deploy       部署到 GitHub Pages"
 	@echo "  make run          执行 crawl + gene + cate + build"
 	@echo "  make export       初始化 SQLite（如有需要）并导出 URL+分类 到 urls.txt"
-	@echo "  make build        生成 GitHub 分类项目页并构建站点"
 	@echo ""
 
 install:
