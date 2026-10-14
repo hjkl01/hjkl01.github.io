@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check Python syntax
+        run: python3 -m compileall -q scripts
+
       - name: Build
         run: pnpm run build
 
