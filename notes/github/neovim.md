@@ -7,12 +7,13 @@ sidebar_label: neovim
 
 # neovim
 
-本分类共 **103** 个项目。
+本分类共 **104** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [99](https://github.com/ThePrimeagen/99) | ![Stars](https://img.shields.io/github/stars/ThePrimeagen/99?style=social) | Neovim AI 客户端，集成 LLM 实现代码搜索与自动修改。 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | ![Stars](https://img.shields.io/github/stars/numToStr/Comment.nvim?style=social) | 智能Neovim注释插件，支持行注释、块注释、Treesitter及多种映射操作。 |
 | [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) | ![Stars](https://img.shields.io/github/stars/CopilotC-Nvim/CopilotChat.nvim?style=social) | 将 GitHub Copilot Chat 集成到 Neovim，支持多模型对话与工具调用。 |
 | [LazyVim](https://github.com/LazyVim/LazyVim) | ![Stars](https://img.shields.io/github/stars/LazyVim/LazyVim?style=social) | LazyVim 是一款基于 lazy.nvim 的 Neovim 配置，提供 IDE 级功能与预置插件，支持自定义扩展。 |

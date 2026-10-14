@@ -7,12 +7,13 @@ sidebar_label: tools
 
 # tools
 
-本分类共 **100** 个项目。
+本分类共 **101** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [dotfiles](https://github.com/hjkl01/dotfiles) | ![Stars](https://img.shields.io/github/stars/hjkl01/dotfiles?style=social) | 个人开发环境配置集合，基于 Zsh/Neovim/Tmux 统一跨设备高效工作流。 |
 | [CasaOS](https://github.com/IceWhaleTech/CasaOS) | ![Stars](https://img.shields.io/github/stars/IceWhaleTech/CasaOS?style=social) | CasaOS是个人云服务器系统，支持家庭场景一键部署应用与管理数据 |
 | [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) | ![Stars](https://img.shields.io/github/stars/XIU2/CloudflareSpeedTest?style=social) | 测试 Cloudflare CDN 延迟和速度，获取最快 IP。 |
 | [ConvertX](https://github.com/C4illin/ConvertX) | ![Stars](https://img.shields.io/github/stars/C4illin/ConvertX?style=social) | ConvertX 是一款自托管的在线文件转换器，支持千余种格式互转，可同时处理多文件、设置密码保护和多用户账号。 |
