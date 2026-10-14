@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parent.parent
 LEGACY_DIR = ROOT / "notes" / "github"
 DB_PATH = ROOT / "data" / "github-projects.db"
-OUTPUT_DIR = ROOT / "generated" / "github"
+OUTPUT_DIR = LEGACY_DIR
 OUTPUT_FILE = OUTPUT_DIR / "index.md"
 # index.md 是 docs 目录的 index 页面，其路由就是 routeBasePath（不带 /index）。
 # 因此分类页返回链接必须指向该路由，写成 ./index 会产生坏链。
@@ -44,6 +44,10 @@ def parse_markdown(path: Path) -> dict | None:
         content = path.read_text(encoding="utf-8")
     except (OSError, UnicodeDecodeError) as exc:
         print(f"跳过无法读取的文件 {path.relative_to(ROOT)}: {exc}")
+        return None
+
+    # 生成文件也位于 notes/github；避免数据库为空时将生成结果再次当作旧数据导入。
+    if "<!-- 此页面由 scripts/github_projects.py 从 SQLite 自动生成" in content:
         return None
 
     url_match = REPO_LINK_RE.search(content)
@@ -177,13 +181,17 @@ def category_filename(category: str) -> str:
     return slug
 
 
-def render_project(row: sqlite3.Row) -> list[str]:
+def markdown_cell(value: str) -> str:
+    """将文本转换为可安全放入 Markdown 表格单元格的内容。"""
+    return re.sub(r"\\s+", " ", str(value or "")).replace("|", "\\|").strip()
+
+
+def render_project(row: sqlite3.Row) -> str:
     owner, repo = row["full_name"].split("/", 1)
-    badge = f"![GitHub Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social)"
-    lines = [f"## [{row['name']}]({row['url']}) {badge}", ""]
-    if row["description"]:
-        lines.extend([row["description"], ""])
-    return lines
+    badge = f"![Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social)"
+    name = markdown_cell(row["name"])
+    description = markdown_cell(row["description"]) or "—"
+    return f"| [{name}]({row['url']}) | {badge} | {description} |"
 
 
 def generate_markdown(conn: sqlite3.Connection) -> int:
@@ -226,15 +234,14 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
         "",
         "# GitHub 项目集",
         "",
-        f"共收录 **{len(rows)}** 个项目，分为 **{len(groups)}** 个分类。Star 数通过 Shields.io 在浏览器端动态加载。",
+        f"共收录 **{len(rows)}** 个项目，分为 **{len(groups)}** 个分类。Star 数通过 Shields.io 动态加载。",
         "",
-        "## 分类目录",
-        "",
-    ]
-
-    for category, projects in groups.items():
+        "| 分类 | 项目数量 |",
+        "| --- | -    for category, projects in groups.items():
         filename = filenames[category]
-        index_lines.append(f"- [{category}]({INDEX_ROUTE}/{filename})（{len(projects)} 个项目）")
+        index_lines.append(
+            f"| [{markdown_cell(category)}]({INDEX_ROUTE}/{filename}) | {len(projects)} |"
+        )
 
         category_lines = [
             "---",
@@ -242,31 +249,43 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
             f"sidebar_label: {category}",
             "---",
             "",
+            f"<!-- 此页面由 scripts/github_projects.py 从 SQLite 自动生成，请勿手动编辑。 -->",
+            "",
             f"# {category}",
             "",
             f"本分类共 **{len(projects)}** 个项目。",
             "",
             f"[返回 GitHub 项目分类目录]({INDEX_ROUTE})",
             "",
+            "| 项目 | Stars | 简介 |",
+            "| --- | --- | --- |",
         ]
-        for row in projects:
-            category_lines.extend(render_project(row))
+        category_lines.extend(render_project(row) for row in projects)
 
         (OUTPUT_DIR / f"{filename}.md").write_text(
-            "\n".join(category_lines).rstrip() + "\n",
+            "\\n".join(category_lines).rstrip() + "\\n",
             encoding="utf-8",
         )
 
     index_lines.append("")
-    OUTPUT_FILE.write_text("\n".join(index_lines).rstrip() + "\n", encoding="utf-8")
+    OUTPUT_FILE.write_text("\\n".join(index_lines).rstrip() + "\\n", encoding="utf-8")
 
-    # generated/github 是专用生成目录；移除数据库中已不存在分类对应的过期页面。
+    # notes/github 由 SQLite 全量生成；清理旧结构中的 Markdown 文件和过期分类页。
     expected_files = {OUTPUT_FILE.name, *(f"{filename}.md" for filename in filenames.values())}
-    for path in OUTPUT_DIR.glob("*.md"):
-        if path.name not in expected_files:
-            path.unlink()
+    for path in OUTPUT_DIR.rglob("*.md"):
+        if path.parent == OUTPUT_DIR and path.name in expected_files:
+            continue
+        path.unlink()
 
-    print(f"已生成 {OUTPUT_DIR.relative_to(ROOT)}：{len(groups)} 个分类文件，{len(rows)} 个项目")
+    # 清理已经没有内容的旧分类目录。
+    for path in sorted(OUTPUT_DIR.rglob("*"), key=lambda item: len(item.parts), reverse=True):
+        if path.is_dir():
+            try:
+                path.rmdir()
+            except OSError:
+                pass
+
+    print(f"已直接更新 {OUTPUT_DIR.relative_to(ROOT)}：{len(groups)} 个分类文件，{len(rows)} 个项目")
     return len(rows)
 
 
