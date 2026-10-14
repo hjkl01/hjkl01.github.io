@@ -62,11 +62,9 @@ async def process_single_url(project_line: str) -> str | None:
     if not project_line:
         return None
 
-    parts = project_line.split()
+    # URL 是第一段，其余内容整体作为分类名，允许分类名称包含空格。
+    parts = project_line.split(maxsplit=1)
     url = normalize_github_url(parts[0])
-    if len(parts) > 2:
-        logger.warning(f"无法解析：{parts}")
-        return None
 
     username, repository = extract_github_info(url)
     if not username or not repository:
@@ -88,8 +86,8 @@ async def process_single_url(project_line: str) -> str | None:
             logger.warning(f"项目简介为空，跳过: {url}")
             return None
 
-        category = parts[1] if len(parts) == 2 else "未分类"
-        if UNCATEGORIZED_FOLDER_PATTERN.match(category):
+        category = parts[1].strip() if len(parts) == 2 else "未分类"
+        if not category or UNCATEGORIZED_FOLDER_PATTERN.match(category):
             category = "未分类"
 
         conn = get_db()
