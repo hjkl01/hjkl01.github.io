@@ -5,7 +5,7 @@
   "homepage": "https://hjkl01.github.io/",
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "python3 scripts/github_projects.py build && docusaurus start",
     "build": "pnpm run fetch-linux-readme && python3 scripts/github_projects.py build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy && git pull",
