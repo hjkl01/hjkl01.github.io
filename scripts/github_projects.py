@@ -347,7 +347,7 @@ def review_categories(conn: sqlite3.Connection) -> None:
             print("所有待审核项目均已处理。")
             return
 
-        print("\\n" + "=" * 72)
+        print("\n" + "=" * 72)
         print(f'项目：{row["full_name"]}')
         print(f'简介：{row["description"] or "（暂无简介）"}')
         print(f'当前分类：{row["category"]}')
