@@ -1,5 +1,3 @@
-PYTHON := python3.12
-
 .PHONY: install run crawl cate gene export build deploy help
 
 help:
