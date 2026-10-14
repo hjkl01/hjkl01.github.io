@@ -1,3 +1,3 @@
 ### [likec4](https://github.com/likec4/likec4) ![GitHub Repo stars](https://img.shields.io/github/stars/likec4/likec4?style=social)
 
-LikeC4 是一种用于描述软件架构的建模语言，可根据代码模型生成实时更新的可视化图表。它基于 C4 模型和 Structurizr DSL 设计，支持自定义元素类型、符号和嵌套层级，能够灵活适配不同团队与项目需求。通过 CLI、VSCode 插件或在线 Playground 快速创建、预览和协作架构视图。
+LikeC4是基于代码的可视化架构建模工具，可自动生成实时架构图，支持自定义符号与嵌套层级，便于团队协作演进软件架构。

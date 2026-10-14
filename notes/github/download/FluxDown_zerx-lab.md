@@ -1,3 +1,3 @@
 ### [FluxDown](https://github.com/zerx-lab/FluxDown) ![GitHub Repo stars](https://img.shields.io/github/stars/zerx-lab/FluxDown?style=social)
 
-FluxDown 是免费的开源下载管理器，支持多线程加速、多协议下载、浏览器集成及 AI 智能体管理。
+FluxDown 是一款快速多协议下载管理器，支持 HTTP、FTP、BitTorrent 等协议，具备动态分段加速和浏览器集成能力。

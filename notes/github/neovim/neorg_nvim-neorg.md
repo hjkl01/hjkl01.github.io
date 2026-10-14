@@ -1,3 +1,3 @@
-### [nvim-neorg neorg](https://github.com/nvim-neorg/neorg)  ![GitHub Repo stars](https://img.shields.io/github/stars/nvim-neorg/neorg?style=social)
+### [neorg](https://github.com/nvim-neorg/neorg) ![GitHub Repo stars](https://img.shields.io/github/stars/nvim-neorg/neorg?style=social)
 
-Neorg 是一款基于 Neovim（需 0.10+ 版本）的 Lua 编写组织工具插件。它基于统一的 .norg 纯文本格式，提供结构化笔记、项目与任务管理、时间追踪、幻灯片制作及排版文档等功能。该工具通过单一文件格式整合各类工作流，确保功能互联并降低学习成本。
+Neorg 是 Neovim 插件，基于 .norg 格式提供结构化笔记、项目管理、任务跟踪等一站式组织能力。

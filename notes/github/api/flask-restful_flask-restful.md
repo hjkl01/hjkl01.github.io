@@ -1,3 +1,3 @@
-### [flask-restful flask-restful](https://github.com/flask-restful/flask-restful)  ![GitHub Repo stars](https://img.shields.io/github/stars/flask-restful/flask-restful?style=social)
+### [flask-restful](https://github.com/flask-restful/flask-restful) ![GitHub Repo stars](https://img.shields.io/github/stars/flask-restful/flask-restful?style=social)
 
-Flask-RESTful 提供了构建优秀 REST API 的基础组件。
+Flask扩展，提供构建RESTful API的核心模块。

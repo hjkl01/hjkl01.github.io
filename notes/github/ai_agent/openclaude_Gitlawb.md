@@ -1,3 +1,3 @@
 ### [openclaude](https://github.com/Gitlawb/openclaude) ![GitHub Repo stars](https://img.shields.io/github/stars/Gitlawb/openclaude?style=social)
 
-开源编程代理 CLI，支持云端与本地多种模型，提供终端工作流与工具调用能力。
+OpenClaude 是开源编码代理 CLI，统一支持多 AI 模型后端，提供终端优先的智能体开发工作流。

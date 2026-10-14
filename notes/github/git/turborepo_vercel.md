@@ -1,3 +1,3 @@
-### [vercel turborepo](https://github.com/vercel/turborepo)  ![GitHub Repo stars](https://img.shields.io/github/stars/vercel/turborepo?style=social)
+### [turborepo](https://github.com/vercel/turborepo) ![GitHub Repo stars](https://img.shields.io/github/stars/vercel/turborepo?style=social)
 
-Turborepo 是由 Vercel 开发的高性能构建系统，专为 JavaScript 和 TypeScript 代码库设计，使用 Rust 编写。
+TurboRepo 是 Vercel 推出的构建系统，专为编程 Agent 设计，实现高效任务调度与构建。

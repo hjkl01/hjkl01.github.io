@@ -1,3 +1,3 @@
 ### [svelte](https://github.com/sveltejs/svelte) ![GitHub Repo stars](https://img.shields.io/github/stars/sveltejs/svelte?style=social)
 
-Svelte 是一个 Web 应用构建框架，其核心是一个编译器。编译器接收声明式组件，将其转换为高效的 JavaScript 代码，能够精准地更新 DOM，从而提升应用性能。
+Svelte 是一个前端框架，通过编译器将声明式组件转换为高效的 JavaScript，直接操作 DOM。

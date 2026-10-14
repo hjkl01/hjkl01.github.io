@@ -1,3 +1,3 @@
 ### [RHI](https://github.com/RankFTW/RHI) ![GitHub Repo stars](https://img.shields.io/github/stars/RankFTW/RHI?style=social)
 
-一键管理游戏 ReShade、HDR 着色器、DLSS 及 NVIDIA 驱动配置，全平台兼容。
+RHI是一款游戏画面增强工具，一键安装管理HDR、ReShade、DLSS及NVIDIA驱动配置。

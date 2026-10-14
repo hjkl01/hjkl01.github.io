@@ -1,3 +1,3 @@
-### [Q00 ouroboros](https://github.com/Q00/ouroboros)  ![GitHub Repo stars](https://img.shields.io/github/stars/Q00/ouroboros?style=social)
+### [ouroboros](https://github.com/Q00/ouroboros) ![GitHub Repo stars](https://img.shields.io/github/stars/Q00/ouroboros?style=social)
 
-Ouroboros 是一个面向 Claude Code 的“规范优先”AI 开发插件，通过苏格拉底式提问和本体分析把模糊想法转化为明确、可验证的需求规格，在写代码前暴露隐藏假设。它以“访谈→规格种子→执行→评估→进化”的循环运行，采用双钻流程完成探索、定义、设计、交付，并通过机械/语义/多模型一致性评估与歧义评分、收敛检测确保清晰度与稳定性。提供多种指令和九种思维代理，支持持续进化循环、卡点辅助、会话跟踪与漂移检测；内置终端监控界面，包含事件溯源、评估、执行、演化等模块，目标是先澄清再构建，避免错误需求导致的返工。
+Ouroboros 是面向 AI 编程的 Agent OS，通过苏格拉底式访谈澄清模糊需求，生成不可变规格，驱动代码执行与多阶段自动验证，实现可复现的自进化编程工作流。

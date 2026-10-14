@@ -1,3 +1,3 @@
 ### [gpui-kit](https://github.com/longbridge/gpui-kit) ![GitHub Repo stars](https://img.shields.io/github/stars/longbridge/gpui-kit?style=social)
 
-Rust桌面应用框架，75+组件，支持跨平台、WebAssembly和高性能UI开发
+Rust桌面UI框架，内置75+组件、GPU加速与跨平台支持

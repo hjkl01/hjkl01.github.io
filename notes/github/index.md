@@ -1,27 +1,29 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
+sidebar_label: Github Trending
 ---
 
-# GitHub 相关
+# Github Trending
 
-## 项目地址
-[https://github.com/hjkl01/dotfiles](https://github.com/hjkl01/dotfiles)
+GitHub 热门项目笔记，由 `make crawl` / `make gene` 自动抓取并分类生成。
 
-## 主要特性
-- **配置管理**：这是一个个人 dotfiles 项目，用于管理各种 shell 和工具的配置文件（如 .bashrc、.vimrc 等），便于跨设备同步和版本控制。
-- **模块化设计**：配置文件采用模块化结构，支持 Vim、Neovim、Zsh 等编辑器和 shell 的自定义设置。
-- **自动化安装**：提供脚本支持一键安装和更新配置，简化环境搭建过程。
-- **兼容性强**：针对 Linux 和 macOS 系统优化，包含主题、插件和快捷键自定义。
+- 每个目录是一个分类，目录下一个 `.md` 文件对应一个仓库
+- 内容包含仓库链接、Star 徽章和一句话简介
+- 分类信息汇总在根目录的 `urls.txt`
 
-## 主要功能
-- **编辑器配置**：集成 Vim/Neovim 的插件管理（如使用 vim-plug 或 packer.nvim），支持语法高亮、代码补全和主题切换。
-- **Shell 增强**：自定义 Zsh 或 Bash 提示符、别名和函数，提高命令行效率。
-- **工具集成**：包含 Git、Tmux 和其他开发工具的配置文件，支持工作流优化。
-- **备份与同步**：通过 Git 仓库实现配置的备份、版本追踪和多机同步。
+## 分类目录
 
-## 用法
-1. **克隆仓库**：运行 `git clone https://github.com/hjkl01/dotfiles.git ~/dotfiles` 将项目克隆到本地。
-2. **安装脚本**：进入目录 `cd ~/dotfiles`，然后执行 `./install.sh`（或类似脚本）来链接配置文件到用户主目录。
-3. **自定义**：编辑仓库中的配置文件以匹配个人偏好，然后重新运行安装脚本应用更改。
-4. **更新**：使用 `git pull` 更新仓库，并重新运行安装脚本以同步最新配置。
-5. **注意**：备份现有配置文件以避免覆盖；适用于 Unix-like 系统，首次使用可能需安装依赖如 Vim 或 Zsh。
+| 目录 | 主题 |
+| --- | --- |
+| `AI` / `ai_agent` / `ai_mcp` / `ai_media` / `ai_rag` | AI、智能体、MCP、多媒体与 RAG |
+| `api` / `crawling` / `download` / `ocr` / `translation` | 接口、抓取、下载与文本处理 |
+| `backup` / `database` / `data` / `monitoring` | 备份、存储与可观测性 |
+| `chat` / `network` / `nginx` / `web` / `email` | 通信、网络与 Web 服务 |
+| `deploy` / `docker` / `kubernetes` / `openwrt` | 部署、容器与网络设备 |
+| `git` / `github` / `team` / `docs` / `markdown` | Git 协作与文档工具 |
+| `go` / `rust` / `python` / `nodejs` / `shell` / `neovim` | 语言生态与编辑器 |
+| `android` / `desktop` / `input` / `macos` / `windows` / `linux` | 各平台工具 |
+| `games` / `emulators` / `media` / `music` / `office` / `tools` | 娱乐与日常效率 |
+| `interview` / `testing` / `cryptography` | 面试、测试与密码学 |
+
+> 左侧目录树可展开查看全部项目。

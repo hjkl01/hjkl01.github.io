@@ -1,3 +1,3 @@
 ### [Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) ![GitHub Repo stars](https://img.shields.io/github/stars/HKUDS/Vibe-Trading?style=social)
 
-Vibe-Trading开源量化研究交易代理。自然语言驱动策略回测、多智能体协作、影子账户行为诊断、Alpha因子库基准测试。支持多市场数据接入与自动化报告导出。
+Vibe-Trading是一款开源金融AI代理，支持自然语言驱动的市场研究、多市场回测、策略发现和 Shadow Account交易行为诊断。

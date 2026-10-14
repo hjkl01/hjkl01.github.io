@@ -1,3 +1,3 @@
-### [steveiliop56 tinyauth](https://github.com/steveiliop56/tinyauth)  ![GitHub Repo stars](https://img.shields.io/github/stars/steveiliop56/tinyauth?style=social)
+### [tinyauth](https://github.com/steveiliop56/tinyauth) ![GitHub Repo stars](https://img.shields.io/github/stars/steveiliop56/tinyauth?style=social)
 
-Tinyauth 是一个简单的认证中间件，旨在通过登录界面或 OAuth（支持 Google、Github 及其他提供商）为应用程序提供保护。它兼容 Traefik、Nginx 和 Caddy 等主流代理服务器。
+极简的 OAuth/LDAP 认证授权服务器，支持反向代理，可作中间件或独立服务运行。

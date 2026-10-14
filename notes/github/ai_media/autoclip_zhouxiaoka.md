@@ -1,3 +1,3 @@
 ### [autoclip](https://github.com/zhouxiaoka/autoclip) ![GitHub Repo stars](https://img.shields.io/github/stars/zhouxiaoka/autoclip?style=social)
 
-AI 自动识别长视频高光片段，生成切片与标题。
+AutoClip是一款本地开源剪辑工具，贴链接即可一键生成适配多平台的短视频、封面和发布文案。

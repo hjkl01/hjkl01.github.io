@@ -1,3 +1,3 @@
 ### [PMail](https://github.com/Jinnrry/PMail) ![GitHub Repo stars](https://img.shields.io/github/stars/Jinnrry/PMail?style=social)
 
-PMail是一款轻量个人邮箱服务器，单文件快速部署，提供完整邮件收发与Web管理功能，支持多域名多用户。
+个人邮件服务器，单文件轻量部署，支持多域多用户，自动HTTPS与安全认证。

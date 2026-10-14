@@ -1,3 +1,3 @@
-### [dovecot core](https://github.com/dovecot/core)  ![GitHub Repo stars](https://img.shields.io/github/stars/dovecot/core?style=social)
+### [core](https://github.com/dovecot/core) ![GitHub Repo stars](https://img.shields.io/github/stars/dovecot/core?style=social)
 
-Dovecot 项目实现了相关 RFC 协议标准，提供安装与配置文档，并通过邮件列表提供技术支持。
+Dovecot 是开源 IMAP/POP3 邮件服务器，提供高效安全的邮件存储与访问服务。

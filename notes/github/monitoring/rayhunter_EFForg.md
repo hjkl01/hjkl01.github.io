@@ -1,3 +1,3 @@
-### [EFForg rayhunter](https://github.com/EFForg/rayhunter)  ![GitHub Repo stars](https://img.shields.io/github/stars/EFForg/rayhunter?style=social)
+### [rayhunter](https://github.com/EFForg/rayhunter) ![GitHub Repo stars](https://img.shields.io/github/stars/EFForg/rayhunter?style=social)
 
-Rayhunter 是一个用于检测 IMSI 捕获器（又称伪基站、Stingray）的开源项目，最初面向廉价移动热点 Orbic RC400L，现也支持部分其他设备，强调易于安装和使用并尽量减少误报。
+Rayhunter是检测IMSI拦截器（伪基站）的开源工具，可在移动热点设备上运行，用于识别和防范手机窃听设备。

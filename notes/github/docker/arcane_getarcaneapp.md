@@ -1,3 +1,3 @@
 ### [arcane](https://github.com/getarcaneapp/arcane) ![GitHub Repo stars](https://img.shields.io/github/stars/getarcaneapp/arcane?style=social)
 
-Arcane 提供现代 Docker 管理。面向普通大众。含图形面板。
+Arcane是现代Docker可视化管理平台，简化容器管理。
