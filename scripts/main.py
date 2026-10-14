@@ -63,8 +63,8 @@ async def process_project(full_name: str, url: str) -> str | None:
         return None
 
 
-async def category_projects() -> None:
-    """对 SQLite 中尚未分类的项目进行分类，并直接更新项目表。"""
+async def category_projects(recategorize: bool = False) -> None:
+    """生成分类建议；常规模式只处理未分类项目，全量模式跳过人工分类。"""
     conn = get_db()
     try:
         rows = conn.execute(
@@ -79,9 +79,13 @@ async def category_projects() -> None:
         ]
         pending = [
             row for row in rows
-            if not row["category"]
-            or row["category"] == "未分类"
-            or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
+            if row["category_source"] != "manual"
+            and (
+                recategorize
+                or not row["category"]
+                or row["category"] == "未分类"
+                or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
+            )
         ]
         if not pending:
             logger.info("SQLite 中没有待分类项目")
@@ -99,8 +103,19 @@ async def category_projects() -> None:
                     logger.warning(f"分类结果无效，跳过: {row['full_name']}")
                     continue
                 conn.execute(
-                    "UPDATE projects SET category = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
-                    (category, row["id"]),
+                    """
+                    UPDATE projects
+                    SET category = CASE
+                            WHEN category IS NULL OR trim(category) = '' OR category = '未分类'
+                                 OR category GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+                            THEN ? ELSE category END,
+                        auto_category = ?,
+                        category_source = 'auto',
+                        category_status = 'pending',
+                        updated_at = CURRENT_TIMESTAMP
+                    WHERE id = ? AND category_source <> 'manual'
+                    """,
+                    (category, category, row["id"]),
                 )
                 if category not in categories:
                     categories.append(category)
@@ -139,6 +154,8 @@ async def generate_pending_descriptions() -> None:
 async def main(command: str = "gene") -> None:
     if command == "cate":
         await category_projects()
+    elif command == "recategorize":
+        await category_projects(recategorize=True)
     else:
         await generate_pending_descriptions()
 
@@ -151,5 +168,7 @@ if __name__ == "__main__":
         asyncio.run(main("cate"))
     elif command == "gene":
         asyncio.run(main("gene"))
+    elif command == "recategorize":
+        asyncio.run(main("recategorize"))
     else:
-        logger.error(f"未知命令: {command}（可用: crawl cate gene）")
+        logger.error(f"未知命令: {command}（可用: crawl cate gene recategorize）")
