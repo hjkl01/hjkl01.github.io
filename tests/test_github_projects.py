@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts import github_projects as projects
+from scripts import github_trending_scraper as scraper
 
 
 class GitHubProjectsTests(unittest.TestCase):
@@ -34,8 +35,8 @@ class GitHubProjectsTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         owner, repo = full_name.split("/", 1)
         path.write_text(
-            f"# [{repo}](https://github.com/{owner}/{repo})\n\n"
-            f"{description}\n",
+            f"# [{repo}](https://github.com/{owner}/{repo})\\n\\n"
+            f"{description}\\n",
             encoding="utf-8",
         )
         return path
@@ -99,6 +100,37 @@ class GitHubProjectsTests(unittest.TestCase):
         try:
             self.assertEqual(projects.migrate_legacy(conn), 1)
             self.assertEqual(conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0], 1)
+        finally:
+            conn.close()
+
+    def test_trending_projects_are_saved_to_sqlite_without_overwriting_existing_data(self):
+        repositories = [
+            {"full_name": "acme/alpha", "name": "alpha", "url": "https://github.com/acme/alpha"},
+            {"full_name": "acme/beta", "name": "beta", "url": "https://github.com/acme/beta"},
+        ]
+        self.assertEqual(scraper.save_repositories(repositories), 2)
+        self.assertEqual(scraper.save_repositories(repositories), 0)
+
+        conn = self.connect()
+        try:
+            conn.execute(
+                "UPDATE projects SET description = ?, category = ? WHERE full_name = ?",
+                ("Preserved description", "Manual category", "acme/alpha"),
+            )
+            conn.commit()
+        finally:
+            conn.close()
+
+        self.assertEqual(scraper.save_repositories(repositories), 0)
+        conn = self.connect()
+        try:
+            row = conn.execute(
+                "SELECT description, category FROM projects WHERE full_name = ?",
+                ("acme/alpha",),
+            ).fetchone()
+            self.assertEqual(row["description"], "Preserved description")
+            self.assertEqual(row["category"], "Manual category")
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0], 2)
         finally:
             conn.close()
 
