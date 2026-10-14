@@ -68,7 +68,7 @@ async def category_projects(recategorize: bool = False) -> None:
     conn = get_db()
     try:
         rows = conn.execute(
-            "SELECT id, full_name, url, description, category FROM projects ORDER BY id"
+            "SELECT id, full_name, url, description, category, category_source FROM projects ORDER BY id"
         ).fetchall()
         categories = [
             row["category"]
