@@ -17,7 +17,7 @@ from scripts.github_trending_scraper import main as github_trending_scraper
 from scripts.prompts import MARKDOWN_PROMPT
 
 
-UNCATEGORIZED_FOLDER_PATTERN = re.compile(r"^(\\d{4}-\\d{2}-\\d{2}|00)$")
+UNCATEGORIZED_FOLDER_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2}|00)$")
 
 
 def get_db():
