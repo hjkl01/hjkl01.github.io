@@ -3,20 +3,61 @@ sidebar_position: 0
 sidebar_label: GitHub 项目
 ---
 
+<!-- 此页面由 scripts/github_projects.py 从 SQLite 自动生成，请勿手动编辑。 -->
+
 # GitHub 项目集
 
-GitHub 项目由 SQLite 统一管理。构建时会在 \`generated/github\` 下为每个分类生成一个独立的 Markdown 文件，并生成本分类目录页；Docusaurus 对外仍使用 \`notes/github\` 路由。
+共收录 **2537** 个项目，分为 **50** 个分类。Star 数通过 Shields.io 动态加载。
 
-- \`make crawl\`：抓取 GitHub Trending，并将新仓库直接写入 \`data/github-projects.db\`
-- \`make gene\`：为数据库中尚无简介的项目生成简介
-- \`make cate\`：对数据库中尚未分类的项目进行分类
-- \`make export\`：将旧的 \`notes/github/**/*.md\` 数据迁移到 SQLite；数据库非空时不会覆盖已有数据
-- \`make build\`：按分类生成 Markdown 页面并构建网站
-- 项目简介、分类和显示顺序保存在 SQLite；Star 数由浏览器加载 Shields.io 动态显示
-
-## 页面生成规则
-
-- \`index.md\` 是分类目录页，列出分类名称和项目数量
-- 每个分类对应一个独立的 Markdown 文件，文件中只包含该分类的项目
-- 分类删除或重命名后，构建会清理不再对应数据库分类的旧生成文件
-- \`generated/github\` 是自动生成目录，请勿手动编辑其中的文件
+| 分类 | 项目数量 |
+| --- | ---: |
+| [AI](/notes/github/AI) | 320 |
+| [ai_agent](/notes/github/ai_agent) | 177 |
+| [ai_mcp](/notes/github/ai_mcp) | 9 |
+| [ai_media](/notes/github/ai_media) | 21 |
+| [ai_rag](/notes/github/ai_rag) | 3 |
+| [android](/notes/github/android) | 37 |
+| [api](/notes/github/api) | 53 |
+| [backup](/notes/github/backup) | 8 |
+| [chat](/notes/github/chat) | 43 |
+| [crawling](/notes/github/crawling) | 54 |
+| [cryptography](/notes/github/cryptography) | 11 |
+| [data](/notes/github/data) | 53 |
+| [database](/notes/github/database) | 138 |
+| [deploy](/notes/github/deploy) | 66 |
+| [desktop](/notes/github/desktop) | 28 |
+| [docker](/notes/github/docker) | 64 |
+| [docs](/notes/github/docs) | 6 |
+| [download](/notes/github/download) | 41 |
+| [email](/notes/github/email) | 22 |
+| [emulators](/notes/github/emulators) | 13 |
+| [games](/notes/github/games) | 44 |
+| [git](/notes/github/git) | 260 |
+| [github](/notes/github/github) | 306 |
+| [go](/notes/github/go) | 21 |
+| [input](/notes/github/input) | 5 |
+| [interview](/notes/github/interview) | 18 |
+| [kubernetes](/notes/github/kubernetes) | 21 |
+| [linux](/notes/github/linux) | 23 |
+| [macos](/notes/github/macos) | 52 |
+| [markdown](/notes/github/markdown) | 2 |
+| [media](/notes/github/media) | 57 |
+| [monitoring](/notes/github/monitoring) | 45 |
+| [music](/notes/github/music) | 1 |
+| [neovim](/notes/github/neovim) | 103 |
+| [network](/notes/github/network) | 69 |
+| [nginx](/notes/github/nginx) | 15 |
+| [nodejs](/notes/github/nodejs) | 29 |
+| [ocr](/notes/github/ocr) | 9 |
+| [office](/notes/github/office) | 5 |
+| [openwrt](/notes/github/openwrt) | 2 |
+| [python](/notes/github/python) | 80 |
+| [rust](/notes/github/rust) | 27 |
+| [shell](/notes/github/shell) | 26 |
+| [team](/notes/github/team) | 2 |
+| [testing](/notes/github/testing) | 18 |
+| [tools](/notes/github/tools) | 100 |
+| [translation](/notes/github/translation) | 2 |
+| [web](/notes/github/web) | 13 |
+| [windows](/notes/github/windows) | 13 |
+| [未分类](/notes/github/未分类) | 2 |
