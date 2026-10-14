@@ -1,6 +1,6 @@
 PYTHON := python3.12
 
-.PHONY: install run crawl cate gene export build deploy help
+.PHONY: install run crawl cate gene export github-db-migrate github-notes-generate build deploy help
 
 help:
 	@echo "📋 可用命令:"
@@ -13,6 +13,8 @@ help:
 	@echo "  make deploy       部署到 GitHub Pages"
 	@echo "  make run          执行 crawl + gene"
 	@echo "  make export       把 md 中的 URL+分类 合并写回 urls.txt"
+	@echo "  make github-db-migrate  从旧项目 Markdown 初始化 SQLite（首次迁移）"
+	@echo "  make github-notes-generate 从 SQLite 生成分类项目页"
 	@echo ""
 
 install:
@@ -34,6 +36,12 @@ gene:
 
 run: crawl gene build
 	@echo "🚀 启动服务run\crawl..."
+
+github-db-migrate:
+	python3 scripts/github_projects.py migrate
+
+github-notes-generate:
+	python3 scripts/github_projects.py generate
 
 export:
 	@echo "📤 合并导出 URL+分类 到 urls.txt..."
