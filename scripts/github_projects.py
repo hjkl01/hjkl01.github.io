@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""将 notes/github 中的旧项目 Markdown 迁移到 SQLite，并生成聚合项目页。
+"""将旧项目 Markdown 迁移到 SQLite，并按分类生成 Docusaurus Markdown 页面。
 
 SQLite 只有一张 projects 表；category 是项目字段，不单独维护分类表。
-数据库一旦存在，就以数据库为准，不会在构建时覆盖人工维护的简介和分类。
+数据库是唯一数据源，构建时为每个分类生成一个 Markdown 文件。
 """
 
 from __future__ import annotations
@@ -20,7 +20,6 @@ OUTPUT_DIR = ROOT / "generated" / "github"
 OUTPUT_FILE = OUTPUT_DIR / "index.md"
 
 REPO_LINK_RE = re.compile(r"\[[^\]]+\]\((https?://github\.com/[^/)]+/[^/)#?]+)(?:/[^)]*)?\)")
-STARS_RE = re.compile(r"img\.shields\.io/github/stars/([^/]+)/([^?/)]+)")
 UNCATEGORIZED_RE = re.compile(r"^(\d{4}-\d{2}-\d{2}|00)$")
 
 
@@ -46,7 +45,6 @@ def parse_markdown(path: Path) -> dict | None:
 
     url_match = REPO_LINK_RE.search(content)
     if not url_match:
-        # 兼容标题链接不是第一个 Markdown 元素的旧文档。
         url_match = re.search(r"https?://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)", content)
         if not url_match:
             return None
@@ -63,7 +61,6 @@ def parse_markdown(path: Path) -> dict | None:
     if UNCATEGORIZED_RE.match(category):
         category = "未分类"
 
-    # 从标题中提取展示名，优先使用 Markdown 链接文字。
     title_match = re.search(r"^\s*#{1,6}\s+\[([^\]]+)\]\(", content, re.MULTILINE)
     name = title_match.group(1).strip() if title_match else url.rstrip("/").split("/")[-1]
 
@@ -85,12 +82,10 @@ def parse_markdown(path: Path) -> dict | None:
         description_lines.append(stripped)
         if len(description_lines) >= 2:
             break
-    description = " ".join(description_lines).strip()
-    description = re.sub(r"\s+", " ", description)
+    description = re.sub(r"\s+", " ", " ".join(description_lines).strip())
 
-    owner_repo = url.removeprefix("https://github.com/")
     return {
-        "full_name": owner_repo,
+        "full_name": url.removeprefix("https://github.com/"),
         "name": name,
         "url": url,
         "description": description,
@@ -168,6 +163,22 @@ def migrate_legacy(conn: sqlite3.Connection, force: bool = False) -> int:
     return imported
 
 
+def category_filename(category: str) -> str:
+    """将分类转换为安全、稳定的 Markdown 文件名，保留中文字符。"""
+    slug = "".join(char if char.isalnum() or char in "-_ " else "-" for char in category)
+    slug = re.sub(r"[\s-]+", "-", slug).strip("-_")
+    return slug or "uncategorized"
+
+
+def render_project(row: sqlite3.Row) -> list[str]:
+    owner, repo = row["full_name"].split("/", 1)
+    badge = f"![GitHub Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social)"
+    lines = [f"## [{row['name']}]({row['url']}) {badge}", ""]
+    if row["description"]:
+        lines.extend([row["description"], ""])
+    return lines
+
+
 def generate_markdown(conn: sqlite3.Connection) -> int:
     rows = conn.execute(
         """
@@ -177,13 +188,28 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
         """
     ).fetchall()
     if not rows:
-        raise RuntimeError("SQLite 中没有项目；请先运行 pnpm run github:db:migrate。")
+        raise RuntimeError("SQLite 中没有项目；请先运行 make export 迁移旧 Markdown。")
 
     groups: dict[str, list[sqlite3.Row]] = {}
     for row in rows:
         groups.setdefault(row["category"] or "未分类", []).append(row)
 
-    lines = [
+    # 防止不同分类经文件名清理后发生冲突。
+    filenames: dict[str, str] = {}
+    used_names: set[str] = set()
+    for category in groups:
+        filename = category_filename(category)
+        if filename.casefold() in used_names:
+            suffix = 2
+            while f"{filename}-{suffix}".casefold() in used_names:
+                suffix += 1
+            filename = f"{filename}-{suffix}"
+        used_names.add(filename.casefold())
+        filenames[category] = filename
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    index_lines = [
         "---",
         "sidebar_position: 0",
         "sidebar_label: GitHub 项目",
@@ -193,31 +219,52 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
         "",
         "# GitHub 项目集",
         "",
-        f"共收录 **{len(rows)}** 个项目，按分类整理。Star 数通过 Shields.io 在浏览器端动态加载。",
+        f"共收录 **{len(rows)}** 个项目，分为 **{len(groups)}** 个分类。Star 数通过 Shields.io 在浏览器端动态加载。",
+        "",
+        "## 分类目录",
         "",
     ]
 
     for category, projects in groups.items():
-        lines.extend([f"## {category}", ""])
-        for row in projects:
-            owner, repo = row["full_name"].split("/", 1)
-            # Shields.io 作为图片在浏览器端请求实时 Star 数，不把数量存入 SQLite。
-            badge = f"![GitHub Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social)"
-            lines.append(f"### [{row['name']}]({row['url']}) {badge}")
-            lines.append("")
-            if row["description"]:
-                lines.append(row["description"])
-                lines.append("")
-        lines.append("")
+        filename = filenames[category]
+        index_lines.append(f"- [{category}](./{filename})（{len(projects)} 个项目）")
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    print(f"已生成 {OUTPUT_FILE.relative_to(ROOT)}：{len(groups)} 个分类，{len(rows)} 个项目")
+        category_lines = [
+            "---",
+            f"title: {category}",
+            f"sidebar_label: {category}",
+            "---",
+            "",
+            f"# {category}",
+            "",
+            f"本分类共 **{len(projects)}** 个项目。",
+            "",
+            f"[返回 GitHub 项目分类目录](./index)",
+            "",
+        ]
+        for row in projects:
+            category_lines.extend(render_project(row))
+
+        (OUTPUT_DIR / f"{filename}.md").write_text(
+            "\n".join(category_lines).rstrip() + "\n",
+            encoding="utf-8",
+        )
+
+    index_lines.append("")
+    OUTPUT_FILE.write_text("\n".join(index_lines).rstrip() + "\n", encoding="utf-8")
+
+    # generated/github 是专用生成目录；移除数据库中已不存在分类对应的过期页面。
+    expected_files = {OUTPUT_FILE.name, *(f"{filename}.md" for filename in filenames.values())}
+    for path in OUTPUT_DIR.glob("*.md"):
+        if path.name not in expected_files:
+            path.unlink()
+
+    print(f"已生成 {OUTPUT_DIR.relative_to(ROOT)}：{len(groups)} 个分类文件，{len(rows)} 个项目")
     return len(rows)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="管理 GitHub 项目 SQLite 数据和聚合 Markdown 页面")
+    parser = argparse.ArgumentParser(description="管理 GitHub 项目 SQLite 数据并按分类生成 Markdown 页面")
     parser.add_argument("command", choices=("build", "migrate", "generate"))
     parser.add_argument("--force", action="store_true", help="重新从旧 Markdown 导入并覆盖相同仓库的数据")
     args = parser.parse_args()
@@ -226,10 +273,6 @@ def main() -> None:
     try:
         if args.command == "migrate":
             migrate_legacy(conn, force=args.force)
-        elif args.command == "generate":
-            if conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0] == 0:
-                migrate_legacy(conn)
-            generate_markdown(conn)
         else:
             if conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0] == 0:
                 migrate_legacy(conn)
