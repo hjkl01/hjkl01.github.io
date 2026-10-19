@@ -78,3 +78,25 @@ GIT_USER=<Your GitHub username> yarn deploy
 ## 📄 License
 
 本项目内容版权归作者所有，代码部分遵循仓库声明的开源协议。
+
+## GitHub 项目分类管理
+
+项目分类统一保存在 `data/github-projects.db` 的 `projects` 表中。使用本地 Web 页面管理项目、搜索和筛选分类、批量调整分类，并确认自动分类建议：
+
+```bash
+make review
+```
+
+默认在浏览器打开 `http://127.0.0.1:8765`。服务仅监听本机地址，按 `Ctrl+C` 停止。端口占用时可指定其他端口：
+
+```bash
+GITHUB_REVIEW_PORT=8766 make review
+```
+
+页面中的分类修改会立即保存到 SQLite。自动分类建议与最终分类分开保存，人工分类不会被自动分类任务覆盖。修改完成后，点击页面中的“生成 Markdown”，或运行 `make build`，将最终分类输出到 `notes/github`。
+
+运行管理 API 回归测试：
+
+```bash
+make test
+```
