@@ -93,7 +93,7 @@ make review
 GITHUB_REVIEW_PORT=8766 make review
 ```
 
-页面中的分类修改会立即保存到 SQLite。自动分类建议与最终分类分开保存，人工分类不会被自动分类任务覆盖。修改完成后，点击页面中的“生成 Markdown”，或运行 `make build`，将最终分类输出到 `notes/github`。
+页面中的分类修改会立即保存到 SQLite。自动分类建议与最终分类分开保存，人工分类不会被自动分类任务覆盖。可以删除单个项目或批量删除选中项目；删除前会二次确认，删除会从 SQLite 项目库移除记录，且不可撤销。删除或修改分类后，点击页面中的“生成 Markdown”，或运行 `make build`，将最新项目库输出到 `notes/github`。
 
 运行管理 API 回归测试：
 
