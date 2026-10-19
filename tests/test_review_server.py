@@ -107,5 +107,28 @@ class ReviewServerTests(unittest.TestCase):
         self.assertEqual(categories, ["开发工具", "开发工具"])
 
 
+    def test_delete_project_removes_it_from_database(self) -> None:
+        status, data = self.request_json("/api/projects/delete", {"ids": [1]})
+        self.assertEqual(status, 200)
+        self.assertEqual(data["deleted"], 1)
+        with review_server.connect_db() as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0], 1)
+            self.assertIsNone(conn.execute("SELECT id FROM projects WHERE id = 1").fetchone())
+
+    def test_bulk_delete_removes_selected_projects(self) -> None:
+        status, data = self.request_json(
+            "/api/projects/bulk", {"ids": [1, 2], "action": "delete"}
+        )
+        self.assertEqual(status, 200)
+        self.assertEqual(data["deleted"], 2)
+        with review_server.connect_db() as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0], 0)
+
+    def test_delete_rejects_unknown_project_id(self) -> None:
+        status, error = self.request_json("/api/projects/delete", {"ids": [999]})
+        self.assertEqual(status, 400)
+        self.assertIn("不存在", error["error"])
+
+
 if __name__ == "__main__":
     unittest.main()
