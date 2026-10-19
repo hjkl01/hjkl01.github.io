@@ -50,7 +50,7 @@ main{max-width:1440px;margin:24px auto;padding:0 24px}.stats{display:grid;grid-t
 <select id="category"><option value="">全部分类</option></select>
 <select id="status"><option value="">全部审核状态</option><option value="pending">待审核</option><option value="confirmed">已审核</option><option value="manual">人工修改</option></select>
 <select id="sort"><option value="name">按名称排序</option><option value="category">按分类排序</option><option value="updated">按更新时间排序</option><option value="id">按入库顺序排序</option></select>
-<button id="clear">清除筛选</button>
+<button id="refreshCategories">刷新分类</button><button id="clear">清除筛选</button>
 </div>
 <div class="bulkbar"><label><input type="checkbox" id="selectPage"> 选择本页</label><span id="selectedCount" class="hint">已选 0 项</span><select id="bulkCategory"><option value="">批量修改分类…</option></select><button id="bulkApply">应用分类</button><button id="bulkAccept">接受自动建议</button><button id="bulkConfirm">标记已审核</button><button id="bulkDelete">删除选中</button></div>
 <div class="table-wrap"><table><thead><tr><th></th><th>项目</th><th>简介</th><th>当前分类</th><th>自动建议</th><th>审核状态</th><th>操作</th></tr></thead><tbody id="rows"><tr><td colspan="7" class="empty">正在加载…</td></tr></tbody></table></div>
@@ -80,7 +80,7 @@ $('bulkAccept').onclick=async()=>{if(!selected.size)return notice('请先选择�
 $('bulkConfirm').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);try{const d=await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],action:'confirm'})});selected.clear();notice('已确认 '+d.updated+' 个项目');await load()}catch(e){notice(e.message,true)}};
 async function deleteProjects(ids){try{const d=await api('/api/projects/delete',{method:'POST',body:JSON.stringify({ids})});ids.forEach(id=>selected.delete(id));notice('已删除 '+d.deleted+' 个项目');await load()}catch(e){notice(e.message,true)}}
 $('bulkDelete').onclick=()=>{if(!selected.size)return notice('请先选择项目',true);if(confirm('确定从项目库中删除选中的 '+selected.size+' 个项目？此操作不可撤销。'))deleteProjects([...selected])};
-$('refresh').onclick=()=>load();$('clear').onclick=()=>{$('q').value='';$('category').value='';$('status').value='';$('sort').value='name';page=1;selected.clear();load()};$('prev').onclick=()=>{if(page>1){page--;load()}};$('next').onclick=()=>{if(page<totalPages){page++;load()}};$('pageSize').onchange=()=>{page=1;load()};['category','status','sort'].forEach(id=>$(id).onchange=()=>{page=1;load()});$('q').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;load()},250)};
+$('refresh').onclick=()=>load();$('refreshCategories').onclick=async()=>{try{await loadMeta();notice('分类列表已从 SQLite 刷新');}catch(e){notice(e.message,true)}};$('clear').onclick=()=>{$('q').value='';$('category').value='';$('status').value='';$('sort').value='name';page=1;selected.clear();load()};$('prev').onclick=()=>{if(page>1){page--;load()}};$('next').onclick=()=>{if(page<totalPages){page++;load()}};$('pageSize').onchange=()=>{page=1;load()};['category','status','sort'].forEach(id=>$(id).onchange=()=>{page=1;load()});$('q').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;load()},250)};
 $('rebuild').onclick=async()=>{if(!confirm('根据 SQLite 中的最终分类重新生成 notes/github 的 Markdown 文件？'))return;try{const d=await api('/api/build',{method:'POST',body:'{}'});notice(d.message)}catch(e){notice(e.message,true)}};
 load();
 </script></body></html>"""
