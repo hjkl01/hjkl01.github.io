@@ -7,12 +7,13 @@ sidebar_label: shell
 
 # shell
 
-本分类共 **26** 个项目。
+本分类共 **27** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [tuios](https://github.com/Gaurav-Gosain/tuios) | ![Stars](https://img.shields.io/github/stars/Gaurav-Gosain/tuios?style=social) | 终端多路复用器，支持平铺布局、持久会话、跨机器连接及 AI agent 状态监控与通信。 |
 | [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) | ![Stars](https://img.shields.io/github/stars/massgravel/Microsoft-Activation-Scripts?style=social) | 开源 Windows 与 Office 激活工具，支持 HWID、Ohook、TSforge 及 KMS 激活方法。 |
 | [RemoveWindowsAI](https://github.com/zoicware/RemoveWindowsAI) | ![Stars](https://img.shields.io/github/stars/zoicware/RemoveWindowsAI?style=social) | 通过 PowerShell 脚本移除 Windows 11 的 Copilot、Recall 等 AI 功能，保护隐私与系统安全。 |
 | [Shell](https://github.com/moudey/Shell) | ![Stars](https://img.shields.io/github/stars/moudey/Shell?style=social) | Windows右键菜单管理器，可自定义菜单项、创建命令并修改删除现有项。 |

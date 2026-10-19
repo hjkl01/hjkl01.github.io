@@ -7,13 +7,20 @@ sidebar_label: tools
 
 # tools
 
-本分类共 **101** 个项目。
+本分类共 **108** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [dotfiles](https://github.com/hjkl01/dotfiles) | ![Stars](https://img.shields.io/github/stars/hjkl01/dotfiles?style=social) | 个人开发环境配置集合，基于 Zsh/Neovim/Tmux 统一跨设备高效工作流。 |
+| [legal-templates](https://github.com/General-Legal/legal-templates) | ![Stars](https://img.shields.io/github/stars/General-Legal/legal-templates?style=social) | 为初创企业提供律师起草的免费法律模板，涵盖NDA、隐私政策等合规文档。 |
+| [raddebugger](https://github.com/EpicGames/raddebugger) | ![Stars](https://img.shields.io/github/stars/EpicGames/raddebugger?style=social) | RAD Debugger 是 Epic 开发的跨平台多进程图形化调试器，配套自定义 RDI 调试信息格式与高性能 RAD 链接器。 |
+| [flutter](https://github.com/flutter/flutter) | ![Stars](https://img.shields.io/github/stars/flutter/flutter?style=social) | Google 跨平台 SDK，一套代码构建手机、网页和桌面应用。 |
+| [FounderOS](https://github.com/Bennettxai/FounderOS) | ![Stars](https://img.shields.io/github/stars/Bennettxai/FounderOS?style=social) | 单人公司操作系统，通过AI助手整合通信、客户漏斗、财务等模块，一键管理企业运营。 |
+| [repowise](https://github.com/repowise-dev/repowise) | ![Stars](https://img.shields.io/github/stars/repowise-dev/repowise?style=social) | 本地代码库分析工具，构建调用图和代码健康评分，帮助开发者和 AI 代理理解代码、评估变更风险、降低技术债。 |
+| [ledgerforge](https://github.com/devaccuracy/ledgerforge) | ![Stars](https://img.shields.io/github/stars/devaccuracy/ledgerforge?style=social) | 开源双式记账系统，精确记录资金流动，提供可验证审计链，控制 AI 代理支出。 |
+| [ScopeSentry](https://github.com/Autumn-27/ScopeSentry) | ![Stars](https://img.shields.io/github/stars/Autumn-27/ScopeSentry?style=social) | ScopeSentry是分布式资产安全扫描平台，支持子域名枚举、漏洞扫描、信息泄露检测等功能。 |
 | [CasaOS](https://github.com/IceWhaleTech/CasaOS) | ![Stars](https://img.shields.io/github/stars/IceWhaleTech/CasaOS?style=social) | CasaOS是个人云服务器系统，支持家庭场景一键部署应用与管理数据 |
 | [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) | ![Stars](https://img.shields.io/github/stars/XIU2/CloudflareSpeedTest?style=social) | 测试 Cloudflare CDN 延迟和速度，获取最快 IP。 |
 | [ConvertX](https://github.com/C4illin/ConvertX) | ![Stars](https://img.shields.io/github/stars/C4illin/ConvertX?style=social) | ConvertX 是一款自托管的在线文件转换器，支持千余种格式互转，可同时处理多文件、设置密码保护和多用户账号。 |

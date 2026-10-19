@@ -7,12 +7,13 @@ sidebar_label: api
 
 # api
 
-本分类共 **53** 个项目。
+本分类共 **54** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [AIStudio2API](https://github.com/Mag1cFall/AIStudio2API) | ![Stars](https://img.shields.io/github/stars/Mag1cFall/AIStudio2API?style=social) | 将Google AI Studio协议转换为OpenAI、Anthropic和Gemini兼容API的代理服务 |
 | [API-Security-Checklist](https://github.com/shieldfy/API-Security-Checklist) | ![Stars](https://img.shields.io/github/stars/shieldfy/API-Security-Checklist?style=social) | API安全最佳实践清单，涵盖认证、授权、输入验证、输出处理及监控等安全措施。 |
 | [api-development-tools](https://github.com/yosriady/api-development-tools) | ![Stars](https://img.shields.io/github/stars/yosriady/api-development-tools?style=social) | RESTful HTTP API 开发工具资源大全，覆盖规范、框架、文档、测试等全链路。 |
 | [automatic-api](https://github.com/dbohdan/automatic-api) | ![Stars](https://img.shields.io/github/stars/dbohdan/automatic-api?style=social) | 列出自动为数据库生成 REST 或 GraphQL API 的工具。 |

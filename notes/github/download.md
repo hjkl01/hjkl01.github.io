@@ -7,12 +7,13 @@ sidebar_label: download
 
 # download
 
-本分类共 **41** 个项目。
+本分类共 **42** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [zlib](https://github.com/heartleo/zlib) | ![Stars](https://img.shields.io/github/stars/heartleo/zlib?style=social) | Z-Library 命令行工具，支持搜索、下载书籍并发送到 Kindle，可集成 AI Agent。 |
 | [BBDown](https://github.com/nilaoda/BBDown) | ![Stars](https://img.shields.io/github/stars/nilaoda/BBDown?style=social) | 该项目已归档停止维护，无功能说明。 |
 | [FileCentipede](https://github.com/filecxx/FileCentipede) | ![Stars](https://img.shields.io/github/stars/filecxx/FileCentipede?style=social) | 一站式文件上传下载管理器，支持HTTP/FTP/BT/WebDAV/SSH等协议，可抓取网页音视频。 |
 | [FluxDown](https://github.com/zerx-lab/FluxDown) | ![Stars](https://img.shields.io/github/stars/zerx-lab/FluxDown?style=social) | FluxDown 是一款快速多协议下载管理器，支持 HTTP、FTP、BitTorrent 等协议，具备动态分段加速和浏览器集成能力。 |

@@ -7,12 +7,14 @@ sidebar_label: testing
 
 # testing
 
-本分类共 **18** 个项目。
+本分类共 **20** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [e2e](https://github.com/tester-army/e2e) | ![Stars](https://img.shields.io/github/stars/tester-army/e2e?style=social) | AI驱动端到端测试框架，用自然语言描述目标，智能体自动操作并验证web和移动应用。 |
+| [sliver](https://github.com/BishopFox/sliver) | ![Stars](https://img.shields.io/github/stars/BishopFox/sliver?style=social) | Sliver 是开源跨平台红队框架，支持 C2 通信和多种后渗透能力。 |
 | [appium](https://github.com/appium/appium) | ![Stars](https://img.shields.io/github/stars/appium/appium?style=social) | Appium是基于WebDriver的跨平台测试自动化工具，支持多语言和多平台的移动应用自动化测试。 |
 | [awesome-test-automation](https://github.com/atinfo/awesome-test-automation) | ![Stars](https://img.shields.io/github/stars/atinfo/awesome-test-automation?style=social) | 精选多语言测试自动化工具与框架合集，帮助工程师快速搭建测试自动化。 |
 | [cypress](https://github.com/cypress-io/cypress) | ![Stars](https://img.shields.io/github/stars/cypress-io/cypress?style=social) | Cypress是一款快速、简单、可靠的浏览器自动化测试框架，用于网页应用测试。 |

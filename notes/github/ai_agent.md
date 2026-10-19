@@ -7,12 +7,17 @@ sidebar_label: ai_agent
 
 # ai_agent
 
-本分类共 **177** 个项目。
+本分类共 **182** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [free-claude-code](https://github.com/Alishahryar1/free-claude-code) | ![Stars](https://img.shields.io/github/stars/Alishahryar1/free-claude-code?style=social) | 聚合 61 个 AI 模型提供商，为多种编码代理提供低成本、高可用的 AI 编程助手服务。 |
+| [CodeAF](https://github.com/Agent-Field/CodeAF) | ![Stars](https://img.shields.io/github/stars/Agent-Field/CodeAF?style=social) | CodeAF是开源编码工厂，用多AI模型自动拆分任务、编写测试、合并代码，统一管理所有项目。 |
+| [SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) | ![Stars](https://img.shields.io/github/stars/twostraws/SwiftUI-Agent-Skill?style=social) | AI编程助手技能，指导生成更智能简洁的SwiftUI代码，规避常见错误与性能问题。 |
+| [agentmesh](https://github.com/google/agentmesh) | ![Stars](https://img.shields.io/github/stars/google/agentmesh?style=social) | AI 代理私有网络，实现工具发布、发现、调用与身份验证，支持安全跨代理通信。 |
+| [phone-harness](https://github.com/ShawnPana/phone-harness) | ![Stars](https://img.shields.io/github/stars/ShawnPana/phone-harness?style=social) | 连接 AI agent 到真实手机，自动识别屏幕内容并执行点击、输入等操作，支持 iOS 和 Android。 |
 | [12-factor-agents](https://github.com/humanlayer/12-factor-agents) | ![Stars](https://img.shields.io/github/stars/humanlayer/12-factor-agents?style=social) | 提出十二项设计原则，帮助开发者构建可靠、可维护且能投入生产环境的LLM智能体应用。 |
 | [9router](https://github.com/decolua/9router) | ![Stars](https://img.shields.io/github/stars/decolua/9router?style=social) | 9Router是一个AI路由和Token节省工具，自动在付费/便宜/免费模型间切换并压缩工具输出，节省20-40%Token。 |
 | [ADR](https://github.com/uber/ADR) | ![Stars](https://img.shields.io/github/stars/uber/ADR?style=social) | ADR 是企业 AI agent 安全系统，可发现终端 AI 工具、监控 agent 行为、检测威胁。 |

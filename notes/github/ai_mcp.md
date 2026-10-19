@@ -7,12 +7,14 @@ sidebar_label: ai_mcp
 
 # ai_mcp
 
-本分类共 **9** 个项目。
+本分类共 **11** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [rea](https://github.com/morluto/rea) | ![Stars](https://img.shields.io/github/stars/morluto/rea?style=social) | REA 是逆向工程 MCP 工具，可分析二进制、应用和运行时行为，辅助 AI 理解功能原理并重建实现。 |
+| [context-mode](https://github.com/mksglu/context-mode) | ![Stars](https://img.shields.io/github/stars/mksglu/context-mode?style=social) | Context Mode是一个MCP服务器，将原始数据保留在沙箱中处理，只返回结果进入上下文，并通过SQLite和FTS5索引保持会话连续性。 |
 | [DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | ![Stars](https://img.shields.io/github/stars/wonderwhy-er/DesktopCommanderMCP?style=social) | Desktop Commander MCP 让 AI 通过协议管理本地文件、执行终端命令和处理 Excel/PDF 等文件。 |
 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | ![Stars](https://img.shields.io/github/stars/punkpeye/awesome-mcp-servers?style=social) | 无法总结，因为提供的 README 内容为空，无任何项目信息可分析。 |
 | [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) | ![Stars](https://img.shields.io/github/stars/DeusData/codebase-memory-mcp?style=social) | 本地MCP代码知识图谱服务器，支持多语言代码搜索、调用追踪与架构可视化，大幅降低AI编程token消耗。 |

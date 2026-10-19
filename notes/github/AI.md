@@ -7,12 +7,13 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **320** 个项目。
+本分类共 **323** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [uzu](https://github.com/trymirai/uzu) | ![Stars](https://img.shields.io/github/stars/trymirai/uzu?style=social) | 高性能AI推理引擎，支持本地部署，实现零延迟、数据隐私保护和零推理成本。 |
 | [AIClient-2-API](https://github.com/justlovemaki/AIClient-2-API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient-2-API?style=social) | 将客户端专属大模型API转换为OpenAI兼容接口，支持多协议智能转换与账户池管理。 |
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |
 | [AionUi](https://github.com/iOfficeAI/AionUi) | ![Stars](https://img.shields.io/github/stars/iOfficeAI/AionUi?style=social) | AionUi 是免费开源的 AI 协作桌面应用，内置智能 Agent，支持多模型，可自动化处理文件和生成文档，支持远程访问和定时任务。 |
@@ -25,6 +26,7 @@ sidebar_label: AI
 | [CopilotKit](https://github.com/CopilotKit/CopilotKit) | ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=social) | 多框架多渠道 AI 代理应用 SDK，支持生成式 UI、共享状态与人在回路交互。 |
 | [CosyVoice](https://github.com/FunAudioLLM/CosyVoice) | ![Stars](https://img.shields.io/github/stars/FunAudioLLM/CosyVoice?style=social) | 基于大语言模型的多语言零样本文本转语音合成系统 |
 | [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) | ![Stars](https://img.shields.io/github/stars/hacksider/Deep-Live-Cam?style=social) | Deep-Live-Cam是一款实时换脸工具,可通过单张图片实现摄像头/视频的AI深度伪造换脸功能。 |
+| [llm-d-router](https://github.com/llm-d/llm-d-router) | ![Stars](https://img.shields.io/github/stars/llm-d/llm-d-router?style=social) | llm-d Router 是 LLM 推理流量的智能调度器，通过负载和缓存感知路由、请求优先级和流量控制，优化大模型推理性能。 |
 | [DeepCode](https://github.com/HKUDS/DeepCode) | ![Stars](https://img.shields.io/github/stars/HKUDS/DeepCode?style=social) | DeepCode是开源多智能体编码助手，能理解项目、生成代码、运行测试并验证结果。 |
 | [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) | ![Stars](https://img.shields.io/github/stars/Hmbown/DeepSeek-TUI?style=social) | 开源编码代理，可在终端读取项目、编辑文件、运行命令，支持任意 AI 模型。 |
 | [DeepTutor](https://github.com/HKUDS/DeepTutor) | ![Stars](https://img.shields.io/github/stars/HKUDS/DeepTutor?style=social) | AI个性化导师系统，提供智能辅导、知识检索与学习跟踪功能。 |
@@ -32,6 +34,7 @@ sidebar_label: AI
 | [ECC](https://github.com/affaan-m/ECC) | ![Stars](https://img.shields.io/github/stars/affaan-m/ECC?style=social) | ECC是AI编程助手的工程系统，提供规划、测试、审查、记忆等能力，将重复经验转化为可复用技能与流程。 |
 | [Everywhere](https://github.com/DearVa/Everywhere) | ![Stars](https://img.shields.io/github/stars/DearVa/Everywhere?style=social) | Everywhere 是跨平台 AI 助手，智能感知屏幕上下文，支持多模型一键调用 |
 | [FalkorDB](https://github.com/FalkorDB/FalkorDB) | ![Stars](https://img.shields.io/github/stars/FalkorDB/FalkorDB?style=social) | FalkorDB 是首款基于稀疏矩阵和线性代数的超低延迟图数据库，专为 LLM 和知识图谱设计，支持 OpenCypher。 |
+| [tokenspeed](https://github.com/lightseekorg/tokenspeed) | ![Stars](https://img.shields.io/github/stars/lightseekorg/tokenspeed?style=social) | TokenSpeed 是面向 agentic 工作负载的 LLM 推理引擎，兼具 TensorRT-LLM 的高性能与 vLLM 的易用性。 |
 | [Foundations-of-LLMs](https://github.com/ZJU-LLMs/Foundations-of-LLMs) | ![Stars](https://img.shields.io/github/stars/ZJU-LLMs/Foundations-of-LLMs?style=social) | 浙大开源的大模型基础教材，系统讲解LLM架构、微调、Prompt工程等知识体系。 |
 | [FunASR](https://github.com/modelscope/FunASR) | ![Stars](https://img.shields.io/github/stars/modelscope/FunASR?style=social) | FunASR 是工业级语音识别工具包，支持离线、流式及边缘部署，提供 ASR、VAD、标点等核心能力。 |
 | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) | ![Stars](https://img.shields.io/github/stars/RVC-Boss/GPT-SoVITS?style=social) | 这是一个支持零样本和少样本语音克隆的文本转语音项目，可实现高质量多语言语音合成。 |

@@ -7,12 +7,13 @@ sidebar_label: emulators
 
 # emulators
 
-本分类共 **13** 个项目。
+本分类共 **14** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [uniterm](https://github.com/ys-ll/uniterm) | ![Stars](https://img.shields.io/github/stars/ys-ll/uniterm?style=social) | uniTerm 是支持 30+ 协议的全功能终端，内置 AI Agent 可自主规划并执行多轮 shell 命令。 |
 | [Cemu](https://github.com/cemu-project/Cemu) | ![Stars](https://img.shields.io/github/stars/cemu-project/Cemu?style=social) | Wii U游戏模拟器，支持在PC上运行Wii U游戏 |
 | [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) | ![Stars](https://img.shields.io/github/stars/EmulatorJS/EmulatorJS?style=social) | 自托管 JavaScript 游戏模拟器，支持多种经典游戏机和街机系统。 |
 | [OpenEmu](https://github.com/OpenEmu/OpenEmu) | ![Stars](https://img.shields.io/github/stars/OpenEmu/OpenEmu?style=social) | OpenEmu 是 macOS 开源游戏模拟器，通过模块化插件架构支持多种经典游戏主机的仿真。 |

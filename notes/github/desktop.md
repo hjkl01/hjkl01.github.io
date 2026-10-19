@@ -7,12 +7,13 @@ sidebar_label: desktop
 
 # desktop
 
-本分类共 **28** 个项目。
+本分类共 **29** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [photosuite](https://github.com/eolix/photosuite) | ![Stars](https://img.shields.io/github/stars/eolix/photosuite?style=social) | PhotoSuite 是免费开源桌面图像编辑器，完全兼容 PSD/PSB 格式，复刻 Photoshop CS6 经典界面与操作。 |
 | [15-minute-apps](https://github.com/learnpyqt/15-minute-apps) | ![Stars](https://img.shields.io/github/stars/learnpyqt/15-minute-apps?style=social) | 提供数百个PyQt/PySide GUI示例与可复用组件，助力快速构建Python图形界面应用。 |
 | [Deskflow](https://github.com/Deskflow/Deskflow) | ![Stars](https://img.shields.io/github/stars/Deskflow/Deskflow?style=social) | Deskflow 是开源键鼠共享软件，用一台设备的键鼠控制多台电脑，实现跨设备无缝操作。 |
 | [FreeRDP](https://github.com/FreeRDP/FreeRDP) | ![Stars](https://img.shields.io/github/stars/FreeRDP/FreeRDP?style=social) | FreeRDP是开源的远程桌面协议实现，支持跨平台连接远程桌面。 |

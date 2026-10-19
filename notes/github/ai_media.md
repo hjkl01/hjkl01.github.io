@@ -7,12 +7,13 @@ sidebar_label: ai_media
 
 # ai_media
 
-本分类共 **21** 个项目。
+本分类共 **22** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [KittenTTS](https://github.com/KittenML/KittenTTS) | ![Stars](https://img.shields.io/github/stars/KittenML/KittenTTS?style=social) | 开源语音合成库，支持免微调声线克隆、多语言及情感控制，CPU实时运行。 |
 | [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) | ![Stars](https://img.shields.io/github/stars/kijai/ComfyUI-KJNodes?style=social) | ComfyUI扩展包，提供实用工具节点、模型优化及工作流增强功能，核心能力为跨子图Set/Get通信和节点快捷操作。 |
 | [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | ![Stars](https://img.shields.io/github/stars/Comfy-Org/ComfyUI?style=social) | ComfyUI通过可视化节点图界面让用户精细控制AI模型参数，高效生成图像、视频、3D及音频等内容。 |
 | [FluidVoice](https://github.com/altic-dev/FluidVoice) | ![Stars](https://img.shields.io/github/stars/altic-dev/FluidVoice?style=social) | 开源 macOS 语音转文字听写应用，支持本地 AI 智能增强、多模型选择与低延迟实时转写。 |
