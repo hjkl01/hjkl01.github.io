@@ -52,7 +52,7 @@ main{max-width:1440px;margin:24px auto;padding:0 24px}.stats{display:grid;grid-t
 <select id="sort"><option value="name">按名称排序</option><option value="category">按分类排序</option><option value="updated">按更新时间排序</option><option value="id">按入库顺序排序</option></select>
 <button id="clear">清除筛选</button>
 </div>
-<div class="bulkbar"><label><input type="checkbox" id="selectPage"> 选择本页</label><span id="selectedCount" class="hint">已选 0 项</span><select id="bulkCategory"><option value="">批量修改分类…</option></select><button id="bulkApply">应用分类</button><button id="bulkAccept">接受自动建议</button><button id="bulkConfirm">标记已审核</button></div>
+<div class="bulkbar"><label><input type="checkbox" id="selectPage"> 选择本页</label><span id="selectedCount" class="hint">已选 0 项</span><select id="bulkCategory"><option value="">批量修改分类…</option></select><button id="bulkApply">应用分类</button><button id="bulkAccept">接受自动建议</button><button id="bulkConfirm">标记已审核</button><button id="bulkDelete">删除选中</button></div>
 <div class="table-wrap"><table><thead><tr><th></th><th>项目</th><th>简介</th><th>当前分类</th><th>自动建议</th><th>审核状态</th><th>操作</th></tr></thead><tbody id="rows"><tr><td colspan="7" class="empty">正在加载…</td></tr></tbody></table></div>
 <div class="footer"><span id="resultCount">—</span><div class="pagination"><button id="prev">上一页</button><span id="pageInfo">1 / 1</span><button id="next">下一页</button><select id="pageSize"><option>25</option><option>50</option><option>100</option></select></div></div>
 </section>
@@ -69,15 +69,17 @@ const current=$('category').value; $('category').innerHTML='<option value="">全
 $('bulkCategory').innerHTML='<option value="">批量修改分类…</option>'+meta.categories.filter(c=>c!=='未分类').map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('')+'<option value="未分类">未分类</option><option value="__new__">＋新建分类…</option>'}
 async function load(){try{await loadMeta();const p=new URLSearchParams({q:$('q').value,category:$('category').value,status:$('status').value,sort:$('sort').value,page:String(page),page_size:$('pageSize').value});const d=await api('/api/projects?'+p);projects=d.items;totalPages=d.pages;$('resultCount').textContent='显示 '+(d.total?((page-1)*Number($('pageSize').value)+1):0)+'–'+Math.min(page*Number($('pageSize').value),d.total)+' 项，共 '+d.total+' 项';$('pageInfo').textContent=page+' / '+totalPages;$('prev').disabled=page<=1;$('next').disabled=page>=totalPages;render()}catch(e){notice(e.message,true)}}
 function render(){const body=$('rows');if(!projects.length){body.innerHTML='<tr><td colspan="7" class="empty">没有符合条件的项目</td></tr>';return}
-body.innerHTML=projects.map(p=>'<tr><td><input type="checkbox" class="pick" data-id="'+p.id+'" '+(selected.has(p.id)?'checked':'')+'></td><td><a class="repo" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.full_name)+'</a><div class="small">'+esc(p.updated_at||'')+'</div></td><td class="description">'+esc(p.description||'暂无简介')+'</td><td><select class="edit-select category-edit" data-id="'+p.id+'">'+categoryOptions(p.category)+'</select></td><td>'+esc(p.auto_category||'—')+'</td><td><span class="pill '+(p.category_source==='manual'?'manual':p.category_status!=='confirmed'?'pending':'')+'">'+(p.category_source==='manual'?'人工修改':p.category_status==='confirmed'?'已审核':'待审核')+'</span></td><td><div class="actions"><button data-action="accept" data-id="'+p.id+'" '+(!p.auto_category?'disabled':'')+'>接受建议</button><button data-action="confirm" data-id="'+p.id+'">确认</button></div></td></tr>').join('');$('selectPage').checked=projects.length>0&&projects.every(p=>selected.has(p.id));$('selectedCount').textContent='已选 '+selected.size+' 项'}
+body.innerHTML=projects.map(p=>'<tr><td><input type="checkbox" class="pick" data-id="'+p.id+'" '+(selected.has(p.id)?'checked':'')+'></td><td><a class="repo" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.full_name)+'</a><div class="small">'+esc(p.updated_at||'')+'</div></td><td class="description">'+esc(p.description||'暂无简介')+'</td><td><select class="edit-select category-edit" data-id="'+p.id+'">'+categoryOptions(p.category)+'</select></td><td>'+esc(p.auto_category||'—')+'</td><td><span class="pill '+(p.category_source==='manual'?'manual':p.category_status!=='confirmed'?'pending':'')+'">'+(p.category_source==='manual'?'人工修改':p.category_status==='confirmed'?'已审核':'待审核')+'</span></td><td><div class="actions"><button data-action="accept" data-id="'+p.id+'" '+(!p.auto_category?'disabled':'')+'>接受建议</button><button data-action="confirm" data-id="'+p.id+'">确认</button><button data-action="delete" data-id="'+p.id+'">删除</button></div></td></tr>').join('');$('selectPage').checked=projects.length>0&&projects.every(p=>selected.has(p.id));$('selectedCount').textContent='已选 '+selected.size+' 项'}
 async function update(id,category,action='manual'){try{await api('/api/projects/update',{method:'POST',body:JSON.stringify({id,category,action})});notice('已保存');await load()}catch(e){notice(e.message,true)}}
 $('rows').addEventListener('change',e=>{const t=e.target;if(t.classList.contains('category-edit')){if(t.value==='__new__'){const name=prompt('输入新分类名称');if(name&&name.trim())update(Number(t.dataset.id),name.trim(),'manual');else load()}else update(Number(t.dataset.id),t.value,'manual')};if(t.classList.contains('pick')){const id=Number(t.dataset.id);t.checked?selected.add(id):selected.delete(id);$('selectedCount').textContent='已选 '+selected.size+' 项';$('selectPage').checked=projects.length>0&&projects.every(p=>selected.has(p.id))}});
-$('rows').addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b)return;const p=projects.find(x=>x.id===Number(b.dataset.id));if(!p)return;if(b.dataset.action==='accept')update(p.id,p.auto_category,'accept');else update(p.id,p.category,'confirm')});
+$('rows').addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b)return;const p=projects.find(x=>x.id===Number(b.dataset.id));if(!p)return;if(b.dataset.action==='accept')update(p.id,p.auto_category,'accept');else if(b.dataset.action==='delete'){if(confirm('确定从项目库中删除 '+p.full_name+'？此操作不可撤销。'))deleteProjects([p.id])}else update(p.id,p.category,'confirm')});
 $('selectPage').addEventListener('change',()=>{projects.forEach(p=>$('selectPage').checked?selected.add(p.id):selected.delete(p.id));render()});
 $('bulkCategory').onchange=()=>{if($('bulkCategory').value==='__new__'){const name=prompt('输入新分类名称');if(name&&name.trim())$('bulkCategory').add(new Option(name.trim(),name.trim(),true,true));else $('bulkCategory').value=''}};
 $('bulkApply').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);const category=$('bulkCategory').value;if(!category)return notice('请选择目标分类',true);try{await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],category,action:'manual'})});selected.clear();notice('已批量修改分类');await load()}catch(e){notice(e.message,true)}};
 $('bulkAccept').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);try{const d=await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],action:'accept'})});selected.clear();notice('已接受 '+d.updated+' 个项目的自动建议');await load()}catch(e){notice(e.message,true)}};
 $('bulkConfirm').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);try{const d=await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],action:'confirm'})});selected.clear();notice('已确认 '+d.updated+' 个项目');await load()}catch(e){notice(e.message,true)}};
+async function deleteProjects(ids){try{const d=await api('/api/projects/delete',{method:'POST',body:JSON.stringify({ids})});ids.forEach(id=>selected.delete(id));notice('已删除 '+d.deleted+' 个项目');await load()}catch(e){notice(e.message,true)}}
+$('bulkDelete').onclick=()=>{if(!selected.size)return notice('请先选择项目',true);if(confirm('确定从项目库中删除选中的 '+selected.size+' 个项目？此操作不可撤销。'))deleteProjects([...selected])};
 $('refresh').onclick=()=>load();$('clear').onclick=()=>{$('q').value='';$('category').value='';$('status').value='';$('sort').value='name';page=1;selected.clear();load()};$('prev').onclick=()=>{if(page>1){page--;load()}};$('next').onclick=()=>{if(page<totalPages){page++;load()}};$('pageSize').onchange=()=>{page=1;load()};['category','status','sort'].forEach(id=>$(id).onchange=()=>{page=1;load()});$('q').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;load()},250)};
 $('rebuild').onclick=async()=>{if(!confirm('根据 SQLite 中的最终分类重新生成 notes/github 的 Markdown 文件？'))return;try{const d=await api('/api/build',{method:'POST',body:'{}'});notice(d.message)}catch(e){notice(e.message,true)}};
 load();
@@ -124,7 +126,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
-        if parsed.path not in {"/api/projects/update", "/api/projects/bulk", "/api/build"}:
+        if parsed.path not in {"/api/projects/update", "/api/projects/bulk", "/api/projects/delete", "/api/build"}:
             json_response(self, 404, {"error": "接口不存在"})
             return
         try:
@@ -139,6 +141,8 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 self.update_project(payload)
             elif parsed.path == "/api/projects/bulk":
                 self.bulk_update(payload)
+            elif parsed.path == "/api/projects/delete":
+                self.delete_project(payload)
             else:
                 with connect_db() as conn:
                     generate_markdown(conn)
@@ -147,6 +151,22 @@ class ReviewHandler(BaseHTTPRequestHandler):
             json_response(self, 400, {"error": str(exc)})
         except Exception as exc:
             json_response(self, 500, {"error": f"操作失败：{exc}"})
+
+    def delete_project(self, payload: dict) -> None:
+        ids = payload.get("ids")
+        if not isinstance(ids, list) or not ids or len(ids) > 1000:
+            raise ValueError("请提供 1–1000 个项目 ID")
+        try:
+            ids = list(dict.fromkeys(int(item) for item in ids))
+        except (TypeError, ValueError):
+            raise ValueError("项目 ID 必须是整数")
+        with connect_db() as conn:
+            placeholders = ",".join("?" for _ in ids)
+            rows = conn.execute("SELECT id FROM projects WHERE id IN (" + placeholders + ")", ids).fetchall()
+            if len(rows) != len(ids):
+                raise ValueError("部分项目不存在，请刷新后重试")
+            conn.execute("DELETE FROM projects WHERE id IN (" + placeholders + ")", ids)
+        json_response(self, 200, {"deleted": len(ids)})
 
     def handle_meta(self) -> None:
         with connect_db() as conn:
@@ -281,6 +301,10 @@ class ReviewHandler(BaseHTTPRequestHandler):
                     updates.append((category, "manual", row["id"]))
             elif action == "confirm":
                 updates = [(row["category"] or "未分类", row["category_source"], row["id"]) for row in rows]
+            elif action == "delete":
+                conn.execute("DELETE FROM projects WHERE id IN (" + placeholders + ")", ids)
+                json_response(self, 200, {"deleted": len(ids)})
+                return
             else:
                 raise ValueError("无效的批量操作")
             conn.executemany(
