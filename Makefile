@@ -8,7 +8,8 @@ help:
 	@echo "  make cate         对 SQLite 中尚未分类的项目分类"
 	@echo "  make pending      列出待人工审核的项目分类"
 	@echo "  make recategorize 重新计算自动分类建议（不覆盖人工分类）"
-	@echo "  make review       交互式审核并修正项目分类"
+	@echo "  make review       启动本地 Web 页面管理所有项目分类"
+	@echo "                    可通过 GITHUB_REVIEW_PORT 指定端口（默认 8765）"
 	@echo "  make gene         生成尚未生成简介的项目简介"
 	@echo "  make summary      打印项目库总览（抓取入库、分类、简介情况）"
 	@echo "  make unify        合并只差大小写/空格的分类（如 ai 归入 AI）；加 dry=1 只报告"
@@ -41,8 +42,8 @@ recategorize:
 	uv run scripts/main.py recategorize
 
 review:
-	@echo "🧭 交互式审核项目分类..."
-	uv run scripts/github_projects.py review
+	@echo "🌐 启动本地 GitHub 项目管理页面..."
+	uv run python scripts/review_server.py
 
 gene:
 	@echo "🚀 生成待处理项目简介..."
