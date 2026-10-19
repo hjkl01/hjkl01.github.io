@@ -12,7 +12,7 @@ from scripts.api_ai import (
     extract_llm_text,
 )
 from scripts.config import logger
-from scripts.github_projects import connect_db, migrate_legacy
+from scripts.github_projects import canonical_category, connect_db, migrate_legacy
 from scripts.github_trending_scraper import main as github_trending_scraper
 from scripts.prompts import MARKDOWN_PROMPT
 
@@ -73,7 +73,9 @@ async def category_projects(recategorize: bool = False) -> None:
         categories = [
             row["category"]
             for row in conn.execute(
-                "SELECT DISTINCT category FROM projects WHERE category <> '未分类' ORDER BY category COLLATE NOCASE"
+                "SELECT category, COUNT(*) AS cnt FROM projects "
+                "WHERE category <> '未分类' GROUP BY category COLLATE NOCASE "
+                "ORDER BY cnt DESC, category COLLATE NOCASE"
             ).fetchall()
             if row["category"] and not UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
         ]
@@ -102,6 +104,8 @@ async def category_projects(recategorize: bool = False) -> None:
                 if not category or UNCATEGORIZED_FOLDER_PATTERN.match(category):
                     logger.warning(f"分类结果无效，跳过: {row['full_name']}")
                     continue
+                # 模型可能返回大小写不同的写法（ai / AI）；统一沿用已有分类名。
+                category = canonical_category(category, categories)
                 conn.execute(
                     """
                     UPDATE projects
@@ -117,7 +121,7 @@ async def category_projects(recategorize: bool = False) -> None:
                     """,
                     (category, category, row["id"]),
                 )
-                if category not in categories:
+                if category.casefold() not in {item.casefold() for item in categories}:
                     categories.append(category)
                 logger.info(f"{row['full_name']} -> {category}")
             except Exception as exc:
