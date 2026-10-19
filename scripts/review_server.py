@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import json
 import os
-import socket
-import subprocess
 import sys
 import threading
 import webbrowser
@@ -61,8 +59,8 @@ main{max-width:1440px;margin:24px auto;padding:0 24px}.stats{display:grid;grid-t
 <p class="hint">分类修改立即写入 SQLite。自动分类只更新建议，不覆盖人工分类。生成页面会更新 notes/github 下的分类 Markdown 文件。</p>
 </main><div id="notice" hidden class="notice"></div>
 <script>
-const $=id=>document.getElementById(id);let page=1,totalPages=1,projects=[],selected=new Set(),meta={categories:[]},timer;
-function notice(text,error=false){const n=$('notice');n.textContent=text;n.className='notice'+(error?' error':'');n.hidden=false;clearTimeout(timer);timer=setTimeout(()=>n.hidden=true,4000)}
+const $=id=>document.getElementById(id);let page=1,totalPages=1,projects=[],selected=new Set(),meta={categories:[]},noticeTimer,searchTimer;
+function notice(text,error=false){const n=$('notice');n.textContent=text;n.className='notice'+(error?' error':'');n.hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>n.hidden=true,4000)}
 async function api(url,options={}){const r=await fetch(url,{headers:{'Content-Type':'application/json'},...options});let data;try{data=await r.json()}catch{throw new Error('服务器返回了无效响应')}if(!r.ok)throw new Error(data.error||('HTTP '+r.status));return data}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function categoryOptions(value){return '<option value="">未分类</option>'+meta.categories.map(c=>'<option value="'+esc(c)+'" '+(c===value?'selected':'')+'>'+esc(c)+'</option>').join('')}
@@ -79,7 +77,7 @@ $('selectPage').addEventListener('change',()=>{projects.forEach(p=>$('selectPage
 $('bulkApply').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);const category=$('bulkCategory').value;if(!category)return notice('请选择目标分类',true);try{await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],category,action:'manual'})});selected.clear();notice('已批量修改分类');await load()}catch(e){notice(e.message,true)}};
 $('bulkAccept').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);try{const d=await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],action:'accept'})});selected.clear();notice('已接受 '+d.updated+' 个项目的自动建议');await load()}catch(e){notice(e.message,true)}};
 $('bulkConfirm').onclick=async()=>{if(!selected.size)return notice('请先选择项目',true);try{const d=await api('/api/projects/bulk',{method:'POST',body:JSON.stringify({ids:[...selected],action:'confirm'})});selected.clear();notice('已确认 '+d.updated+' 个项目');await load()}catch(e){notice(e.message,true)}};
-$('refresh').onclick=()=>load();$('clear').onclick=()=>{$('q').value='';$('category').value='';$('status').value='';$('sort').value='name';page=1;selected.clear();load()};$('prev').onclick=()=>{if(page>1){page--;load()}};$('next').onclick=()=>{if(page<totalPages){page++;load()}};$('pageSize').onchange=()=>{page=1;load()};['category','status','sort'].forEach(id=>$(id).onchange=()=>{page=1;load()});$('q').oninput=()=>{clearTimeout(timer);timer=setTimeout(()=>{page=1;load()},250)};
+$('refresh').onclick=()=>load();$('clear').onclick=()=>{$('q').value='';$('category').value='';$('status').value='';$('sort').value='name';page=1;selected.clear();load()};$('prev').onclick=()=>{if(page>1){page--;load()}};$('next').onclick=()=>{if(page<totalPages){page++;load()}};$('pageSize').onchange=()=>{page=1;load()};['category','status','sort'].forEach(id=>$(id).onchange=()=>{page=1;load()});$('q').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;load()},250)};
 $('rebuild').onclick=async()=>{if(!confirm('根据 SQLite 中的最终分类重新生成 notes/github 的 Markdown 文件？'))return;try{const d=await api('/api/build',{method:'POST',body:'{}'});notice(d.message)}catch(e){notice(e.message,true)}};
 load();
 </script></body></html>"""
