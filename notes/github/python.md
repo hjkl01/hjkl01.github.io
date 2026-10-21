@@ -7,12 +7,89 @@ sidebar_label: python
 
 # python
 
-本分类共 **80** 个项目。
+本分类共 **151** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [buildozer](https://github.com/kivy/buildozer) | ![Stars](https://img.shields.io/github/stars/kivy/buildozer?style=social) | 用于将 Python 应用打包为多平台可安装二进制包的构建工具。 |
+| [django-filter](https://github.com/carltongibson/django-filter) | ![Stars](https://img.shields.io/github/stars/carltongibson/django-filter?style=social) | Django 应用，可通过 URL 参数动态过滤查询集，兼容 Django REST Framework。 |
+| [django-ninja](https://github.com/vitalik/django-ninja) | ![Stars](https://img.shields.io/github/stars/vitalik/django-ninja?style=social) | Django Ninja 是基于 Django 的快速 REST API 框架，通过 Python 类型提示实现高性能开发和自动 OpenAPI 文档生成。 |
+| [djangorestframework-simplejwt](https://github.com/jazzband/djangorestframework-simplejwt) | ![Stars](https://img.shields.io/github/stars/jazzband/djangorestframework-simplejwt?style=social) | Simple JWT 为 Django REST Framework 提供 JSON Web Token 身份认证功能。 |
+| [drf-spectacular](https://github.com/tfranzel/drf-spectacular) | ![Stars](https://img.shields.io/github/stars/tfranzel/drf-spectacular?style=social) | DRF OpenAPI Schema 自动生成工具，支持丰富自定义。 |
+| [drf-yasg](https://github.com/axnsan12/drf-yasg) | ![Stars](https://img.shields.io/github/stars/axnsan12/drf-yasg?style=social) | drf-yasg 是 Django REST Framework 的 Swagger/OpenAPI 文档生成工具，支持嵌套序列化器并内置 Swagger UI 和 ReDoc。 |
+| [eve-swagger](https://github.com/pyeve/eve-swagger) | ![Stars](https://img.shields.io/github/stars/pyeve/eve-swagger?style=social) | 为Eve框架RESTful API自动生成Swagger文档，支持字段描述和事件钩子文档。 |
+| [fastapi-best-practices](https://github.com/zhanymkanov/fastapi-best-practices) | ![Stars](https://img.shields.io/github/stars/zhanymkanov/fastapi-best-practices?style=social) | FastAPI 生产项目开发最佳实践指南，涵盖架构设计、异步处理与数据验证规范。 |
+| [fastapi](https://github.com/tiangolo/fastapi) | ![Stars](https://img.shields.io/github/stars/tiangolo/fastapi?style=social) | 高性能 Python API 框架，基于类型提示实现自动数据验证和交互式文档生成。 |
+| [flasgger](https://github.com/flasgger/flasgger) | ![Stars](https://img.shields.io/github/stars/flasgger/flasgger?style=social) | Flask 扩展，自动提取 OpenAPI 规范并内嵌 SwaggerUI 可视化 API，支持 YAML/字典/Schemas 定义与数据验证。 |
+| [flask-restful](https://github.com/flask-restful/flask-restful) | ![Stars](https://img.shields.io/github/stars/flask-restful/flask-restful?style=social) | Flask扩展，提供构建RESTful API的核心模块。 |
+| [flask-restless](https://github.com/jfinkels/flask-restless) | ![Stars](https://img.shields.io/github/stars/jfinkels/flask-restless?style=social) | Flask扩展，为SQLAlchemy模型自动生成符合JSON API规范的RESTful API端点。 |
+| [pyjwt](https://github.com/jpadilla/pyjwt) | ![Stars](https://img.shields.io/github/stars/jpadilla/pyjwt?style=social) | PyJWT 是 Python 实现的 JSON Web Token 库，用于安全地编码和解码 JWT 令牌。 |
+| [dlt](https://github.com/dlt-hub/dlt) | ![Stars](https://img.shields.io/github/stars/dlt-hub/dlt?style=social) | dlt 是开源 Python 库，用于自动化数据加载，支持多源数据提取与多目标加载。 |
+| [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder) | ![Stars](https://img.shields.io/github/stars/dpgaspar/Flask-AppBuilder?style=social) | 基于 Flask 的快速应用开发框架，自动 CRUD、权限管理与多数据库支持。 |
+| [apscheduler](https://github.com/agronholm/apscheduler) | ![Stars](https://img.shields.io/github/stars/agronholm/apscheduler?style=social) | Python 任务调度系统，支持 Cron/间隔/日历触发，具备持久化与分布式扩展能力。 |
+| [django-mongoengine](https://github.com/MongoEngine/django-mongoengine) | ![Stars](https://img.shields.io/github/stars/MongoEngine/django-mongoengine?style=social) | 让Django可使用MongoDB作为数据库后端的整合框架，支持Session、模型及认证等功能。 |
+| [django-sql-dashboard](https://github.com/simonw/django-sql-dashboard) | ![Stars](https://img.shields.io/github/stars/simonw/django-sql-dashboard?style=social) | 为 Django 提供只读 SQL 查询执行、交互式仪表盘创建和数据可视化功能，支持团队协作与数据分析。 |
+| [django-sql-explorer](https://github.com/groveco/django-sql-explorer) | ![Stars](https://img.shields.io/github/stars/groveco/django-sql-explorer?style=social) | 基于Django的SQL查询工具，支持多库连接、AI助手辅助，可在浏览器中直接查询并可视化分析数据。 |
+| [flask-react-spa](https://github.com/briancappello/flask-react-spa) | ![Stars](https://img.shields.io/github/stars/briancappello/flask-react-spa?style=social) | Flask+React全栈SPA脚手架，提供用户认证、REST API、异步任务和生产部署能力。 |
+| [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) | ![Stars](https://img.shields.io/github/stars/audreyr/cookiecutter-pypackage?style=social) | Python包脚手架模板，集成CI/CD和PyPI自动发布，快速搭建生产级项目。 |
+| [guietta](https://github.com/alfiopuglisi/guietta) | ![Stars](https://img.shields.io/github/stars/alfiopuglisi/guietta?style=social) | 用表格定义布局的Python GUI框架，快速构建简单界面。 |
+| [pywebview](https://github.com/r0x0r/pywebview) | ![Stars](https://img.shields.io/github/stars/r0x0r/pywebview?style=social) | 轻量级原生 GUI 框架，将 HTML 嵌入桌面应用，支持 JS 与 Python 双向通信 |
+| [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth) | ![Stars](https://img.shields.io/github/stars/miguelgrinberg/Flask-HTTPAuth?style=social) | Flask-HTTPAuth为Flask应用提供Basic、Digest和Token HTTP认证功能，保护路由安全。 |
+| [Gooey](https://github.com/chriskiehl/Gooey) | ![Stars](https://img.shields.io/github/stars/chriskiehl/Gooey?style=social) | Gooey将Python控制台程序一键转换为友好的图形界面应用。 |
+| [PyG2Plot](https://github.com/hustcc/PyG2Plot) | ![Stars](https://img.shields.io/github/stars/hustcc/PyG2Plot?style=social) | Python绑定G2Plot图表库，通过少量代码生成交互式统计图表，支持渲染HTML、Jupyter等格式。 |
+| [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI) | ![Stars](https://img.shields.io/github/stars/PySimpleGUI/PySimpleGUI?style=social) | PySimpleGUI 简化 Python GUI 开发，封装 tkinter 框架，让无经验者轻松创建桌面应用。 |
+| [PySnooper](https://github.com/cool-RR/PySnooper) | ![Stars](https://img.shields.io/github/stars/cool-RR/PySnooper?style=social) | PySnooper 是一个 Python 调试工具，通过装饰器自动记录函数执行过程及变量变化，无需打断点即可排查问题。 |
+| [TabPy](https://github.com/tableau/TabPy) | ![Stars](https://img.shields.io/github/stars/tableau/TabPy?style=social) | 扩展 Tableau 能力，允许用户通过表格计算执行 Python 脚本和函数。 |
+| [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer) | ![Stars](https://img.shields.io/github/stars/ParthJadhav/Tkinter-Designer?style=social) | Figma 驱动的 Python GUI 拖放设计器，自动生成 Tkinter 代码。 |
+| [alive-progress](https://github.com/rsalmei/alive-progress) | ![Stars](https://img.shields.io/github/stars/rsalmei/alive-progress?style=social) | alive-progress是Python进度条库，提供动态转速动画、ETA估算与暂停恢复功能，解决长时间任务可视化。 |
+| [arrow](https://github.com/arrow-py/arrow) | ![Stars](https://img.shields.io/github/stars/arrow-py/arrow?style=social) | Arrow 是 Python 日期时间库，提供更简洁 API 处理日期时间、时区转换和格式化。 |
+| [awesome-flask](https://github.com/humiaozuzu/awesome-flask) | ![Stars](https://img.shields.io/github/stars/humiaozuzu/awesome-flask?style=social) | Python微框架Flask的扩展生态集合，提供管理界面、API、认证、缓存、数据库等扩展及教程资源。 |
+| [cookiecutter](https://github.com/audreyr/cookiecutter) | ![Stars](https://img.shields.io/github/stars/audreyr/cookiecutter?style=social) | Cookiecutter是一个命令行工具，通过项目模板快速生成Python包等项目的脚手架结构。 |
+| [dateutil](https://github.com/dateutil/dateutil) | ![Stars](https://img.shields.io/github/stars/dateutil/dateutil?style=social) | Python dateutil库，提供强大的日期时间处理功能：智能解析任意日期字符串、计算相对时间差、支持复杂重复规则及多时区处理。 |
+| [diagrams](https://github.com/mingrammer/diagrams) | ![Stars](https://img.shields.io/github/stars/mingrammer/diagrams?style=social) | Diagrams是一个Python库，通过代码绘制云系统架构图，支持AWS、Azure、GCP等主流云服务，便于架构原型设计与版本追踪。 |
+| [django-autocomplete-light](https://github.com/yourlabs/django-autocomplete-light) | ![Stars](https://img.shields.io/github/stars/yourlabs/django-autocomplete-light?style=social) | Django表单自动补全库，提供原生Web组件和Select2等多种插件支持。 |
+| [django-cms](https://github.com/django-cms/django-cms) | ![Stars](https://img.shields.io/github/stars/django-cms/django-cms?style=social) | 基于 Django 的轻量级开源 CMS，支持多语言、前端编辑、插件扩展及 SEO 友好页面管理。 |
+| [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) | ![Stars](https://img.shields.io/github/stars/jazzband/django-debug-toolbar?style=social) | Django Debug Toolbar 是可配置的调试面板栏，用于显示当前请求响应的各项调试信息。 |
+| [django-environ](https://github.com/joke2k/django-environ) | ![Stars](https://img.shields.io/github/stars/joke2k/django-environ?style=social) | django-environ: 用环境变量配置Django应用，支持.env文件读取、URL解析和多环境部署 |
+| [django-grappelli](https://github.com/sehmaschine/django-grappelli) | ![Stars](https://img.shields.io/github/stars/sehmaschine/django-grappelli?style=social) | 为 Django 管理界面提供美观的网格化皮肤替换方案。 |
+| [django-guardian](https://github.com/django-guardian/django-guardian) | ![Stars](https://img.shields.io/github/stars/django-guardian/django-guardian?style=social) | django-guardian是Django的对象级权限插件，支持为单个对象精细分配用户或组的访问权限。 |
+| [django-slick-reporting](https://github.com/RamezIssac/django-slick-reporting) | ![Stars](https://img.shields.io/github/stars/RamezIssac/django-slick-reporting?style=social) | 基于 Django 的报表引擎，支持聚合、时间序列、交叉表等计算，一行代码生成多种图表可视化。 |
+| [django-unfold](https://github.com/unfoldadmin/django-unfold) | ![Stars](https://img.shields.io/github/stars/unfoldadmin/django-unfold?style=social) | Django 现代管理后台主题，提供仪表板构建、深色模式与高级筛选等核心能力。 |
+| [djoser](https://github.com/sunscrapers/djoser) | ![Stars](https://img.shields.io/github/stars/sunscrapers/djoser?style=social) | Django REST框架身份认证库，提供注册登录密码重置API，支持Token和JWT认证。 |
+| [eve](https://github.com/pyeve/eve) | ![Stars](https://img.shields.io/github/stars/pyeve/eve?style=social) | Eve 是一个 Python REST API 框架，支持 MongoDB 和 SQL，可快速构建可定制的 RESTful 服务。 |
+| [flask-jwt-extended](https://github.com/vimalloc/flask-jwt-extended) | ![Stars](https://img.shields.io/github/stars/vimalloc/flask-jwt-extended?style=social) | Flask-JWT-Extended 是 Flask 的 JWT 认证扩展，支持令牌验证、刷新令牌、黑名单管理等功能。 |
+| [flask-security](https://github.com/Flask-Middleware/flask-security) | ![Stars](https://img.shields.io/github/stars/Flask-Middleware/flask-security?style=social) | Flask-Security 是 Flask 框架的安全扩展，提供用户认证、授权和角色管理功能。 |
+| [flask-wtf](https://github.com/lepture/flask-wtf) | ![Stars](https://img.shields.io/github/stars/lepture/flask-wtf?style=social) | Flask-WTF 实现 Flask 与 WTForms 的简单集成，提供 CSRF 防护、文件上传和 reCAPTCHA 支持。 |
+| [flask-wtf](https://github.com/wtforms/flask-wtf) | ![Stars](https://img.shields.io/github/stars/wtforms/flask-wtf?style=social) | Flask与WTForms的简单集成，支持CSRF保护、文件上传和reCAPTCHA验证。 |
+| [frappe](https://github.com/frappe/frappe) | ![Stars](https://img.shields.io/github/stars/frappe/frappe?style=social) | 基于Python和JavaScript的全栈Web框架，提供内置管理界面、REST API和权限管理，支持快速构建复杂企业应用。 |
+| [holoviews](https://github.com/holoviz/holoviews) | ![Stars](https://img.shields.io/github/stars/holoviz/holoviews?style=social) | HoloViews 是 Python 可视化库，通过数据注解实现自动绘图，简化数据分析与可视化流程。 |
+| [icecream](https://github.com/gruns/icecream) | ![Stars](https://img.shields.io/github/stars/gruns/icecream?style=social) | IceCream 是 Python 调试工具，ic() 自动打印变量名和值，支持格式化和高亮显示输出。 |
+| [marshmallow](https://github.com/marshmallow-code/marshmallow) | ![Stars](https://img.shields.io/github/stars/marshmallow-code/marshmallow?style=social) | 一个Python序列化库，用于复杂对象与原生数据的双向转换，支持数据验证、反序列化与序列化。 |
+| [mimesis](https://github.com/lk-geimfari/mimesis) | ![Stars](https://img.shields.io/github/stars/lk-geimfari/mimesis?style=social) | Mimesis是一个Python假数据生成库，支持多语言和本地化，可生成姓名、地址、邮箱等真实数据，用于测试、开发及数据脱敏。 |
+| [minio-py](https://github.com/minio/minio-py) | ![Stars](https://img.shields.io/github/stars/minio/minio-py?style=social) | MinIO Python SDK 提供对象存储操作接口，支持文件上传下载与桶管理。 |
+| [prek](https://github.com/j178/prek) | ![Stars](https://img.shields.io/github/stars/j178/prek?style=social) | prek是代码hooks框架，在提交前或CI中运行格式化、lint等检查，是pre-commit的Rust重写版。 |
+| [pydantic](https://github.com/samuelcolvin/pydantic) | ![Stars](https://img.shields.io/github/stars/samuelcolvin/pydantic?style=social) | 用 Python 类型注解进行数据验证和解析的快速库。 |
+| [rq](https://github.com/rq/rq) | ![Stars](https://img.shields.io/github/stars/rq/rq?style=social) | 基于 Redis 的 Python 后台任务队列库，支持异步执行、优先级调度、定时任务等功能。 |
+| [ruff](https://github.com/astral-sh/ruff) | ![Stars](https://img.shields.io/github/stars/astral-sh/ruff?style=social) | Ruff 是极速 Python 代码检查和格式化器，可替代 Flake8、Black 等工具，速度快数十倍。 |
+| [schedule](https://github.com/dbader/schedule) | ![Stars](https://img.shields.io/github/stars/dbader/schedule?style=social) | Python 定时任务调度库，以友好语法定期执行函数，无需外部依赖。 |
+| [slowapi](https://github.com/laurentS/slowapi) | ![Stars](https://img.shields.io/github/stars/laurentS/slowapi?style=social) | SlowApi 是用于 Starlette/FastAPI 的速率限制库，支持装饰器设置请求频率，兼容 Redis、Memcached 和内存存储后端。 |
+| [starlette](https://github.com/Kludex/starlette) | ![Stars](https://img.shields.io/github/stars/Kludex/starlette?style=social) | 轻量ASGI框架，支持HTTP和WebSocket，用于构建异步Python Web服务。 |
+| [structlog](https://github.com/hynek/structlog) | ![Stars](https://img.shields.io/github/stars/hynek/structlog?style=social) | structlog是Python结构化日志库，支持JSON、logfmt等格式输出，灵活对接标准日志系统。 |
+| [ty](https://github.com/astral-sh/ty) | ![Stars](https://img.shields.io/github/stars/astral-sh/ty?style=social) | 用 Rust 编写的极速 Python 类型检查器和语言服务器，比 mypy 快 10-100 倍。 |
+| [ultrajson](https://github.com/ultrajson/ultrajson) | ![Stars](https://img.shields.io/github/stars/ultrajson/ultrajson?style=social) | UltraJSON是用纯C编写的极速JSON编解码器，为Python提供高效的JSON序列化和反序列化能力。 |
+| [wave](https://github.com/h2oai/wave) | ![Stars](https://img.shields.io/github/stars/h2oai/wave?style=social) | 基于Python/R，无需前端代码即可快速构建实时、低延迟的浏览器仪表板与应用 |
+| [wooey](https://github.com/wooey/wooey) | ![Stars](https://img.shields.io/github/stars/wooey/wooey?style=social) | Wooey是命令行Python脚本的Web界面，让非技术人员也能轻松运行脚本处理数据。 |
+| [30-Days-Of-Python](https://github.com/Asabeneh/30-Days-Of-Python) | ![Stars](https://img.shields.io/github/stars/Asabeneh/30-Days-Of-Python?style=social) | 这是一个为期30天的Python编程挑战教程，涵盖从基础语法到Web开发、数据处理等完整内容，帮助初学者掌握Python编程。 |
+| [django-oscar](https://github.com/django-oscar/django-oscar) | ![Stars](https://img.shields.io/github/stars/django-oscar/django-oscar?style=social) | 为Django提供可高度定制的电商框架，支持B2C至复杂B2B等多种业务场景。 |
+| [iii](https://github.com/iii-hq/iii) | ![Stars](https://img.shields.io/github/stars/iii-hq/iii?style=social) | iii 是共享运行时系统，通过 Worker/Trigger/Function 原语实现服务零集成、实时观察与动态扩展。 |
+| [pyrefly](https://github.com/facebook/pyrefly) | ![Stars](https://img.shields.io/github/stars/facebook/pyrefly?style=social) | Pyrefly是快速Python类型检查器和语言服务器，提供类型检查、代码导航、自动补全等IDE功能。 |
+| [textual](https://github.com/textualize/textual) | ![Stars](https://img.shields.io/github/stars/textualize/textual?style=social) | Textual是用Python构建跨平台UI的框架，应用可同时在终端和浏览器中运行。 |
+| [DearPyGui](https://github.com/hoffstadt/DearPyGui) | ![Stars](https://img.shields.io/github/stars/hoffstadt/DearPyGui?style=social) | Dear PyGui是一个现代高性能Python GUI框架，采用GPU渲染，支持图表、节点编辑器及跨平台开发。 |
+| [enaml](https://github.com/nucleic/enaml) | ![Stars](https://img.shields.io/github/stars/nucleic/enaml?style=social) | Enaml 是基于约束布局和声明式语法的 Python GUI 框架，快速构建跨平台原生界面。 |
+| [pex](https://github.com/pex-tool/pex) | ![Stars](https://img.shields.io/github/stars/pex-tool/pex?style=social) | pex 用于打包 Python 应用为可执行 .pex 文件，支持跨平台便携部署和依赖冻结。 |
+| [full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql) | ![Stars](https://img.shields.io/github/stars/tiangolo/full-stack-fastapi-postgresql?style=social) | 基于 FastAPI 和 React 的全栈模板，提供用户认证、数据库管理及现代化前端界面，支持 Docker 部署与 CI/CD。 |
 | [Django-React-Redux-Boilerplate](https://github.com/faisalnazik/Django-React-Redux-Boilerplate) | ![Stars](https://img.shields.io/github/stars/faisalnazik/Django-React-Redux-Boilerplate?style=social) | Django React Redux全栈模板，内置JWT认证、表单验证和Material UI，助力快速开发。 |
 | [InvenTree](https://github.com/inventree/InvenTree) | ![Stars](https://img.shields.io/github/stars/inventree/InvenTree?style=social) | 开源库存管理系统，提供零件跟踪、库存控制和 REST API 扩展能力。 |
 | [PrettyErrors](https://github.com/onelivesleft/PrettyErrors) | ![Stars](https://img.shields.io/github/stars/onelivesleft/PrettyErrors?style=social) | Python 异常美化库，将混乱的错误栈转换为清晰彩色的高可读输出格式。 |
@@ -20,7 +97,6 @@ sidebar_label: python
 | [PythonDataScienceHandbook](https://github.com/jakevdp/PythonDataScienceHandbook) | ![Stars](https://img.shields.io/github/stars/jakevdp/PythonDataScienceHandbook?style=social) | Python数据科学手册，提供Jupyter notebooks讲解NumPy、Pandas等核心库使用方法。 |
 | [Python](https://github.com/TheAlgorithms/Python) | ![Stars](https://img.shields.io/github/stars/TheAlgorithms/Python?style=social) | The Algorithms - Python 是一个用 Python 实现各类算法的教育性项目，用于学习参考。 |
 | [RustPython](https://github.com/RustPython/RustPython) | ![Stars](https://img.shields.io/github/stars/RustPython/RustPython?style=social) | 用 Rust 实现的 Python 3 解释器，支持 WebAssembly、JIT 编译与嵌入式部署。 |
-| [WeasyPrint](https://github.com/Kozea/WeasyPrint) | ![Stars](https://img.shields.io/github/stars/Kozea/WeasyPrint?style=social) | 将 HTML/CSS 转换为 PDF 文档，用于生成报告、发票、票据等 |
 | [app-generator](https://github.com/app-generator/app-generator) | ![Stars](https://img.shields.io/github/stars/app-generator/app-generator?style=social) | App Generator 是一个快速应用生成平台，帮助用户将创意快速转化为可部署的 Django/Flask 项目，内置爬虫、数据库管理、CSV处理等开发工具。 |
 | [awesome-flask](https://github.com/mjhea0/awesome-flask) | ![Stars](https://img.shields.io/github/stars/mjhea0/awesome-flask?style=social) | 汇总了 Flask 框架的精选扩展、教程、资源与开源项目。 |
 | [better-exceptions](https://github.com/Qix-/better-exceptions) | ![Stars](https://img.shields.io/github/stars/Qix-/better-exceptions?style=social) | 自动美化 Python 异常输出，使错误信息更清晰易读。 |
@@ -60,15 +136,12 @@ sidebar_label: python
 | [gae-init](https://github.com/gae-init/gae-init) | ![Stars](https://img.shields.io/github/stars/gae-init/gae-init?style=social) | gae-init 是基于 Google App Engine 的 Python Flask 脚手架，可快速搭建 Web 应用。 |
 | [gino](https://github.com/python-gino/gino) | ![Stars](https://img.shields.io/github/stars/python-gino/gino?style=social) | GINO是Python轻量级异步ORM，基于SQLAlchemy核心，支持PostgreSQL/MySQL，提供异步CRUD和上下文事务管理。 |
 | [kombu](https://github.com/celery/kombu) | ![Stars](https://img.shields.io/github/stars/celery/kombu?style=social) | Kombu 是 Python 消息库，通过可插拔传输支持多种消息服务器，简化 AMQP 消息传递。 |
-| [lighter-python](https://github.com/elliottech/lighter-python) | ![Stars](https://img.shields.io/github/stars/elliottech/lighter-python?style=social) | zkLighter 永续交易所 Python SDK，支持账户查询、订单管理、行情获取及 WebSocket 实时数据流。 |
 | [marimo](https://github.com/marimo-team/marimo) | ![Stars](https://img.shields.io/github/stars/marimo-team/marimo?style=social) | 响应式Python笔记本，自动执行依赖代码，支持SQL与交互UI，无隐藏状态。 |
-| [moffee](https://github.com/wbopan/moffee) | ![Stars](https://img.shields.io/github/stars/wbopan/moffee?style=social) | 开源幻灯片制作工具，将 Markdown 转为专业演示文稿，自动处理布局、分页与样式。 |
 | [msgspec](https://github.com/msgspec/msgspec) | ![Stars](https://img.shields.io/github/stars/msgspec/msgspec?style=social) | msgspec 是高性能序列化库，支持 JSON、MessagePack 等格式的编解码与验证。 |
 | [mypy](https://github.com/python/mypy) | ![Stars](https://img.shields.io/github/stars/python/mypy?style=social) | Mypy 为 Python 提供静态类型检查，在不运行代码的情况下发现类型使用错误。 |
 | [nicegui](https://github.com/zauberzeug/nicegui) | ![Stars](https://img.shields.io/github/stars/zauberzeug/nicegui?style=social) | NiceGUI 是基于 Python 的 Web UI 框架，可在浏览器中创建图形界面，支持按钮、图表、3D 场景等，适用于微应用开发。 |
 | [numpy](https://github.com/numpy/numpy) | ![Stars](https://img.shields.io/github/stars/numpy/numpy?style=social) | NumPy 是 Python 科学计算基础库，提供强大的 N 维数组对象及线性代数、傅里叶变换等核心功能。 |
 | [orjson](https://github.com/ijl/orjson) | ![Stars](https://img.shields.io/github/stars/ijl/orjson?style=social) | 高速 Python JSON 库，原生支持 dataclass、datetime、numpy 及 UUID 等类型序列化与解析。 |
-| [pdf-inspector](https://github.com/firecrawl/pdf-inspector) | ![Stars](https://img.shields.io/github/stars/firecrawl/pdf-inspector?style=social) | Rust 库，快速分类 PDF 并提取带位置信息的文本，转换为结构清晰的 Markdown，按需选择性 OCR。 |
 | [pdoc](https://github.com/mitmproxy/pdoc) | ![Stars](https://img.shields.io/github/stars/mitmproxy/pdoc?style=social) | pdoc 是 Python API 文档生成器，可自动解析代码并生成静态 HTML 文档。 |
 | [pendulum](https://github.com/sdispater/pendulum) | ![Stars](https://img.shields.io/github/stars/sdispater/pendulum?style=social) | Python日期时间处理库，提供简洁的时区和时间操作API。 |
 | [plotly.py](https://github.com/plotly/plotly.py) | ![Stars](https://img.shields.io/github/stars/plotly/plotly.py?style=social) | plotly.py 是 Python 交互式图表库，支持 30 余种图表类型，可在 Jupyter 和网页中展示数据可视化结果。 |
@@ -81,7 +154,6 @@ sidebar_label: python
 | [python-small-examples](https://github.com/jackzhenguo/python-small-examples) | ![Stars](https://img.shields.io/github/stars/jackzhenguo/python-small-examples?style=social) | Python经典案例集，涵盖基础语法、函数、面向对象、正则、绘图、数据分析等，提供简短实用代码示例。 |
 | [python-user-agents](https://github.com/selwin/python-user-agents) | ![Stars](https://img.shields.io/github/stars/selwin/python-user-agents?style=social) | 一个Python库，通过解析User Agent字符串，识别设备类型、检测触控能力、浏览器和操作系统。 |
 | [pytorch-image-models](https://github.com/huggingface/pytorch-image-models) | ![Stars](https://img.shields.io/github/stars/huggingface/pytorch-image-models?style=social) | timm是PyTorch图像模型库，集成大量SOTA模型架构、预训练权重、优化器与训练脚本，支持ImageNet训练结果复现及多场景视觉任务。 |
-| [rogue](https://github.com/qualifire-dev/rogue) | ![Stars](https://img.shields.io/github/stars/qualifire-dev/rogue?style=social) | AI Agent 评估与红队测试平台，支持自动化业务规则验证及对抗性安全漏洞扫描。 |
 | [simpleui](https://github.com/newpanjing/simpleui) | ![Stars](https://img.shields.io/github/stars/newpanjing/simpleui?style=social) | SimpleUI 是 Django Admin 主题，解决界面单调问题，提供多标签页面与现代化用户界面。 |
 | [strawberry](https://github.com/strawberry-graphql/strawberry) | ![Stars](https://img.shields.io/github/stars/strawberry-graphql/strawberry?style=social) | 基于Python dataclass的GraphQL库，支持类型检查与Django集成，提供开发服务器。 |
 | [streamlit](https://github.com/streamlit/streamlit) | ![Stars](https://img.shields.io/github/stars/streamlit/streamlit?style=social) | Streamlit 可将 Python 脚本快速转换为交互式数据应用，支持构建仪表盘、报告及聊天应用，并提供云端部署与分享能力。 |
@@ -92,4 +164,3 @@ sidebar_label: python
 | [wechat-app-unpack](https://github.com/leo9960/wechat-app-unpack) | ![Stars](https://img.shields.io/github/stars/leo9960/wechat-app-unpack?style=social) | 微信小程序解包工具，可将 wxapkg 文件还原为可读的 JS、WXML 源码和样式文件。 |
 | [wemake-django-template](https://github.com/wemake-services/wemake-django-template) | ![Stars](https://img.shields.io/github/stars/wemake-services/wemake-django-template?style=social) | Django 项目模板，快速搭建高质量、安全的项目结构，内置 REST API、类型检查和自动化测试。 |
 | [wsgidav](https://github.com/mar10/wsgidav) | ![Stars](https://img.shields.io/github/stars/mar10/wsgidav?style=social) | 用Python实现的WebDAV服务器，基于WSGI协议，支持SSL和虚拟文件系统访问。 |
-| [xiaomusic](https://github.com/hanxi/xiaomusic) | ![Stars](https://img.shields.io/github/stars/hanxi/xiaomusic?style=social) | 通过语音指令控制小爱音箱播放音乐，支持在线下载歌曲、本地播放和歌单管理。 |

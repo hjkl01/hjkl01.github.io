@@ -7,7 +7,7 @@ sidebar_label: input
 
 # input
 
-本分类共 **5** 个项目。
+本分类共 **6** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -18,3 +18,4 @@ sidebar_label: input
 | [rime-frost](https://github.com/gaboolic/rime-frost) | ![Stars](https://img.shields.io/github/stars/gaboolic/rime-frost?style=social) | 基于高质量语料优化词频的拼音输入法方案，支持全拼双拼及辅助码整句输入。 |
 | [rime-ice](https://github.com/iDvel/rime-ice) | ![Stars](https://img.shields.io/github/stars/iDvel/rime-ice?style=social) | 雾凇拼音是开箱即用的简体中文Rime输入法配置，支持全拼双拼、精校词库及多项扩展功能。 |
 | [rime_wanxiang](https://github.com/amzxyz/rime_wanxiang) | ![Stars](https://img.shields.io/github/stars/amzxyz/rime_wanxiang?style=social) | 万象拼音是基于 Rime 的拼音输入方案，提供带调词库、辅码系统与 Lua 扩展，实现精准流畅的中文输入体验。 |
+| [kanata](https://github.com/jtroo/kanata) | ![Stars](https://img.shields.io/github/stars/jtroo/kanata?style=social) | 跨平台键盘重映射工具，支持多层按键与高级自定义，提升打字舒适度。 |

@@ -7,21 +7,32 @@ sidebar_label: nodejs
 
 # nodejs
 
-本分类共 **29** 个项目。
+本分类共 **40** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [typescript-go](https://github.com/microsoft/typescript-go) | ![Stars](https://img.shields.io/github/stars/microsoft/typescript-go?style=social) | TypeScript 7.0 原生端口预览，提供编译、类型检查与语言服务功能。 |
+| [bun](https://github.com/oven-sh/bun) | ![Stars](https://img.shields.io/github/stars/oven-sh/bun?style=social) | Bun 是 JavaScript/TypeScript 一体化开发工具，提供高性能运行时、包管理器、测试运行器和构建工具，兼容 Node.js。 |
+| [boa](https://github.com/boa-dev/boa) | ![Stars](https://img.shields.io/github/stars/boa-dev/boa?style=social) | Rust 编写的实验性 JavaScript 解析器和解释器，支持超 90% ECMAScript 规范 |
+| [mui-x](https://github.com/mui/mui-x) | ![Stars](https://img.shields.io/github/stars/mui/mui-x?style=social) | MUI X 是高级 React 组件库，提供数据网格、日期时间选择器、图表和树视图，用于构建复杂的数据密集型应用。 |
+| [react-login-page](https://github.com/uiwjs/react-login-page) | ![Stars](https://img.shields.io/github/stars/uiwjs/react-login-page?style=social) | React 登录页组件库，提供灵活 API 快速构建自定义登录页面 |
+| [vite-plus](https://github.com/voidzero-dev/vite-plus) | ![Stars](https://img.shields.io/github/stars/voidzero-dev/vite-plus?style=social) | 整合 Vite 等多工具的一站式 Web 开发工具链，提供开发、测试、构建等能力。 |
+| [create-react-app](https://github.com/facebook/create-react-app) | ![Stars](https://img.shields.io/github/stars/facebook/create-react-app?style=social) | 零配置创建 React 应用，预配置构建工具链，快速开始开发。 |
+| [gatsby](https://github.com/gatsbyjs/gatsby) | ![Stars](https://img.shields.io/github/stars/gatsbyjs/gatsby?style=social) | 基于 React 的开源静态网站生成框架，帮助开发者快速构建高性能、内容丰富的网站和应用。 |
+| [native](https://github.com/vercel-labs/native) | ![Stars](https://img.shields.io/github/stars/vercel-labs/native?style=social) | 用 TypeScript 构建原生桌面应用，编译为可执行文件并在系统窗口渲染界面。 |
+| [react-doctor](https://github.com/millionco/react-doctor) | ![Stars](https://img.shields.io/github/stars/millionco/react-doctor?style=social) | 运行确定性检查，报告 React 代码状态、效果、性能等问题，支持多框架。 |
+| [react-router](https://github.com/remix-run/react-router) | ![Stars](https://img.shields.io/github/stars/remix-run/react-router?style=social) | React Router 是 React 路由管理工具，支持多策略部署，可作为框架或库使用。 |
+| [svelte](https://github.com/sveltejs/svelte) | ![Stars](https://img.shields.io/github/stars/sveltejs/svelte?style=social) | Svelte 是一个前端框架，通过编译器将声明式组件转换为高效的 JavaScript，直接操作 DOM。 |
+| [fnm](https://github.com/Schniz/fnm) | ![Stars](https://img.shields.io/github/stars/Schniz/fnm?style=social) | fnm 是快速简洁的 Node.js 版本管理器，基于 Rust 构建，支持跨平台自动切换 Node.js 版本。 |
 | [ViewUI](https://github.com/view-design/ViewUI) | ![Stars](https://img.shields.io/github/stars/view-design/ViewUI?style=social) | ViewUI是基于Vue.js的高品质UI组件库，提供丰富美观的组件和友好API，帮助开发者高效构建用户界面。 |
 | [atrilabs-engine](https://github.com/Atri-Labs/atrilabs-engine) | ![Stars](https://img.shields.io/github/stars/Atri-Labs/atrilabs-engine?style=social) | 全栈Web框架，支持可视化无代码和代码开发，多语言集成，一键部署至多种云平台。 |
 | [awesome-nest-boilerplate](https://github.com/NarHakobyan/awesome-nest-boilerplate) | ![Stars](https://img.shields.io/github/stars/NarHakobyan/awesome-nest-boilerplate?style=social) | 企业级 NestJS 脚手架，内置 CQRS、JWT 认证与多运行时支持，解决团队规模化开发的结构化问题。 |
 | [axios](https://github.com/axios/axios) | ![Stars](https://img.shields.io/github/stars/axios/axios?style=social) | Axios 是基于 Promise 的 HTTP 客户端，用于浏览器和 Node.js 发送请求，支持拦截器、数据转换和取消请求。 |
 | [esbuild](https://github.com/evanw/esbuild) | ![Stars](https://img.shields.io/github/stars/evanw/esbuild?style=social) | esbuild 是极速 JavaScript 打包工具，支持 JS/CSS/TS/JSX 构建、模块打包与代码压缩。 |
-| [full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql) | ![Stars](https://img.shields.io/github/stars/tiangolo/full-stack-fastapi-postgresql?style=social) | 基于 FastAPI 和 React 的全栈模板，提供用户认证、数据库管理及现代化前端界面，支持 Docker 部署与 CI/CD。 |
 | [heyui](https://github.com/heyui/heyui) | ![Stars](https://img.shields.io/github/stars/heyui/heyui?style=social) | HeyUI 增强组件库，修复各类 bug 并增强 Select、Upload 等组件功能。 |
 | [kit](https://github.com/sveltejs/kit) | ![Stars](https://img.shields.io/github/stars/sveltejs/kit?style=social) | SvelteKit 是 Svelte 的全栈 Web 框架，简化 Web 开发，提供服务端渲染、路由和多种部署适配。 |
-| [kms-tools](https://github.com/ikxin/kms-tools) | ![Stars](https://img.shields.io/github/stars/ikxin/kms-tools?style=social) | KMS Tools 是一站式 KMS 工具箱，提供激活脚本生成、服务器检测与状态监控功能。 |
 | [lightence-ant-design-react-template](https://github.com/altence/lightence-ant-design-react-template) | ![Stars](https://img.shields.io/github/stars/altence/lightence-ant-design-react-template?style=social) | Lightence是免费React管理仪表盘模板，基于Ant Design，加速UI开发并降低MVP成本。 |
 | [lingo.dev](https://github.com/lingodotdev/lingo.dev) | ![Stars](https://img.shields.io/github/stars/lingodotdev/lingo.dev?style=social) | 本地化工程平台，通过可配置引擎集成 LLM 翻译、品牌控制与质量评估 |
 | [n](https://github.com/tj/n) | ![Stars](https://img.shields.io/github/stars/tj/n?style=social) | n 是一款 Node.js 版本管理工具，支持通过命令行交互式安装、切换和管理多个 Node.js 版本。 |

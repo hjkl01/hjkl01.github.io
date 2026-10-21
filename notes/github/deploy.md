@@ -7,20 +7,18 @@ sidebar_label: deploy
 
 # deploy
 
-本分类共 **66** 个项目。
+本分类共 **57** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [traefik](https://github.com/traefik/traefik) | ![Stars](https://img.shields.io/github/stars/traefik/traefik?style=social) | Traefik 是现代 HTTP 反向代理和负载均衡器，自动动态发现微服务并配置路由。 |
+| [cadence](https://github.com/cadence-workflow/cadence) | ![Stars](https://img.shields.io/github/stars/cadence-workflow/cadence?style=social) | Cadence是开源工作流平台，用于构建可扩展、容错、长期运行的分布式工作流。 |
 | [1Panel](https://github.com/1Panel-dev/1Panel) | ![Stars](https://img.shields.io/github/stars/1Panel-dev/1Panel?style=social) | 开源 Linux 服务器管理面板，提供 AI 管理、可视化运维、网站一键部署、应用商店等功能。 |
-| [KubeOperator](https://github.com/KubeOperator/KubeOperator) | ![Stars](https://img.shields.io/github/stars/KubeOperator/KubeOperator?style=social) | KubeOperator 是开源轻量级 K8s 发行版，提供可视化 Web UI，支持离线部署与多云环境，帮助企业一键创建、管理和运营生产级 Kubernetes 集群。 |
-| [LACT](https://github.com/ilya-zlobintsev/LACT) | ![Stars](https://img.shields.io/github/stars/ilya-zlobintsev/LACT?style=social) | LACT 是 Linux 显卡控制工具，支持 AMD/NVIDIA/Intel 显卡的监控、超频、风扇和功耗管理。 |
-| [Telegram-iOS](https://github.com/TelegramMessenger/Telegram-iOS) | ![Stars](https://img.shields.io/github/stars/TelegramMessenger/Telegram-iOS?style=social) | Telegram iOS开源客户端编译指南，供开发者自建应用。 |
 | [act](https://github.com/nektos/act) | ![Stars](https://img.shields.io/github/stars/nektos/act?style=social) | 在本地运行GitHub Actions工作流，实现快速测试与替代Makefile。 |
 | [airflow](https://github.com/apache/airflow) | ![Stars](https://img.shields.io/github/stars/apache/airflow?style=social) | 用代码定义、调度和监控工作流，解决任务编排与自动化问题。 |
 | [alertmanager](https://github.com/prometheus/alertmanager) | ![Stars](https://img.shields.io/github/stars/prometheus/alertmanager?style=social) | Alertmanager处理告警去重、分组、路由与静默抑制，支持邮件、PagerDuty等多种通知渠道。 |
-| [alloy](https://github.com/grafana/alloy) | ![Stars](https://img.shields.io/github/stars/grafana/alloy?style=social) | Alloy 是开源可观测性管道，支持指标、日志、追踪和配置收集，可编程且兼容多遥测生态。 |
 | [ansible-collection-hardening](https://github.com/dev-sec/ansible-collection-hardening) | ![Stars](https://img.shields.io/github/stars/dev-sec/ansible-collection-hardening?style=social) | 该Ansible集合提供经过验证的Linux系统、MySQL、Nginx和OpenSSH加固方案，符合DevSec安全基线标准。 |
 | [ansible](https://github.com/ansible/ansible) | ![Stars](https://img.shields.io/github/stars/ansible/ansible?style=social) | Ansible是开源IT自动化平台，简化配置管理、应用部署和云自动化运维。 |
 | [argo-workflows](https://github.com/argoproj/argo-workflows) | ![Stars](https://img.shields.io/github/stars/argoproj/argo-workflows?style=social) | Argo Workflows 是 Kubernetes 上的开源容器原生工作流引擎，用于编排并行任务和定义多步骤工作流。 |
@@ -33,7 +31,6 @@ sidebar_label: deploy
 | [cds](https://github.com/ovh/cds) | ![Stars](https://img.shields.io/github/stars/ovh/cds?style=social) | 企业级持续交付与 DevOps 自动化平台，支持可视化工作流、Pipeline as Code 和多云自动扩展。 |
 | [chef](https://github.com/get-convex/chef) | ![Stars](https://img.shields.io/github/stars/get-convex/chef?style=social) | AI 全栈应用构建器，内置数据库、零配置认证、文件上传及实时 UI 能力。 |
 | [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) | ![Stars](https://img.shields.io/github/stars/audreyfeldroy/cookiecutter-pypackage?style=social) | 生成带完整工具链、CI/CD 和 PyPI 自动发布的 Python 包模板 |
-| [cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) | ![Stars](https://img.shields.io/github/stars/audreyr/cookiecutter-pypackage?style=social) | Python包脚手架模板，集成CI/CD和PyPI自动发布，快速搭建生产级项目。 |
 | [coolify](https://github.com/coollabsio/coolify) | ![Stars](https://img.shields.io/github/stars/coollabsio/coolify?style=social) | 开源自托管云部署平台，支持一键部署应用、数据库及 300+ 服务，提供完整运维管理能力。 |
 | [course-tencent-cloud](https://github.com/xiaochong0302/course-tencent-cloud) | ![Stars](https://img.shields.io/github/stars/xiaochong0302/course-tencent-cloud?style=social) | 基于腾讯云和Phalcon的开源网校系统，支持在线课程与知识付费平台搭建 |
 | [dagger](https://github.com/dagger/dagger) | ![Stars](https://img.shields.io/github/stars/dagger/dagger?style=social) | Dagger 是软件交付自动化平台，通过容器化实现可编程、可重复、可观测的构建与部署流程。 |
@@ -43,17 +40,12 @@ sidebar_label: deploy
 | [dockpanel](https://github.com/ovexro/dockpanel) | ![Stars](https://img.shields.io/github/stars/ovexro/dockpanel?style=social) | 自托管 Linux 服务器面板，Docker 原生，支持应用一键部署、网站托管与监控安全管理。 |
 | [doco-cd](https://github.com/kimdre/doco-cd) | ![Stars](https://img.shields.io/github/stars/kimdre/doco-cd?style=social) | Doco-CD是Docker Compose的GitOps持续部署工具，支持自动部署与更新。 |
 | [drone](https://github.com/harness/drone) | ![Stars](https://img.shields.io/github/stars/harness/drone?style=social) | 开源 DevOps 平台，集代码托管、自动化流水线、开发环境与制品管理于一体。 |
-| [external-secrets](https://github.com/external-secrets/external-secrets) | ![Stars](https://img.shields.io/github/stars/external-secrets/external-secrets?style=social) | Kubernetes密钥管理算子，自动将AWS Secrets Manager、HashiCorp Vault等外部系统的密钥同步注入到K8s Secrets中。 |
 | [fleet](https://github.com/fleetdm/fleet) | ![Stars](https://img.shields.io/github/stars/fleetdm/fleet?style=social) | 开源平台，统一管理多平台设备，提供移动设备管理、补丁、软件部署和合规验证能力。 |
 | [flyctl](https://github.com/superfly/flyctl) | ![Stars](https://img.shields.io/github/stars/superfly/flyctl?style=social) | flyctl 是 fly.io 平台的命令行工具，用于部署和管理云应用。 |
 | [goploy](https://github.com/zhenorzz/goploy) | ![Stars](https://img.shields.io/github/stars/zhenorzz/goploy?style=social) | 支持代码发布回滚的一键式 Web 部署系统，自动化构建与服务器监控。 |
-| [helm](https://github.com/helm/helm) | ![Stars](https://img.shields.io/github/stars/helm/helm?style=social) | Helm 是 Kubernetes 应用包管理工具，用于简化应用的安装、发布与版本管理。 |
 | [incubator-devlake](https://github.com/apache/incubator-devlake) | ![Stars](https://img.shields.io/github/stars/apache/incubator-devlake?style=social) | Apache DevLake是一款开源DevOps数据平台，整合多工具开发数据，通过预置仪表盘提供工程效能分析与可视化。 |
-| [infracost](https://github.com/infracost/infracost) | ![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social) | 为 Terraform 等 IaC 提供部署前云成本估算，支持 AWS/Azure/GCP 多云平台。 |
 | [jenkins](https://github.com/jenkinsci/jenkins) | ![Stars](https://img.shields.io/github/stars/jenkinsci/jenkins?style=social) | Jenkins是开源自动化服务器，支持构建、测试和部署，自动化软件工作流。 |
-| [karpor](https://github.com/KusionStack/karpor) | ![Stars](https://img.shields.io/github/stars/KusionStack/karpor?style=social) | Karpor是Kubernetes可视化工具，提供跨集群资源搜索、合规治理和AI辅助操作能力，解决Kubernetes管理复杂性问题。 |
 | [keep](https://github.com/keephq/keep) | ![Stars](https://img.shields.io/github/stars/keephq/keep?style=social) | Keep是开源AIOps告警管理平台，提供统一视图、告警去重关联过滤增强、工作流自动化和AI智能分析能力。 |
-| [kokoro](https://github.com/hexgrad/kokoro) | ![Stars](https://img.shields.io/github/stars/hexgrad/kokoro?style=social) | 轻量级开源TTS推理库，支持多语言文本转语音合成。 |
 | [komodo](https://github.com/moghtech/komodo) | ![Stars](https://img.shields.io/github/stars/moghtech/komodo?style=social) | Komodo 是跨多台服务器构建部署软件的开源工具，无数量限制，支持 API 自动化。 |
 | [lake](https://github.com/merico-dev/lake) | ![Stars](https://img.shields.io/github/stars/merico-dev/lake?style=social) | Apache DevLake聚合多源DevOps数据，可视化软件全生命周期，提取工程效能洞察。 |
 | [matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy) | ![Stars](https://img.shields.io/github/stars/spantaleev/matrix-docker-ansible-deploy?style=social) | 用Ansible和Docker自动化部署自托管Matrix服务器及各类配套服务。 |
@@ -66,7 +58,6 @@ sidebar_label: deploy
 | [opensre](https://github.com/Tracer-Cloud/opensre) | ![Stars](https://img.shields.io/github/stars/Tracer-Cloud/opensre?style=social) | OpenSRE 是开源 AI SRE 智能体框架，连接 60+ 工具，自动分析日志/指标/追踪，定位生产故障根因并提供修复建议。 |
 | [opentofu](https://github.com/opentofu/opentofu) | ![Stars](https://img.shields.io/github/stars/opentofu/opentofu?style=social) | OpenTofu是开源基础设施即代码工具，支持安全高效地构建、变更和版本控制基础设施。 |
 | [orchest](https://github.com/orchest/orchest) | ![Stars](https://img.shields.io/github/stars/orchest/orchest?style=social) | 可视化数据管道构建工具，无需框架与YAML，支持直接用Python、R或Julia编写数据处理代码。 |
-| [pixi](https://github.com/prefix-dev/pixi) | ![Stars](https://img.shields.io/github/stars/prefix-dev/pixi?style=social) | 跨平台多语言包管理器，简化开发环境依赖管理，提供类 cargo/npm 体验。 |
 | [prefect](https://github.com/PrefectHQ/prefect) | ![Stars](https://img.shields.io/github/stars/PrefectHQ/prefect?style=social) | Prefect是Python工作流编排框架，用于构建数据管道，支持调度、重试、缓存和事件驱动自动化。 |
 | [probo](https://github.com/getprobo/probo) | ![Stars](https://img.shields.io/github/stars/getprobo/probo?style=social) | Probo是一款面向工程师的开源GRC治理平台，支持风险识别、合规控制、第三方风险管理等全生命周期管理，并提供MCP、CLI等多接口能力。 |
 | [risingwave](https://github.com/risingwavelabs/risingwave) | ![Stars](https://img.shields.io/github/stars/risingwavelabs/risingwave?style=social) | 面向 AI 代理的事件流平台，统一数据摄取、增量处理与低延迟查询，替代传统流式技术栈。 |
@@ -75,7 +66,7 @@ sidebar_label: deploy
 | [semaphore](https://github.com/semaphoreui/semaphore) | ![Stars](https://img.shields.io/github/stars/semaphoreui/semaphore?style=social) | Semaphore UI 是 Ansible、Terraform 等 DevOps 工具的现代 Web 界面，支持可视化执行任务与权限控制。 |
 | [terraform-provider-aws](https://github.com/hashicorp/terraform-provider-aws) | ![Stars](https://img.shields.io/github/stars/hashicorp/terraform-provider-aws?style=social) | 使 Terraform 能够管理 AWS 云资源的基础设施配置工具 |
 | [terraform](https://github.com/hashicorp/terraform) | ![Stars](https://img.shields.io/github/stars/hashicorp/terraform?style=social) | Terraform 是基础设施即代码工具，用于安全高效地构建、管理和版本控制云资源 |
-| [video-search-and-summarization](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization) | ![Stars](https://img.shields.io/github/stars/NVIDIA-AI-Blueprints/video-search-and-summarization?style=social) | 基于GPU加速的视频AI智能体，支持自然语言搜索、总结和可视化分析视频内容。 |
 | [warpgate](https://github.com/warp-tech/warpgate) | ![Stars](https://img.shields.io/github/stars/warp-tech/warpgate?style=social) | Warpgate 是透明堡垒机，支持 SSH/RDP/VNC 等多种协议，无需客户端，提供会话录制与双因素认证。 |
 | [web-unified-docs](https://github.com/hashicorp/web-unified-docs) | ![Stars](https://img.shields.io/github/stars/hashicorp/web-unified-docs?style=social) | 统一文档项目提供断链检查和文档API，集中管理多产品文档。 |
 | [wgcloud](https://github.com/tianshiyeben/wgcloud) | ![Stars](https://img.shields.io/github/stars/tianshiyeben/wgcloud?style=social) | WGCLOUD是轻量级分布式运维监控系统，实时采集服务器主机指标，支持告警推送与可视化大屏展示。 |
+| [harness](https://github.com/harness/harness) | ![Stars](https://img.shields.io/github/stars/harness/harness?style=social) | 开源 DevOps 平台，提供代码托管、自动化流水线、Gitspaces 开发环境和制品注册表等端到端开发能力。 |

@@ -7,7 +7,7 @@ sidebar_label: testing
 
 # testing
 
-本分类共 **20** 个项目。
+本分类共 **27** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -15,6 +15,14 @@ sidebar_label: testing
 | --- | --- | --- |
 | [e2e](https://github.com/tester-army/e2e) | ![Stars](https://img.shields.io/github/stars/tester-army/e2e?style=social) | AI驱动端到端测试框架，用自然语言描述目标，智能体自动操作并验证web和移动应用。 |
 | [sliver](https://github.com/BishopFox/sliver) | ![Stars](https://img.shields.io/github/stars/BishopFox/sliver?style=social) | Sliver 是开源跨平台红队框架，支持 C2 通信和多种后渗透能力。 |
+| [httprunner](https://github.com/httprunner/httprunner) | ![Stars](https://img.shields.io/github/stars/httprunner/httprunner?style=social) | HttpRunner是通用智能自动化测试框架，支持UI自动化、接口测试与性能测试。 |
+| [scan4all](https://github.com/hktalent/scan4all) | ![Stars](https://img.shields.io/github/stars/hktalent/scan4all?style=social) | 集成扫描、漏洞检测、弱密码爆破的一站式自动化渗透测试工具。 |
+| [hey](https://github.com/rakyll/hey) | ![Stars](https://img.shields.io/github/stars/rakyll/hey?style=social) | hey 是轻量 HTTP 压力测试工具，支持 HTTP/2，可设置请求数、并发数及速率限制并输出统计。 |
+| [bettercap](https://github.com/bettercap/bettercap) | ![Stars](https://img.shields.io/github/stars/bettercap/bettercap?style=social) | Bettercap是一款支持WiFi、蓝牙、CAN-bus及以太网的多功能网络侦察与渗透测试框架。 |
+| [oha](https://github.com/hatoo/oha) | ![Stars](https://img.shields.io/github/stars/hatoo/oha?style=social) | oha是用Rust编写的HTTP压力测试工具，支持实时TUI界面显示负载测试数据。 |
+| [dperf](https://github.com/baidu/dperf) | ![Stars](https://img.shields.io/github/stars/baidu/dperf?style=social) | dperf 是基于 DPDK 的高性能网络流量生成与负载测试工具，支持单服务器每秒千万级 HTTP 连接和数百 Gbps 吞吐量。 |
+| [rogue](https://github.com/qualifire-dev/rogue) | ![Stars](https://img.shields.io/github/stars/qualifire-dev/rogue?style=social) | AI Agent 评估与红队测试平台，支持自动化业务规则验证及对抗性安全漏洞扫描。 |
+| [vtebench](https://github.com/alacritty/vtebench) | ![Stars](https://img.shields.io/github/stars/alacritty/vtebench?style=social) | vtebench 是用于基准测试终端模拟器 PTY 读取性能的工具，通过运行可执行文件测量读取速度。 |
 | [appium](https://github.com/appium/appium) | ![Stars](https://img.shields.io/github/stars/appium/appium?style=social) | Appium是基于WebDriver的跨平台测试自动化工具，支持多语言和多平台的移动应用自动化测试。 |
 | [awesome-test-automation](https://github.com/atinfo/awesome-test-automation) | ![Stars](https://img.shields.io/github/stars/atinfo/awesome-test-automation?style=social) | 精选多语言测试自动化工具与框架合集，帮助工程师快速搭建测试自动化。 |
 | [cypress](https://github.com/cypress-io/cypress) | ![Stars](https://img.shields.io/github/stars/cypress-io/cypress?style=social) | Cypress是一款快速、简单、可靠的浏览器自动化测试框架，用于网页应用测试。 |
@@ -26,7 +34,6 @@ sidebar_label: testing
 | [hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | ![Stars](https://img.shields.io/github/stars/0x4m4/hexstrike-ai?style=social) | AI驱动的网络安全渗透测试自动化平台，集成150+安全工具与12+智能代理。 |
 | [hyperfine](https://github.com/sharkdp/hyperfine) | ![Stars](https://img.shields.io/github/stars/sharkdp/hyperfine?style=social) | hyperfine 是命令行基准测试工具，用于多命令性能对比分析，支持统计、预热和结果导出。 |
 | [keploy](https://github.com/keploy/keploy) | ![Stars](https://img.shields.io/github/stars/keploy/keploy?style=social) | 基于 eBPF 从真实流量自动生成 API 测试用例和 Mock，零侵入提升测试覆盖率。 |
-| [neotest](https://github.com/nvim-neotest/neotest) | ![Stars](https://img.shields.io/github/stars/nvim-neotest/neotest?style=social) | Neotest是NeoVim测试框架，支持运行、调试和查看多语言测试结果。 |
 | [nuclei-templates](https://github.com/projectdiscovery/nuclei-templates) | ![Stars](https://img.shields.io/github/stars/projectdiscovery/nuclei-templates?style=social) | Nuclei漏洞扫描器的社区模板库，提供各类安全漏洞检测模板，帮助发现应用程序中的已知漏洞。 |
 | [nuclei](https://github.com/projectdiscovery/nuclei) | ![Stars](https://img.shields.io/github/stars/projectdiscovery/nuclei?style=social) | Nuclei是基于YAML模板的高性能漏洞扫描器，支持多协议，可自定义检测场景，实现零误报。 |
 | [oss-policies-info](https://github.com/google/oss-policies-info) | ![Stars](https://img.shields.io/github/stars/google/oss-policies-info?style=social) | 汇总Google开源项目支持政策，提供中央化的支持矩阵说明。 |

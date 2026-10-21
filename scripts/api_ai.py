@@ -124,9 +124,7 @@ async def api_github_readme(owner: str, repo: str) -> str | None:
     stop=stop_after_attempt(LLM_MAX_ATTEMPTS),
     wait=wait_fixed(2),
     retry=(retry_if_exception_type() | retry_if_result(_is_blank_llm_response)),
-    before_sleep=lambda state: logger.warning(
-        f"OpenAI 第 {state.attempt_number} 次调用失败：{state.outcome.exception() or '返回为空'}，准备重试"
-    ),
+    before_sleep=lambda state: logger.warning(f"OpenAI 第 {state.attempt_number} 次调用失败：{state.outcome.exception() or '返回为空'}，准备重试"),
     retry_error_callback=_llm_give_up,
 )
 async def api_openai_generate(

@@ -67,27 +67,18 @@ async def category_projects(recategorize: bool = False) -> None:
     """生成分类建议；常规模式只处理未分类项目，全量模式跳过人工分类。"""
     conn = get_db()
     try:
-        rows = conn.execute(
-            "SELECT id, full_name, url, description, category, category_source FROM projects ORDER BY id"
-        ).fetchall()
+        rows = conn.execute("SELECT id, full_name, url, description, category, category_source FROM projects ORDER BY id").fetchall()
         categories = [
             row["category"]
             for row in conn.execute(
-                "SELECT category, COUNT(*) AS cnt FROM projects "
-                "WHERE category <> '未分类' GROUP BY category COLLATE NOCASE "
-                "ORDER BY cnt DESC, category COLLATE NOCASE"
+                "SELECT category, COUNT(*) AS cnt FROM projects WHERE category <> '未分类' GROUP BY category COLLATE NOCASE ORDER BY cnt DESC, category COLLATE NOCASE"
             ).fetchall()
             if row["category"] and not UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
         ]
         pending = [
-            row for row in rows
-            if row["category_source"] != "manual"
-            and (
-                recategorize
-                or not row["category"]
-                or row["category"] == "未分类"
-                or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
-            )
+            row
+            for row in rows
+            if row["category_source"] != "manual" and (recategorize or not row["category"] or row["category"] == "未分类" or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"]))
         ]
         if not pending:
             logger.info("SQLite 中没有待分类项目")

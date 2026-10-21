@@ -7,15 +7,17 @@ sidebar_label: linux
 
 # linux
 
-本分类共 **23** 个项目。
+本分类共 **25** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [LACT](https://github.com/ilya-zlobintsev/LACT) | ![Stars](https://img.shields.io/github/stars/ilya-zlobintsev/LACT?style=social) | LACT 是 Linux 显卡控制工具，支持 AMD/NVIDIA/Intel 显卡的监控、超频、风扇和功耗管理。 |
+| [crontab-ui](https://github.com/alseambusher/crontab-ui) | ![Stars](https://img.shields.io/github/stars/alseambusher/crontab-ui?style=social) | 基于Web的Crontab管理工具，提供可视化界面安全地增删改查定时任务，支持备份、导入导出及错误日志。 |
+| [bluetui](https://github.com/pythops/bluetui) | ![Stars](https://img.shields.io/github/stars/pythops/bluetui?style=social) | Linux 终端蓝牙管理工具，基于 bluez 管理蓝牙设备、适配器与配对设备。 |
 | [How-To-Secure-A-Linux-Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server) | ![Stars](https://img.shields.io/github/stars/imthenachoman/How-To-Secure-A-Linux-Server?style=social) | Linux服务器安全加固指南，涵盖SSH、防火墙、入侵检测与审计等功能。 |
 | [HyDE](https://github.com/HyDE-Project/HyDE) | ![Stars](https://img.shields.io/github/stars/HyDE-Project/HyDE?style=social) | HyDE是一个基于Hyprland的桌面环境配置框架，提供主题、壁纸、样式和一键安装脚本，专为Arch Linux发行版打造高度定制化的用户界面体验。 |
-| [archinstall](https://github.com/archlinux/archinstall) | ![Stars](https://img.shields.io/github/stars/archlinux/archinstall?style=social) | Arch Linux 引导式安装工具，支持自动化安装及作为库管理服务与包。 |
 | [awesome](https://github.com/awesomeWM/awesome) | ![Stars](https://img.shields.io/github/stars/awesomeWM/awesome?style=social) | Awesome 是一款高度可配置的下一代 X 窗口管理器框架。 |
 | [blur-my-shell](https://github.com/aunetx/blur-my-shell) | ![Stars](https://img.shields.io/github/stars/aunetx/blur-my-shell?style=social) | GNOME Shell扩展，为顶栏、概览、面板和应用窗口添加毛玻璃模糊效果。 |
 | [cronboard](https://github.com/antoniorodr/cronboard) | ![Stars](https://img.shields.io/github/stars/antoniorodr/cronboard?style=social) | 终端 Cron 任务管理器，支持本地/远程服务器增删改查、暂停恢复及失败通知。 |

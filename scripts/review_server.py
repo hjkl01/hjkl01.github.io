@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """本地 GitHub 项目分类管理页面（仅标准库，无额外运行依赖）。"""
+
 from __future__ import annotations
 
 import json
@@ -15,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from scripts.github_projects import connect_db, generate_markdown, migrate_legacy  # noqa: E402
 
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 PORT = int(os.environ.get("GITHUB_REVIEW_PORT", "8765"))
 PAGE_SIZE_DEFAULT = 25
 PAGE_SIZE_MAX = 100
@@ -173,17 +174,14 @@ class ReviewHandler(BaseHTTPRequestHandler):
             total = conn.execute("SELECT COUNT(*) FROM projects").fetchone()[0]
             pending = conn.execute("SELECT COUNT(*) FROM projects WHERE category_status <> 'confirmed'").fetchone()[0]
             manual = conn.execute("SELECT COUNT(*) FROM projects WHERE category_source = 'manual'").fetchone()[0]
-            uncategorized = conn.execute(
-                "SELECT COUNT(*) FROM projects WHERE category IS NULL OR trim(category) = '' OR category = '未分类'"
-            ).fetchone()[0]
+            uncategorized = conn.execute("SELECT COUNT(*) FROM projects WHERE category IS NULL OR trim(category) = '' OR category = '未分类'").fetchone()[0]
             categories = [
-                row["category"] for row in conn.execute(
-                    "SELECT category FROM projects WHERE category IS NOT NULL AND trim(category) <> '' "
-                    "GROUP BY category COLLATE NOCASE ORDER BY category COLLATE NOCASE"
+                row["category"]
+                for row in conn.execute(
+                    "SELECT category FROM projects WHERE category IS NOT NULL AND trim(category) <> '' GROUP BY category COLLATE NOCASE ORDER BY category COLLATE NOCASE"
                 )
             ]
-        json_response(self, 200, {"total": total, "pending": pending, "manual": manual,
-                                  "uncategorized": uncategorized, "categories": categories})
+        json_response(self, 200, {"total": total, "pending": pending, "manual": manual, "uncategorized": uncategorized, "categories": categories})
 
     def handle_projects(self, query: dict[str, list[str]]) -> None:
         q = query.get("q", [""])[0].strip()
@@ -214,8 +212,12 @@ class ReviewHandler(BaseHTTPRequestHandler):
         elif status:
             json_response(self, 400, {"error": "无效的审核状态"})
             return
-        order_by = {"name": "full_name COLLATE NOCASE", "category": "category COLLATE NOCASE, full_name COLLATE NOCASE",
-                    "updated": "updated_at DESC, id DESC", "id": "id DESC"}.get(sort)
+        order_by = {
+            "name": "full_name COLLATE NOCASE",
+            "category": "category COLLATE NOCASE, full_name COLLATE NOCASE",
+            "updated": "updated_at DESC, id DESC",
+            "id": "id DESC",
+        }.get(sort)
         if not order_by:
             json_response(self, 400, {"error": "无效的排序字段"})
             return
@@ -227,8 +229,9 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 "category_status, updated_at FROM projects" + clause + " ORDER BY " + order_by + " LIMIT ? OFFSET ?",
                 [*params, page_size, (page - 1) * page_size],
             ).fetchall()
-        json_response(self, 200, {"items": [dict(row) for row in rows], "total": total,
-                                  "page": page, "page_size": page_size, "pages": max(1, (total + page_size - 1) // page_size)})
+        json_response(
+            self, 200, {"items": [dict(row) for row in rows], "total": total, "page": page, "page_size": page_size, "pages": max(1, (total + page_size - 1) // page_size)}
+        )
 
     @staticmethod
     def validate_category(value: object, conn) -> str:
@@ -239,9 +242,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
             raise ValueError("分类名称不能为空")
         if len(category) > 80:
             raise ValueError("分类名称不能超过 80 个字符")
-        existing = conn.execute(
-            "SELECT category FROM projects WHERE category = ? COLLATE NOCASE LIMIT 1", (category,)
-        ).fetchone()
+        existing = conn.execute("SELECT category FROM projects WHERE category = ? COLLATE NOCASE LIMIT 1", (category,)).fetchone()
         return existing["category"] if existing else category
 
     def update_project(self, payload: dict) -> None:
@@ -267,8 +268,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
             else:
                 raise ValueError("无效的操作")
             conn.execute(
-                "UPDATE projects SET category = ?, category_source = ?, category_status = 'confirmed', "
-                "updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+                "UPDATE projects SET category = ?, category_source = ?, category_status = 'confirmed', updated_at = CURRENT_TIMESTAMP WHERE id = ?",
                 (category, source, project_id),
             )
         json_response(self, 200, {"updated": 1, "category": category})
@@ -284,9 +284,7 @@ class ReviewHandler(BaseHTTPRequestHandler):
             raise ValueError("项目 ID 必须是整数")
         with connect_db() as conn:
             placeholders = ",".join("?" for _ in ids)
-            rows = conn.execute(
-                f"SELECT id, category, auto_category, category_source FROM projects WHERE id IN ({placeholders})", ids
-            ).fetchall()
+            rows = conn.execute(f"SELECT id, category, auto_category, category_source FROM projects WHERE id IN ({placeholders})", ids).fetchall()
             if len(rows) != len(ids):
                 raise ValueError("部分项目不存在，请刷新后重试")
             if action == "manual":
@@ -308,8 +306,8 @@ class ReviewHandler(BaseHTTPRequestHandler):
             else:
                 raise ValueError("无效的批量操作")
             conn.executemany(
-                "UPDATE projects SET category = ?, category_source = ?, category_status = 'confirmed', "
-                "updated_at = CURRENT_TIMESTAMP WHERE id = ?", updates,
+                "UPDATE projects SET category = ?, category_source = ?, category_status = 'confirmed', updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+                updates,
             )
         json_response(self, 200, {"updated": len(updates)})
 

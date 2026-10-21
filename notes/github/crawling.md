@@ -7,13 +7,15 @@ sidebar_label: crawling
 
 # crawling
 
-本分类共 **54** 个项目。
+本分类共 **60** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
-| [AreaCity-JsSpider-StatsGov](https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov) | ![Stars](https://img.shields.io/github/stars/xiangyuecn/AreaCity-JsSpider-StatsGov?style=social) | 采集中国省市区镇四级行政区划数据，标注拼音、坐标和边界范围，并提供数据转换与查询工具。 |
+| [camofox-browser](https://github.com/jo-inc/camofox-browser) | ![Stars](https://img.shields.io/github/stars/jo-inc/camofox-browser?style=social) | AI 代理的反检测浏览器服务，基于 Camoufox 绕过主流网站 Bot 防护 |
+| [TrendRadar](https://github.com/sansan0/TrendRadar) | ![Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=social) | 聚合多平台热点新闻，按关键词筛选推送，支持AI智能分析与多渠道通知。 |
+| [wechat-article-exporter](https://github.com/wechat-article/wechat-article-exporter) | ![Stars](https://img.shields.io/github/stars/wechat-article/wechat-article-exporter?style=social) | 一款微信公众号文章批量下载工具，支持多种格式导出及评论阅读数据。 |
 | [CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | ![Stars](https://img.shields.io/github/stars/CloakHQ/CloakBrowser?style=social) | 通过 C++ 源码级指纹修改绕过反爬虫检测的隐身 Chromium 浏览器。 |
 | [Crack-JS-Spider](https://github.com/LoseNine/Crack-JS-Spider) | ![Stars](https://img.shields.io/github/stars/LoseNine/Crack-JS-Spider?style=social) | 破解Python爬虫遇到的JS加密问题，提供AST混淆还原和Chrome调试逆向教程 |
 | [CrawlerTutorial](https://github.com/NanmiCoder/CrawlerTutorial) | ![Stars](https://img.shields.io/github/stars/NanmiCoder/CrawlerTutorial?style=social) | 面向自媒体平台的爬虫教程仓库，涵盖从入门到高级的静态/动态数据抓取、反检测与自动化采集实战。 |
@@ -67,3 +69,7 @@ sidebar_label: crawling
 | [stagehand](https://github.com/browserbase/stagehand) | ![Stars](https://img.shields.io/github/stars/browserbase/stagehand?style=social) | 浏览器 AI 代理 SDK，通过自然语言驱动页面操作与结构化数据提取。 |
 | [undetected-chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) | ![Stars](https://img.shields.io/github/stars/ultrafunkamsterdam/undetected-chromedriver?style=social) | 优化版Selenium驱动，自动修补ChromeDriver，绕过Distill、DataDome等反爬虫检测。 |
 | [weiboSpider](https://github.com/dataabc/weiboSpider) | ![Stars](https://img.shields.io/github/stars/dataabc/weiboSpider?style=social) | 连续爬取新浪微博用户资料与微博内容、图片视频等数据，并保存至文件或数据库。 |
+| [mitmproxy2swagger](https://github.com/alufers/mitmproxy2swagger) | ![Stars](https://img.shields.io/github/stars/alufers/mitmproxy2swagger?style=social) | 从抓包流量自动逆向生成 REST API 的 OpenAPI 文档 |
+| [mitmproxy](https://github.com/mitmproxy/mitmproxy) | ![Stars](https://img.shields.io/github/stars/mitmproxy/mitmproxy?style=social) | mitmproxy 是支持 SSL/TLS 的交互式代理工具，可拦截调试 HTTP 和 WebSocket 流量 |
+| [proxypin](https://github.com/wanghongenpin/proxypin) | ![Stars](https://img.shields.io/github/stars/wanghongenpin/proxypin?style=social) | 开源 HTTP(S) 流量抓包工具，支持拦截、检查与重写网络请求。 |
+| [selenium-wire](https://github.com/wkeeling/selenium-wire) | ![Stars](https://img.shields.io/github/stars/wkeeling/selenium-wire?style=social) | Selenium Wire 扩展 Selenium，可捕获并拦截浏览器发出的 HTTP/HTTPS 请求，支持动态修改请求和响应。 |
