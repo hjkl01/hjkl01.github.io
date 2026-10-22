@@ -7,7 +7,7 @@ sidebar_label: shell
 
 # shell
 
-本分类共 **42** 个项目。
+本分类共 **40** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -21,7 +21,6 @@ sidebar_label: shell
 | [chezmoi](https://github.com/twpayne/chezmoi) | ![Stars](https://img.shields.io/github/stars/twpayne/chezmoi?style=social) | 跨多台机器安全管理和同步dotfiles配置。 |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | ![Stars](https://img.shields.io/github/stars/BurntSushi/ripgrep?style=social) | 基于正则的递归文件搜索工具，自动忽略gitignore等文件，搜索速度快。 |
 | [tailspin](https://github.com/bensadeh/tailspin) | ![Stars](https://img.shields.io/github/stars/bensadeh/tailspin?style=social) | tailspin 是一款零配置的日志文件高亮查看工具，自动识别并着色日期、IP、URL 等常见模式，支持管道输入与自定义主题。 |
-| [xterm.js](https://github.com/xtermjs/xterm.js) | ![Stars](https://img.shields.io/github/stars/xtermjs/xterm.js?style=social) | 在浏览器中提供功能完备的终端体验，支持各类终端应用、高性能渲染和富 Unicode |
 | [yq](https://github.com/mikefarah/yq) | ![Stars](https://img.shields.io/github/stars/mikefarah/yq?style=social) | yq 是基于 jq 语法的轻量级命令行工具，支持 YAML、JSON、XML 等多种格式的数据处理和格式转换。 |
 | [zellij](https://github.com/zellij-org/zellij) | ![Stars](https://img.shields.io/github/stars/zellij-org/zellij?style=social) | Zellij 是终端多路复用器，支持自定义布局、多人协作和插件扩展。 |
 | [brush](https://github.com/reubeno/brush) | ![Stars](https://img.shields.io/github/stars/reubeno/brush?style=social) | 基于Rust的Bash兼容shell，可日常使用或嵌入程序，提供历史建议与语法高亮。 |
@@ -44,7 +43,6 @@ sidebar_label: shell
 | [modern-unix](https://github.com/ibraheemdev/modern-unix) | ![Stars](https://img.shields.io/github/stars/ibraheemdev/modern-unix?style=social) | 提供现代美观的 Unix 命令行工具替代品，提升终端使用体验 |
 | [nushell](https://github.com/nushell/nushell) | ![Stars](https://img.shields.io/github/stars/nushell/nushell?style=social) | Nushell 是一款跨平台的现代化结构化 Shell，将数据视为表格并通过管道高效处理。 |
 | [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) | ![Stars](https://img.shields.io/github/stars/JanDeDobbeleer/oh-my-posh?style=social) | 跨平台 Shell 提示主题引擎，高度可定制、配置简单、执行快速。 |
-| [opentui](https://github.com/sst/opentui) | ![Stars](https://img.shields.io/github/stars/sst/opentui?style=social) | 终端 UI 库，用 Zig 实现，支持 TypeScript/React/Solid，提供 flexbox 布局和多媒体渲染能力 |
 | [starship](https://github.com/starship/starship) | ![Stars](https://img.shields.io/github/stars/starship/starship?style=social) | Starship 是一款极速、高度可定制、跨平台跨 Shell 的智能提示符工具。 |
 | [television](https://github.com/alexpasmantier/television) | ![Stars](https://img.shields.io/github/stars/alexpasmantier/television?style=social) | 快速终端模糊查找器，支持文件、代码、Git仓库等多种数据源的实时搜索 |
 | [term.everything](https://github.com/mmulet/term.everything) | ![Stars](https://img.shields.io/github/stars/mmulet/term.everything?style=social) | Term.Everything将Wayland图形界面渲染到终端，让用户能在命令行中直接运行任何GUI应用程序。 |

@@ -7,7 +7,7 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **460** 个项目。
+本分类共 **459** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -168,7 +168,6 @@ sidebar_label: AI
 | [edgequake](https://github.com/raphaelmansuy/edgequake) | ![Stars](https://img.shields.io/github/stars/raphaelmansuy/edgequake?style=social) | 基于 Rust 的 Graph-RAG 系统，将文档转化为知识图谱，结合向量搜索与图遍历提供带来源的智能问答。 |
 | [eigent](https://github.com/eigent-ai/eigent) | ![Stars](https://img.shields.io/github/stars/eigent-ai/eigent?style=social) | 开源AI协作桌面应用，支持多智能体并行执行复杂工作流，本地部署保障数据安全。 |
 | [eino](https://github.com/cloudwego/eino) | ![Stars](https://img.shields.io/github/stars/cloudwego/eino?style=social) | Eino 是 Golang LLM 应用框架，通过组件化、Agent 和编排简化 AI 开发。 |
-| [engram](https://github.com/Gentleman-Programming/engram) | ![Stars](https://img.shields.io/github/stars/Gentleman-Programming/engram?style=social) | 为AI编程代理提供持久化记忆，解决会话结束后遗忘的问题，支持多种主流编程助手工具。 |
 | [evals](https://github.com/openai/evals) | ![Stars](https://img.shields.io/github/stars/openai/evals?style=social) | OpenAI Evals 是 LLM 评测框架，提供注册表与自定义评测能力。 |
 | [exo](https://github.com/exo-explore/exo) | ![Stars](https://img.shields.io/github/stars/exo-explore/exo?style=social) | exo 将多台设备连接为 AI 集群，在本地运行大型模型，支持多设备并行加速与多种 API 兼容。 |
 | [fabro](https://github.com/fabro-sh/fabro) | ![Stars](https://img.shields.io/github/stars/fabro-sh/fabro?style=social) | Fabro 是开源 AI 编码工作流引擎，用图结构定义流程，支持多模型路由与人工审核，让 AI 编程更可靠可控。 |

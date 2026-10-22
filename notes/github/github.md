@@ -7,7 +7,7 @@ sidebar_label: github
 
 # github
 
-本分类共 **265** 个项目。
+本分类共 **266** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -278,3 +278,4 @@ sidebar_label: github
 | [xianyu-auto-reply](https://github.com/zhinianboke/xianyu-auto-reply) | ![Stars](https://img.shields.io/github/stars/zhinianboke/xianyu-auto-reply?style=social) | 闲鱼多账号自动化系统，支持自动回复、自动发货、商品发布与AI智能对话。 |
 | [zephyr](https://github.com/zephyrproject-rtos/zephyr) | ![Stars](https://img.shields.io/github/stars/zephyrproject-rtos/zephyr?style=social) | Zephyr 是面向资源受限设备的可扩展实时操作系统，支持多架构与内置安全，适用于物联网嵌入式设备开发。 |
 | [zizmor](https://github.com/zizmorcore/zizmor) | ![Stars](https://img.shields.io/github/stars/zizmorcore/zizmor?style=social) | zizmor是CI/CD静态安全分析工具，可检测模板注入、凭证泄露等安全隐患。 |
+| [opentui](https://github.com/sst/opentui) | ![Stars](https://img.shields.io/github/stars/sst/opentui?style=social) | 终端 UI 库，用 Zig 实现，支持 TypeScript/React/Solid，提供 flexbox 布局和多媒体渲染能力 |

@@ -7,7 +7,7 @@ sidebar_label: ai_app
 
 # ai_app
 
-本分类共 **45** 个项目。
+本分类共 **47** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -15,6 +15,7 @@ sidebar_label: ai_app
 | --- | --- | --- |
 | [FounderOS](https://github.com/Bennettxai/FounderOS) | ![Stars](https://img.shields.io/github/stars/Bennettxai/FounderOS?style=social) | 单人公司操作系统，通过AI助手整合通信、客户漏斗、财务等模块，一键管理企业运营。 |
 | [CodeAF](https://github.com/Agent-Field/CodeAF) | ![Stars](https://img.shields.io/github/stars/Agent-Field/CodeAF?style=social) | CodeAF是开源编码工厂，用多AI模型自动拆分任务、编写测试、合并代码，统一管理所有项目。 |
+| [engram](https://github.com/Gentleman-Programming/engram) | ![Stars](https://img.shields.io/github/stars/Gentleman-Programming/engram?style=social) | 为AI编程代理提供持久化记忆，解决会话结束后遗忘的问题，支持多种主流编程助手工具。 |
 | [DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) | ![Stars](https://img.shields.io/github/stars/esengine/DeepSeek-Reasonix?style=social) | 开源AI编程助手，自动读取代码、编辑文件和运行命令测试，支持多种使用方式。 |
 | [LibreChat](https://github.com/danny-avila/LibreChat) | ![Stars](https://img.shields.io/github/stars/danny-avila/LibreChat?style=social) | LibreChat是一款自托管AI对话平台，聚合多家AI模型，支持Agent管理、代码解释器、图片生成及多模态聊天。 |
 | [TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | ![Stars](https://img.shields.io/github/stars/TencentCloud/TencentDB-Agent-Memory?style=social) | 为 AI Agent 团队提供记忆系统，自动提取并复用对话、技能、文档和代码知识，减少重复工作，提升效率。 |
@@ -58,3 +59,4 @@ sidebar_label: ai_app
 | [Memori](https://github.com/MemoriLabs/Memori) | ![Stars](https://img.shields.io/github/stars/MemoriLabs/Memori?style=social) | Memori 为 AI Agent 提供持久化记忆层，自动记录执行过程并支持跨会话记忆召回，降低长对话成本。 |
 | [claude-code-harness](https://github.com/Chachamaru127/claude-code-harness) | ![Stars](https://img.shields.io/github/stars/Chachamaru127/claude-code-harness?style=social) | Claude Code Harness 是一款开发插件，通过计划、执行、审查、发布的纪律性循环安全委托 AI 代理完成代码任务，让开发者把控目标与验收标准。 |
 | [opencode](https://github.com/opencode-ai/opencode) | ![Stars](https://img.shields.io/github/stars/opencode-ai/opencode?style=social) | OpenCode 是一款终端交互式 AI 编程助手，支持多种大语言模型，可智能辅助编码、调试并执行命令。 |
+| [mem0](https://github.com/mem0ai/mem0) | ![Stars](https://img.shields.io/github/stars/mem0ai/mem0?style=social) | Mem0是AI记忆层，让AI助手记住用户偏好与历史信息，实现个性化交互。 |

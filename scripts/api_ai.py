@@ -9,13 +9,13 @@ from tenacity import retry, retry_if_exception_type, retry_if_result, stop_after
 
 from scripts.config import (
     logger,
-    GITHUB_TOKEN,
     OPENAI_API,
     OPENAI_API_KEY,
     OPENAI_MODEL,
     API_CONCURRENCY,
     LLM_MAX_ATTEMPTS,
 )
+from scripts import config
 from scripts.prompts import CATEGORY_PROMPT
 
 
@@ -50,11 +50,13 @@ class httpxClient:
     @classmethod
     async def get_github_client(cls) -> httpx.AsyncClient:
         if cls._github_client is None:
+            headers = {"Accept": "application/vnd.github.v3+json"}
+            # 未配置 GITHUB_TOKEN 时不发 Authorization，改用匿名请求（受限但可用）。
+            # 通过 config 模块间接引用，便于长驻服务调用 reload_github_token() 热更新。
+            if config.GITHUB_TOKEN:
+                headers["Authorization"] = f"Bearer {config.GITHUB_TOKEN}"
             cls._github_client = httpx.AsyncClient(
-                headers={
-                    "Authorization": f"Bearer {GITHUB_TOKEN}",
-                    "Accept": "application/vnd.github.v3+json",
-                },
+                headers=headers,
                 timeout=30.0,
                 follow_redirects=True,
             )
@@ -112,7 +114,12 @@ async def api_github_readme(owner: str, repo: str) -> str | None:
     async with httpxClient.get_semaphore():
         resp = await client.get(url)
     if resp.status_code != 200:
-        logger.error(f"无法获取 README: HTTP {resp.status_code}")
+        if resp.status_code in {401, 403}:
+            logger.error(f"无法获取 README: HTTP {resp.status_code}（GITHUB_TOKEN 无效或额度用尽）")
+        elif resp.status_code == 404:
+            logger.error(f"无法获取 README: HTTP 404（仓库不存在或没有 README）")
+        else:
+            logger.error(f"无法获取 README: HTTP {resp.status_code}")
         return None
 
     data = resp.json()
