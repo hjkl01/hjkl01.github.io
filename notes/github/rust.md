@@ -7,12 +7,37 @@ sidebar_label: rust
 
 # rust
 
-本分类共 **27** 个项目。
+本分类共 **53** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [rustls](https://github.com/rustls/rustls) | ![Stars](https://img.shields.io/github/stars/rustls/rustls?style=social) | 用 Rust 编写的现代 TLS 库，实现 TLS 1.2/1.3，无需配置即可提供安全连接。 |
+| [Pake](https://github.com/tw93/Pake) | ![Stars](https://img.shields.io/github/stars/tw93/Pake?style=social) | Pake 可将任意网页一键打包为轻量桌面应用，支持 macOS、Windows、Linux 多平台。 |
+| [tauri](https://github.com/tauri-apps/tauri) | ![Stars](https://img.shields.io/github/stars/tauri-apps/tauri?style=social) | Tauri 是基于 Rust 和 Web 技术的跨平台桌面应用框架，生成轻量高效的二进制文件。 |
+| [clap](https://github.com/clap-rs/clap) | ![Stars](https://img.shields.io/github/stars/clap-rs/clap?style=social) | Rust命令行参数解析库，支持声明式或过程式创建解析器。 |
+| [egui](https://github.com/emilk/egui) | ![Stars](https://img.shields.io/github/stars/emilk/egui?style=social) | egui是纯Rust即时模式GUI库，简单易用，支持Web和原生环境。 |
+| [embassy](https://github.com/embassy-rs/embassy) | ![Stars](https://img.shields.io/github/stars/embassy-rs/embassy?style=social) | 基于 Rust 异步的嵌入式应用开发框架，替代 RTOS 实现安全高效的微控制器编程。 |
+| [smithay](https://github.com/Smithay/smithay) | ![Stars](https://img.shields.io/github/stars/Smithay/smithay?style=social) | Smithay 是 Rust 开发的 Wayland 合成器构建库，提供通用组件帮助开发者快速创建合成器。 |
+| [tonic](https://github.com/hyperium/tonic) | ![Stars](https://img.shields.io/github/stars/hyperium/tonic?style=social) | Rust gRPC 框架，基于 HTTP/2 的高性能异步 RPC 实现，支持流式传输与互操作性。 |
+| [vello](https://github.com/linebender/vello) | ![Stars](https://img.shields.io/github/stars/linebender/vello?style=social) | Rust 编写的高性能 2D 矢量渲染器，支持 CPU/GPU 多种渲染后端。 |
+| [windows-rs](https://github.com/microsoft/windows-rs) | ![Stars](https://img.shields.io/github/stars/microsoft/windows-rs?style=social) | windows-rs 为 Rust 提供 Windows API bindings，覆盖 COM、WinRT、系统服务和 UI 等功能。 |
+| [yew](https://github.com/yewstack/yew) | ![Stars](https://img.shields.io/github/stars/yewstack/yew?style=social) | Yew 是 Rust 的 WebAssembly 前端框架，用于构建高性能交互式 Web 应用。 |
+| [awesome-rust](https://github.com/rust-unofficial/awesome-rust) | ![Stars](https://img.shields.io/github/stars/rust-unofficial/awesome-rust?style=social) | 收录优质 Rust 代码与资源，供开发者参考学习。 |
+| [burn](https://github.com/tracel-ai/burn) | ![Stars](https://img.shields.io/github/stars/tracel-ai/burn?style=social) | Burn是Rust深度学习框架，统一训练与推理，支持多平台GPU/CPU加速。 |
+| [coreutils](https://github.com/uutils/coreutils) | ![Stars](https://img.shields.io/github/stars/uutils/coreutils?style=social) | 用 Rust 实现的跨平台 GNU coreutils 替代品，完全兼容 GNU 工具集。 |
+| [grpc-rust](https://github.com/grpc/grpc-rust) | ![Stars](https://img.shields.io/github/stars/grpc/grpc-rust?style=social) | Rust 实现的 gRPC 框架，支持高性能异步双向流式通信。 |
+| [hickory-dns](https://github.com/hickory-dns/hickory-dns) | ![Stars](https://img.shields.io/github/stars/hickory-dns/hickory-dns?style=social) | 基于 Rust 的安全 DNS 客户端、服务器和解析器，支持 DNSSEC 和加密传输。 |
+| [rustnet](https://github.com/domcyrus/rustnet) | ![Stars](https://img.shields.io/github/stars/domcyrus/rustnet?style=social) | RustNet 是终端网络监控工具，实时显示 TCP/UDP/QUIC 连接及进程信息。 |
+| [tokio](https://github.com/tokio-rs/tokio) | ![Stars](https://img.shields.io/github/stars/tokio-rs/tokio?style=social) | Tokio是Rust异步运行时，提供高性能、可靠、可扩展的非阻塞I/O平台，用于构建异步应用。 |
+| [gpui-component](https://github.com/longbridge/gpui-component) | ![Stars](https://img.shields.io/github/stars/longbridge/gpui-component?style=social) | 基于Rust和GPUI的高性能桌面应用框架，提供75+组件，支持WebAssembly、无障碍访问和JavaScript扩展，可跨平台构建现代化桌面应用。 |
+| [iced](https://github.com/iced-rs/iced) | ![Stars](https://img.shields.io/github/stars/iced-rs/iced?style=social) | Rust跨平台GUI库，采用类Elm响应式编程模型，以类型安全和简洁API为核心，支持多端原生与Web界面开发。 |
+| [maturin](https://github.com/PyO3/maturin) | ![Stars](https://img.shields.io/github/stars/PyO3/maturin?style=social) | Maturin 是将 Rust 库构建为 Python 包（wheel）的工具，支持 pyo3、cffi 和 uniffi 绑定。 |
+| [wgpu-native](https://github.com/gfx-rs/wgpu-native) | ![Stars](https://img.shields.io/github/stars/gfx-rs/wgpu-native?style=social) | 基于 Rust 的原生 WebGPU 实现，为多种语言提供图形渲染绑定支持。 |
+| [wgpu](https://github.com/gfx-rs/wgpu) | ![Stars](https://img.shields.io/github/stars/gfx-rs/wgpu?style=social) | wgpu 是一个跨平台的纯 Rust 图形 API，基于 WebGPU 标准，支持 Vulkan、Metal、D3D12 和 WebGL2。 |
+| [RustScan](https://github.com/bee-san/RustScan) | ![Stars](https://img.shields.io/github/stars/bee-san/RustScan?style=social) | RustScan是一款现代端口扫描工具，支持快速扫描、自定义脚本引擎（Python/Lua/Shell）和自适应学习功能。 |
+| [reqwest](https://github.com/seanmonstar/reqwest) | ![Stars](https://img.shields.io/github/stars/seanmonstar/reqwest?style=social) | Rust 的 HTTP 客户端库，支持异步/阻塞、JSON 请求、HTTPS 等核心功能。 |
 | [axum](https://github.com/tokio-rs/axum) | ![Stars](https://img.shields.io/github/stars/tokio-rs/axum?style=social) | Axum 是 Rust HTTP 路由库，提供简洁 API 和丰富的中间件支持。 |
 | [book](https://github.com/rust-lang/book) | ![Stars](https://img.shields.io/github/stars/rust-lang/book?style=social) | 这是 Rust 编程语言的官方入门教材，通过 mdBook 构建，面向初学者系统讲解 Rust 语言基础与编程实践。 |
 | [cargo](https://github.com/rust-lang/cargo) | ![Stars](https://img.shields.io/github/stars/rust-lang/cargo?style=social) | Cargo是Rust项目的依赖管理器和构建工具，负责下载依赖并编译项目。 |
@@ -40,3 +65,4 @@ sidebar_label: rust
 | [topcoat](https://github.com/tokio-rs/topcoat) | ![Stars](https://img.shields.io/github/stars/tokio-rs/topcoat?style=social) | Rust 全栈框架，支持服务端渲染、客户端响应式交互、模块化路由及 Tailwind 集成。 |
 | [tracing](https://github.com/tokio-rs/tracing) | ![Stars](https://img.shields.io/github/stars/tokio-rs/tracing?style=social) | tracing 是一个 Rust 框架，用于收集结构化、基于事件的诊断信息，帮助开发者实现应用级可观测性。 |
 | [winit](https://github.com/rust-windowing/winit) | ![Stars](https://img.shields.io/github/stars/rust-windowing/winit?style=social) | 跨平台窗口创建与管理库，支持处理调整大小、按键和鼠标事件。 |
+| [rspack](https://github.com/web-infra-dev/rspack) | ![Stars](https://img.shields.io/github/stars/web-infra-dev/rspack?style=social) | 基于 Rust 的高性能 Web 打包工具，兼容 webpack 生态，极速构建。 |

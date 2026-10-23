@@ -13,10 +13,10 @@ sidebar_label: nginx
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [apisix](https://github.com/apache/apisix) | ![Stars](https://img.shields.io/github/stars/apache/apisix?style=social) | Apache APISIX 是一个动态实时高性能的 API 网关，提供负载均衡、动态路由、认证授权、可观测性等核心功能。 |
 | [certbot](https://github.com/certbot/certbot) | ![Stars](https://img.shields.io/github/stars/certbot/certbot?style=social) | Certbot 是 EFF 开发的免费开源工具，可自动从 Let's Encrypt 获取并部署 HTTPS 证书，支持 Apache、nginx 等多种 Web 服务器。 |
 | [certificates](https://github.com/smallstep/certificates) | ![Stars](https://img.shields.io/github/stars/smallstep/certificates?style=social) | step-ca 是一款面向 DevOps 的在线证书颁发机构，支持 HTTPS、TLS、SSH 证书的自动化签发与管理，并提供私有 ACME 服务。 |
 | [certimate](https://github.com/certimate-go/certimate) | ![Stars](https://img.shields.io/github/stars/certimate-go/certimate?style=social) | 开源自托管 SSL 证书管理工具，自动化签发、部署、续期与监控。 |
-| [grm](https://github.com/gphper/grm) | ![Stars](https://img.shields.io/github/stars/gphper/grm?style=social) | 基于 Go+Vue 的 Web 版 Redis 管理工具，支持多种数据结构操作与连接管理。 |
 | [mkcert](https://github.com/FiloSottile/mkcert) | ![Stars](https://img.shields.io/github/stars/FiloSottile/mkcert?style=social) | mkcert 自动创建本地 CA 并生成受系统信任的开发证书，无需额外配置。 |
 | [naxsi](https://github.com/nbs-system/naxsi) | ![Stars](https://img.shields.io/github/stars/nbs-system/naxsi?style=social) | Naxsi 是 Nginx 的 Web 应用防火墙模块，默认拒绝模式，通过行为分析防御 XSS 和 SQL 注入等 web 攻击。 |
 | [nginx-admins-handbook](https://github.com/trimstray/nginx-admins-handbook) | ![Stars](https://img.shields.io/github/stars/trimstray/nginx-admins-handbook?style=social) | Nginx管理员手册，涵盖配置规则、安全加固、性能优化与故障排查的实战指南。 |

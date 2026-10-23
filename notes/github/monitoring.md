@@ -13,11 +13,11 @@ sidebar_label: monitoring
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [mimir](https://github.com/grafana/mimir) | ![Stars](https://img.shields.io/github/stars/grafana/mimir?style=social) | Grafana Mimir是Prometheus的可扩展长期存储解决方案，支持海量时序数据、全球指标视图、高可用与多租户架构。 |
 | [Pulse](https://github.com/rcourtman/Pulse) | ![Stars](https://img.shields.io/github/stars/rcourtman/Pulse?style=social) | Pulse 是一款自托管的运维监控平台，支持 Proxmox、Docker、Kubernetes 等多平台，提供实时状态监控、告警与 AI 巡检能力。 |
 | [ServerStatus](https://github.com/cppla/ServerStatus) | ![Stars](https://img.shields.io/github/stars/cppla/ServerStatus?style=social) | 轻量服务器监控面板，支持多节点在线状态、资源占用、网络延迟与服务告警。 |
 | [analytics](https://github.com/plausible/analytics) | ![Stars](https://img.shields.io/github/stars/plausible/analytics?style=social) | 开源隐私优先的网页分析工具，轻量无 Cookie，符合 GDPR 合规要求 |
 | [beszel](https://github.com/henrygd/beszel) | ![Stars](https://img.shields.io/github/stars/henrygd/beszel?style=social) | Beszel 是轻量级服务器监控平台，支持容器统计、历史数据、告警和自动备份功能。 |
-| [bottom](https://github.com/ClementTsang/bottom) | ![Stars](https://img.shields.io/github/stars/ClementTsang/bottom?style=social) | 跨平台终端系统监控工具，可视化显示CPU、内存、网络等资源使用情况，并支持进程管理。 |
 | [cadvisor](https://github.com/google/cadvisor) | ![Stars](https://img.shields.io/github/stars/google/cadvisor?style=social) | cAdvisor 是容器资源监控守护进程，采集 CPU、内存、网络等使用数据，提供 Web UI 和 API 访问。 |
 | [categraf](https://github.com/flashcatcloud/categraf) | ![Stars](https://img.shields.io/github/stars/flashcatcloud/categraf?style=social) | 一款 All-in-One 数据采集器，支持指标与日志采集，适配物理机、容器、K8s 等多种环境，内置近百插件，开箱即用。 |
 | [changedetection.io](https://github.com/dgtlmoon/changedetection.io) | ![Stars](https://img.shields.io/github/stars/dgtlmoon/changedetection.io?style=social) | 自动检测网页内容变更，支持价格监控、AI智能过滤，实时推送通知提醒。 |

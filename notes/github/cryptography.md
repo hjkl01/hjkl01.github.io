@@ -7,7 +7,7 @@ sidebar_label: cryptography
 
 # cryptography
 
-本分类共 **11** 个项目。
+本分类共 **9** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -20,7 +20,5 @@ sidebar_label: cryptography
 | [libsignal](https://github.com/signalapp/libsignal) | ![Stars](https://img.shields.io/github/stars/signalapp/libsignal?style=social) | Signal协议跨平台加密库，实现双棘轮算法等核心安全通信功能 |
 | [openbao](https://github.com/openbao/openbao) | ![Stars](https://img.shields.io/github/stars/openbao/openbao?style=social) | OpenBao 是开源密钥管理平台，实现敏感数据的安全存储、动态生成与集中管理。 |
 | [pydictor](https://github.com/LandGrey/pydictor) | ![Stars](https://img.shields.io/github/stars/LandGrey/pydictor?style=social) | pydictor是一款强大的黑客字典生成工具，支持暴力破解攻击前的字典构建与处理。 |
-| [pyjwt](https://github.com/jpadilla/pyjwt) | ![Stars](https://img.shields.io/github/stars/jpadilla/pyjwt?style=social) | PyJWT 是 Python 实现的 JSON Web Token 库，用于安全地编码和解码 JWT 令牌。 |
-| [rustls](https://github.com/rustls/rustls) | ![Stars](https://img.shields.io/github/stars/rustls/rustls?style=social) | 用 Rust 编写的现代 TLS 库，实现 TLS 1.2/1.3，无需配置即可提供安全连接。 |
 | [vaultwarden](https://github.com/dani-garcia/vaultwarden) | ![Stars](https://img.shields.io/github/stars/dani-garcia/vaultwarden?style=social) | 轻量级自托管密码管理器，兼容 Bitwarden 客户端。 |
-| [webdis](https://github.com/nicolasff/webdis) | ![Stars](https://img.shields.io/github/stars/nicolasff/webdis?style=social) | Webdis 提供 HTTP 接口，通过 URL 命令访问 Redis 并返回 JSON 数据。 |
+| [CyberChef](https://github.com/gchq/CyberChef) | ![Stars](https://img.shields.io/github/stars/gchq/CyberChef?style=social) | CyberChef 是网络安全瑞士军刀工具，支持数据编码、加密解密、哈希计算等多种处理能力。 |

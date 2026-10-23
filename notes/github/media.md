@@ -7,12 +7,18 @@ sidebar_label: media
 
 # media
 
-本分类共 **57** 个项目。
+本分类共 **65** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [server](https://github.com/music-assistant/server) | ![Stars](https://img.shields.io/github/stars/music-assistant/server?style=social) | 免费开源媒体库管理器，连接流媒体服务与联网音箱。 |
+| [uosc](https://github.com/tomasklaen/uosc) | ![Stars](https://img.shields.io/github/stars/tomasklaen/uosc?style=social) | MPV播放器极简UI，基于光标距离智能显隐，提供播放控制、字幕下载、播放列表等核心功能。 |
+| [utao](https://github.com/VonChange/utao) | ![Stars](https://img.shields.io/github/stars/VonChange/utao?style=social) | 专为电视设计的浏览器，绕过投屏限制，让手机会员在大屏观看视频，解决套娃收费痛点。 |
+| [ygege](https://github.com/UwUDev/ygege) | ![Stars](https://img.shields.io/github/stars/UwUDev/ygege?style=social) | Nostr协议的高性能torrent索引搜索工具，支持Prowlarr和Jackett集成。 |
+| [stremio-core](https://github.com/Stremio/stremio-core) | ![Stars](https://img.shields.io/github/stars/Stremio/stremio-core?style=social) | Stremio 核心 Rust 引擎，实现媒体发现、库管理与播放状态等跨平台共享逻辑。 |
+| [Macast](https://github.com/xfangfang/Macast) | ![Stars](https://img.shields.io/github/stars/xfangfang/Macast?style=social) | Macast 是一款菜单栏应用，基于 mpv 实现 DLNA 媒体渲染器，可将手机媒体推送到电脑播放。 |
 | [Ant-Media-Server](https://github.com/ant-media/Ant-Media-Server) | ![Stars](https://img.shields.io/github/stars/ant-media/Ant-Media-Server?style=social) | Ant Media Server是开源流媒体服务器，支持WebRTC等多种协议，提供超低延迟实时视频服务。 |
 | [AzuraCast](https://github.com/AzuraCast/AzuraCast) | ![Stars](https://img.shields.io/github/stars/AzuraCast/AzuraCast?style=social) | 自托管广播电台管理平台，通过 Web 界面和 API 实现电台全功能管理。 |
 | [FireRed-OpenStoryline](https://github.com/FireRedTeam/FireRed-OpenStoryline) | ![Stars](https://img.shields.io/github/stars/FireRedTeam/FireRed-OpenStoryline?style=social) | AI驱动的对话式视频创作工具，支持智能素材搜索、脚本生成、配乐配音推荐，通过自然语言完成视频剪辑。 |
@@ -70,3 +76,5 @@ sidebar_label: media
 | [video.js](https://github.com/videojs/video.js) | ![Stars](https://img.shields.io/github/stars/videojs/video.js?style=social) | Video.js v10 是现代模块化媒体播放器框架，为 Web 和 React 提供视频播放能力。 |
 | [webrtc](https://github.com/pion/webrtc) | ![Stars](https://img.shields.io/github/stars/pion/webrtc?style=social) | 纯 Go 实现的 WebRTC 库，支持点对点音视频通信与数据传输，无需 Cgo 且跨平台。 |
 | [xbmc](https://github.com/xbmc/xbmc) | ![Stars](https://img.shields.io/github/stars/xbmc/xbmc?style=social) | Kodi是一款免费开源的媒体播放器和家庭娱乐中心软件，支持多平台，可播放多种音视频格式并管理媒体库。 |
+| [keyviz](https://github.com/mulaRahul/keyviz) | ![Stars](https://img.shields.io/github/stars/mulaRahul/keyviz?style=social) | Keyviz 是一款开源工具，实时可视化按键和鼠标操作，适合演示与录屏。 |
+| [screenpipe](https://github.com/screenpipe/screenpipe) | ![Stars](https://img.shields.io/github/stars/screenpipe/screenpipe?style=social) | 持续录制屏幕与音频，本地 AI 搜索记忆，智能映射工作流并赋能 AI agent。 |

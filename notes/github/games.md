@@ -7,13 +7,13 @@ sidebar_label: games
 
 # games
 
-本分类共 **44** 个项目。
+本分类共 **45** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
-| [AnyPS5](https://github.com/boykopovar/AnyPS5) | ![Stars](https://img.shields.io/github/stars/boykopovar/AnyPS5?style=social) | 将可执行文件自动移植至 Linux/Windows，无需模拟。 |
+| [blizzless-diiis](https://github.com/blizzless/blizzless-diiis) | ![Stars](https://img.shields.io/github/stars/blizzless/blizzless-diiis?style=social) | 暗黑3开源本地服务器，实现账号、职业、聊天、公会、地牢、物品及AI等核心游戏功能 |
 | [AutoHotkey](https://github.com/AutoHotkey/AutoHotkey) | ![Stars](https://img.shields.io/github/stars/AutoHotkey/AutoHotkey?style=social) | 免费开源自动化工具，通过自定义脚本和热键实现重复任务的自动化。 |
 | [BeamMP](https://github.com/BeamMP/BeamMP) | ![Stars](https://img.shields.io/github/stars/BeamMP/BeamMP?style=social) | BeamMP是为BeamNG.drive添加在线多人联机功能的Lua模组，支持多人同服对战与聊天。 |
 | [Beyond-All-Reason](https://github.com/beyond-all-reason/Beyond-All-Reason) | ![Stars](https://img.shields.io/github/stars/beyond-all-reason/Beyond-All-Reason?style=social) | 开源即时战略游戏，基于 Recoil 引擎，支持多人对战与单人模式，并提供开发者友好的测试框架。 |
@@ -40,7 +40,6 @@ sidebar_label: games
 | [arnis](https://github.com/louis-e/arnis) | ![Stars](https://img.shields.io/github/stars/louis-e/arnis?style=social) | Arnis 是一个将真实世界地理数据（如 OpenStreetMap 和地形高程）转换为 Minecraft 世界的工具，可生成家园、城市和自然景观。 |
 | [azerothcore-wotlk](https://github.com/azerothcore/azerothcore-wotlk) | ![Stars](https://img.shields.io/github/stars/azerothcore/azerothcore-wotlk?style=social) | 开源魔兽世界服务器框架，还原 3.3.5a 玩法，稳定模块化可扩展 |
 | [bevy](https://github.com/bevyengine/bevy) | ![Stars](https://img.shields.io/github/stars/bevyengine/bevy?style=social) | 基于Rust的开源2D/3D游戏引擎，采用ECS架构，支持模块化开发和高性能并行计算。 |
-| [cheating-daddy](https://github.com/sohzm/cheating-daddy) | ![Stars](https://img.shields.io/github/stars/sohzm/cheating-daddy?style=social) | 基于 Gemini AI 的实时助手，通过屏幕与音频分析，在面试及会议中提供实时辅助建议。 |
 | [claude-opus-5-5-demo](https://github.com/riba2534/claude-opus-5-5-demo) | ![Stars](https://img.shields.io/github/stars/riba2534/claude-opus-5-5-demo?style=social) | 用 Claude Opus 5.5 单提示词一键生成完整 3D 游戏并直接部署上线。 |
 | [cs2-dumper](https://github.com/a2x/cs2-dumper) | ![Stars](https://img.shields.io/github/stars/a2x/cs2-dumper?style=social) | 用于读取CS2游戏内存并转储偏移量和接口信息的多平台工具 |
 | [dota2bot-OpenHyperAI](https://github.com/forest0xia/dota2bot-OpenHyperAI) | ![Stars](https://img.shields.io/github/stars/forest0xia/dota2bot-OpenHyperAI?style=social) | Dota 2 智能 BOT 脚本，支持 127+ 英雄，智能推进 Farm 推塔，支持多模式与高度定制。 |
@@ -48,7 +47,6 @@ sidebar_label: games
 | [engine](https://github.com/playcanvas/engine) | ![Stars](https://img.shields.io/github/stars/playcanvas/engine?style=social) | 基于 WebGL2/WebGPU 的开源游戏引擎，用于创建跨平台交互式 3D 应用与游戏。 |
 | [game-eggs](https://github.com/pterodactyl/game-eggs) | ![Stars](https://img.shields.io/github/stars/pterodactyl/game-eggs?style=social) | 收录多款游戏服务器配置与模组支持，帮助快速搭建多人游戏服务器。 |
 | [kaiju](https://github.com/KaijuEngine/kaiju) | ![Stars](https://img.shields.io/github/stars/KaijuEngine/kaiju?style=social) | 跨平台 2D/3D 游戏引擎，Go 语言开发，基于 Vulkan，支持内置编辑器与实时着色器更新，高性能。 |
-| [lively](https://github.com/rocksdanister/lively) | ![Stars](https://img.shields.io/github/stars/rocksdanister/lively?style=social) | 开源动态壁纸软件，支持视频、网页和应用作壁纸，可交互且省电。 |
 | [manualAttach](https://github.com/stijnwop/manualAttach) | ![Stars](https://img.shields.io/github/stars/stijnwop/manualAttach?style=social) | Farming Simulator 25的拟真配件安装模组，强制玩家下车手动连接农机具、PTO和液压管。 |
 | [open-source-games](https://github.com/bobeff/open-source-games) | ![Stars](https://img.shields.io/github/stars/bobeff/open-source-games?style=social) | 开源游戏资源库，汇集各类开源游戏及经典游戏开源重制版。 |
 | [pausemygameW](https://github.com/cornradio/pausemygameW) | ![Stars](https://img.shields.io/github/stars/cornradio/pausemygameW?style=social) | PC游戏暂停恢复工具，调用pssuspend实现游戏进程挂起与恢复。 |
@@ -57,3 +55,6 @@ sidebar_label: games
 | [server](https://github.com/LandSandBoat/server) | ![Stars](https://img.shields.io/github/stars/LandSandBoat/server?style=social) | 开源 FFXI 服务器模拟器，解决官方服务器关闭问题，支持玩家自建游戏服务器。 |
 | [spring](https://github.com/beyond-all-reason/spring) | ![Stars](https://img.shields.io/github/stars/beyond-all-reason/spring?style=social) | Recoil 是开源实时战略游戏引擎，为 RTS 游戏提供核心开发与运行支持。 |
 | [wesnoth](https://github.com/wesnoth/wesnoth) | ![Stars](https://img.shields.io/github/stars/wesnoth/wesnoth?style=social) | 开源回合制战术策略游戏，支持单人战役与多人对战，高度可模组化。 |
+| [mineflayer](https://github.com/PrismarineJS/mineflayer) | ![Stars](https://img.shields.io/github/stars/PrismarineJS/mineflayer?style=social) | Mineflayer 是用 JS/Python 创建 Minecraft 机器人的框架，支持多版本，具备实体追踪、移动、战斗、建造、聊天等核心功能。 |
+| [nakama](https://github.com/heroiclabs/nakama) | ![Stars](https://img.shields.io/github/stars/heroiclabs/nakama?style=social) | Nakama 是开源分布式游戏服务器，提供实时多人、社交聊天和排行榜功能，助力快速构建可扩展的游戏应用。 |
+| [veloren](https://github.com/veloren/veloren) | ![Stars](https://img.shields.io/github/stars/veloren/veloren?style=social) | Veloren是一款开放世界奇幻动作冒险RPG游戏 |

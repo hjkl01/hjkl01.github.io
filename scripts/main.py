@@ -20,6 +20,10 @@ from scripts.prompts import MARKDOWN_PROMPT
 UNCATEGORIZED_FOLDER_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2}|00)$")
 
 
+class DescriptionGenerationError(RuntimeError):
+    """简介生成失败（README 拉取或 LLM 返回无效）。"""
+
+
 def get_db():
     """打开项目数据库；首次运行时兼容从旧 Markdown 初始化。"""
     conn = connect_db()
@@ -28,22 +32,25 @@ def get_db():
     return conn
 
 
+async def build_description(full_name: str, url: str) -> str:
+    """拉取 README 并调用 LLM 生成简介；失败时抛出带原因的 DescriptionGenerationError。"""
+    owner, repository = full_name.split("/", 1)
+    readme_content = await api_github_readme(owner, repository)
+    if not readme_content:
+        raise DescriptionGenerationError(f"无法获取 {full_name} 的 README（GITHUB_TOKEN 无效/未配置，或仓库无 README）")
+
+    prompt = MARKDOWN_PROMPT.replace("readme_content", readme_content)
+    ai_resp = await api_openai_generate(prompt)
+    description = extract_llm_text(ai_resp)
+    if not description:
+        raise DescriptionGenerationError(f"LLM 未为 {full_name} 返回有效简介（检查 OPENAI_API / OPENAI_MODEL）")
+    return description
+
+
 async def process_project(full_name: str, url: str) -> str | None:
     """为 SQLite 中尚无简介的项目生成简介并更新原记录。"""
     try:
-        owner, repository = full_name.split("/", 1)
-        readme_content = await api_github_readme(owner, repository)
-        if not readme_content:
-            logger.warning(f"未获取到 README，稍后可重试: {full_name}")
-            return None
-
-        prompt = MARKDOWN_PROMPT.replace("readme_content", readme_content)
-        ai_resp = await api_openai_generate(prompt)
-        description = extract_llm_text(ai_resp)
-        if not description:
-            logger.warning(f"项目简介为空，稍后可重试: {full_name}")
-            return None
-
+        description = await build_description(full_name, url)
         conn = get_db()
         try:
             conn.execute(
@@ -67,27 +74,18 @@ async def category_projects(recategorize: bool = False) -> None:
     """生成分类建议；常规模式只处理未分类项目，全量模式跳过人工分类。"""
     conn = get_db()
     try:
-        rows = conn.execute(
-            "SELECT id, full_name, url, description, category, category_source FROM projects ORDER BY id"
-        ).fetchall()
+        rows = conn.execute("SELECT id, full_name, url, description, category, category_source FROM projects ORDER BY id").fetchall()
         categories = [
             row["category"]
             for row in conn.execute(
-                "SELECT category, COUNT(*) AS cnt FROM projects "
-                "WHERE category <> '未分类' GROUP BY category COLLATE NOCASE "
-                "ORDER BY cnt DESC, category COLLATE NOCASE"
+                "SELECT category, COUNT(*) AS cnt FROM projects WHERE category <> '未分类' GROUP BY category COLLATE NOCASE ORDER BY cnt DESC, category COLLATE NOCASE"
             ).fetchall()
             if row["category"] and not UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
         ]
         pending = [
-            row for row in rows
-            if row["category_source"] != "manual"
-            and (
-                recategorize
-                or not row["category"]
-                or row["category"] == "未分类"
-                or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"])
-            )
+            row
+            for row in rows
+            if row["category_source"] != "manual" and (recategorize or not row["category"] or row["category"] == "未分类" or UNCATEGORIZED_FOLDER_PATTERN.match(row["category"]))
         ]
         if not pending:
             logger.info("SQLite 中没有待分类项目")

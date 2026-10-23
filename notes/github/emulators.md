@@ -13,7 +13,7 @@ sidebar_label: emulators
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
-| [uniterm](https://github.com/ys-ll/uniterm) | ![Stars](https://img.shields.io/github/stars/ys-ll/uniterm?style=social) | uniTerm 是支持 30+ 协议的全功能终端，内置 AI Agent 可自主规划并执行多轮 shell 命令。 |
+| [romm](https://github.com/rommapp/romm) | ![Stars](https://img.shields.io/github/stars/rommapp/romm?style=social) | 自托管ROM管理器，支持浏览器内运行游戏、多设备存档同步及400+平台元数据。 |
 | [Cemu](https://github.com/cemu-project/Cemu) | ![Stars](https://img.shields.io/github/stars/cemu-project/Cemu?style=social) | Wii U游戏模拟器，支持在PC上运行Wii U游戏 |
 | [EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) | ![Stars](https://img.shields.io/github/stars/EmulatorJS/EmulatorJS?style=social) | 自托管 JavaScript 游戏模拟器，支持多种经典游戏机和街机系统。 |
 | [OpenEmu](https://github.com/OpenEmu/OpenEmu) | ![Stars](https://img.shields.io/github/stars/OpenEmu/OpenEmu?style=social) | OpenEmu 是 macOS 开源游戏模拟器，通过模块化插件架构支持多种经典游戏主机的仿真。 |
@@ -25,5 +25,5 @@ sidebar_label: emulators
 | [nesrom](https://github.com/dream1986/nesrom) | ![Stars](https://img.shields.io/github/stars/dream1986/nesrom?style=social) | NES经典游戏合集，提供离线游玩与怀旧游戏体验。 |
 | [shadPS4](https://github.com/shadps4-emu/shadPS4) | ![Stars](https://img.shields.io/github/stars/shadps4-emu/shadPS4?style=social) | shadPS4 是 PS4 模拟器，让 PC 用户能玩 PS4 游戏，核心是模拟 PS4 硬件环境。 |
 | [shadps4-qtlauncher](https://github.com/shadps4-emu/shadps4-qtlauncher) | ![Stars](https://img.shields.io/github/stars/shadps4-emu/shadps4-qtlauncher?style=social) | QtLauncher是shadPS4的官方启动器，用于启动和管理PS4模拟器游戏。 |
-| [velero](https://github.com/vmware-tanzu/velero) | ![Stars](https://img.shields.io/github/stars/vmware-tanzu/velero?style=social) | Velero 是 Kubernetes 集群备份恢复工具，支持资源与持久卷的备份、恢复、迁移及环境复制。 |
 | [xenia](https://github.com/xenia-project/xenia) | ![Stars](https://img.shields.io/github/stars/xenia-project/xenia?style=social) | Xenia是一款实验性Xbox 360模拟器，允许在其他平台上运行Xbox 360游戏。 |
+| [AnyPS5](https://github.com/boykopovar/AnyPS5) | ![Stars](https://img.shields.io/github/stars/boykopovar/AnyPS5?style=social) | 将可执行文件自动移植至 Linux/Windows，无需模拟。 |

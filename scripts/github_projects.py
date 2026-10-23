@@ -33,10 +33,7 @@ def normalize_category_name(category: object) -> str:
 
 def load_category_map(conn: sqlite3.Connection) -> dict[str, str]:
     """返回 casefold 键 -> 规范分类名（同一含义里项目数最多的写法）。"""
-    rows = conn.execute(
-        "SELECT category, COUNT(*) AS count FROM projects "
-        "WHERE category IS NOT NULL AND trim(category) <> '' GROUP BY category"
-    ).fetchall()
+    rows = conn.execute("SELECT category, COUNT(*) AS count FROM projects WHERE category IS NOT NULL AND trim(category) <> '' GROUP BY category").fetchall()
     best: dict[str, tuple[int, str]] = {}
     for row in rows:
         name = normalize_category_name(row["category"])
@@ -44,16 +41,12 @@ def load_category_map(conn: sqlite3.Connection) -> dict[str, str]:
             continue
         key = name.casefold()
         current = best.get(key)
-        if current is None or row["count"] > current[0] or (
-            row["count"] == current[0] and name < current[1]
-        ):
+        if current is None or row["count"] > current[0] or (row["count"] == current[0] and name < current[1]):
             best[key] = (row["count"], name)
     return {key: value[1] for key, value in best.items()}
 
 
-def canonical_category(
-    category: object, known: dict[str, str] | list[str] | tuple[str, ...] | None = None
-) -> str:
+def canonical_category(category: object, known: dict[str, str] | list[str] | tuple[str, ...] | None = None) -> str:
     """把分类名归一到已有写法；known 可以是 load_category_map 的映射，也可以是分类名列表。"""
     name = normalize_category_name(category)
     if not name:
@@ -79,10 +72,7 @@ def unify_categories(conn: sqlite3.Connection, dry_run: bool = False) -> int:
     for row in rows:
         category = canonical_category(row["category"], mapping)
         auto_category = canonical_category(row["auto_category"], mapping)
-        if (
-            category != normalize_category_name(row["category"])
-            or auto_category != normalize_category_name(row["auto_category"])
-        ):
+        if category != normalize_category_name(row["category"]) or auto_category != normalize_category_name(row["auto_category"]):
             updates.append((category, auto_category, row["id"]))
             changed += 1
     if not dry_run and updates:
@@ -286,10 +276,7 @@ def group_rows_by_category(rows: list[sqlite3.Row]) -> dict[str, list[sqlite3.Ro
         name = normalize_category_name(row["category"]) or "未分类"
         bucket = counts.setdefault(name.casefold(), {})
         bucket[name] = bucket.get(name, 0) + 1
-    canonical = {
-        key: max(items, key=lambda name: (items[name], [-ord(c) for c in name]))
-        for key, items in counts.items()
-    }
+    canonical = {key: max(items, key=lambda name: (items[name], [-ord(c) for c in name])) for key, items in counts.items()}
 
     groups: dict[str, list[sqlite3.Row]] = {}
     for row in rows:
@@ -356,9 +343,7 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
 
     for category, category_projects in groups.items():
         filename = filenames[category]
-        index_lines.append(
-            f"| [{markdown_cell(category)}]({INDEX_ROUTE}/{filename}) | {len(category_projects)} |"
-        )
+        index_lines.append(f"| [{markdown_cell(category)}]({INDEX_ROUTE}/{filename}) | {len(category_projects)} |")
 
         category_lines = [
             "---",
@@ -386,9 +371,7 @@ def generate_markdown(conn: sqlite3.Connection) -> int:
 
     # notes/github 由 SQLite 全量生成；清理旧结构中的 Markdown 文件和过期分类页。
     # 大小写不敏感的文件系统上需要忽略文件名大小写判断“仍需要”。
-    expected_files = {
-        name.casefold() for name in (OUTPUT_FILE.name, *(f"{filename}.md" for filename in filenames.values()))
-    }
+    expected_files = {name.casefold() for name in (OUTPUT_FILE.name, *(f"{filename}.md" for filename in filenames.values()))}
     for path in OUTPUT_DIR.rglob("*.md"):
         if path.parent == OUTPUT_DIR and path.name.casefold() in expected_files:
             continue
@@ -421,7 +404,7 @@ def show_pending(conn: sqlite3.Connection) -> int:
     print(f"待审核项目：{len(rows)} 个")
     for row in rows:
         suggestion = row["auto_category"] or "（无自动建议）"
-        print(f'{row["id"]:>5}  {row["full_name"]}  当前：{row["category"]}  自动建议：{suggestion}')
+        print(f"{row['id']:>5}  {row['full_name']}  当前：{row['category']}  自动建议：{suggestion}")
     return len(rows)
 
 
@@ -459,13 +442,8 @@ def show_summary(conn: sqlite3.Connection, recent: int = 15, max_categories: int
     ]
 
     print(f"📚 GitHub 项目库总览（{DB_PATH.relative_to(ROOT)}）")
-    print(
-        f"  项目总数：{totals['total']}  分类数：{len(category_rows)}  今日新增：{totals['added_today'] or 0}"
-    )
-    print(
-        f"  缺简介：{totals['no_description'] or 0}  未分类：{totals['uncategorized'] or 0}  "
-        f"待审核分类：{totals['pending_review'] or 0}"
-    )
+    print(f"  项目总数：{totals['total']}  分类数：{len(category_rows)}  今日新增：{totals['added_today'] or 0}")
+    print(f"  缺简介：{totals['no_description'] or 0}  未分类：{totals['uncategorized'] or 0}  待审核分类：{totals['pending_review'] or 0}")
 
     if category_rows:
         shown = category_rows if max_categories <= 0 else category_rows[:max_categories]
@@ -474,7 +452,7 @@ def show_summary(conn: sqlite3.Connection, recent: int = 15, max_categories: int
         for row in shown:
             pending = f"（待审核 {row['pending']}）" if row["pending"] else ""
             print(f"    {str(row['category']):<{width}}  {row['count']:>4} 个{pending}")
-        rest = category_rows[len(shown):]
+        rest = category_rows[len(shown) :]
         if rest:
             other = sum(row["count"] for row in rest)
             print(f"    {'其他':<{width}}  {other:>4} 个（{len(rest)} 个小分类）")
@@ -500,7 +478,8 @@ def show_summary(conn: sqlite3.Connection, recent: int = 15, max_categories: int
 def review_categories(conn: sqlite3.Connection) -> None:
     skipped: set[int] = set()
     categories = [
-        row["category"] for row in conn.execute(
+        row["category"]
+        for row in conn.execute(
             "SELECT category FROM projects WHERE category IS NOT NULL AND trim(category) <> '' "
             "AND category <> '未分类' GROUP BY category COLLATE NOCASE "
             "ORDER BY COUNT(*) DESC, category COLLATE NOCASE"
@@ -524,10 +503,10 @@ def review_categories(conn: sqlite3.Connection) -> None:
             return
 
         print("\n" + "=" * 72)
-        print(f'项目：{row["full_name"]}')
-        print(f'简介：{row["description"] or "（暂无简介）"}')
-        print(f'当前分类：{row["category"]}')
-        print(f'自动建议：{row["auto_category"] or "（无）"}')
+        print(f"项目：{row['full_name']}")
+        print(f"简介：{row['description'] or '（暂无简介）'}")
+        print(f"当前分类：{row['category']}")
+        print(f"自动建议：{row['auto_category'] or '（无）'}")
         print("选择分类编号，或输入 n 创建分类；a 接受自动建议；s 跳过；q 退出。")
         for index, category in enumerate(categories, start=1):
             print(f"  {index}. {category}")
@@ -570,7 +549,7 @@ def review_categories(conn: sqlite3.Connection) -> None:
             (category, row["id"]),
         )
         conn.commit()
-        print(f'已确认：{row["full_name"]} -> {category}')
+        print(f"已确认：{row['full_name']} -> {category}")
 
 
 def main() -> None:

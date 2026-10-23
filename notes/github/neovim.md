@@ -7,13 +7,20 @@ sidebar_label: neovim
 
 # neovim
 
-本分类共 **104** 个项目。
+本分类共 **110** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [99](https://github.com/ThePrimeagen/99) | ![Stars](https://img.shields.io/github/stars/ThePrimeagen/99?style=social) | Neovim AI 客户端，集成 LLM 实现代码搜索与自动修改。 |
+| [kulala.nvim](https://github.com/mistweaverco/kulala.nvim) | ![Stars](https://img.shields.io/github/stars/mistweaverco/kulala.nvim?style=social) | Neovim HTTP/GraphQL/gRPC 客户端插件，支持脚本执行与 .http 文件。 |
+| [sealos](https://github.com/labring/sealos) | ![Stars](https://img.shields.io/github/stars/labring/sealos?style=social) | Sealos 是一款 AI 原生云操作系统，基于 Kubernetes，提供云端开发环境、托管数据库和一键部署能力，简化应用的开发、部署与运维。 |
+| [any-jump.vim](https://github.com/pechorin/any-jump.vim) | ![Stars](https://img.shields.io/github/stars/pechorin/any-jump.vim?style=social) | Vim插件，利用ripgrep快速搜索40+语言代码的定义与引用，支持预览跳转。 |
+| [gruvbox](https://github.com/gruvbox-community/gruvbox) | ![Stars](https://img.shields.io/github/stars/gruvbox-community/gruvbox?style=social) | Vim 复古配色主题，支持亮暗模式切换与丰富自定义选项，提供多语言语法高亮。 |
+| [starter](https://github.com/LazyVim/starter) | ![Stars](https://img.shields.io/github/stars/LazyVim/starter?style=social) | 这是 LazyVim 的启动模板，帮助用户快速配置和使用 Neovim 编辑器。 |
+| [tree-sitter](https://github.com/tree-sitter/tree-sitter) | ![Stars](https://img.shields.io/github/stars/tree-sitter/tree-sitter?style=social) | Tree-sitter是解析器生成工具和增量解析库，可构建源码语法树并高效实时更新，支持任意编程语言及容错解析。 |
+| [lapce](https://github.com/lapce/lapce) | ![Stars](https://img.shields.io/github/stars/lapce/lapce?style=social) | 闪电般快速的代码编辑器，内置LSP、远程开发、Vim模式与终端。 |
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | ![Stars](https://img.shields.io/github/stars/numToStr/Comment.nvim?style=social) | 智能Neovim注释插件，支持行注释、块注释、Treesitter及多种映射操作。 |
 | [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) | ![Stars](https://img.shields.io/github/stars/CopilotC-Nvim/CopilotChat.nvim?style=social) | 将 GitHub Copilot Chat 集成到 Neovim，支持多模型对话与工具调用。 |
 | [LazyVim](https://github.com/LazyVim/LazyVim) | ![Stars](https://img.shields.io/github/stars/LazyVim/LazyVim?style=social) | LazyVim 是一款基于 lazy.nvim 的 Neovim 配置，提供 IDE 级功能与预置插件，支持自定义扩展。 |
@@ -92,7 +99,6 @@ sidebar_label: neovim
 | [opencode.nvim](https://github.com/NickvanDyke/opencode.nvim) | ![Stars](https://img.shields.io/github/stars/NickvanDyke/opencode.nvim?style=social) | opencode.nvim 是 Neovim 插件，集成 OpenCode AI 提供智能问答、代码编辑与命令执行，无缝融入开发者工作流。 |
 | [opencode.nvim](https://github.com/nickjvandyke/opencode.nvim) | ![Stars](https://img.shields.io/github/stars/nickjvandyke/opencode.nvim?style=social) | Neovim 插件，集成 OpenCode AI，注入编辑器上下文，辅助代码编写与审查。 |
 | [opencode.nvim](https://github.com/sudo-tee/opencode.nvim) | ![Stars](https://img.shields.io/github/stars/sudo-tee/opencode.nvim?style=social) | Neovim插件，连接opencode AI编程代理，提供聊天界面并自动捕获编辑器上下文。 |
-| [opencode](https://github.com/sst/opencode) | ![Stars](https://img.shields.io/github/stars/sst/opencode?style=social) | 开源 AI 编程代理，支持代码开发、分析与探索的多模式智能助手。 |
 | [orgmode](https://github.com/nvim-orgmode/orgmode) | ![Stars](https://img.shields.io/github/stars/nvim-orgmode/orgmode?style=social) | Neovim的Orgmode克隆，提供议程视图、任务管理、笔记捕获等核心功能。 |
 | [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) | ![Stars](https://img.shields.io/github/stars/nvim-lua/plenary.nvim?style=social) | Neovim Lua工具库，提供异步编程、进程管理、路径操作等常用函数。 |
 | [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | ![Stars](https://img.shields.io/github/stars/MeanderingProgrammer/render-markdown.nvim?style=social) | Neovim的Markdown渲染插件，在编辑器内直接预览渲染后的文档效果，支持标题、代码块、表格、LaTeX等组件。 |
@@ -115,5 +121,5 @@ sidebar_label: neovim
 | [vim-plug](https://github.com/junegunn/vim-plug) | ![Stars](https://img.shields.io/github/stars/junegunn/vim-plug?style=social) | 极简Vim插件管理器，支持并行安装更新、按需加载和版本回滚。 |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | ![Stars](https://img.shields.io/github/stars/folke/which-key.nvim?style=social) | WhichKey 是 Neovim 插件，打字时弹出按键提示，帮助用户记忆快捷键绑定。 |
 | [yazi.nvim](https://github.com/mikavilpas/yazi.nvim) | ![Stars](https://img.shields.io/github/stars/mikavilpas/yazi.nvim?style=social) | 在 Neovim 浮动窗口中集成 yazi 文件管理器，支持与分屏、LSP 等深度联动。 |
-| [yazi](https://github.com/mikavilpas/yazi) | ![Stars](https://img.shields.io/github/stars/mikavilpas/yazi?style=social) | Yazi是基于Rust的异步终端文件管理器，内置图像预览、多标签支持和批量重命名功能。 |
-| [yazi](https://github.com/sxyazi/yazi) | ![Stars](https://img.shields.io/github/stars/sxyazi/yazi?style=social) | 基于 Rust 的极速终端文件管理器，支持异步 I/O、图像预览和插件系统 |
+| [vim-translator](https://github.com/voldikss/vim-translator) | ![Stars](https://img.shields.io/github/stars/voldikss/vim-translator?style=social) | vim/neovim 异步即时翻译插件，支持多引擎。 |
+| [neotest](https://github.com/nvim-neotest/neotest) | ![Stars](https://img.shields.io/github/stars/nvim-neotest/neotest?style=social) | Neotest是NeoVim测试框架，支持运行、调试和查看多语言测试结果。 |

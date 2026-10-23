@@ -7,13 +7,19 @@ sidebar_label: ai_media
 
 # ai_media
 
-本分类共 **22** 个项目。
+本分类共 **33** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5) | ![Stars](https://img.shields.io/github/stars/ace-step/ACE-Step-1.5?style=social) | ACE-Step 是一款高效开源音乐生成模型，可在消费级硬件上快速生成商业级质量音乐，支持精准风格控制与编辑。 |
 | [KittenTTS](https://github.com/KittenML/KittenTTS) | ![Stars](https://img.shields.io/github/stars/KittenML/KittenTTS?style=social) | 开源语音合成库，支持免微调声线克隆、多语言及情感控制，CPU实时运行。 |
+| [OpenMontage](https://github.com/calesthio/OpenMontage) | ![Stars](https://img.shields.io/github/stars/calesthio/OpenMontage?style=social) | 开源 AI 视频制作系统，通过自然语言驱动 Agent 自动完成从研究、脚本、素材生成到剪辑合成的完整视频生产流程。 |
+| [RedditVideoMakerBot](https://github.com/elebumm/RedditVideoMakerBot) | ![Stars](https://img.shields.io/github/stars/elebumm/RedditVideoMakerBot?style=social) | 自动从Reddit获取内容并生成无需手动剪辑的短视频 |
+| [Vision-Agents](https://github.com/GetStream/Vision-Agents) | ![Stars](https://img.shields.io/github/stars/GetStream/Vision-Agents?style=social) | 实时视频 AI 代理，融合视觉模型与大语言模型，实现低延迟视频理解与交互。 |
+| [claude-video](https://github.com/bradautomates/claude-video) | ![Stars](https://img.shields.io/github/stars/bradautomates/claude-video?style=social) | 将视频转换为带时间戳的帧和转录文本，供 AI agent 分析。 |
+| [speech-to-speech](https://github.com/huggingface/speech-to-speech) | ![Stars](https://img.shields.io/github/stars/huggingface/speech-to-speech?style=social) | 使用开源模型在本地构建低延迟语音对话代理，无需云端服务或API密钥。 |
 | [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) | ![Stars](https://img.shields.io/github/stars/kijai/ComfyUI-KJNodes?style=social) | ComfyUI扩展包，提供实用工具节点、模型优化及工作流增强功能，核心能力为跨子图Set/Get通信和节点快捷操作。 |
 | [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | ![Stars](https://img.shields.io/github/stars/Comfy-Org/ComfyUI?style=social) | ComfyUI通过可视化节点图界面让用户精细控制AI模型参数，高效生成图像、视频、3D及音频等内容。 |
 | [FluidVoice](https://github.com/altic-dev/FluidVoice) | ![Stars](https://img.shields.io/github/stars/altic-dev/FluidVoice?style=social) | 开源 macOS 语音转文字听写应用，支持本地 AI 智能增强、多模型选择与低延迟实时转写。 |
@@ -35,3 +41,8 @@ sidebar_label: ai_media
 | [video-use](https://github.com/browser-use/video-use) | ![Stars](https://img.shields.io/github/stars/browser-use/video-use?style=social) | AI对话式视频剪辑工具，自动去停顿、调色、加字幕动画，智能输出成片。 |
 | [voice-pro](https://github.com/abus-aikorea/voice-pro) | ![Stars](https://img.shields.io/github/stars/abus-aikorea/voice-pro?style=social) | AI语音识别、翻译与配音工具，支持多语言及语音克隆。 |
 | [workflow_templates](https://github.com/Comfy-Org/workflow_templates) | ![Stars](https://img.shields.io/github/stars/Comfy-Org/workflow_templates?style=social) | 为 ComfyUI 提供工作流程模板和可复用子图组件，帮助快速搭建和分享 AI 工作流。 |
+| [kokoro](https://github.com/hexgrad/kokoro) | ![Stars](https://img.shields.io/github/stars/hexgrad/kokoro?style=social) | 轻量级开源TTS推理库，支持多语言文本转语音合成。 |
+| [video-search-and-summarization](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization) | ![Stars](https://img.shields.io/github/stars/NVIDIA-AI-Blueprints/video-search-and-summarization?style=social) | 基于GPU加速的视频AI智能体，支持自然语言搜索、总结和可视化分析视频内容。 |
+| [REAL-Video-Enhancer](https://github.com/TNTwise/REAL-Video-Enhancer) | ![Stars](https://img.shields.io/github/stars/TNTwise/REAL-Video-Enhancer?style=social) | REAL Video Enhancer 是一款支持帧插值与超分辨率的跨平台视频增强工具。 |
+| [ace-step-ui](https://github.com/fspecii/ace-step-ui) | ![Stars](https://img.shields.io/github/stars/fspecii/ace-step-ui?style=social) | 开源本地 AI 音乐生成工具，免费替代 Suno，支持生成带人声的完整歌曲和多种音乐风格 |
+| [pocket-tts](https://github.com/kyutai-labs/pocket-tts) | ![Stars](https://img.shields.io/github/stars/kyutai-labs/pocket-tts?style=social) | 轻量 CPU 文本转语音工具，支持低延迟流式输出、语音克隆与多语言。 |

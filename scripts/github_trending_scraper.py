@@ -161,10 +161,7 @@ def print_scraped_projects(repositories: list[dict], stats: dict, per_page: dict
     print(f"  抓取页面 {len(per_page)} 个，条目 {sum(per_page.values())} 条，去重后 {len(repositories)} 个项目")
     for source, count in per_page.items():
         print(f"    {count:>3} 条  {source}")
-    print(
-        f"  写入 SQLite：新增 {stats['inserted']} 个，已收录 {stats['existing']} 个，"
-        f"数据库总计 {stats['total']} 个项目"
-    )
+    print(f"  写入 SQLite：新增 {stats['inserted']} 个，已收录 {stats['existing']} 个，数据库总计 {stats['total']} 个项目")
 
     try:
         limit = int(os.getenv("TRENDING_PRINT_LIMIT", PRINT_LIMIT_DEFAULT))
@@ -172,17 +169,18 @@ def print_scraped_projects(repositories: list[dict], stats: dict, per_page: dict
         limit = PRINT_LIMIT_DEFAULT
     shown = repositories if limit <= 0 else repositories[:limit]
 
-    print(f"\n{'#':>3}  {_pad('状态', 8)}  {_pad('项目', 38)}  {_pad('语言', 12)}  "
-          f"{_rpad('Stars', 8)}  {_rpad('本期', 7)}  {_rpad('Forks', 7)}  简介")
+    print(f"\n{'#':>3}  {_pad('状态', 8)}  {_pad('项目', 38)}  {_pad('语言', 12)}  {_rpad('Stars', 8)}  {_rpad('本期', 7)}  {_rpad('Forks', 7)}  简介")
     print("─" * 120)
     for index, item in enumerate(shown, start=1):
         stars = f"{item['stars']:,}" if item.get("stars") is not None else "—"
         forks = f"{item['forks']:,}" if item.get("forks") is not None else "—"
         period = f"+{item['stars_in_period']:,}" if item.get("stars_in_period") is not None else "—"
         description = _truncate(item.get("trending_description") or "", 60)
-        print(f"{index:>3}  {_pad(item.get('status', '未入库'), 8)}  "
-              f"{_pad(item['full_name'], 38)}  {_pad(item.get('language') or '—', 12)}  {stars:>8}  "
-              f"{period:>7}  {forks:>7}  {description}")
+        print(
+            f"{index:>3}  {_pad(item.get('status', '未入库'), 8)}  "
+            f"{_pad(item['full_name'], 38)}  {_pad(item.get('language') or '—', 12)}  {stars:>8}  "
+            f"{period:>7}  {forks:>7}  {description}"
+        )
 
     if len(shown) < len(repositories):
         print(f"  … 其余 {len(repositories) - len(shown)} 个项目未打印（TRENDING_PRINT_LIMIT={limit}）")

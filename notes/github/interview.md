@@ -7,14 +7,15 @@ sidebar_label: interview
 
 # interview
 
-本分类共 **18** 个项目。
+本分类共 **19** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [cheating-daddy](https://github.com/sohzm/cheating-daddy) | ![Stars](https://img.shields.io/github/stars/sohzm/cheating-daddy?style=social) | 基于 Gemini AI 的实时助手，通过屏幕与音频分析，在面试及会议中提供实时辅助建议。 |
+| [data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook) | ![Stars](https://img.shields.io/github/stars/DataExpert-io/data-engineer-handbook?style=social) | 该资源库为数据工程师学习提供完整资料，涵盖路线规划、书籍、社区、工具与课程，助力入门与进阶。 |
 | [JustHireMe](https://github.com/vasu-devs/JustHireMe) | ![Stars](https://img.shields.io/github/stars/vasu-devs/JustHireMe?style=social) | 本地优先AI求职工具，抓取职位、智能匹配并生成个性化简历和求职信。 |
-| [RCLI](https://github.com/RunanywhereAI/RCLI) | ![Stars](https://img.shields.io/github/stars/RunanywhereAI/RCLI?style=social) | Wally 是命令行工具，一键启动编码代理并连接托管或本地模型，支持跨平台。 |
 | [Resume-Matcher](https://github.com/srbhr/Resume-Matcher) | ![Stars](https://img.shields.io/github/stars/srbhr/Resume-Matcher?style=social) | AI驱动的简历定制工具，可根据职位描述自动生成定制化简历、求职信及面试准备建议。 |
 | [ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | ![Stars](https://img.shields.io/github/stars/MadsLorentzen/ai-job-search?style=social) | 基于Claude Code的AI求职框架，自动评估职位匹配、定制简历求职信并辅助面试准备。 |
 | [algorithms](https://github.com/keon/algorithms) | ![Stars](https://img.shields.io/github/stars/keon/algorithms?style=social) | Python 3 实现的精简数据结构与算法库，代码简洁、文档完善，适合学习与参考。 |
