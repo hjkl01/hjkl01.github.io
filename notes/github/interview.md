@@ -7,12 +7,13 @@ sidebar_label: interview
 
 # interview
 
-本分类共 **19** 个项目。
+本分类共 **20** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [freehire](https://github.com/strelov1/freehire) | ![Stars](https://img.shields.io/github/stars/strelov1/freehire?style=social) | freehire 直连公司招聘网站，聚合去重 IT 职位，提供搜索、简历匹配和应用管理工具。 |
 | [cheating-daddy](https://github.com/sohzm/cheating-daddy) | ![Stars](https://img.shields.io/github/stars/sohzm/cheating-daddy?style=social) | 基于 Gemini AI 的实时助手，通过屏幕与音频分析，在面试及会议中提供实时辅助建议。 |
 | [data-engineer-handbook](https://github.com/DataExpert-io/data-engineer-handbook) | ![Stars](https://img.shields.io/github/stars/DataExpert-io/data-engineer-handbook?style=social) | 该资源库为数据工程师学习提供完整资料，涵盖路线规划、书籍、社区、工具与课程，助力入门与进阶。 |
 | [JustHireMe](https://github.com/vasu-devs/JustHireMe) | ![Stars](https://img.shields.io/github/stars/vasu-devs/JustHireMe?style=social) | 本地优先AI求职工具，抓取职位、智能匹配并生成个性化简历和求职信。 |

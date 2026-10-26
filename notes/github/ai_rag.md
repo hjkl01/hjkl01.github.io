@@ -7,13 +7,12 @@ sidebar_label: ai_rag
 
 # ai_rag
 
-本分类共 **12** 个项目。
+本分类共 **11** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
-| [xerj](https://github.com/xerj-org/xerj) | ![Stars](https://img.shields.io/github/stars/xerj-org/xerj?style=social) | XERJ是一个本地AI搜索引擎，可自动索引任意文件夹，帮助编码智能体精准检索代码并大幅减少Token消耗。 |
 | [gortex](https://github.com/zzet/gortex) | ![Stars](https://img.shields.io/github/stars/zzet/gortex?style=social) | 将代码解析为知识图谱，为 AI 编程助手提供精准上下文，大幅减少 token 消耗。 |
 | [graphify](https://github.com/safishamsi/graphify) | ![Stars](https://img.shields.io/github/stars/safishamsi/graphify?style=social) | 将项目代码与文档映射为知识图谱，支持本地AST解析与图查询，替代传统文件搜索。 |
 | [graphrag](https://github.com/microsoft/graphrag) | ![Stars](https://img.shields.io/github/stars/microsoft/graphrag?style=social) | 基于知识图谱和大语言模型，从非结构化文本中提取结构化数据以增强LLM对私有数据的问答能力。 |

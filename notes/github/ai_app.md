@@ -7,12 +7,15 @@ sidebar_label: ai_app
 
 # ai_app
 
-本分类共 **47** 个项目。
+本分类共 **50** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [Codync](https://github.com/leepokai/Codync) | ![Stars](https://img.shields.io/github/stars/leepokai/Codync?style=social) | Codync 将本地编程助手转为持久化机器人，支持从手机或终端远程管理对话与审批。 |
+| [agent-beacon](https://github.com/Asymptote-Labs/agent-beacon) | ![Stars](https://img.shields.io/github/stars/Asymptote-Labs/agent-beacon?style=social) | Beacon是编码AI代理的记忆层，跨工具捕获会话历史，将有效工作流和调试经验转化为可复用的共享知识。 |
+| [awesome-ai-agents](https://github.com/slavakurilyak/awesome-ai-agents) | ![Stars](https://img.shields.io/github/stars/slavakurilyak/awesome-ai-agents?style=social) | 开源AI代理项目目录，按类别分类收录，展示星标数、增长趋势和项目描述。 |
 | [FounderOS](https://github.com/Bennettxai/FounderOS) | ![Stars](https://img.shields.io/github/stars/Bennettxai/FounderOS?style=social) | 单人公司操作系统，通过AI助手整合通信、客户漏斗、财务等模块，一键管理企业运营。 |
 | [CodeAF](https://github.com/Agent-Field/CodeAF) | ![Stars](https://img.shields.io/github/stars/Agent-Field/CodeAF?style=social) | CodeAF是开源编码工厂，用多AI模型自动拆分任务、编写测试、合并代码，统一管理所有项目。 |
 | [engram](https://github.com/Gentleman-Programming/engram) | ![Stars](https://img.shields.io/github/stars/Gentleman-Programming/engram?style=social) | 为AI编程代理提供持久化记忆，解决会话结束后遗忘的问题，支持多种主流编程助手工具。 |

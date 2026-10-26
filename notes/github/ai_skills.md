@@ -7,13 +7,18 @@ sidebar_label: ai_skills
 
 # ai_skills
 
-本分类共 **32** 个项目。
+本分类共 **37** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | ![Stars](https://img.shields.io/github/stars/cloudflare/security-audit-skill?style=social) | 将AI编码Agent转化为安全审计员，通过多阶段流程自动发现并验证代码漏洞。 |
+| [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | ![Stars](https://img.shields.io/github/stars/anthropics/knowledge-work-plugins?style=social) | 基于 Claude 的工作角色插件集合，为不同职能提供专业技能、工具连接和自动化命令，助力高效完成专业工作。 |
 | [rea](https://github.com/morluto/rea) | ![Stars](https://img.shields.io/github/stars/morluto/rea?style=social) | REA 是逆向工程 MCP 工具，可分析二进制、应用和运行时行为，辅助 AI 理解功能原理并重建实现。 |
+| [claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | ![Stars](https://img.shields.io/github/stars/anthropics/claude-plugins-official?style=social) | Claude Code插件市场目录，提供内部与第三方插件安装管理。 |
+| [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | ![Stars](https://img.shields.io/github/stars/multica-ai/andrej-karpathy-skills?style=social) | 通过四个原则改善Claude Code编程行为：先思考再编码、保持简洁、精准修改、目标驱动执行，解决LLM代码缺陷。 |
+| [agents](https://github.com/wshobson/agents) | ![Stars](https://img.shields.io/github/stars/wshobson/agents?style=social) | 为 AI 编程工具提供插件、智能体和技能，支持代码开发、审查与安全扫描。 |
 | [agency-agents](https://github.com/msitarzewski/agency-agents) | ![Stars](https://img.shields.io/github/stars/msitarzewski/agency-agents?style=social) | 聚合230+个专业AI代理，覆盖工程、设计、营销等多领域，支持一键安装至主流AI开发工具。 |
 | [agent-skills](https://github.com/addyosmani/agent-skills) | ![Stars](https://img.shields.io/github/stars/addyosmani/agent-skills?style=social) | 为 AI 编码代理提供工程技能包，将资深工程师的最佳实践编码为结构化工作流，覆盖开发全生命周期。 |
 | [agentskills](https://github.com/agentskills/agentskills) | ![Stars](https://img.shields.io/github/stars/agentskills/agentskills?style=social) | Agent Skills 是标准化开放格式，为 AI 智能体提供可扩展的专业知识与工作流程能力。 |

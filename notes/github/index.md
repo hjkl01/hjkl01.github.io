@@ -7,17 +7,17 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2439** 个项目，分为 **55** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2462** 个项目，分为 **55** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
-| [AI](/notes/github/AI) | 459 |
-| [ai_api](/notes/github/ai_api) | 9 |
-| [ai_app](/notes/github/ai_app) | 47 |
+| [AI](/notes/github/AI) | 464 |
+| [ai_api](/notes/github/ai_api) | 10 |
+| [ai_app](/notes/github/ai_app) | 50 |
 | [ai_mcp](/notes/github/ai_mcp) | 20 |
-| [ai_media](/notes/github/ai_media) | 33 |
-| [ai_rag](/notes/github/ai_rag) | 12 |
-| [ai_skills](/notes/github/ai_skills) | 32 |
+| [ai_media](/notes/github/ai_media) | 34 |
+| [ai_rag](/notes/github/ai_rag) | 11 |
+| [ai_skills](/notes/github/ai_skills) | 37 |
 | [android](/notes/github/android) | 27 |
 | [api](/notes/github/api) | 14 |
 | [backup](/notes/github/backup) | 11 |
@@ -32,22 +32,22 @@ sidebar_label: GitHub 项目
 | [desktop](/notes/github/desktop) | 20 |
 | [docker](/notes/github/docker) | 64 |
 | [docs](/notes/github/docs) | 6 |
-| [download](/notes/github/download) | 38 |
+| [download](/notes/github/download) | 37 |
 | [email](/notes/github/email) | 22 |
 | [emulators](/notes/github/emulators) | 14 |
 | [games](/notes/github/games) | 45 |
 | [git](/notes/github/git) | 33 |
-| [github](/notes/github/github) | 266 |
+| [github](/notes/github/github) | 273 |
 | [go](/notes/github/go) | 44 |
 | [input](/notes/github/input) | 6 |
 | [install](/notes/github/install) | 6 |
-| [interview](/notes/github/interview) | 19 |
+| [interview](/notes/github/interview) | 20 |
 | [kubernetes](/notes/github/kubernetes) | 35 |
 | [linux](/notes/github/linux) | 25 |
 | [log](/notes/github/log) | 4 |
 | [macos](/notes/github/macos) | 24 |
 | [markdown](/notes/github/markdown) | 4 |
-| [media](/notes/github/media) | 65 |
+| [media](/notes/github/media) | 66 |
 | [monitoring](/notes/github/monitoring) | 45 |
 | [music](/notes/github/music) | 9 |
 | [neovim](/notes/github/neovim) | 110 |
@@ -57,12 +57,12 @@ sidebar_label: GitHub 项目
 | [ocr](/notes/github/ocr) | 12 |
 | [office](/notes/github/office) | 19 |
 | [openwrt](/notes/github/openwrt) | 31 |
-| [python](/notes/github/python) | 151 |
+| [python](/notes/github/python) | 152 |
 | [rust](/notes/github/rust) | 53 |
 | [shell](/notes/github/shell) | 40 |
 | [team](/notes/github/team) | 12 |
 | [terminal](/notes/github/terminal) | 5 |
 | [testing](/notes/github/testing) | 27 |
-| [translation](/notes/github/translation) | 4 |
+| [translation](/notes/github/translation) | 3 |
 | [web](/notes/github/web) | 29 |
-| [windows](/notes/github/windows) | 38 |
+| [windows](/notes/github/windows) | 39 |

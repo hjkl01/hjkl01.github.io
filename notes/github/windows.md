@@ -7,12 +7,13 @@ sidebar_label: windows
 
 # windows
 
-本分类共 **38** 个项目。
+本分类共 **39** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [MangoDisk](https://github.com/harry0703/MangoDisk) | ![Stars](https://img.shields.io/github/stars/harry0703/MangoDisk?style=social) | MangoDisk是跨平台磁盘清理工具，提供深度清理、文件分析和隐私保护功能。 |
 | [MicYou](https://github.com/LanRhyme/MicYou) | ![Stars](https://img.shields.io/github/stars/LanRhyme/MicYou?style=social) | 将手机变成电脑的高品质麦克风，支持 Wi-Fi/USB/Web 连接与实时音频处理。 |
 | [FaceWinUnlock-Tauri](https://github.com/zs1083339604/FaceWinUnlock-Tauri) | ![Stars](https://img.shields.io/github/stars/zs1083339604/FaceWinUnlock-Tauri?style=social) | 基于Tauri的Windows面容识别解锁工具，通过DLL注入实现开机和锁屏刷脸解锁，支持多账户与活体检测。 |
 | [PeekDesktop](https://github.com/shanselman/PeekDesktop) | ![Stars](https://img.shields.io/github/stars/shanselman/PeekDesktop?style=social) | PeekDesktop 为 Windows 10/11 添加 macOS 风格的点击桌面壁纸显示功能，可隐藏和恢复窗口。 |

@@ -7,12 +7,13 @@ sidebar_label: python
 
 # python
 
-本分类共 **151** 个项目。
+本分类共 **152** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [fastapi](https://github.com/fastapi/fastapi) | ![Stars](https://img.shields.io/github/stars/fastapi/fastapi?style=social) | 基于Python类型提示的现代高性能Web框架，用于快速构建API，支持自动数据验证和交互式文档生成。 |
 | [buildozer](https://github.com/kivy/buildozer) | ![Stars](https://img.shields.io/github/stars/kivy/buildozer?style=social) | 用于将 Python 应用打包为多平台可安装二进制包的构建工具。 |
 | [django-filter](https://github.com/carltongibson/django-filter) | ![Stars](https://img.shields.io/github/stars/carltongibson/django-filter?style=social) | Django 应用，可通过 URL 参数动态过滤查询集，兼容 Django REST Framework。 |
 | [django-ninja](https://github.com/vitalik/django-ninja) | ![Stars](https://img.shields.io/github/stars/vitalik/django-ninja?style=social) | Django Ninja 是基于 Django 的快速 REST API 框架，通过 Python 类型提示实现高性能开发和自动 OpenAPI 文档生成。 |

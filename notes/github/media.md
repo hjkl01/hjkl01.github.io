@@ -7,12 +7,13 @@ sidebar_label: media
 
 # media
 
-本分类共 **65** 个项目。
+本分类共 **66** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [Concat](https://github.com/jub0t/Concat) | ![Stars](https://img.shields.io/github/stars/jub0t/Concat?style=social) | 免费开源跨平台视频编辑器，支持自动字幕、AI配音、背景移除和多轨剪辑，完全本地运行，无水印无订阅。 |
 | [server](https://github.com/music-assistant/server) | ![Stars](https://img.shields.io/github/stars/music-assistant/server?style=social) | 免费开源媒体库管理器，连接流媒体服务与联网音箱。 |
 | [uosc](https://github.com/tomasklaen/uosc) | ![Stars](https://img.shields.io/github/stars/tomasklaen/uosc?style=social) | MPV播放器极简UI，基于光标距离智能显隐，提供播放控制、字幕下载、播放列表等核心功能。 |
 | [utao](https://github.com/VonChange/utao) | ![Stars](https://img.shields.io/github/stars/VonChange/utao?style=social) | 专为电视设计的浏览器，绕过投屏限制，让手机会员在大屏观看视频，解决套娃收费痛点。 |

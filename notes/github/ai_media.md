@@ -7,13 +7,14 @@ sidebar_label: ai_media
 
 # ai_media
 
-本分类共 **33** 个项目。
+本分类共 **34** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5) | ![Stars](https://img.shields.io/github/stars/ace-step/ACE-Step-1.5?style=social) | ACE-Step 是一款高效开源音乐生成模型，可在消费级硬件上快速生成商业级质量音乐，支持精准风格控制与编辑。 |
+| [jasna](https://github.com/Kruk2/jasna) | ![Stars](https://img.shields.io/github/stars/Kruk2/jasna?style=social) | Jasna 是免费 GPU 加速的马赛克恢复工具，支持视频和图像。 |
 | [KittenTTS](https://github.com/KittenML/KittenTTS) | ![Stars](https://img.shields.io/github/stars/KittenML/KittenTTS?style=social) | 开源语音合成库，支持免微调声线克隆、多语言及情感控制，CPU实时运行。 |
 | [OpenMontage](https://github.com/calesthio/OpenMontage) | ![Stars](https://img.shields.io/github/stars/calesthio/OpenMontage?style=social) | 开源 AI 视频制作系统，通过自然语言驱动 Agent 自动完成从研究、脚本、素材生成到剪辑合成的完整视频生产流程。 |
 | [RedditVideoMakerBot](https://github.com/elebumm/RedditVideoMakerBot) | ![Stars](https://img.shields.io/github/stars/elebumm/RedditVideoMakerBot?style=social) | 自动从Reddit获取内容并生成无需手动剪辑的短视频 |

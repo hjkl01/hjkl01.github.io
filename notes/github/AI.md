@@ -7,12 +7,14 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **459** 个项目。
+本分类共 **464** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [microduck](https://github.com/pollen-robotics/microduck) | ![Stars](https://img.shields.io/github/stars/pollen-robotics/microduck?style=social) | 基于强化学习的小型双足机器人控制系统，可实现行走、滚动、抓取等功能。 |
+| [xerj](https://github.com/xerj-org/xerj) | ![Stars](https://img.shields.io/github/stars/xerj-org/xerj?style=social) | XERJ是一个本地AI搜索引擎，可自动索引任意文件夹，帮助编码智能体精准检索代码并大幅减少Token消耗。 |
 | [uzu](https://github.com/trymirai/uzu) | ![Stars](https://img.shields.io/github/stars/trymirai/uzu?style=social) | 高性能AI推理引擎，支持本地部署，实现零延迟、数据隐私保护和零推理成本。 |
 | [AIClient-2-API](https://github.com/justlovemaki/AIClient-2-API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient-2-API?style=social) | 将客户端专属大模型API转换为OpenAI兼容接口，支持多协议智能转换与账户池管理。 |
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |
@@ -31,14 +33,17 @@ sidebar_label: AI
 | [DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) | ![Stars](https://img.shields.io/github/stars/Hmbown/DeepSeek-TUI?style=social) | 开源编码代理，可在终端读取项目、编辑文件、运行命令，支持任意 AI 模型。 |
 | [SwiftUI-Agent-Skill](https://github.com/twostraws/SwiftUI-Agent-Skill) | ![Stars](https://img.shields.io/github/stars/twostraws/SwiftUI-Agent-Skill?style=social) | AI编程助手技能，指导生成更智能简洁的SwiftUI代码，规避常见错误与性能问题。 |
 | [DeepTutor](https://github.com/HKUDS/DeepTutor) | ![Stars](https://img.shields.io/github/stars/HKUDS/DeepTutor?style=social) | AI个性化导师系统，提供智能辅导、知识检索与学习跟踪功能。 |
+| [vllm](https://github.com/vllm-project/vllm) | ![Stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social) | 大语言模型高速推理和服务框架，支持 200+ 模型架构。 |
 | [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio) | ![Stars](https://img.shields.io/github/stars/modelscope/DiffSynth-Studio?style=social) | 开源扩散模型引擎，支持图像、视频、音频生成的推理与训练，提供显存管理和参数量化能力。 |
 | [ECC](https://github.com/affaan-m/ECC) | ![Stars](https://img.shields.io/github/stars/affaan-m/ECC?style=social) | ECC是AI编程助手的工程系统，提供规划、测试、审查、记忆等能力，将重复经验转化为可复用技能与流程。 |
 | [AIStudio2API](https://github.com/Mag1cFall/AIStudio2API) | ![Stars](https://img.shields.io/github/stars/Mag1cFall/AIStudio2API?style=social) | 将Google AI Studio协议转换为OpenAI、Anthropic和Gemini兼容API的代理服务 |
 | [Everywhere](https://github.com/DearVa/Everywhere) | ![Stars](https://img.shields.io/github/stars/DearVa/Everywhere?style=social) | Everywhere 是跨平台 AI 助手，智能感知屏幕上下文，支持多模型一键调用 |
 | [FalkorDB](https://github.com/FalkorDB/FalkorDB) | ![Stars](https://img.shields.io/github/stars/FalkorDB/FalkorDB?style=social) | FalkorDB 是首款基于稀疏矩阵和线性代数的超低延迟图数据库，专为 LLM 和知识图谱设计，支持 OpenCypher。 |
+| [sglang](https://github.com/sgl-project/sglang) | ![Stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social) | SGLang 是面向大语言模型和多模态模型的高速推理框架，支持智能体、大规模部署与强化学习。 |
 | [tokenspeed](https://github.com/lightseekorg/tokenspeed) | ![Stars](https://img.shields.io/github/stars/lightseekorg/tokenspeed?style=social) | TokenSpeed 是面向 agentic 工作负载的 LLM 推理引擎，兼具 TensorRT-LLM 的高性能与 vLLM 的易用性。 |
 | [Foundations-of-LLMs](https://github.com/ZJU-LLMs/Foundations-of-LLMs) | ![Stars](https://img.shields.io/github/stars/ZJU-LLMs/Foundations-of-LLMs?style=social) | 浙大开源的大模型基础教材，系统讲解LLM架构、微调、Prompt工程等知识体系。 |
 | [FunASR](https://github.com/modelscope/FunASR) | ![Stars](https://img.shields.io/github/stars/modelscope/FunASR?style=social) | FunASR 是工业级语音识别工具包，支持离线、流式及边缘部署，提供 ASR、VAD、标点等核心能力。 |
+| [harvey](https://github.com/ethanplusai/harvey) | ![Stars](https://img.shields.io/github/stars/ethanplusai/harvey?style=social) | Harvey是一款运行在本地订阅计划上的自主销售Agent，自动寻找潜在客户、写个性化开发邮件、处理回复，全程人工审核后才发送。 |
 | [phone-harness](https://github.com/ShawnPana/phone-harness) | ![Stars](https://img.shields.io/github/stars/ShawnPana/phone-harness?style=social) | 连接 AI agent 到真实手机，自动识别屏幕内容并执行点击、输入等操作，支持 iOS 和 Android。 |
 | [GPT-SoVITS](https://github.com/RVC-Boss/GPT-SoVITS) | ![Stars](https://img.shields.io/github/stars/RVC-Boss/GPT-SoVITS?style=social) | 这是一个支持零样本和少样本语音克隆的文本转语音项目，可实现高质量多语言语音合成。 |
 | [GenieX](https://github.com/qualcomm/GenieX) | ![Stars](https://img.shields.io/github/stars/qualcomm/GenieX?style=social) | GenieX 是高通设备本地 AI 推理运行时，支持在骁龙芯片上高效运行 LLM/VLM 模型。 |
