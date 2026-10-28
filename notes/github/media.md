@@ -7,7 +7,7 @@ sidebar_label: media
 
 # media
 
-本分类共 **66** 个项目。
+本分类共 **59** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -25,8 +25,6 @@ sidebar_label: media
 | [FireRed-OpenStoryline](https://github.com/FireRedTeam/FireRed-OpenStoryline) | ![Stars](https://img.shields.io/github/stars/FireRedTeam/FireRed-OpenStoryline?style=social) | AI驱动的对话式视频创作工具，支持智能素材搜索、脚本生成、配乐配音推荐，通过自然语言完成视频剪辑。 |
 | [FreeTube](https://github.com/FreeTubeApp/FreeTube) | ![Stars](https://img.shields.io/github/stars/FreeTubeApp/FreeTube?style=social) | 开源桌面 YouTube 播放器，无广告，保护隐私，防止 Google 追踪。 |
 | [GoFilm](https://github.com/ProudMuBai/GoFilm) | ![Stars](https://img.shields.io/github/stars/ProudMuBai/GoFilm?style=social) | 基于Vue和Gin的在线影视站，支持公共资源自动采集与定时更新，提供影片浏览播放及后台管理功能。 |
-| [HuYaTv](https://github.com/jayjd/HuYaTv) | ![Stars](https://img.shields.io/github/stars/jayjd/HuYaTv?style=social) | 聚合多平台游戏直播，支持电视手机车机终端观看与弹幕互动。 |
-| [IPTV](https://github.com/Free-TV/IPTV) | ![Stars](https://img.shields.io/github/stars/Free-TV/IPTV?style=social) | 汇集全球各地免费电视频道，提供M3U播放列表供IPTV播放器使用。 |
 | [Jellyfin-Enhanced](https://github.com/n00bcodr/Jellyfin-Enhanced) | ![Stars](https://img.shields.io/github/stars/n00bcodr/Jellyfin-Enhanced?style=social) | Jellyfin 增强插件，提供海报标签、防剧透保护、书签、丰富详情页等功能。 |
 | [LLPlayer](https://github.com/umlx5h/LLPlayer) | ![Stars](https://img.shields.io/github/stars/umlx5h/LLPlayer?style=social) | 专为语言学习者设计的视频播放器，支持双字幕、AI自动生成字幕与实时翻译功能。 |
 | [LTX-Video](https://github.com/Lightricks/LTX-Video) | ![Stars](https://img.shields.io/github/stars/Lightricks/LTX-Video?style=social) | LTX-Video是基于DiT的视频生成模型，支持同步音频视频生成、图像到视频转换及多关键帧控制。 |
@@ -38,24 +36,19 @@ sidebar_label: media
 | [Recordly](https://github.com/webadderallorg/Recordly) | ![Stars](https://img.shields.io/github/stars/webadderallorg/Recordly?style=social) | 开源录屏剪辑工具，具备自动缩放、光标美化、时间线编辑与 MP4/GIF 导出功能。 |
 | [StreamCap](https://github.com/ihmily/StreamCap) | ![Stars](https://img.shields.io/github/stars/ihmily/StreamCap?style=social) | StreamCap是跨平台直播流录制工具，支持40+国内外平台批量录制、循环监控、定时任务与自动转码。 |
 | [TVAPP](https://github.com/youhunwl/TVAPP) | ![Stars](https://img.shields.io/github/stars/youhunwl/TVAPP?style=social) | 整合TV版影视、K歌、直播等应用及接口源下载。 |
-| [TVBoxOSC](https://github.com/o0HalfLife0o/TVBoxOSC) | ![Stars](https://img.shields.io/github/stars/o0HalfLife0o/TVBoxOSC?style=social) | TVBoxOSC 是一款基于多开源项目构建的电视盒子视频聚合播放软件，可整合播放各类视频源。 |
 | [TizenBrew](https://github.com/reisxd/TizenBrew) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenBrew?style=social) | 一键安装Tizen系统自定义应用，免去重复使用开发工具的繁琐流程。 |
 | [TizenTubeCobalt](https://github.com/reisxd/TizenTubeCobalt) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenTubeCobalt?style=social) | 增强流媒体观看体验，支持去广告、跳赞助片段及调节播放速度。 |
 | [TizenTube](https://github.com/reisxd/TizenTube) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenTube?style=social) | 流媒体增强工具，去除广告并支持自动跳过分段赞助片。 |
 | [TorrServer](https://github.com/YouROK/TorrServer) | ![Stars](https://img.shields.io/github/stars/YouROK/TorrServer?style=social) | 在线流式播放种子，支持缓存和无需下载即可观看。 |
-| [WebViewTvLive](https://github.com/hxh19950701/WebViewTvLive) | ![Stars](https://img.shields.io/github/stars/hxh19950701/WebViewTvLive?style=social) | 基于 X5 WebView 的电视直播应用，一键打开官方网页观看直播。 |
 | [autocut](https://github.com/mli/autocut) | ![Stars](https://img.shields.io/github/stars/mli/autocut?style=social) | AutoCut 通过自动生成字幕，编辑文本选择保留句子，自动剪切并合并视频片段。 |
 | [fframes](https://github.com/dmtrKovalenko/fframes) | ![Stars](https://img.shields.io/github/stars/dmtrKovalenko/fframes?style=social) | fframes是基于Rust和SVG的视频创作框架，通过GPU加速渲染，配合AI coding agent根据描述自动生成视频。 |
-| [gao](https://github.com/gaotianliuyun/gao) | ![Stars](https://img.shields.io/github/stars/gaotianliuyun/gao?style=social) | 提供 TVBox 与 FongMi 影视配置文件，聚合点播源、直播线路及解析接口。 |
 | [go2rtc](https://github.com/AlexxIT/go2rtc) | ![Stars](https://img.shields.io/github/stars/AlexxIT/go2rtc?style=social) | go2rtc是一款通用摄像头流媒体应用，支持数十种协议互转、低延迟推送、双向音频及按需转码。 |
 | [immich](https://github.com/immich-app/immich) | ![Stars](https://img.shields.io/github/stars/immich-app/immich?style=social) | 高性能自托管照片视频管理服务，支持自动备份、人脸识别、地理标记和智能搜索。 |
-| [iptv](https://github.com/iptv-org/iptv) | ![Stars](https://img.shields.io/github/stars/iptv-org/iptv?style=social) | 汇集全球公开 IPTV 频道，提供可直接在播放器中使用的直播流媒体链接。 |
 | [jellium-desktop](https://github.com/andrewrabert/jellium-desktop) | ![Stars](https://img.shields.io/github/stars/andrewrabert/jellium-desktop?style=social) | 非官方 Jellyfin 桌面客户端，基于 CEF 和 mpv，支持 Linux/macOS/Windows 跨平台视频播放。 |
 | [jellyfin-desktop](https://github.com/jellyfin/jellyfin-desktop) | ![Stars](https://img.shields.io/github/stars/jellyfin/jellyfin-desktop?style=social) | Jellyfin 桌面客户端，支持音频直通与硬件解码，无需转码即可播放多种媒体格式。 |
 | [jellyfin-web](https://github.com/jellyfin/jellyfin-web) | ![Stars](https://img.shields.io/github/stars/jellyfin/jellyfin-web?style=social) | Jellyfin Web 是 Jellyfin 媒体服务器的 Web 前端，为桌面浏览器、Android 和 iOS 提供媒体播放与管理界面。 |
 | [jellyfin](https://github.com/jellyfin/jellyfin) | ![Stars](https://img.shields.io/github/stars/jellyfin/jellyfin?style=social) | 免费开源媒体系统，管理并流式传输媒体到多设备 |
 | [live](https://github.com/fanmingming/live) | ![Stars](https://img.shields.io/github/stars/fanmingming/live?style=social) | 免费开源的电视广播图标库与直播工具，提供台标资源、EPG接口、m3u订阅及格式转换服务。 |
-| [live](https://github.com/wwb521/live) | ![Stars](https://img.shields.io/github/stars/wwb521/live?style=social) | 免费影视资源聚合平台，提供直播源和 TVBox 接口，方便用户观看电视节目与影视内容。 |
 | [lossless-cut](https://github.com/mifi/lossless-cut) | ![Stars](https://img.shields.io/github/stars/mifi/lossless-cut?style=social) | 跨平台无损音视频编辑工具，基于 FFmpeg 实现快速切割、合并与重组，无需重新编码。 |
 | [mediamtx](https://github.com/bluenviron/mediamtx) | ![Stars](https://img.shields.io/github/stars/bluenviron/mediamtx?style=social) | MediaMTX 是零依赖的实时媒体服务器，支持多协议流发布、读取、录制与自动协议转换。 |
 | [moviepy](https://github.com/Zulko/moviepy) | ![Stars](https://img.shields.io/github/stars/Zulko/moviepy?style=social) | MoviePy 是 Python 视频编辑库，支持剪辑、拼接、字幕、合成与特效等非线性编辑功能 |

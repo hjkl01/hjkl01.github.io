@@ -7,14 +7,16 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **464** 个项目。
+本分类共 **466** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [claude-seo](https://github.com/AgriciDaniel/claude-seo) | ![Stars](https://img.shields.io/github/stars/AgriciDaniel/claude-seo?style=social) | SEO审计插件，覆盖技术与AI搜索，生成优化方案。 |
 | [microduck](https://github.com/pollen-robotics/microduck) | ![Stars](https://img.shields.io/github/stars/pollen-robotics/microduck?style=social) | 基于强化学习的小型双足机器人控制系统，可实现行走、滚动、抓取等功能。 |
 | [xerj](https://github.com/xerj-org/xerj) | ![Stars](https://img.shields.io/github/stars/xerj-org/xerj?style=social) | XERJ是一个本地AI搜索引擎，可自动索引任意文件夹，帮助编码智能体精准检索代码并大幅减少Token消耗。 |
+| [agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | ![Stars](https://img.shields.io/github/stars/aws/agent-toolkit-for-aws?style=social) | 为AI编码代理提供AWS工具、技能与护栏，助其在AWS上构建、部署及管理应用。 |
 | [uzu](https://github.com/trymirai/uzu) | ![Stars](https://img.shields.io/github/stars/trymirai/uzu?style=social) | 高性能AI推理引擎，支持本地部署，实现零延迟、数据隐私保护和零推理成本。 |
 | [AIClient-2-API](https://github.com/justlovemaki/AIClient-2-API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient-2-API?style=social) | 将客户端专属大模型API转换为OpenAI兼容接口，支持多协议智能转换与账户池管理。 |
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |

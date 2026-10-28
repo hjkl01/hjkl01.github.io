@@ -7,12 +7,15 @@ sidebar_label: ai_skills
 
 # ai_skills
 
-本分类共 **37** 个项目。
+本分类共 **40** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [Claude-Red](https://github.com/SnailSploit/Claude-Red) | ![Stars](https://img.shields.io/github/stars/SnailSploit/Claude-Red?style=social) | 为Claude提供78项攻防安全技能，使其按场景加载专业知识，成为上下文感知的红队操作工具。 |
+| [skills](https://github.com/higgsfield-ai/skills) | ![Stars](https://img.shields.io/github/stars/higgsfield-ai/skills?style=social) | 支持AI智能体调用多模态模型生成图视频及品牌资产，提供一键建站部署，满足全流程视觉创意需求。 |
+| [cc-skills-golang](https://github.com/samber/cc-skills-golang) | ![Stars](https://img.shields.io/github/stars/samber/cc-skills-golang?style=social) | 为AI编程助手提供Go语言专项技能集，覆盖风格、测试及性能，助其按需加载专业知识，提升开发质量。 |
 | [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | ![Stars](https://img.shields.io/github/stars/cloudflare/security-audit-skill?style=social) | 将AI编码Agent转化为安全审计员，通过多阶段流程自动发现并验证代码漏洞。 |
 | [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | ![Stars](https://img.shields.io/github/stars/anthropics/knowledge-work-plugins?style=social) | 基于 Claude 的工作角色插件集合，为不同职能提供专业技能、工具连接和自动化命令，助力高效完成专业工作。 |
 | [rea](https://github.com/morluto/rea) | ![Stars](https://img.shields.io/github/stars/morluto/rea?style=social) | REA 是逆向工程 MCP 工具，可分析二进制、应用和运行时行为，辅助 AI 理解功能原理并重建实现。 |

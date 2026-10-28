@@ -7,7 +7,7 @@ sidebar_label: chat
 
 # chat
 
-本分类共 **49** 个项目。
+本分类共 **50** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -62,3 +62,4 @@ sidebar_label: chat
 | [whatsmeow](https://github.com/tulir/whatsmeow) | ![Stars](https://img.shields.io/github/stars/tulir/whatsmeow?style=social) | Go语言的WhatsApp多设备API库，支持消息收发、群组管理、状态同步等核心功能。 |
 | [livekit](https://github.com/livekit/livekit) | ![Stars](https://img.shields.io/github/stars/livekit/livekit?style=social) | LiveKit 是开源实时音视频平台，基于分布式 WebRTC SFU 连接人、设备与 AI 模型。 |
 | [call-me](https://github.com/miroslavpejic85/call-me) | ![Stars](https://img.shields.io/github/stars/miroslavpejic85/call-me?style=social) | 开源自托管 WebRTC 一键视频通话组件，可嵌入网站实现即时视频沟通，无需注册。 |
+| [Edgechat](https://github.com/aozorae/Edgechat) | ![Stars](https://img.shields.io/github/stars/aozorae/Edgechat?style=social) | 基于Cloudflare的开源团队聊天系统，支持自部署、加密及Telegram桥接 |

@@ -7,12 +7,13 @@ sidebar_label: deploy
 
 # deploy
 
-本分类共 **57** 个项目。
+本分类共 **58** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [encore](https://github.com/encoredev/encore) | ![Stars](https://img.shields.io/github/stars/encoredev/encore?style=social) | 编码式后端基础设施编排工具，本地测试并一键部署到AWS或GCP云 |
 | [traefik](https://github.com/traefik/traefik) | ![Stars](https://img.shields.io/github/stars/traefik/traefik?style=social) | Traefik 是现代 HTTP 反向代理和负载均衡器，自动动态发现微服务并配置路由。 |
 | [cadence](https://github.com/cadence-workflow/cadence) | ![Stars](https://img.shields.io/github/stars/cadence-workflow/cadence?style=social) | Cadence是开源工作流平台，用于构建可扩展、容错、长期运行的分布式工作流。 |
 | [1Panel](https://github.com/1Panel-dev/1Panel) | ![Stars](https://img.shields.io/github/stars/1Panel-dev/1Panel?style=social) | 开源 Linux 服务器管理面板，提供 AI 管理、可视化运维、网站一键部署、应用商店等功能。 |
