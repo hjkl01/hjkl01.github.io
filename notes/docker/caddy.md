@@ -41,6 +41,8 @@ http:// {
     redir https://{host}{uri} permanent
 }
 # v2:
+
+# http://:80 {
 :80 {
     redir https://{host}{uri}
 }
