@@ -35,6 +35,15 @@ proxychains-ng
 open -a /Applications/Google\ Chrome.app/ --args --proxy-server=127.0.0.1:7890
 ```
 
+## brew services
+
+把命令行程序做成开机自启 + 崩溃自动重启的 launchd 服务，自定义 formula 的完整流程见 [brew services](/notes/mac/brew-services)。
+
+```shell
+brew services list
+brew services start|stop|restart|info <name>
+```
+
 ## brew cask
 
 ### markdown
