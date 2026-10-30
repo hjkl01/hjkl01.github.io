@@ -7,7 +7,7 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **466** 个项目。
+本分类共 **468** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -15,10 +15,12 @@ sidebar_label: AI
 | --- | --- | --- |
 | [claude-seo](https://github.com/AgriciDaniel/claude-seo) | ![Stars](https://img.shields.io/github/stars/AgriciDaniel/claude-seo?style=social) | SEO审计插件，覆盖技术与AI搜索，生成优化方案。 |
 | [microduck](https://github.com/pollen-robotics/microduck) | ![Stars](https://img.shields.io/github/stars/pollen-robotics/microduck?style=social) | 基于强化学习的小型双足机器人控制系统，可实现行走、滚动、抓取等功能。 |
+| [x-algorithm](https://github.com/xai-org/x-algorithm) | ![Stars](https://img.shields.io/github/stars/xai-org/x-algorithm?style=social) | X“为你推荐”信息流算法代码库，通过多源检索、Transformer排序及可见性过滤，决定用户可见及排序的帖子。 |
 | [xerj](https://github.com/xerj-org/xerj) | ![Stars](https://img.shields.io/github/stars/xerj-org/xerj?style=social) | XERJ是一个本地AI搜索引擎，可自动索引任意文件夹，帮助编码智能体精准检索代码并大幅减少Token消耗。 |
 | [agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | ![Stars](https://img.shields.io/github/stars/aws/agent-toolkit-for-aws?style=social) | 为AI编码代理提供AWS工具、技能与护栏，助其在AWS上构建、部署及管理应用。 |
 | [uzu](https://github.com/trymirai/uzu) | ![Stars](https://img.shields.io/github/stars/trymirai/uzu?style=social) | 高性能AI推理引擎，支持本地部署，实现零延迟、数据隐私保护和零推理成本。 |
 | [AIClient-2-API](https://github.com/justlovemaki/AIClient-2-API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient-2-API?style=social) | 将客户端专属大模型API转换为OpenAI兼容接口，支持多协议智能转换与账户池管理。 |
+| [open-ontologies](https://github.com/fabio-rovai/open-ontologies) | ![Stars](https://img.shields.io/github/stars/fabio-rovai/open-ontologies?style=social) | 本工具规划本体变更，生成可独立验证的推导证明，支持多种推理与校验。 |
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |
 | [AionUi](https://github.com/iOfficeAI/AionUi) | ![Stars](https://img.shields.io/github/stars/iOfficeAI/AionUi?style=social) | AionUi 是免费开源的 AI 协作桌面应用，内置智能 Agent，支持多模型，可自动化处理文件和生成文档，支持远程访问和定时任务。 |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | ![Stars](https://img.shields.io/github/stars/mukul975/Anthropic-Cybersecurity-Skills?style=social) | 开源网络安全技能库，为 AI 代理提供结构化安全知识，支持威胁检测、取证分析和事件响应等工作流程。 |

@@ -7,7 +7,7 @@ sidebar_label: install
 
 # install
 
-本分类共 **6** 个项目。
+本分类共 **7** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -19,3 +19,4 @@ sidebar_label: install
 | [archinstall](https://github.com/archlinux/archinstall) | ![Stars](https://img.shields.io/github/stars/archlinux/archinstall?style=social) | Arch Linux 引导式安装工具，支持自动化安装及作为库管理服务与包。 |
 | [etcher](https://github.com/balena-io/etcher) | ![Stars](https://img.shields.io/github/stars/balena-io/etcher?style=social) | Etcher 可将系统镜像安全烧录至 SD 卡或 U 盘，自动验证完整性并防止误写硬盘。 |
 | [rufus](https://github.com/pbatard/rufus) | ![Stars](https://img.shields.io/github/stars/pbatard/rufus?style=social) | Rufus是可靠的USB格式化与启动盘制作工具，支持ISO镜像写入 |
+| [DroidDesk](https://github.com/orailnoor/DroidDesk) | ![Stars](https://img.shields.io/github/stars/orailnoor/DroidDesk?style=social) | 在安卓手机上运行完整Linux桌面，支持VS Code、Blender等应用，提供本地AI与原生性能。 |

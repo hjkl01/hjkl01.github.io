@@ -7,11 +7,11 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2471** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2476** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
-| [AI](/notes/github/AI) | 466 |
+| [AI](/notes/github/AI) | 468 |
 | [ai_api](/notes/github/ai_api) | 10 |
 | [ai_app](/notes/github/ai_app) | 50 |
 | [ai_mcp](/notes/github/ai_mcp) | 20 |
@@ -37,10 +37,10 @@ sidebar_label: GitHub 项目
 | [emulators](/notes/github/emulators) | 14 |
 | [games](/notes/github/games) | 45 |
 | [git](/notes/github/git) | 33 |
-| [github](/notes/github/github) | 273 |
+| [github](/notes/github/github) | 274 |
 | [go](/notes/github/go) | 44 |
 | [input](/notes/github/input) | 6 |
-| [install](/notes/github/install) | 6 |
+| [install](/notes/github/install) | 7 |
 | [interview](/notes/github/interview) | 20 |
 | [kubernetes](/notes/github/kubernetes) | 35 |
 | [linux](/notes/github/linux) | 25 |
@@ -49,7 +49,7 @@ sidebar_label: GitHub 项目
 | [markdown](/notes/github/markdown) | 4 |
 | [media](/notes/github/media) | 59 |
 | [monitoring](/notes/github/monitoring) | 45 |
-| [music](/notes/github/music) | 9 |
+| [music](/notes/github/music) | 10 |
 | [neovim](/notes/github/neovim) | 110 |
 | [network](/notes/github/network) | 36 |
 | [nginx](/notes/github/nginx) | 15 |

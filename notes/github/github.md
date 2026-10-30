@@ -7,7 +7,7 @@ sidebar_label: github
 
 # github
 
-本分类共 **273** 个项目。
+本分类共 **274** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -15,6 +15,7 @@ sidebar_label: github
 | --- | --- | --- |
 | [harper](https://github.com/Automattic/harper) | ![Stars](https://img.shields.io/github/stars/Automattic/harper?style=social) | Harper 是一款快速、隐私安全的开源英语语法检查工具，支持多编辑器集成。 |
 | [koharu](https://github.com/koharu-rs/koharu) | ![Stars](https://img.shields.io/github/stars/koharu-rs/koharu?style=social) | Koharu 是基于机器学习的本地漫画翻译工具，通过 OCR、图像修复和 LLM 实现自动化多语言翻译与排版。 |
+| [php-src](https://github.com/php/php-src) | ![Stars](https://img.shields.io/github/stars/php/php-src?style=social) | PHP通用脚本语言的官方解释器，支持Web开发与功能扩展 |
 | [impactor](https://github.com/claration/impactor) | ![Stars](https://img.shields.io/github/stars/claration/impactor?style=social) | 开源跨平台iOS侧载工具，支持签名安装应用与Tweak注入 |
 | [trivy](https://github.com/aquasecurity/trivy) | ![Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social) | Trivy是一款全面通用的安全扫描工具，可扫描容器镜像、文件系统、Git仓库、虚拟机和K8s，检测漏洞、SBOM、配置问题、敏感信息和许可证。 |
 | [ScopeSentry](https://github.com/Autumn-27/ScopeSentry) | ![Stars](https://img.shields.io/github/stars/Autumn-27/ScopeSentry?style=social) | 分布式网络安全扫描平台，支持资产测绘、漏洞检测、子域名接管等多模块扫描任务。 |

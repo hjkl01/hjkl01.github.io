@@ -7,7 +7,7 @@ sidebar_label: music
 
 # music
 
-本分类共 **9** 个项目。
+本分类共 **10** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -22,3 +22,4 @@ sidebar_label: music
 | [navidrome](https://github.com/navidrome/navidrome) | ![Stars](https://img.shields.io/github/stars/navidrome/navidrome?style=social) | 开源个人音乐流媒体服务器，支持多设备访问和 Subsonic 客户端兼容。 |
 | [go-music-dl](https://github.com/guohuiyuan/go-music-dl) | ![Stars](https://img.shields.io/github/stars/guohuiyuan/go-music-dl?style=social) | 多平台音乐搜索下载工具，支持Web、终端、桌面应用，提供歌单管理与无损音质下载。 |
 | [xiaomusic](https://github.com/hanxi/xiaomusic) | ![Stars](https://img.shields.io/github/stars/hanxi/xiaomusic?style=social) | 通过语音指令控制小爱音箱播放音乐，支持在线下载歌曲、本地播放和歌单管理。 |
+| [NeriPlayer](https://github.com/cwuom/NeriPlayer) | ![Stars](https://img.shields.io/github/stars/cwuom/NeriPlayer?style=social) | NeriPlayer是原生Android音频播放器，整合多源在线播放、本地管理与自建同步，提供丰富歌词及音效体验。 |
