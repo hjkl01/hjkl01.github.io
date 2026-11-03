@@ -7,12 +7,13 @@ sidebar_label: email
 
 # email
 
-本分类共 **22** 个项目。
+本分类共 **23** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [BillionMail](https://github.com/Billionmail/BillionMail) | ![Stars](https://img.shields.io/github/stars/Billionmail/BillionMail?style=social) | 开源邮件服务器与营销平台，支持批量发送、统计分析及自建托管。 |
 | [BillionMail](https://github.com/aaPanel/BillionMail) | ![Stars](https://img.shields.io/github/stars/aaPanel/BillionMail?style=social) | BillionMail是开源邮件服务器与邮件营销平台，支持邮件群发、数据分析与模板自定义，无需限制即可自托管管理邮件活动。 |
 | [Mailu](https://github.com/Mailu/Mailu) | ![Stars](https://img.shields.io/github/stars/Mailu/Mailu?style=social) | 纯 Docker 邮件服务器，提供完整邮件收发、反垃圾、Web 邮箱及安全管理等功能。 |
 | [PMail](https://github.com/Jinnrry/PMail) | ![Stars](https://img.shields.io/github/stars/Jinnrry/PMail?style=social) | 个人邮件服务器，单文件轻量部署，支持多域多用户，自动HTTPS与安全认证。 |

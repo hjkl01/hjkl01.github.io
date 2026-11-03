@@ -7,13 +7,15 @@ sidebar_label: ai_api
 
 # ai_api
 
-本分类共 **10** 个项目。
+本分类共 **12** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [treg](https://github.com/superdesigndev/treg) | ![Stars](https://img.shields.io/github/stars/superdesigndev/treg?style=social) | 统一代理数千工具API，按调用计费，免供应商注册，支持团队密钥共享。 |
 | [free-claude-code](https://github.com/Alishahryar1/free-claude-code) | ![Stars](https://img.shields.io/github/stars/Alishahryar1/free-claude-code?style=social) | 聚合 61 个 AI 模型提供商，为多种编码代理提供低成本、高可用的 AI 编程助手服务。 |
+| [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) | ![Stars](https://img.shields.io/github/stars/router-for-me/CLIProxyAPI?style=social) | 本地代理多账号AI CLI，提供兼容OpenAI等API，支持多模型流式及负载均衡。 |
 | [opencode2api](https://github.com/jasonxu114514/opencode2api) | ![Stars](https://img.shields.io/github/stars/jasonxu114514/opencode2api?style=social) | OpenCode 网关服务，将 Zen/Go 平台协议转换为标准推理 API，支持免费模型访问。 |
 | [agentmesh](https://github.com/google/agentmesh) | ![Stars](https://img.shields.io/github/stars/google/agentmesh?style=social) | AI 代理私有网络，实现工具发布、发现、调用与身份验证，支持安全跨代理通信。 |
 | [9router](https://github.com/decolua/9router) | ![Stars](https://img.shields.io/github/stars/decolua/9router?style=social) | 9Router是一个AI路由和Token节省工具，自动在付费/便宜/免费模型间切换并压缩工具输出，节省20-40%Token。 |

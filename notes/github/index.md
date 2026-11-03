@@ -7,12 +7,12 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2476** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2484** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
-| [AI](/notes/github/AI) | 468 |
-| [ai_api](/notes/github/ai_api) | 10 |
+| [AI](/notes/github/AI) | 472 |
+| [ai_api](/notes/github/ai_api) | 12 |
 | [ai_app](/notes/github/ai_app) | 50 |
 | [ai_mcp](/notes/github/ai_mcp) | 20 |
 | [ai_media](/notes/github/ai_media) | 34 |
@@ -33,7 +33,7 @@ sidebar_label: GitHub 项目
 | [docker](/notes/github/docker) | 64 |
 | [docs](/notes/github/docs) | 6 |
 | [download](/notes/github/download) | 37 |
-| [email](/notes/github/email) | 22 |
+| [email](/notes/github/email) | 23 |
 | [emulators](/notes/github/emulators) | 14 |
 | [games](/notes/github/games) | 45 |
 | [git](/notes/github/git) | 33 |
@@ -58,7 +58,7 @@ sidebar_label: GitHub 项目
 | [office](/notes/github/office) | 19 |
 | [openwrt](/notes/github/openwrt) | 31 |
 | [python](/notes/github/python) | 152 |
-| [rust](/notes/github/rust) | 53 |
+| [rust](/notes/github/rust) | 54 |
 | [shell](/notes/github/shell) | 40 |
 | [team](/notes/github/team) | 12 |
 | [terminal](/notes/github/terminal) | 5 |

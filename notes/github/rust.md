@@ -7,12 +7,13 @@ sidebar_label: rust
 
 # rust
 
-本分类共 **53** 个项目。
+本分类共 **54** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [cuda-rust](https://github.com/NVIDIA/cuda-rust) | ![Stars](https://img.shields.io/github/stars/NVIDIA/cuda-rust?style=social) | CUDA Rust平台，用Rust编写GPU内核，提供SIMT与Tile模型及运行时，保障跨GPU所有权安全。 |
 | [rustls](https://github.com/rustls/rustls) | ![Stars](https://img.shields.io/github/stars/rustls/rustls?style=social) | 用 Rust 编写的现代 TLS 库，实现 TLS 1.2/1.3，无需配置即可提供安全连接。 |
 | [Pake](https://github.com/tw93/Pake) | ![Stars](https://img.shields.io/github/stars/tw93/Pake?style=social) | Pake 可将任意网页一键打包为轻量桌面应用，支持 macOS、Windows、Linux 多平台。 |
 | [tauri](https://github.com/tauri-apps/tauri) | ![Stars](https://img.shields.io/github/stars/tauri-apps/tauri?style=social) | Tauri 是基于 Rust 和 Web 技术的跨平台桌面应用框架，生成轻量高效的二进制文件。 |
