@@ -564,10 +564,24 @@ function update(dt) {
   if (window.__camHook) window.__camHook(camera); // 调试/截图用相机钩子
 }
 
+// 自适应分辨率：连续掉帧就降 pixelRatio（只降不升，避免震荡）
+let dprAcc = 0, dprN = 0, dprStep = 0;
 function frame(now) {
   requestAnimationFrame(frame);
   const dt = Math.min(0.05, Math.max(0.0005, (now - last) / 1000));
   last = now;
+  if (!simMode && !document.hidden) {
+    dprAcc += dt; dprN++;
+    if (dprAcc >= 2.5) {
+      const fps = dprN / dprAcc;
+      if (fps < 42 && dprStep < 2) {
+        dprStep++;
+        renderer.setPixelRatio(Math.max(0.8, renderer.getPixelRatio() * 0.78));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+      dprAcc = 0; dprN = 0;
+    }
+  }
   const T0 = performance.now();
   update(dt);
   const T1 = performance.now();
