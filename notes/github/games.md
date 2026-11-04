@@ -7,7 +7,7 @@ sidebar_label: games
 
 # games
 
-本分类共 **45** 个项目。
+本分类共 **46** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -58,3 +58,4 @@ sidebar_label: games
 | [mineflayer](https://github.com/PrismarineJS/mineflayer) | ![Stars](https://img.shields.io/github/stars/PrismarineJS/mineflayer?style=social) | Mineflayer 是用 JS/Python 创建 Minecraft 机器人的框架，支持多版本，具备实体追踪、移动、战斗、建造、聊天等核心功能。 |
 | [nakama](https://github.com/heroiclabs/nakama) | ![Stars](https://img.shields.io/github/stars/heroiclabs/nakama?style=social) | Nakama 是开源分布式游戏服务器，提供实时多人、社交聊天和排行榜功能，助力快速构建可扩展的游戏应用。 |
 | [veloren](https://github.com/veloren/veloren) | ![Stars](https://img.shields.io/github/stars/veloren/veloren?style=social) | Veloren是一款开放世界奇幻动作冒险RPG游戏 |
+| [RetroArch](https://github.com/libretro/RetroArch) | ![Stars](https://img.shields.io/github/stars/libretro/RetroArch?style=social) | 多平台统一前端，加载各类模拟器核心，支持游戏回放、实时回溯等。 |

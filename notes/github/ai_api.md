@@ -7,7 +7,7 @@ sidebar_label: ai_api
 
 # ai_api
 
-本分类共 **12** 个项目。
+本分类共 **13** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -25,3 +25,4 @@ sidebar_label: ai_api
 | [opencode-antigravity-auth](https://github.com/NoeFabris/opencode-antigravity-auth) | ![Stars](https://img.shields.io/github/stars/NoeFabris/opencode-antigravity-auth?style=social) | Opencode OAuth 插件，通过 Google 账号认证访问 Antigravity 与 Gemini CLI 配额，支持 Claude 及 Gemini 模型调用。 |
 | [router](https://github.com/weave-os/router) | ![Stars](https://img.shields.io/github/stars/weave-os/router?style=social) | 支持多厂商API的智能模型路由器，根据请求动作自动选择最优模型，降低推理成本。 |
 | [sub2api](https://github.com/Wei-Shaw/sub2api) | ![Stars](https://img.shields.io/github/stars/Wei-Shaw/sub2api?style=social) | AI API网关平台，将多账号订阅配额分发为API Key，支持精准计费与智能调度。 |
+| [AIClient2API](https://github.com/justlovemaki/AIClient2API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient2API?style=social) | 统一多客户端AI接口，模拟请求并封装为本地OpenAI兼容接口 |

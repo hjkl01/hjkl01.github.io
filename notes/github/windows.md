@@ -7,7 +7,7 @@ sidebar_label: windows
 
 # windows
 
-本分类共 **39** 个项目。
+本分类共 **40** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -52,3 +52,4 @@ sidebar_label: windows
 | [simplewall](https://github.com/henrypp/simplewall) | ![Stars](https://img.shields.io/github/stars/henrypp/simplewall?style=social) | 基于WFP的轻量级网络过滤工具，支持自定义规则与内置拦截列表。 |
 | [winget-cli](https://github.com/microsoft/winget-cli) | ![Stars](https://img.shields.io/github/stars/microsoft/winget-cli?style=social) | Windows Package Manager 是 Windows 平台的命令行包管理工具，支持从 Microsoft Store 和社区仓库搜索和安装软件。 |
 | [wsldl](https://github.com/yuk7/wsldl) | ![Stars](https://img.shields.io/github/stars/yuk7/wsldl?style=social) | WSL 发行版的安装器、启动器和配置管理工具，支持 tarball 和 vhdx 格式。 |
+| [Mocreak](https://github.com/OdysseusYuan/Mocreak) | ![Stars](https://img.shields.io/github/stars/OdysseusYuan/Mocreak?style=social) | 一键下载、安装并部署正版Windows系统与多版本Office，支持高度定制、多语言及多场景办公增强。 |

@@ -7,7 +7,7 @@ sidebar_label: backup
 
 # backup
 
-本分类共 **11** 个项目。
+本分类共 **12** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -24,3 +24,4 @@ sidebar_label: backup
 | [shiori](https://github.com/go-shiori/shiori) | ![Stars](https://img.shields.io/github/stars/go-shiori/shiori?style=social) | Shiori是一款Go编写的书签管理工具，支持命令行和网页界面，可导入导出书签并自动存档网页。 |
 | [flare](https://github.com/soulteary/flare) | ![Stars](https://img.shields.io/github/stars/soulteary/flare?style=social) | Flare是一款基于Go的轻量级高性能书签应用，无需数据库，支持离线模式和可选功能。 |
 | [my-bookmark](https://github.com/luchenqun/my-bookmark) | ![Stars](https://img.shields.io/github/stars/luchenqun/my-bookmark?style=social) | 在线书签管理工具，支持书签增删改查、分类搜索、备忘录及跨设备同步访问。 |
+| [linkding-cn](https://github.com/WooHooDai/linkding-cn) | ![Stars](https://img.shields.io/github/stars/WooHooDai/linkding-cn?style=social) | 开源自托管书签管理与稍后读工具，支持快照存档及可定制阅读模式，满足网页高效管理需求。 |

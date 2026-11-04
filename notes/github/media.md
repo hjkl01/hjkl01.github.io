@@ -7,7 +7,7 @@ sidebar_label: media
 
 # media
 
-本分类共 **59** 个项目。
+本分类共 **55** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -16,7 +16,6 @@ sidebar_label: media
 | [Concat](https://github.com/jub0t/Concat) | ![Stars](https://img.shields.io/github/stars/jub0t/Concat?style=social) | 免费开源跨平台视频编辑器，支持自动字幕、AI配音、背景移除和多轨剪辑，完全本地运行，无水印无订阅。 |
 | [server](https://github.com/music-assistant/server) | ![Stars](https://img.shields.io/github/stars/music-assistant/server?style=social) | 免费开源媒体库管理器，连接流媒体服务与联网音箱。 |
 | [uosc](https://github.com/tomasklaen/uosc) | ![Stars](https://img.shields.io/github/stars/tomasklaen/uosc?style=social) | MPV播放器极简UI，基于光标距离智能显隐，提供播放控制、字幕下载、播放列表等核心功能。 |
-| [utao](https://github.com/VonChange/utao) | ![Stars](https://img.shields.io/github/stars/VonChange/utao?style=social) | 专为电视设计的浏览器，绕过投屏限制，让手机会员在大屏观看视频，解决套娃收费痛点。 |
 | [ygege](https://github.com/UwUDev/ygege) | ![Stars](https://img.shields.io/github/stars/UwUDev/ygege?style=social) | Nostr协议的高性能torrent索引搜索工具，支持Prowlarr和Jackett集成。 |
 | [stremio-core](https://github.com/Stremio/stremio-core) | ![Stars](https://img.shields.io/github/stars/Stremio/stremio-core?style=social) | Stremio 核心 Rust 引擎，实现媒体发现、库管理与播放状态等跨平台共享逻辑。 |
 | [Macast](https://github.com/xfangfang/Macast) | ![Stars](https://img.shields.io/github/stars/xfangfang/Macast?style=social) | Macast 是一款菜单栏应用，基于 mpv 实现 DLNA 媒体渲染器，可将手机媒体推送到电脑播放。 |
@@ -30,12 +29,10 @@ sidebar_label: media
 | [LTX-Video](https://github.com/Lightricks/LTX-Video) | ![Stars](https://img.shields.io/github/stars/Lightricks/LTX-Video?style=social) | LTX-Video是基于DiT的视频生成模型，支持同步音频视频生成、图像到视频转换及多关键帧控制。 |
 | [LibreTV](https://github.com/LibreSpark/LibreTV) | ![Stars](https://img.shields.io/github/stars/LibreSpark/LibreTV?style=social) | 聚合搜索影视资源，支持HLS播放、直播IPTV与进度同步 |
 | [LunaTV](https://github.com/MoonTechLab/LunaTV) | ![Stars](https://img.shields.io/github/stars/MoonTechLab/LunaTV?style=social) | 跨平台影视聚合播放器，支持多源搜索、在线播放与收藏同步。 |
-| [MoonTV](https://github.com/samqin123/MoonTV) | ![Stars](https://img.shields.io/github/stars/samqin123/MoonTV?style=social) | MoonTV 是跨平台影视聚合播放器，支持多源搜索、在线播放、收藏同步与去广告。 |
 | [MovieBox-Tui](https://github.com/mesamirh/MovieBox-Tui) | ![Stars](https://img.shields.io/github/stars/mesamirh/MovieBox-Tui?style=social) | 终端电影剧集搜索引擎，支持流媒体播放、下载和直播电视。 |
 | [OpenCut](https://github.com/OpenCut-app/OpenCut) | ![Stars](https://img.shields.io/github/stars/OpenCut-app/OpenCut?style=social) | OpenCut 是一款免费的开源视频编辑器，支持网页、桌面和移动端，跨平台统一代码库。 |
 | [Recordly](https://github.com/webadderallorg/Recordly) | ![Stars](https://img.shields.io/github/stars/webadderallorg/Recordly?style=social) | 开源录屏剪辑工具，具备自动缩放、光标美化、时间线编辑与 MP4/GIF 导出功能。 |
 | [StreamCap](https://github.com/ihmily/StreamCap) | ![Stars](https://img.shields.io/github/stars/ihmily/StreamCap?style=social) | StreamCap是跨平台直播流录制工具，支持40+国内外平台批量录制、循环监控、定时任务与自动转码。 |
-| [TVAPP](https://github.com/youhunwl/TVAPP) | ![Stars](https://img.shields.io/github/stars/youhunwl/TVAPP?style=social) | 整合TV版影视、K歌、直播等应用及接口源下载。 |
 | [TizenBrew](https://github.com/reisxd/TizenBrew) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenBrew?style=social) | 一键安装Tizen系统自定义应用，免去重复使用开发工具的繁琐流程。 |
 | [TizenTubeCobalt](https://github.com/reisxd/TizenTubeCobalt) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenTubeCobalt?style=social) | 增强流媒体观看体验，支持去广告、跳赞助片段及调节播放速度。 |
 | [TizenTube](https://github.com/reisxd/TizenTube) | ![Stars](https://img.shields.io/github/stars/reisxd/TizenTube?style=social) | 流媒体增强工具，去除广告并支持自动跳过分段赞助片。 |
@@ -54,7 +51,6 @@ sidebar_label: media
 | [moviepy](https://github.com/Zulko/moviepy) | ![Stars](https://img.shields.io/github/stars/Zulko/moviepy?style=social) | MoviePy 是 Python 视频编辑库，支持剪辑、拼接、字幕、合成与特效等非线性编辑功能 |
 | [ntsc-rs](https://github.com/valadaptive/ntsc-rs) | ![Stars](https://img.shields.io/github/stars/valadaptive/ntsc-rs?style=social) | 模拟NTSC/VHS复古视频伪影，支持AE/PR插件或独立运行。 |
 | [obs-studio](https://github.com/obsproject/obs-studio) | ![Stars](https://img.shields.io/github/stars/obsproject/obs-studio?style=social) | OBS Studio 是开源视频录制与直播软件，支持捕获、合成、编码和串流 |
-| [open-tv](https://github.com/Fredolx/open-tv) | ![Stars](https://img.shields.io/github/stars/Fredolx/open-tv?style=social) | Fred TV 是一款开源 IPTV 播放器，支持多平台，可导入频道源、录制直播、收藏管理和快速搜索。 |
 | [openscreen](https://github.com/siddharthvaddem/openscreen) | ![Stars](https://img.shields.io/github/stars/siddharthvaddem/openscreen?style=social) | OpenScreen 是 Screen Studio 的免费开源替代品，支持屏幕录制、摄像头画中画、自动缩放及本地字幕生成，用于制作产品演示和教程视频。 |
 | [palmier-pro](https://github.com/palmier-io/palmier-pro) | ![Stars](https://img.shields.io/github/stars/palmier-io/palmier-pro?style=social) | Palmier Pro 是一款面向 AI 的 macOS 视频编辑器，内置生成式 AI，支持通过 MCP 让 AI 代理直接在时间轴上创作和编辑视频。 |
 | [photoprism](https://github.com/photoprism/photoprism) | ![Stars](https://img.shields.io/github/stars/photoprism/photoprism?style=social) | PhotoPrism是一款AI驱动的隐私优先相册应用，支持浏览、整理和分享照片视频，自动标签与人脸识别。 |

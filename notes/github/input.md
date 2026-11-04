@@ -7,7 +7,7 @@ sidebar_label: input
 
 # input
 
-本分类共 **6** 个项目。
+本分类共 **8** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -19,3 +19,5 @@ sidebar_label: input
 | [rime-ice](https://github.com/iDvel/rime-ice) | ![Stars](https://img.shields.io/github/stars/iDvel/rime-ice?style=social) | 雾凇拼音是开箱即用的简体中文Rime输入法配置，支持全拼双拼、精校词库及多项扩展功能。 |
 | [rime_wanxiang](https://github.com/amzxyz/rime_wanxiang) | ![Stars](https://img.shields.io/github/stars/amzxyz/rime_wanxiang?style=social) | 万象拼音是基于 Rime 的拼音输入方案，提供带调词库、辅码系统与 Lua 扩展，实现精准流畅的中文输入体验。 |
 | [kanata](https://github.com/jtroo/kanata) | ![Stars](https://img.shields.io/github/stars/jtroo/kanata?style=social) | 跨平台键盘重映射工具，支持多层按键与高级自定义，提升打字舒适度。 |
+| [imewlconverter](https://github.com/studyzy/imewlconverter) | ![Stars](https://img.shields.io/github/stars/studyzy/imewlconverter?style=social) | 支持五十余种输入法词库格式互转，支持批量及命令行模式，适配多平台 |
+| [qingjian](https://github.com/qingjian-team/qingjian) | ![Stars](https://img.shields.io/github/stars/qingjian-team/qingjian?style=social) | 一款支持多语言译词显示的输入法，边打字边学外语，支持简拼纠错。 |

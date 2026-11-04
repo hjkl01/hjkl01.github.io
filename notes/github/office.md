@@ -7,7 +7,7 @@ sidebar_label: office
 
 # office
 
-本分类共 **19** 个项目。
+本分类共 **20** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -32,3 +32,4 @@ sidebar_label: office
 | [bentopdf](https://github.com/alam00000/bentopdf) | ![Stars](https://img.shields.io/github/stars/alam00000/bentopdf?style=social) | 隐私优先的浏览器端 PDF 工具，支持合并、拆分、编辑、转换等操作。 |
 | [gotenberg](https://github.com/gotenberg/gotenberg) | ![Stars](https://img.shields.io/github/stars/gotenberg/gotenberg?style=social) | Docker 文档转 PDF API，支持 HTML、Markdown、Office 格式转换 |
 | [pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX) | ![Stars](https://img.shields.io/github/stars/pdf2htmlEX/pdf2htmlEX?style=social) | 将PDF转换为HTML，保留精确排版、字体、链接、书签和多媒体，适用于学术论文与复杂布局文档。 |
+| [bento](https://github.com/nyblnet/bento) | ![Stars](https://img.shields.io/github/stars/nyblnet/bento?style=social) | 单文件演示工具，内嵌编辑与放映功能，支持离线协作、图表及AI修改，解决文档锁定问题。 |

@@ -7,12 +7,12 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2484** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2491** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
 | [AI](/notes/github/AI) | 472 |
-| [ai_api](/notes/github/ai_api) | 12 |
+| [ai_api](/notes/github/ai_api) | 13 |
 | [ai_app](/notes/github/ai_app) | 50 |
 | [ai_mcp](/notes/github/ai_mcp) | 20 |
 | [ai_media](/notes/github/ai_media) | 34 |
@@ -20,7 +20,7 @@ sidebar_label: GitHub 项目
 | [ai_skills](/notes/github/ai_skills) | 40 |
 | [android](/notes/github/android) | 27 |
 | [api](/notes/github/api) | 14 |
-| [backup](/notes/github/backup) | 11 |
+| [backup](/notes/github/backup) | 12 |
 | [chat](/notes/github/chat) | 50 |
 | [cloudDrive](/notes/github/cloudDrive) | 16 |
 | [Cloudflare](/notes/github/Cloudflare) | 6 |
@@ -35,11 +35,11 @@ sidebar_label: GitHub 项目
 | [download](/notes/github/download) | 37 |
 | [email](/notes/github/email) | 23 |
 | [emulators](/notes/github/emulators) | 14 |
-| [games](/notes/github/games) | 45 |
+| [games](/notes/github/games) | 46 |
 | [git](/notes/github/git) | 33 |
 | [github](/notes/github/github) | 274 |
 | [go](/notes/github/go) | 44 |
-| [input](/notes/github/input) | 6 |
+| [input](/notes/github/input) | 8 |
 | [install](/notes/github/install) | 7 |
 | [interview](/notes/github/interview) | 20 |
 | [kubernetes](/notes/github/kubernetes) | 35 |
@@ -47,7 +47,7 @@ sidebar_label: GitHub 项目
 | [log](/notes/github/log) | 4 |
 | [macos](/notes/github/macos) | 24 |
 | [markdown](/notes/github/markdown) | 4 |
-| [media](/notes/github/media) | 59 |
+| [media](/notes/github/media) | 55 |
 | [monitoring](/notes/github/monitoring) | 45 |
 | [music](/notes/github/music) | 10 |
 | [neovim](/notes/github/neovim) | 110 |
@@ -55,7 +55,7 @@ sidebar_label: GitHub 项目
 | [nginx](/notes/github/nginx) | 15 |
 | [nodejs](/notes/github/nodejs) | 40 |
 | [ocr](/notes/github/ocr) | 12 |
-| [office](/notes/github/office) | 19 |
+| [office](/notes/github/office) | 20 |
 | [openwrt](/notes/github/openwrt) | 31 |
 | [python](/notes/github/python) | 152 |
 | [rust](/notes/github/rust) | 54 |
@@ -64,6 +64,6 @@ sidebar_label: GitHub 项目
 | [terminal](/notes/github/terminal) | 5 |
 | [testing](/notes/github/testing) | 27 |
 | [translation](/notes/github/translation) | 3 |
-| [tv](/notes/github/tv) | 9 |
+| [tv](/notes/github/tv) | 13 |
 | [web](/notes/github/web) | 29 |
-| [windows](/notes/github/windows) | 39 |
+| [windows](/notes/github/windows) | 40 |
