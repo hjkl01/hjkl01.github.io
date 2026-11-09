@@ -23,6 +23,7 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
     "docusaurus-lunr-search": "^3.6.0",
+    "js-yaml": "^5.5.0",
     "lucide-react": "^0.544.0",
     "lunr": "^2.3.9",
     "prism-react-renderer": "^2.4.1",

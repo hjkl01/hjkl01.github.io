@@ -139,6 +139,7 @@ const config: Config = {
           items: [
             { to: "calculator/", label: "Calculator" },
             { to: "regex/", label: "regex" },
+            { to: "clash2singbox/", label: "Clash → sing-box" },
           ],
         },
         { to: "notes/github", label: "Github Trending", position: "left" },

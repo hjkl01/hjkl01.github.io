@@ -23,6 +23,9 @@ importers:
       docusaurus-lunr-search:
         specifier: ^3.6.0
         version: 3.6.0(@docusaurus/core@3.10.1(@mdx-js/react@3.0.0(@types/react@18.3.31)(react@18.0.0))(clean-css@5.3.3)(cssnano@6.1.2(postcss@8.5.15))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(html-minifier-terser@7.2.0)(postcss@8.5.15)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(supports-color@8.1.1)(typescript@5.5.3))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)
+      js-yaml:
+        specifier: ^5.5.0
+        version: 5.5.0
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@18.0.0)
@@ -2077,6 +2080,9 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argparse@3.0.4:
+    resolution: {integrity: sha512-fwWK3Zq22l4XJJjx5mcBHGikIk+hJqO+32dPm0Jur7+rtG5x1scOjSfdT9ZKeWHPpsya/l0HHK4tDImBkTrtvA==}
+
   array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
 
@@ -3629,6 +3635,10 @@ packages:
 
   js-yaml@4.2.0:
     resolution: {integrity: sha512-ePWsvanv0DWuDRsW8dnt+R4jQ31SCRCQ7hhNcPXZPsoBZiemuZNYGf7adZdqX2D86j6rvKp3RpCxVTSb8WQlOw==}
+    hasBin: true
+
+  js-yaml@5.5.0:
+    resolution: {integrity: sha512-paNr4LFIFPjeeSmwNYdrb8FafLLG/Cr2Af3GjbsHJ5CxIjH4r0c2emlmRdAtpPAieP1gRVzk6buBbVP5gBMGAg==}
     hasBin: true
 
   jsesc@3.1.0:
@@ -8934,6 +8944,8 @@ snapshots:
 
   argparse@2.0.1: {}
 
+  argparse@3.0.4: {}
+
   array-flatten@1.1.1: {}
 
   array-union@2.1.0: {}
@@ -10650,6 +10662,10 @@ snapshots:
   js-yaml@4.2.0:
     dependencies:
       argparse: 2.0.1
+
+  js-yaml@5.5.0:
+    dependencies:
+      argparse: 3.0.4
 
   jsesc@3.1.0: {}
 

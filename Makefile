@@ -76,6 +76,8 @@ export:
 test:
 	@echo "🧪 运行项目管理 API 回归测试..."
 	uv run python -m unittest discover -s tests -v
+	@echo "🧪 运行 clash2singbox 转换自检..."
+	node tests/clash2singbox.check.mts
 
 build:
 	@echo "🏗️ 构建站点..."
