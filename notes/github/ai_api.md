@@ -7,7 +7,7 @@ sidebar_label: ai_api
 
 # ai_api
 
-本分类共 **14** 个项目。
+本分类共 **15** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -27,3 +27,4 @@ sidebar_label: ai_api
 | [router](https://github.com/weave-os/router) | ![Stars](https://img.shields.io/github/stars/weave-os/router?style=social) | 支持多厂商API的智能模型路由器，根据请求动作自动选择最优模型，降低推理成本。 |
 | [sub2api](https://github.com/Wei-Shaw/sub2api) | ![Stars](https://img.shields.io/github/stars/Wei-Shaw/sub2api?style=social) | AI API网关平台，将多账号订阅配额分发为API Key，支持精准计费与智能调度。 |
 | [AIClient2API](https://github.com/justlovemaki/AIClient2API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient2API?style=social) | 统一多客户端AI接口，模拟请求并封装为本地OpenAI兼容接口 |
+| [freellmapi](https://github.com/tashfeenahmed/freellmapi) | ![Stars](https://img.shields.io/github/stars/tashfeenahmed/freellmapi?style=social) | 免费LLM路由工具，聚合多家免费层，提供统一OpenAI兼容接口及自动限流。 |

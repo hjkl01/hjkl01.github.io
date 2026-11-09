@@ -7,7 +7,7 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **475** 个项目。
+本分类共 **474** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -357,7 +357,6 @@ sidebar_label: AI
 | [ADR](https://github.com/uber/ADR) | ![Stars](https://img.shields.io/github/stars/uber/ADR?style=social) | ADR 是企业 AI agent 安全系统，可发现终端 AI 工具、监控 agent 行为、检测威胁。 |
 | [AP2](https://github.com/google-agentic-commerce/AP2) | ![Stars](https://img.shields.io/github/stars/google-agentic-commerce/AP2?style=social) | Agent Payments Protocol（AP2）：让AI智能体完成支付与购物交易的开放协议。 |
 | [Agent-Kernel](https://github.com/ZJU-LLMs/Agent-Kernel) | ![Stars](https://img.shields.io/github/stars/ZJU-LLMs/Agent-Kernel?style=social) | Agent-Kernel是基于LLM的大规模社会模拟多智能体框架，支持动态管理Agent与实时行为验证。 |
-| [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | ![Stars](https://img.shields.io/github/stars/Panniantong/Agent-Reach?style=social) | 为AI Agent提供一键互联网接入，自动选型、配置和维护各平台渠道。 |
 | [Agent-S](https://github.com/simular-ai/Agent-S) | ![Stars](https://img.shields.io/github/stars/simular-ai/Agent-S?style=social) | Agent S是开源GUI智能体框架，通过屏幕视觉理解自动执行鼠标键盘操作完成桌面任务，支持跨平台自动化办公。 |
 | [Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering) | ![Stars](https://img.shields.io/github/stars/muratcankoylan/Agent-Skills-for-Context-Engineering?style=social) | AI智能体上下文工程技能库，提供管理LLM上下文窗口的核心技术，构建生产级智能体系统。 |
 | [AiToEarn](https://github.com/yikart/AiToEarn) | ![Stars](https://img.shields.io/github/stars/yikart/AiToEarn?style=social) | AiToEarn 是 AI 内容营销智能体，助力创作者一键创作、分发并变现内容至全球主流平台。 |

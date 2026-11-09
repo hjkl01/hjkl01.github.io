@@ -7,14 +7,14 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2508** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2509** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
-| [AI](/notes/github/AI) | 475 |
-| [ai_api](/notes/github/ai_api) | 14 |
+| [AI](/notes/github/AI) | 474 |
+| [ai_api](/notes/github/ai_api) | 15 |
 | [ai_app](/notes/github/ai_app) | 51 |
-| [ai_mcp](/notes/github/ai_mcp) | 20 |
+| [ai_mcp](/notes/github/ai_mcp) | 21 |
 | [ai_media](/notes/github/ai_media) | 34 |
 | [ai_rag](/notes/github/ai_rag) | 11 |
 | [ai_skills](/notes/github/ai_skills) | 43 |
