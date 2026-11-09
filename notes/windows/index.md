@@ -46,18 +46,18 @@ echo Hello | clip
 ## 开机启动 退出CMD窗口
 
 ```vbs
-# start_mihomo.vbs
+# start_sing-box.vbs
 
 Set WshShell = CreateObject("WScript.Shell")
 
 ' 杀死已有进程（0=隐藏窗口，True=等待执行完）
-WshShell.Run "cmd /c taskkill /F /IM mihomo.exe >nul 2>&1", 0, True
+WshShell.Run "cmd /c taskkill /F /IM sing-box.exe >nul 2>&1", 0, True
 
 ' 等待1秒
 WScript.Sleep 1000
 
 ' 后台启动 mihomo（0=隐藏，False=不等待）
-WshShell.Run """D:\Program Files\mihomo\mihomo.exe"" -f ""D:\Program Files\mihomo\config.yaml""", 0, False
+WshShell.Run """D:\Program Files\sing-box\sing-box.exe"" run -c ""D:\Program Files\sing-box\config.json""", 0, False
 
 Set WshShell = Nothing
 ```
