@@ -7,7 +7,7 @@ sidebar_label: windows
 
 # windows
 
-本分类共 **40** 个项目。
+本分类共 **42** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -53,3 +53,5 @@ sidebar_label: windows
 | [winget-cli](https://github.com/microsoft/winget-cli) | ![Stars](https://img.shields.io/github/stars/microsoft/winget-cli?style=social) | Windows Package Manager 是 Windows 平台的命令行包管理工具，支持从 Microsoft Store 和社区仓库搜索和安装软件。 |
 | [wsldl](https://github.com/yuk7/wsldl) | ![Stars](https://img.shields.io/github/stars/yuk7/wsldl?style=social) | WSL 发行版的安装器、启动器和配置管理工具，支持 tarball 和 vhdx 格式。 |
 | [Mocreak](https://github.com/OdysseusYuan/Mocreak) | ![Stars](https://img.shields.io/github/stars/OdysseusYuan/Mocreak?style=social) | 一键下载、安装并部署正版Windows系统与多版本Office，支持高度定制、多语言及多场景办公增强。 |
+| [weblink](https://github.com/99percentpeople/weblink) | ![Stars](https://img.shields.io/github/stars/99percentpeople/weblink?style=social) | 基于 WebRTC 的点对点协作平台，支持聊天、文件传输、音视频通话及远程桌面控制与 AI 自动化。 |
+| [3z9wopt](https://github.com/3z9w/3z9wopt) | ![Stars](https://img.shields.io/github/stars/3z9w/3z9wopt?style=social) | Windows免安装清理优化工具箱，集垃圾清理、系统优化、启动项、驱动、蓝屏分析等十大模块于一体。 |

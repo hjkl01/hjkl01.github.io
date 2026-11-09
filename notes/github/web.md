@@ -7,12 +7,13 @@ sidebar_label: web
 
 # web
 
-本分类共 **29** 个项目。
+本分类共 **30** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [openchoreo](https://github.com/openchoreo/openchoreo) | ![Stars](https://img.shields.io/github/stars/openchoreo/openchoreo?style=social) | — |
 | [swagger-ui](https://github.com/swagger-api/swagger-ui) | ![Stars](https://img.shields.io/github/stars/swagger-api/swagger-ui?style=social) | Swagger UI 是一个基于 OpenAPI 规范自动生成可视化、可交互 API 文档的开源工具。 |
 | [zitadel](https://github.com/zitadel/zitadel) | ![Stars](https://img.shields.io/github/stars/zitadel/zitadel?style=social) | 开源身份管理平台，提供SSO、MFA、OIDC认证及多租户能力 |
 | [altair](https://github.com/altair-viz/altair) | ![Stars](https://img.shields.io/github/stars/altair-viz/altair?style=social) | Python 声明式可视化库，基于 Vega-Lite 规范，用简洁 API 快速生成交互式统计图表。 |

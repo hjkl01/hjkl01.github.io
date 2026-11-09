@@ -7,7 +7,7 @@ sidebar_label: openwrt
 
 # openwrt
 
-本分类共 **31** 个项目。
+本分类共 **32** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -44,3 +44,4 @@ sidebar_label: openwrt
 | [v2ray-core](https://github.com/v2fly/v2ray-core) | ![Stars](https://img.shields.io/github/stars/v2fly/v2ray-core?style=social) | 一套网络工具，帮助用户构建个人网络并保护隐私 |
 | [ShellCrash](https://github.com/juewuy/ShellCrash) | ![Stars](https://img.shields.io/github/stars/juewuy/ShellCrash?style=social) | ShellCrash 是在 Shell 环境下部署和管理 mihomo/sing-box 代理内核的脚本工具。 |
 | [gluetun](https://github.com/passteque/gluetun) | ![Stars](https://img.shields.io/github/stars/passteque/gluetun?style=social) | 轻量级 VPN 客户端，支持多种服务商与协议，内置 DNS 加密和防火墙保护。 |
+| [clashtui](https://github.com/JohanChane/clashtui) | ![Stars](https://img.shields.io/github/stars/JohanChane/clashtui?style=social) | 终端代理管理工具，支持Mihomo和sing-box双内核，可切换节点、管理订阅、监控连接及控制服务。 |

@@ -7,13 +7,15 @@ sidebar_label: ai_app
 
 # ai_app
 
-本分类共 **50** 个项目。
+本分类共 **52** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [Codync](https://github.com/leepokai/Codync) | ![Stars](https://img.shields.io/github/stars/leepokai/Codync?style=social) | Codync 将本地编程助手转为持久化机器人，支持从手机或终端远程管理对话与审批。 |
+| [auto-ontology](https://github.com/NVIDIA/auto-ontology) | ![Stars](https://img.shields.io/github/stars/NVIDIA/auto-ontology?style=social) | 企业元数据构建本体，对齐定义并生成可验证SQL，供智能体可靠查询结构化数据。 |
+| [OpenMausBot](https://github.com/milind-soni/OpenMausBot) | ![Stars](https://img.shields.io/github/stars/milind-soni/OpenMausBot?style=social) | 开源聊天式AI助手，支持本地多智能体协作，连接应用与云电脑 |
 | [agent-beacon](https://github.com/Asymptote-Labs/agent-beacon) | ![Stars](https://img.shields.io/github/stars/Asymptote-Labs/agent-beacon?style=social) | Beacon是编码AI代理的记忆层，跨工具捕获会话历史，将有效工作流和调试经验转化为可复用的共享知识。 |
 | [awesome-ai-agents](https://github.com/slavakurilyak/awesome-ai-agents) | ![Stars](https://img.shields.io/github/stars/slavakurilyak/awesome-ai-agents?style=social) | 开源AI代理项目目录，按类别分类收录，展示星标数、增长趋势和项目描述。 |
 | [FounderOS](https://github.com/Bennettxai/FounderOS) | ![Stars](https://img.shields.io/github/stars/Bennettxai/FounderOS?style=social) | 单人公司操作系统，通过AI助手整合通信、客户漏斗、财务等模块，一键管理企业运营。 |

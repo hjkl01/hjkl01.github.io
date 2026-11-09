@@ -7,12 +7,13 @@ sidebar_label: Cloudflare
 
 # Cloudflare
 
-本分类共 **6** 个项目。
+本分类共 **7** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [cloud-mail](https://github.com/maillab/cloud-mail) | ![Stars](https://img.shields.io/github/stars/maillab/cloud-mail?style=social) | 基于 Cloudflare 的轻量级邮箱服务，支持多邮箱创建、邮件收发与附件管理。 |
 | [awesome-cloudflare](https://github.com/zhuima/awesome-cloudflare) | ![Stars](https://img.shields.io/github/stars/zhuima/awesome-cloudflare?style=social) | 精选 Cloudflare 开源工具与资源，助力独立开发者提效降本。 |
 | [BPB-Wizard](https://github.com/bia-pain-bache/BPB-Wizard) | ![Stars](https://img.shields.io/github/stars/bia-pain-bache/BPB-Wizard?style=social) | BPB面板一键安装工具，支持Web和CLI双版本，简化Cloudflare部署流程。 |
 | [celld](https://github.com/denoland/celld) | ![Stars](https://img.shields.io/github/stars/denoland/celld?style=social) | celld 是开源的 Cloudflare Workers 自托管运行时，支持本地部署持久化对象、KV 等服务。 |

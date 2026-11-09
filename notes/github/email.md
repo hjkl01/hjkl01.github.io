@@ -14,12 +14,12 @@ sidebar_label: email
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [BillionMail](https://github.com/Billionmail/BillionMail) | ![Stars](https://img.shields.io/github/stars/Billionmail/BillionMail?style=social) | 开源邮件服务器与营销平台，支持批量发送、统计分析及自建托管。 |
+| [sellbird](https://github.com/ethanplusai/sellbird) | ![Stars](https://img.shields.io/github/stars/ethanplusai/sellbird?style=social) | 基于现有AI订阅，自动查找客户、验证邮箱、撰写并发送个性化冷邮件，管理回复的开源外联平台。 |
 | [BillionMail](https://github.com/aaPanel/BillionMail) | ![Stars](https://img.shields.io/github/stars/aaPanel/BillionMail?style=social) | BillionMail是开源邮件服务器与邮件营销平台，支持邮件群发、数据分析与模板自定义，无需限制即可自托管管理邮件活动。 |
 | [Mailu](https://github.com/Mailu/Mailu) | ![Stars](https://img.shields.io/github/stars/Mailu/Mailu?style=social) | 纯 Docker 邮件服务器，提供完整邮件收发、反垃圾、Web 邮箱及安全管理等功能。 |
 | [PMail](https://github.com/Jinnrry/PMail) | ![Stars](https://img.shields.io/github/stars/Jinnrry/PMail?style=social) | 个人邮件服务器，单文件轻量部署，支持多域多用户，自动HTTPS与安全认证。 |
 | [another-tmp-mailbox](https://github.com/rev1si0n/another-tmp-mailbox) | ![Stars](https://img.shields.io/github/stars/rev1si0n/another-tmp-mailbox?style=social) | 临时邮箱服务，无需注册即可接收邮件，保护用户隐私，避免真实邮箱泄露。 |
 | [check-if-email-exists](https://github.com/reacherhq/check-if-email-exists) | ![Stars](https://img.shields.io/github/stars/reacherhq/check-if-email-exists?style=social) | 无需发送邮件即可检查邮箱是否存在，支持语法、DNS、SMTP 验证。 |
-| [cloud-mail](https://github.com/maillab/cloud-mail) | ![Stars](https://img.shields.io/github/stars/maillab/cloud-mail?style=social) | 基于 Cloudflare 的轻量级邮箱服务，支持多邮箱创建、邮件收发与附件管理。 |
 | [core](https://github.com/dovecot/core) | ![Stars](https://img.shields.io/github/stars/dovecot/core?style=social) | Dovecot 是开源 IMAP/POP3 邮件服务器，提供高效安全的邮件存储与访问服务。 |
 | [docker-mailserver](https://github.com/docker-mailserver/docker-mailserver) | ![Stars](https://img.shields.io/github/stars/docker-mailserver/docker-mailserver?style=social) | 容器化邮件服务器，集成 SMTP/IMAP、反垃圾邮件和反病毒，配置简单无需数据库。 |
 | [dockerized](https://github.com/iredmail/dockerized) | ![Stars](https://img.shields.io/github/stars/iredmail/dockerized?style=social) | 基于Docker的一站式企业邮箱解决方案，提供SMTP、IMAP/POP3、Webmail及反垃圾/反病毒等核心邮件服务。 |
