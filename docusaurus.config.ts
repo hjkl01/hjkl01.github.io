@@ -108,7 +108,7 @@ const config: Config = {
       hideOnScroll: false,
 
       items: [
-        { to: "nav/", label: "Nav", position: "left" },
+        { to: "/", label: "Nav", position: "left" },
         { to: "rss/", label: "RSS", position: "left" },
 
         {

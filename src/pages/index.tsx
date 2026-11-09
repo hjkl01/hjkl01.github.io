@@ -1,6 +1,2 @@
-import { Redirect } from "@docusaurus/router";
-
-
-export default function Home(): JSX.Element {
-  return <Redirect to="/nav/" />;
-}
+// 首页即导航页，避免开发时同域名下 / -> /nav 的跳转影响其他服务
+export { default } from "./nav";
