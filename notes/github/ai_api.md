@@ -7,13 +7,14 @@ sidebar_label: ai_api
 
 # ai_api
 
-本分类共 **13** 个项目。
+本分类共 **14** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [treg](https://github.com/superdesigndev/treg) | ![Stars](https://img.shields.io/github/stars/superdesigndev/treg?style=social) | 统一代理数千工具API，按调用计费，免供应商注册，支持团队密钥共享。 |
+| [mesh-llm](https://github.com/Mesh-LLM/mesh-llm) | ![Stars](https://img.shields.io/github/stars/Mesh-LLM/mesh-llm?style=social) | 跨机器池化GPU，提供OpenAI兼容接口，支持大模型拆分与混合智能体网关 |
 | [free-claude-code](https://github.com/Alishahryar1/free-claude-code) | ![Stars](https://img.shields.io/github/stars/Alishahryar1/free-claude-code?style=social) | 聚合 61 个 AI 模型提供商，为多种编码代理提供低成本、高可用的 AI 编程助手服务。 |
 | [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) | ![Stars](https://img.shields.io/github/stars/router-for-me/CLIProxyAPI?style=social) | 本地代理多账号AI CLI，提供兼容OpenAI等API，支持多模型流式及负载均衡。 |
 | [opencode2api](https://github.com/jasonxu114514/opencode2api) | ![Stars](https://img.shields.io/github/stars/jasonxu114514/opencode2api?style=social) | OpenCode 网关服务，将 Zen/Go 平台协议转换为标准推理 API，支持免费模型访问。 |

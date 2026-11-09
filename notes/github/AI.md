@@ -7,7 +7,7 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **472** 个项目。
+本分类共 **475** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -17,6 +17,7 @@ sidebar_label: AI
 | [microduck](https://github.com/pollen-robotics/microduck) | ![Stars](https://img.shields.io/github/stars/pollen-robotics/microduck?style=social) | 基于强化学习的小型双足机器人控制系统，可实现行走、滚动、抓取等功能。 |
 | [x-algorithm](https://github.com/xai-org/x-algorithm) | ![Stars](https://img.shields.io/github/stars/xai-org/x-algorithm?style=social) | X“为你推荐”信息流算法代码库，通过多源检索、Transformer排序及可见性过滤，决定用户可见及排序的帖子。 |
 | [xerj](https://github.com/xerj-org/xerj) | ![Stars](https://img.shields.io/github/stars/xerj-org/xerj?style=social) | XERJ是一个本地AI搜索引擎，可自动索引任意文件夹，帮助编码智能体精准检索代码并大幅减少Token消耗。 |
+| [agent-desktop](https://github.com/vercel-labs/agent-desktop) | ![Stars](https://img.shields.io/github/stars/vercel-labs/agent-desktop?style=social) | 通过系统辅助功能树让AI智能体跨平台查看并操作桌面应用。 |
 | [agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws) | ![Stars](https://img.shields.io/github/stars/aws/agent-toolkit-for-aws?style=social) | 为AI编码代理提供AWS工具、技能与护栏，助其在AWS上构建、部署及管理应用。 |
 | [uzu](https://github.com/trymirai/uzu) | ![Stars](https://img.shields.io/github/stars/trymirai/uzu?style=social) | 高性能AI推理引擎，支持本地部署，实现零延迟、数据隐私保护和零推理成本。 |
 | [watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover) | ![Stars](https://img.shields.io/github/stars/guillaumemeyer/watermarks-remover?style=social) | 工具用于从文本和文件中移除多家AI厂商的溯源水印与元数据。 |
@@ -26,7 +27,9 @@ sidebar_label: AI
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |
 | [nasiko](https://github.com/Nasiko-Labs/nasiko) | ![Stars](https://img.shields.io/github/stars/Nasiko-Labs/nasiko?style=social) | Nasiko是智能体运行平台，统一发现编码代理、归因成本并路由模型调用，实现跨厂商治理与编排。 |
 | [AionUi](https://github.com/iOfficeAI/AionUi) | ![Stars](https://img.shields.io/github/stars/iOfficeAI/AionUi?style=social) | AionUi 是免费开源的 AI 协作桌面应用，内置智能 Agent，支持多模型，可自动化处理文件和生成文档，支持远程访问和定时任务。 |
+| [auto-ontology](https://github.com/NVIDIA/auto-ontology) | ![Stars](https://img.shields.io/github/stars/NVIDIA/auto-ontology?style=social) | 企业元数据构建本体，对齐定义并生成可验证SQL，供智能体可靠查询结构化数据。 |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | ![Stars](https://img.shields.io/github/stars/mukul975/Anthropic-Cybersecurity-Skills?style=social) | 开源网络安全技能库，为 AI 代理提供结构化安全知识，支持威胁检测、取证分析和事件响应等工作流程。 |
+| [OpenMausBot](https://github.com/milind-soni/OpenMausBot) | ![Stars](https://img.shields.io/github/stars/milind-soni/OpenMausBot?style=social) | 开源聊天式AI助手，支持本地多智能体协作，连接应用与云电脑 |
 | [thinkrail](https://github.com/JetBrains/thinkrail) | ![Stars](https://img.shields.io/github/stars/JetBrains/thinkrail?style=social) | ThinkRail是智能IDE，基于编码代理，提供隔离工作区、规范管理、技能扩展，助力高效并行开发与项目知识沉淀。 |
 | [AntigravityManager](https://github.com/Draculabo/AntigravityManager) | ![Stars](https://img.shields.io/github/stars/Draculabo/AntigravityManager?style=social) | Antigravity Manager 是一款专业多账号管理工具，用于批量管理 Google Gemini 和 Claude AI 账号，支持智能自动切换、实时配额监控及本地 API 代理服务。 |
 | [AstrBot](https://github.com/AstrBotDevs/AstrBot) | ![Stars](https://img.shields.io/github/stars/AstrBotDevs/AstrBot?style=social) | 开源一站式AI聊天机器人平台，集成多平台IM，支持大模型对话、Agent、插件扩展和知识库。 |

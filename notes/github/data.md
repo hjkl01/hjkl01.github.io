@@ -7,13 +7,12 @@ sidebar_label: data
 
 # data
 
-本分类共 **30** 个项目。
+本分类共 **29** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
-| [ziwei-doushu](https://github.com/Renhuai123/ziwei-doushu) | ![Stars](https://img.shields.io/github/stars/Renhuai123/ziwei-doushu?style=social) | 开源紫微斗数排盘引擎与解读数据集，提供完整排盘算法、古籍数据及百万级命盘解读，支持传统命理分析。 |
 | [AreaCity-JsSpider-StatsGov](https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov) | ![Stars](https://img.shields.io/github/stars/xiangyuecn/AreaCity-JsSpider-StatsGov?style=social) | 采集中国省市区镇四级行政区划数据，标注拼音、坐标和边界范围，并提供数据转换与查询工具。 |
 | [1brc](https://github.com/gunnarmorling/1brc) | ![Stars](https://img.shields.io/github/stars/gunnarmorling/1brc?style=social) | Java百亿行挑战：读取气象站温度数据，计算各站点最低、平均、最高温度，探索Java性能极限。 |
 | [Administrative-divisions-of-China](https://github.com/modood/Administrative-divisions-of-China) | ![Stars](https://img.shields.io/github/stars/modood/Administrative-divisions-of-China?style=social) | 提供中华人民共和国五级行政区划数据（省市县乡镇村），支持前端联动选择。 |
