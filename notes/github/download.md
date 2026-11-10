@@ -7,7 +7,7 @@ sidebar_label: download
 
 # download
 
-本分类共 **37** 个项目。
+本分类共 **38** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -50,3 +50,4 @@ sidebar_label: download
 | [you-get](https://github.com/soimort/you-get) | ![Stars](https://img.shields.io/github/stars/soimort/you-get?style=social) | 命令行媒体下载工具，支持从各大网站下载视频、音频和图片。 |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ![Stars](https://img.shields.io/github/stars/yt-dlp/yt-dlp?style=social) | yt-dlp是命令行音视频下载工具，支持数千网站，提供格式选择、元数据处理、后处理等强大功能。 |
 | [ytDownloader](https://github.com/aandrew-me/ytDownloader) | ![Stars](https://img.shields.io/github/stars/aandrew-me/ytDownloader?style=social) | ytDownloader是一款现代GUI视频音频下载工具，支持数百个网站，提供硬件加速压缩、字幕下载等功能，跨平台使用。 |
+| [misterdownloadmanager](https://github.com/anefzaoui/misterdownloadmanager) | ![Stars](https://img.shields.io/github/stars/anefzaoui/misterdownloadmanager?style=social) | 开源免费下载管理器，支持多浏览器视频与电驴下载，速度更快且无广告。 |

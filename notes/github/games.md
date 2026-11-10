@@ -7,7 +7,7 @@ sidebar_label: games
 
 # games
 
-本分类共 **46** 个项目。
+本分类共 **47** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -59,3 +59,4 @@ sidebar_label: games
 | [nakama](https://github.com/heroiclabs/nakama) | ![Stars](https://img.shields.io/github/stars/heroiclabs/nakama?style=social) | Nakama 是开源分布式游戏服务器，提供实时多人、社交聊天和排行榜功能，助力快速构建可扩展的游戏应用。 |
 | [veloren](https://github.com/veloren/veloren) | ![Stars](https://img.shields.io/github/stars/veloren/veloren?style=social) | Veloren是一款开放世界奇幻动作冒险RPG游戏 |
 | [RetroArch](https://github.com/libretro/RetroArch) | ![Stars](https://img.shields.io/github/stars/libretro/RetroArch?style=social) | 多平台统一前端，加载各类模拟器核心，支持游戏回放、实时回溯等。 |
+| [Hookshot](https://github.com/NotRexed/Hookshot) | ![Stars](https://img.shields.io/github/stars/NotRexed/Hookshot?style=social) | Hookshot是塞尔达传说时之笛PC原生运行器，将游戏代码静态重编译为Windows或Linux可执行程序，支持图形渲染与自定义模组。 |
