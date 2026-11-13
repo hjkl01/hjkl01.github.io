@@ -7,7 +7,7 @@ sidebar_label: linux
 
 # linux
 
-本分类共 **25** 个项目。
+本分类共 **26** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -38,3 +38,4 @@ sidebar_label: linux
 | [xdotool](https://github.com/jordansissel/xdotool) | ![Stars](https://img.shields.io/github/stars/jordansissel/xdotool?style=social) | xdotool 是 X11 自动化工具，可模拟键盘鼠标输入和窗口控制。 |
 | [xxh](https://github.com/xxh/xxh) | ![Stars](https://img.shields.io/github/stars/xxh/xxh?style=social) | xxh通过SSH将便携shell环境带到远程主机，无需root权限。 |
 | [yay](https://github.com/Jguer/yay) | ![Stars](https://img.shields.io/github/stars/Jguer/yay?style=social) | yay是Arch Linux的AUR包管理器，自动解决依赖并构建安装软件包。 |
+| [open-android-dex](https://github.com/dotnetdreamer/open-android-dex) | ![Stars](https://img.shields.io/github/stars/dotnetdreamer/open-android-dex?style=social) | 开源工具，将安卓手机变桌面，支持多窗口、Ubuntu及Docker |

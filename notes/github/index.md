@@ -7,7 +7,7 @@ sidebar_label: GitHub 项目
 
 # GitHub 项目集
 
-共收录 **2511** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
+共收录 **2512** 个项目，分为 **56** 个分类。Star 数通过 Shields.io 动态加载。
 
 | 分类 | 项目数量 |
 | --- | ---: |
@@ -43,7 +43,7 @@ sidebar_label: GitHub 项目
 | [install](/notes/github/install) | 7 |
 | [interview](/notes/github/interview) | 20 |
 | [kubernetes](/notes/github/kubernetes) | 36 |
-| [linux](/notes/github/linux) | 25 |
+| [linux](/notes/github/linux) | 26 |
 | [log](/notes/github/log) | 4 |
 | [macos](/notes/github/macos) | 24 |
 | [markdown](/notes/github/markdown) | 4 |
