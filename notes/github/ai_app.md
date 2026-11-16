@@ -7,14 +7,16 @@ sidebar_label: ai_app
 
 # ai_app
 
-本分类共 **51** 个项目。
+本分类共 **54** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [astryx](https://github.com/meta/astryx) | ![Stars](https://img.shields.io/github/stars/meta/astryx?style=social) | Astryx是开源设计系统，提供可定制组件，支持人类与AI协同开发，基于React。 |
 | [Codync](https://github.com/leepokai/Codync) | ![Stars](https://img.shields.io/github/stars/leepokai/Codync?style=social) | Codync 将本地编程助手转为持久化机器人，支持从手机或终端远程管理对话与审批。 |
 | [agent-beacon](https://github.com/Asymptote-Labs/agent-beacon) | ![Stars](https://img.shields.io/github/stars/Asymptote-Labs/agent-beacon?style=social) | Beacon是编码AI代理的记忆层，跨工具捕获会话历史，将有效工作流和调试经验转化为可复用的共享知识。 |
+| [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | ![Stars](https://img.shields.io/github/stars/opensandbox-group/OpenSandbox?style=social) | OpenSandbox为AI应用提供隔离沙箱环境，支持代码执行、命令运行、文件管理及浏览器操作，可在Docker和Kubernetes上统一部署。 |
 | [ziwei-doushu](https://github.com/Renhuai123/ziwei-doushu) | ![Stars](https://img.shields.io/github/stars/Renhuai123/ziwei-doushu?style=social) | 开源紫微斗数排盘引擎与解读数据集，提供完整排盘算法、古籍数据及百万级命盘解读，支持传统命理分析。 |
 | [awesome-ai-agents](https://github.com/slavakurilyak/awesome-ai-agents) | ![Stars](https://img.shields.io/github/stars/slavakurilyak/awesome-ai-agents?style=social) | 开源AI代理项目目录，按类别分类收录，展示星标数、增长趋势和项目描述。 |
 | [FounderOS](https://github.com/Bennettxai/FounderOS) | ![Stars](https://img.shields.io/github/stars/Bennettxai/FounderOS?style=social) | 单人公司操作系统，通过AI助手整合通信、客户漏斗、财务等模块，一键管理企业运营。 |
@@ -64,3 +66,4 @@ sidebar_label: ai_app
 | [claude-code-harness](https://github.com/Chachamaru127/claude-code-harness) | ![Stars](https://img.shields.io/github/stars/Chachamaru127/claude-code-harness?style=social) | Claude Code Harness 是一款开发插件，通过计划、执行、审查、发布的纪律性循环安全委托 AI 代理完成代码任务，让开发者把控目标与验收标准。 |
 | [opencode](https://github.com/opencode-ai/opencode) | ![Stars](https://img.shields.io/github/stars/opencode-ai/opencode?style=social) | OpenCode 是一款终端交互式 AI 编程助手，支持多种大语言模型，可智能辅助编码、调试并执行命令。 |
 | [mem0](https://github.com/mem0ai/mem0) | ![Stars](https://img.shields.io/github/stars/mem0ai/mem0?style=social) | Mem0是AI记忆层，让AI助手记住用户偏好与历史信息，实现个性化交互。 |
+| [dsh-Go](https://github.com/ccch1mneyyy/dsh-Go) | ![Stars](https://img.shields.io/github/stars/ccch1mneyyy/dsh-Go?style=social) | 手机端 DeepSeek Harness 客户端，支持本机运行、远程连接、手机操控及对话分享。 |

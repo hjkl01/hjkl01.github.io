@@ -7,12 +7,13 @@ sidebar_label: ai_mcp
 
 # ai_mcp
 
-本分类共 **21** 个项目。
+本分类共 **22** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [ha-mcp](https://github.com/homeassistant-ai/ha-mcp) | ![Stars](https://img.shields.io/github/stars/homeassistant-ai/ha-mcp?style=social) | 用AI自然语言配置和自动化Home Assistant，提供86个工具管理设备、脚本、仪表盘及系统设置。 |
 | [context-mode](https://github.com/mksglu/context-mode) | ![Stars](https://img.shields.io/github/stars/mksglu/context-mode?style=social) | Context Mode是一个MCP服务器，将原始数据保留在沙箱中处理，只返回结果进入上下文，并通过SQLite和FTS5索引保持会话连续性。 |
 | [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | ![Stars](https://img.shields.io/github/stars/Panniantong/Agent-Reach?style=social) | 为AI Agent提供一键互联网接入，自动选型、配置和维护各平台渠道。 |
 | [agent-browser](https://github.com/vercel-labs/agent-browser) | ![Stars](https://img.shields.io/github/stars/vercel-labs/agent-browser?style=social) | AI智能体浏览器自动化工具，原生Rust实现的快速CLI。 |

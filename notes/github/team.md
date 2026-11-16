@@ -7,7 +7,7 @@ sidebar_label: team
 
 # team
 
-本分类共 **12** 个项目。
+本分类共 **13** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -25,3 +25,4 @@ sidebar_label: team
 | [focalboard](https://github.com/mattermost/focalboard) | ![Stars](https://img.shields.io/github/stars/mattermost/focalboard?style=social) | 开源自托管项目管理工具，替代 Trello、Notion、Asana，帮助管理个人与团队工作。 |
 | [jira-cli](https://github.com/ankitpokhrel/jira-cli) | ![Stars](https://img.shields.io/github/stars/ankitpokhrel/jira-cli?style=social) | JiraCLI是一款交互式命令行工具，无需打开Jira网页界面即可高效管理问题、史诗和冲刺，提升日常工作效率。 |
 | [dootask](https://github.com/kuaifan/dootask) | ![Stars](https://img.shields.io/github/stars/kuaifan/dootask?style=social) | DooTask 是开源任务管理系统，提供任务规划、分配、进度追踪与团队协作功能，支持 Docker 一键部署。 |
+| [kan](https://github.com/kanbn/kan) | ![Stars](https://img.shields.io/github/stars/kanbn/kan?style=social) | 开源项目管理工具，替代Trello，支持看板协作、导入及多成员管理。 |

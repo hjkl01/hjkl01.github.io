@@ -7,12 +7,13 @@ sidebar_label: kubernetes
 
 # kubernetes
 
-本分类共 **36** 个项目。
+本分类共 **37** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
+| [nvke](https://github.com/dsx-ai-factory/nvke) | ![Stars](https://img.shields.io/github/stars/dsx-ai-factory/nvke?style=social) | 在自有NVIDIA GPU基础设施上运行托管Kubernetes，支持集群创建与生命周期管理。 |
 | [openchoreo](https://github.com/openchoreo/openchoreo) | ![Stars](https://img.shields.io/github/stars/openchoreo/openchoreo?style=social) | 面向Kubernetes的开源开发者平台，提供门户、CI/CD及GitOps，简化应用部署与运维。 |
 | [gateway-api](https://github.com/kubernetes-sigs/gateway-api) | ![Stars](https://img.shields.io/github/stars/kubernetes-sigs/gateway-api?style=social) | Kubernetes Gateway API 提供入口流量管理的 CRD 规范，支持 HTTP、gRPC、TLS、TCP、UDP 等多种路由类型。 |
 | [gofr](https://github.com/gofr-dev/gofr) | ![Stars](https://img.shields.io/github/stars/gofr-dev/gofr?style=social) | GoFr 是面向 Kubernetes 的微服务开发框架，内置可观测性与 REST/gRPC 支持，简化云原生服务构建。 |

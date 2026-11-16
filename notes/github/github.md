@@ -7,18 +7,21 @@ sidebar_label: github
 
 # github
 
-本分类共 **278** 个项目。
+本分类共 **281** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
 | 项目 | Stars | 简介 |
 | --- | --- | --- |
 | [zed](https://github.com/zed-industries/zed) | ![Stars](https://img.shields.io/github/stars/zed-industries/zed?style=social) | Zed是一款高性能多人协作代码编辑器，源自Atom与Tree-sitter，支持跨平台开发。 |
+| [sherlock](https://github.com/sherlock-project/sherlock) | ![Stars](https://img.shields.io/github/stars/sherlock-project/sherlock?style=social) | 跨四百多个社交平台批量查询指定用户名，快速追踪线上数字身份。 |
 | [harper](https://github.com/Automattic/harper) | ![Stars](https://img.shields.io/github/stars/Automattic/harper?style=social) | Harper 是一款快速、隐私安全的开源英语语法检查工具，支持多编辑器集成。 |
 | [koharu](https://github.com/koharu-rs/koharu) | ![Stars](https://img.shields.io/github/stars/koharu-rs/koharu?style=social) | Koharu 是基于机器学习的本地漫画翻译工具，通过 OCR、图像修复和 LLM 实现自动化多语言翻译与排版。 |
 | [php-src](https://github.com/php/php-src) | ![Stars](https://img.shields.io/github/stars/php/php-src?style=social) | PHP通用脚本语言的官方解释器，支持Web开发与功能扩展 |
+| [sure](https://github.com/we-promise/sure) | ![Stars](https://img.shields.io/github/stars/we-promise/sure?style=social) | 个人理财应用，提供现金流、净资产管理，支持自托管与多端访问，并集成AI助手。 |
 | [zapfast](https://github.com/crmne/zapfast) | ![Stars](https://img.shields.io/github/stars/crmne/zapfast?style=social) | 基于Rust的原生跨平台轻量级WhatsApp客户端，低内存高速度，支持多账户与本地加密存储。 |
 | [impactor](https://github.com/claration/impactor) | ![Stars](https://img.shields.io/github/stars/claration/impactor?style=social) | 开源跨平台iOS侧载工具，支持签名安装应用与Tweak注入 |
+| [mujoco](https://github.com/google-deepmind/mujoco) | ![Stars](https://img.shields.io/github/stars/google-deepmind/mujoco?style=social) | MuJoCo是通用物理引擎，快速精准模拟关节结构与接触，助力机器人和机器学习研究。 |
 | [Hyprland](https://github.com/hyprwm/Hyprland) | ![Stars](https://img.shields.io/github/stars/hyprwm/Hyprland?style=social) | Hyprland是动态平铺Wayland合成器，独立实现且高度可定制，支持丰富视觉效果、插件及多种窗口布局，提升桌面体验。 |
 | [trivy](https://github.com/aquasecurity/trivy) | ![Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social) | Trivy是一款全面通用的安全扫描工具，可扫描容器镜像、文件系统、Git仓库、虚拟机和K8s，检测漏洞、SBOM、配置问题、敏感信息和许可证。 |
 | [ScopeSentry](https://github.com/Autumn-27/ScopeSentry) | ![Stars](https://img.shields.io/github/stars/Autumn-27/ScopeSentry?style=social) | 分布式网络安全扫描平台，支持资产测绘、漏洞检测、子域名接管等多模块扫描任务。 |

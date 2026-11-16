@@ -7,7 +7,7 @@ sidebar_label: AI
 
 # AI
 
-本分类共 **474** 个项目。
+本分类共 **479** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -24,10 +24,12 @@ sidebar_label: AI
 | [AIClient-2-API](https://github.com/justlovemaki/AIClient-2-API) | ![Stars](https://img.shields.io/github/stars/justlovemaki/AIClient-2-API?style=social) | 将客户端专属大模型API转换为OpenAI兼容接口，支持多协议智能转换与账户池管理。 |
 | [herdr](https://github.com/herdrdev/herdr) | ![Stars](https://img.shields.io/github/stars/herdrdev/herdr?style=social) | 多机编码代理终端管理器，断连保活、恢复布局、多机统一窗口与代理会话监控。 |
 | [open-ontologies](https://github.com/fabio-rovai/open-ontologies) | ![Stars](https://img.shields.io/github/stars/fabio-rovai/open-ontologies?style=social) | 本工具规划本体变更，生成可独立验证的推导证明，支持多种推理与校验。 |
+| [plannotator](https://github.com/backnotprop/plannotator) | ![Stars](https://img.shields.io/github/stars/backnotprop/plannotator?style=social) | 本地浏览器工具，审查AI代理生成的代码与计划，支持标注并即时反馈。 |
 | [Acontext](https://github.com/memodb-io/Acontext) | ![Stars](https://img.shields.io/github/stars/memodb-io/Acontext?style=social) | Acontext让AI Agent自动从会话中学习，将经验存储为可复用、跨框架的技能文件。 |
 | [nasiko](https://github.com/Nasiko-Labs/nasiko) | ![Stars](https://img.shields.io/github/stars/Nasiko-Labs/nasiko?style=social) | Nasiko是智能体运行平台，统一发现编码代理、归因成本并路由模型调用，实现跨厂商治理与编排。 |
 | [AionUi](https://github.com/iOfficeAI/AionUi) | ![Stars](https://img.shields.io/github/stars/iOfficeAI/AionUi?style=social) | AionUi 是免费开源的 AI 协作桌面应用，内置智能 Agent，支持多模型，可自动化处理文件和生成文档，支持远程访问和定时任务。 |
 | [auto-ontology](https://github.com/NVIDIA/auto-ontology) | ![Stars](https://img.shields.io/github/stars/NVIDIA/auto-ontology?style=social) | 企业元数据构建本体，对齐定义并生成可验证SQL，供智能体可靠查询结构化数据。 |
+| [elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | ![Stars](https://img.shields.io/github/stars/google/elephant-goldfish-model?style=social) | 开源AI插件，以大象持上下文起草规格，金鱼无记忆评审，辅助软件设计与审查。 |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | ![Stars](https://img.shields.io/github/stars/mukul975/Anthropic-Cybersecurity-Skills?style=social) | 开源网络安全技能库，为 AI 代理提供结构化安全知识，支持威胁检测、取证分析和事件响应等工作流程。 |
 | [OpenMausBot](https://github.com/milind-soni/OpenMausBot) | ![Stars](https://img.shields.io/github/stars/milind-soni/OpenMausBot?style=social) | 开源聊天式AI助手，支持本地多智能体协作，连接应用与云电脑 |
 | [thinkrail](https://github.com/JetBrains/thinkrail) | ![Stars](https://img.shields.io/github/stars/JetBrains/thinkrail?style=social) | ThinkRail是智能IDE，基于编码代理，提供隔离工作区、规范管理、技能扩展，助力高效并行开发与项目知识沉淀。 |
@@ -35,8 +37,11 @@ sidebar_label: AI
 | [AstrBot](https://github.com/AstrBotDevs/AstrBot) | ![Stars](https://img.shields.io/github/stars/AstrBotDevs/AstrBot?style=social) | 开源一站式AI聊天机器人平台，集成多平台IM，支持大模型对话、Agent、插件扩展和知识库。 |
 | [Awesome-ML-SYS-Tutorial](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial) | ![Stars](https://img.shields.io/github/stars/zhaochenyang20/Awesome-ML-SYS-Tutorial?style=social) | 机器学习系统学习笔记，聚焦RL基础设施与推理系统，构建正确基础以确保算法结论可靠。 |
 | [BettaFish](https://github.com/666ghj/BettaFish) | ![Stars](https://img.shields.io/github/stars/666ghj/BettaFish?style=social) | 多智能体舆情分析系统，自动监控30+社媒并生成深度分析报告。 |
+| [claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | ![Stars](https://img.shields.io/github/stars/anthropics/claude-quickstarts?style=social) | 提供Claude API应用开发快速入门项目，涵盖客服、数据分析及智能代理等场景 |
 | [Bonsai-demo](https://github.com/PrismML-Eng/Bonsai-demo) | ![Stars](https://img.shields.io/github/stars/PrismML-Eng/Bonsai-demo?style=social) | 本地运行 Bonsai 2 27B 推理模型，支持多平台视觉、工具调用与长上下文。 |
+| [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | ![Stars](https://img.shields.io/github/stars/elementalsouls/Claude-BugHunter?style=social) | 面向AI代理的外部漏洞挖掘与红队技能集，覆盖Web应用漏洞及企业平台攻击链，支持多框架自动加载。 |
 | [CopilotKit](https://github.com/CopilotKit/CopilotKit) | ![Stars](https://img.shields.io/github/stars/CopilotKit/CopilotKit?style=social) | 多框架多渠道 AI 代理应用 SDK，支持生成式 UI、共享状态与人在回路交互。 |
+| [claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | ![Stars](https://img.shields.io/github/stars/tradermonty/claude-trading-skills?style=social) | 为限时个人投资者提供市场审查、风险管理、交易规划及复盘的结构化AI工作流工具，不代替买卖决策。 |
 | [CosyVoice](https://github.com/FunAudioLLM/CosyVoice) | ![Stars](https://img.shields.io/github/stars/FunAudioLLM/CosyVoice?style=social) | 基于大语言模型的多语言零样本文本转语音合成系统 |
 | [Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam) | ![Stars](https://img.shields.io/github/stars/hacksider/Deep-Live-Cam?style=social) | Deep-Live-Cam是一款实时换脸工具,可通过单张图片实现摄像头/视频的AI深度伪造换脸功能。 |
 | [llm-d-router](https://github.com/llm-d/llm-d-router) | ![Stars](https://img.shields.io/github/stars/llm-d/llm-d-router?style=social) | llm-d Router 是 LLM 推理流量的智能调度器，通过负载和缓存感知路由、请求优先级和流量控制，优化大模型推理性能。 |
