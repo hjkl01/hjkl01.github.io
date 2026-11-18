@@ -7,7 +7,7 @@ sidebar_label: media
 
 # media
 
-本分类共 **55** 个项目。
+本分类共 **56** 个项目。
 
 [返回 GitHub 项目分类目录](/notes/github)
 
@@ -68,3 +68,4 @@ sidebar_label: media
 | [xbmc](https://github.com/xbmc/xbmc) | ![Stars](https://img.shields.io/github/stars/xbmc/xbmc?style=social) | Kodi是一款免费开源的媒体播放器和家庭娱乐中心软件，支持多平台，可播放多种音视频格式并管理媒体库。 |
 | [keyviz](https://github.com/mulaRahul/keyviz) | ![Stars](https://img.shields.io/github/stars/mulaRahul/keyviz?style=social) | Keyviz 是一款开源工具，实时可视化按键和鼠标操作，适合演示与录屏。 |
 | [screenpipe](https://github.com/screenpipe/screenpipe) | ![Stars](https://img.shields.io/github/stars/screenpipe/screenpipe?style=social) | 持续录制屏幕与音频，本地 AI 搜索记忆，智能映射工作流并赋能 AI agent。 |
+| [HolyArrs](https://github.com/HolyArrs/HolyArrs) | ![Stars](https://img.shields.io/github/stars/HolyArrs/HolyArrs?style=social) | HolyArrs是轻量自托管媒体应用，统一管理影视音乐及下载请求，替代六款独立工具。 |
